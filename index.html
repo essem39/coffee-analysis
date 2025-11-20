@@ -385,20 +385,14 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
-        
   .article-button {
-    /* 1. Делает кнопку блочным элементом, чтобы она занимала всю ширину */
+    /* ФИКСЫ: Полная ширина, блочный элемент, центрирование и высота */
     display: block; 
-    
-    /* 2. Центрирует текст внутри кнопки */
     text-align: center;
-    
-    /* 3. УДАЛЯЕТ нижнее подчеркивание со ссылки */
     text-decoration: none; 
-    
-    /* 4. УВЕЛИЧИВАЕТ высоту кнопки (1.25rem вместо 0.75rem) */
     padding: 1.25rem 1rem; 
     
+    /* ОРИГИНАЛЬНЫЕ СТИЛИ */
     width: 100%;
     background: transparent;
     border: 1px solid var(--border);
@@ -407,9 +401,7 @@
     cursor: pointer;
     transition: var(--transition-smooth);
     font-size: 0.875rem;
-} ... остальные стили ... */
 }
-        
         .article-card:hover .article-button {
             background: var(--primary);
             color: var(--primary-foreground);
