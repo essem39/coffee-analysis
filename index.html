@@ -386,23 +386,18 @@
             overflow: hidden;
         }
         
-        .article-button {
+       .article-button {
     /* Чтобы кнопка растянулась на всю ширину: */
     display: block; 
     
     /* Чтобы текст встал по центру кнопки: */
     text-align: center;
     
+    /* УДАЛЯЕТ НИЖНЮЮ ЧЕРТУ: */
+    text-decoration: none; 
+    
     width: 100%;
-    padding: 0.75rem 1rem;
     /* ... остальные стили ... */
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--foreground);
-    border-radius: calc(var(--radius) - 2px);
-    cursor: pointer;
-    transition: var(--transition-smooth);
-    font-size: 0.875rem;
 }
         
         .article-card:hover .article-button {
