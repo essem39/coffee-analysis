@@ -386,18 +386,28 @@
             overflow: hidden;
         }
         
-       .article-button {
-    /* Чтобы кнопка растянулась на всю ширину: */
+  .article-button {
+    /* 1. Делает кнопку блочным элементом, чтобы она занимала всю ширину */
     display: block; 
     
-    /* Чтобы текст встал по центру кнопки: */
+    /* 2. Центрирует текст внутри кнопки */
     text-align: center;
     
-    /* УДАЛЯЕТ НИЖНЮЮ ЧЕРТУ: */
+    /* 3. УДАЛЯЕТ нижнее подчеркивание со ссылки */
     text-decoration: none; 
     
+    /* 4. УВЕЛИЧИВАЕТ высоту кнопки (1.25rem вместо 0.75rem) */
+    padding: 1.25rem 1rem; 
+    
     width: 100%;
-    /* ... остальные стили ... */
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--foreground);
+    border-radius: calc(var(--radius) - 2px);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    font-size: 0.875rem;
+} ... остальные стили ... */
 }
         
         .article-card:hover .article-button {
