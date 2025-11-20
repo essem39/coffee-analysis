@@ -1,1 +1,565 @@
+<!DOCTYPE html>
 
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Мастер-класс: Как приготовить идеальный эспрессо в домашних условиях (Полное пошаговое руководство)</title>
+<meta content="Приготовление идеального эспрессо — это искусство, которое требует знаний и техники. В этом пошаговом мастер-классе мы разберем весь процесс: от выбора зерна и помола до экстракции и анализа результата." name="description"/>
+<style>html {
+    box-sizing: border-box;
+    }
+*, *::before, *::after {
+    box-sizing: inherit;
+    }
+.cover-container {
+    position: relative;
+    height: 1131.4px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #2C1810 0%, #3D2817 100%);
+    margin: 0 auto;
+    max-width: 880px;
+    padding: 0;
+    }
+.cover-container /* Background image with clip-path and overlay */ .cover-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://agents-download.skywork.ai/image/rt/5c8a725c4c79a4dbb817a5bf64690bab.jpg);
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    opacity: 0.85;
+    z-index: 1;
+    }
+.cover-container /* Overlay gradient for text readability */ .cover-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(180deg, rgba(44, 24, 16, 0) 0%, rgba(44, 24, 16, 0.85) 50%, rgba(44, 24, 16, 0.95) 100%);
+    z-index: 2;
+    }
+.cover-container /* Geometric accent block - angled color band */ .geometric-accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 65%;
+    height: 45%;
+    background: linear-gradient(135deg, rgba(44, 24, 16, 0.92) 0%, rgba(60, 35, 20, 0.88) 100%);
+    clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0 100%);
+    z-index: 3;
+    }
+.cover-container /* Secondary accent band */ .accent-band {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, #D4A574 0%, #D4A574 60%, transparent 100%);
+    z-index: 4;
+    }
+.cover-container /* Main content wrapper */ .content-wrapper {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+    }
+.cover-container /* Title block with semi-transparent background */ .title-block {
+    position: relative;
+    padding: 60px 70px 80px 70px;
+    max-width: 75%;
+    margin-bottom: 40px;
+    margin-left: 0;
+    }
+.cover-container .title-block::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: rgba(44, 24, 16, 0.75);
+    border-radius: 8px;
+    z-index: -1;
+    }
+.cover-container /* Main title styling */ .main-title {
+    font-family: "Georgia", serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: #FFF;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+.cover-container /* Subtitle styling */ .subtitle {
+    font-family: "Georgia", serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #D4A574;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    letter-spacing: 0.3px;
+    }
+.cover-container /* Metadata section */ .metadata {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 14px;
+    color: #E8D4C4;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    }
+.cover-container .metadata-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    }
+.cover-container .metadata-divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(212, 165, 116, 0.4);
+    }
+.cover-container /* Decorative element - small accent square */ .accent-square {
+    position: absolute;
+    width: 4px;
+    height: 40px;
+    background: #D4A574;
+    left: 70px;
+    top: 60px;
+    border-radius: 2px;
+    }
+.toc-container {
+    position: relative;
+    height: auto;
+    margin: 0 auto;
+    padding: 80px 70px;
+    background: linear-gradient(135deg, #2C1810 0%, #3D2817 100%);
+    color: #FFF;
+    max-width: 880px;
+    overflow: hidden;
+    }
+.toc-container .toc-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://agents-download.skywork.ai/image/rt/5c8a725c4c79a4dbb817a5bf64690bab.jpg);
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: 0;
+    }
+.toc-container .toc-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 60px;
+    background: #D4A574;
+    border-radius: 2px;
+    z-index: 2;
+    }
+.toc-container h1 {
+    position: relative;
+    z-index: 1;
+    font-family: "Georgia", serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFF;
+    margin: 0 0 50px 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #D4A574;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+.toc-container ul {
+    position: relative;
+    z-index: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+.toc-container li {
+    margin: 0;
+    padding: 0;
+    }
+.toc-container li.level-1 {
+    margin: 25px 0 15px 0;
+    padding: 12px 0 12px 0;
+    border-left: 3px solid #D4A574;
+    padding-left: 20px;
+    }
+.toc-container li.level-1 > a, .toc-container li.level-1 > span {
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFF;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    display: block;
+    line-height: 1.4;
+    }
+.toc-container li.level-1 > a:hover {
+    color: #D4A574;
+    transition: color 0.3s ease;
+    }
+.toc-container li.level-2 {
+    margin: 10px 0 8px 0;
+    padding: 8px 0 8px 0;
+    padding-left: 40px;
+    }
+.toc-container li.level-2 > a, .toc-container li.level-2 > span {
+    font-family: "Georgia", serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #E8D4C4;
+    text-decoration: none;
+    letter-spacing: 0.1px;
+    display: block;
+    line-height: 1.4;
+    }
+.toc-container li.level-2 > a:hover {
+    color: #D4A574;
+    transition: color 0.3s ease;
+    }
+.toc-container li.level-3 {
+    margin: 6px 0 6px 0;
+    padding: 6px 0 6px 0;
+    padding-left: 60px;
+    }
+.toc-container li.level-3 > a, .toc-container li.level-3 > span {
+    font-family: "Georgia", serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #D4C4B8;
+    text-decoration: none;
+    letter-spacing: 0.05px;
+    display: block;
+    line-height: 1.4;
+    }
+.toc-container li.level-3 > a:hover {
+    color: #D4A574;
+    transition: color 0.3s ease;
+    }
+.toc-container ul ul {
+    margin: 8px 0 0 0;
+    padding: 0;
+    }
+.container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    }
+.chart-container {
+    position: relative;
+    margin: 3em auto;
+    max-width: 700px;
+    min-height: 200px;
+    max-height: 400px;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+    }
+h1, h2, h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 1.5em;
+    }
+h1 {
+    font-size: 2.2em;
+    line-height: 1.2;
+    }
+h2 {
+    font-size: 1.8em;
+    }
+h3 {
+    font-size: 1.4em;
+    border-bottom: 1px solid #ecf0f1;
+    }
+p, li {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    }
+ul, ol {
+    padding-left: 20px;
+    }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+table thead tr {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: left;
+    }
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    }
+table tbody tr {
+    border-bottom: 1px solid #ddd;
+    }
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+    }
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #2c3e50;
+    }
+strong {
+    color: #34495e;
+    }
+.note {
+    background-color: #ecf0f1;
+    border-left: 5px solid #3498db;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+    }
+.note strong {
+    color: #2980b9;
+    }
+.troubleshooting-table td:first-child {
+    width: 30%;
+    }
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        }
+    .cover-container, .toc-container {
+        width: 100%;
+        height: 100vh;
+        /* 确保适应页面高度 */
+        overflow: hidden;
+        /* 避免内容溢出 */
+        page-break-after: always !important;
+        -webkit-print-color-adjust: exact !important;
+        }
+    }</style></head>
+<body><div class="cover-container">
+<div class="geometric-accent"></div>
+<div class="accent-band"></div>
+<div class="content-wrapper">
+<div class="title-block">
+<div class="accent-square"></div>
+<h1 class="main-title">Идеальный эспрессо дома</h1>
+<p class="subtitle">Полное пошаговое руководство по приготовлению профессионального кофе</p>
+<div class="metadata">
+<div class="metadata-item">
+<span>Руководство по кофейному мастерству</span>
+</div>
+<div class="metadata-divider"></div>
+<div class="metadata-item">
+<span>Ноябрь 2025</span>
+</div>
+</div>
+</div>
+</div>
+</div><div class="toc-container">
+<h1>Содержание</h1>
+<ul>
+<li class="level-1"><a href="#section-1">1. Фундамент успеха: Оборудование и зерно</a>
+<ul>
+<li class="level-2"><a href="#section-1-1">1.1. Кофемашина</a></li>
+<li class="level-2"><a href="#section-1-2">1.2. Кофемолка</a></li>
+<li class="level-2"><a href="#section-1-3">1.3. Свежесть и обжарка зерна</a></li>
+</ul>
+</li>
+<li class="level-1"><a href="#section-2">2. Этап I: Подготовка (4 критических шага)</a></li>
+<li class="level-1"><a href="#section-3">3. Этап II: Экстракция (Золотая формула 1:2)</a></li>
+<li class="level-1"><a href="#section-4">4. Анализ результата и устранение проблем</a>
+<ul>
+<li class="level-2"><a href="#section-4-1">4.1. Визуальный анализ крема</a></li>
+<li class="level-2"><a href="#section-4-2">4.2. Вкусовой анализ и корректировка</a></li>
+</ul>
+</li>
+<li class="level-1"><a href="#section-5">5. Уход за оборудованием</a></li>
+</ul>
+</div><div class="container">
+<h1 id="section-1">Идеальный эспрессо дома: Полное пошаговое руководство</h1>
+<p>Приготовление идеального эспрессо — это не магия, а точное следование технологии. Эталонный напиток должен иметь густую, плотную крема, идеальный баланс кислотности, сладости и горечи. Этот мастер-класс — ваша дорожная карта к профессиональному результату на домашнем оборудовании.</p>
+<h2 id="section-1">1. Фундамент успеха: Оборудование и зерно</h2>
+<p>Нельзя приготовить настоящий эспрессо без правильных инструментов. 90% успеха зависят от трех ключевых элементов: кофемашины, кофемолки и свежего зерна.</p>
+<h3 id="section-1-1">1.1. Кофемашина</h3>
+<p>Для приготовления эспрессо нужна рожковая (полуавтоматическая) кофемашина, способная создавать стабильное давление <strong>около 9 бар</strong> и поддерживать температуру воды в диапазоне <strong>90–96°C</strong>. Автоматические машины «всё в одном» удобны, но не дают контроля над процессом, который необходим для достижения идеального результата.</p>
+<ul>
+<li><strong>Стабильность температуры:</strong> Ищите модели с PID-контроллером. Он поддерживает температуру с точностью до градуса, что критически важно для повторяемости вкуса.</li>
+<li><strong>Давление:</strong> Стандарт индустрии — 9 бар. Это давление обеспечивает оптимальную экстракцию вкусоароматических веществ.</li>
+</ul>
+<h3 id="section-1-2">1.2. Кофемолка</h3>
+<p><strong>Ваш самый важный инструмент.</strong> Хорошая кофемолка важнее дорогой кофемашины. Эспрессо требует очень мелкого и, что самое главное, равномерного помола. Ножевые (роторные) кофемолки создают пыль и крупные частицы одновременно, что делает качественную экстракцию невозможной.</p>
+<ul>
+<li><strong>Тип жерновов:</strong> Только жерновая кофемолка. Конические жернова часто дают хороший результат для эспрессо в домашних условиях, тогда как плоские жернова являются стандартом в профессиональной среде за их высокую однородность помола.</li>
+<li><strong>Микрометрическая настройка:</strong> Возможность делать очень маленькие шаги в регулировке помола — ключ к поиску идеального времени экстракции.</li>
+</ul>
+<h3 id="section-1-3">1.3. Свежесть и обжарка зерна</h3>
+<p>Даже лучшее оборудование бессильно, если кофе старый. Используйте зерна, обжаренные <strong>от 7 до 21 дня назад</strong>. В этот период кофе «отдыхает» после обжарки, из него выходит лишний углекислый газ, а вкус достигает своего пика.</p>
+<ul>
+<li><strong>Степень обжарки:</strong> Для эспрессо традиционно используют среднюю или темно-среднюю обжарку. Она дает сбалансированный вкус с нотами шоколада и карамели. Светлая обжарка (под фильтр) может дать очень кислотный и несбалансированный шот, если не адаптировать под нее рецепт (например, повысить температуру и коэффициент).</li>
+</ul>
+<div class="note">
+<strong>Важно:</strong> Не забывайте про аксессуары! Вам понадобятся точные <strong>весы</strong> (с шагом 0,1 г и таймером), <strong>темпер</strong> подходящего диаметра, а также <strong>игольчатый разравниватель (WDT)</strong> для разбивания комочков.
+    </div>
+<h2 id="section-2">2. Этап I: Подготовка (4 критических шага)</h2>
+<p>Каждый шаг в подготовке кофейной таблетки напрямую влияет на конечный вкус. Пропуск или небрежное выполнение любого из них приведет к неравномерной экстракции.</p>
+<table>
+<thead>
+<tr>
+<th>Шаг</th>
+<th>Действие</th>
+<th>Зачем это нужно?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Дозировка</strong></td>
+<td>Отмерьте точное количество зерна на весах. Стандарт для двойной корзины: <strong>18–20 граммов</strong>.</td>
+<td>Обеспечивает повторяемость вкуса и правильное сопротивление потоку воды. Недостаток или избыток кофе нарушит экстракцию.</td>
+</tr>
+<tr>
+<td><strong>2. Помол</strong></td>
+<td>Смелите отмеренную дозу кофе непосредственно перед приготовлением. Помол должен быть очень мелким, как сахарная пудра или мелкая соль, но не создавать "пыль".</td>
+<td>Это главный регулятор времени экстракции. Слишком крупный помол — вода пройдет быстро. Слишком мелкий — медленно или не пройдет вовсе.</td>
+</tr>
+<tr>
+<td><strong>3. Распределение и Темперовка</strong></td>
+<td>Разбейте комочки игольчатым разравнивателем (WDT). Затем уплотните молотый кофе в портафильтре темпером с усилием 15–20 кг. Темпер держите строго горизонтально.</td>
+<td>Создает однородную, плотную "таблетку" без каналов, по которым вода пойдет в обход, что предотвращает неравномерную экстракцию (channeling).</td>
+</tr>
+<tr>
+<td><strong>4. Пролив (Flush)</strong></td>
+<td>Сделайте короткий пролив горячей воды (2-3 секунды) из группы без портафильтра непосредственно перед его установкой.</td>
+<td>Стабилизирует температуру группы, смывает остатки старого кофе и предотвращает появление "жженого" привкуса от перегретой воды.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="section-3">3. Этап II: Экстракция (Золотая формула 1:2)</h2>
+<p>Экстракция — это процесс извлечения вкуса из кофе под давлением. Мы ориентируемся на «золотой стандарт» эспрессо, который описывается формулой 1:2 (Brew Ratio).</p>
+<div class="note">
+<strong>Золотой стандарт эспрессо:</strong> Из <strong>18 граммов</strong> молотого кофе мы должны получить <strong>36 граммов</strong> готового напитка за <strong>25–30 секунд</strong> при температуре около 93°C и давлении 9 бар.
+    </div>
+<p>Это отношение массы сухого кофе к массе готового напитка. Поставьте чашку на весы и контролируйте процесс в реальном времени.</p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Идеальное значение (стартовая точка)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Вход (Input)</strong></td>
+<td>18 граммов (сухого кофе)</td>
+</tr>
+<tr>
+<td><strong>Выход (Output)</strong></td>
+<td>36 граммов (готового напитка)</td>
+</tr>
+<tr>
+<td><strong>Время экстракции</strong></td>
+<td>25–30 секунд (с момента включения насоса)</td>
+</tr>
+</tbody>
+</table>
+<p>Время — это индикатор правильности помола. Если вы получили 36 граммов напитка, но время вышло за рамки идеального диапазона, необходимо скорректировать помол.</p>
+<ul>
+<li>Если пролив <strong>быстрый (меньше 20 секунд)</strong> → <strong>Недоэкстракция</strong>. Вкус будет кислым, пустым, водянистым. <strong>Решение:</strong> сделайте помол мельче.</li>
+<li>Если пролив <strong>медленный (больше 35 секунд)</strong> → <strong>Переэкстракция</strong>. Вкус будет горьким, жженым, вяжущим. <strong>Решение:</strong> сделайте помол крупнее.</li>
+</ul>
+<h2 id="section-4">4. Анализ результата и устранение проблем</h2>
+<p>Ваш эспрессо готов. Теперь оцените его визуально и на вкус. Это поможет понять, что можно улучшить в следующий раз.</p>
+<h3 id="section-4-1">4.1. Визуальный анализ крема</h3>
+<p>Крема — это эмульсия из масел и углекислого газа, которая образуется на поверхности эспрессо. Ее цвет и стойкость многое говорят о качестве экстракции.</p>
+<ul>
+<li><strong>Идеальная крема:</strong> Густая, плотная, эластичная, золотисто-коричневого цвета с тигровыми полосками. Держится 2-3 минуты.</li>
+<li><strong>Тонкая, светлая, быстро исчезающая крема:</strong> Признак недоэкстракции или несвежего кофе. Помол слишком крупный, либо зерна выдохлись.</li>
+<li><strong>Темная крема с белым пятном в центре или черными точками:</strong> Явный признак переэкстракции. Помол слишком мелкий или температура воды слишком высокая.</li>
+</ul>
+<h3 id="section-4-2">4.2. Вкусовой анализ и корректировка</h3>
+<p>Вкус — главный критерий. Сбалансированный эспрессо должен быть сладким, с приятной кислотностью и легкой горечью в послевкусии.</p>
+<table class="troubleshooting-table">
+<thead>
+<tr>
+<th>Проблема</th>
+<th>Возможная причина</th>
+<th>Как исправить</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Слишком кисло</strong></td>
+<td>Недоэкстракция</td>
+<td>
+<ol>
+<li>Сделайте помол <strong>мельче</strong> (основное решение).</li>
+<li>Увеличьте время экстракции.</li>
+<li>Немного повысьте температуру воды (например, с 92°C до 94°C).</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td><strong>Слишком горько</strong></td>
+<td>Переэкстракция</td>
+<td>
+<ol>
+<li>Сделайте помол <strong>крупнее</strong> (основное решение).</li>
+<li>Уменьшите время экстракции.</li>
+<li>Немного понизьте температуру воды.</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td><strong>Вкус "пустой", водянистый</strong></td>
+<td>Неравномерная экстракция (каналы) или слишком крупный помол.</td>
+<td>
+<ol>
+<li>Улучшите подготовку таблетки: используйте WDT для разбивания комков.</li>
+<li>Убедитесь, что темперовка ровная.</li>
+<li>Сделайте помол немного мельче.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+<h2 id="section-5">5. Уход за оборудованием</h2>
+<p>Чистота — залог вкусного кофе. Остатки кофейных масел быстро прогоркают и портят вкус каждой последующей чашки.</p>
+<ul>
+<li><strong>После каждой чашки:</strong> Промывайте портафильтр и дисперсионную сетку группы.</li>
+<li><strong>Ежедневно:</strong> В конце дня проводите чистку группы со слепым фильтром и специальным чистящим средством.</li>
+<li><strong>Регулярно:</strong> Очищайте кофемолку от остатков старого кофе и масел.</li>
+</ul>
+<p>Приготовление эспрессо — это увлекательный процесс, требующий практики. Не бойтесь экспериментировать, меняя по одному параметру за раз, и анализируйте результат. Со временем вы научитесь чувствовать свой кофе и стабильно получать идеальную чашку.</p>
+</div></body></html>
