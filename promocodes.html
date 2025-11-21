@@ -3,120 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Специальные Предложения: Промокод US7 | Coffee Analysis</title>
-    <meta name="description" content="Получите эксклюзивные промокоды и специальные предложения для экономии на лучшем кофейном оборудовании и зерне. Активируйте скидку 7% с US7!">
+    <title>Специальные Предложения | Coffee Analysis</title>
     
-    <link rel="stylesheet" href="ВАШ_ФАЙЛ_СТИЛЕЙ.css"> 
+    <link rel="stylesheet" href="sapphire_deep_blue.css"> 
     
     <style>
-        /* Стили для структуры и выравнивания */
-        .container { 
+        /* Основные настройки страницы */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- СТИЛИ ДЛЯ ВЕРХНЕГО МЕНЮ (ХЕДЕР) --- */
+        .site-header {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px 0;
+            background-color: #fff;
+        }
+        .header-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto; /* Центрирует сам контейнер */
+            display: flex;
+            justify-content: space-between; /* ГЛАВНОЕ: Логотип слева, Меню справа */
+            align-items: center;
+        }
+        .logo a {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2C1810; /* Цвет кофе */
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .main-nav a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 15px; /* Отступ между ссылками */
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .main-nav a:hover {
+            color: #D4A574;
+        }
+        .main-nav .special-offer-btn {
+            color: #D4A574;
+            font-weight: bold;
+        }
+
+        /* --- СТИЛИ ДЛЯ КОНТЕНТА --- */
+        .page-container {
+            width: 90%;
+            max-width: 1000px; /* Ограничиваем ширину текста, чтобы было как в статьях */
+            margin: 40px auto;
+        }
+        
+        /* Блок с промокодом */
+        .promo-block {
+            background-color: #FFF8F3;
+            border-left: 5px solid #D4A574;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        .promo-code {
+            font-size: 1.5em;
+            padding: 5px 15px;
+            border: 2px dashed #D4A574;
+            background-color: #fff;
+            display: inline-block;
+            margin: 10px 0;
+            font-family: monospace;
+            color: #333;
+        }
+        .button {
+            background-color: #D4A574;
+            color: white !important;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none !important;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background-color: #b88655;
+        }
+
+        /* --- СТИЛИ ДЛЯ ФУТЕРА --- */
+        .site-footer {
+            background-color: #f9f9f9;
+            border-top: 1px solid #e0e0e0;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        .footer-content {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
-        .article-container { 
-            padding: 40px 0;
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
         }
-
-        /* Стили Хедера: Центрирование Логотипа и Меню */
-        .site-header {
-            border-bottom: 1px solid #eee;
-            padding: 15px 0;
-            text-align: center; /* Центрирует Логотип и Меню */
+        .footer-column h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #2C1810;
         }
-        .main-nav {
-            text-align: center;
-            margin-top: 10px;
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
         }
-        .logo a {
+        .footer-column li {
+            margin-bottom: 8px;
+        }
+        .footer-column a {
             text-decoration: none;
-            color: #333;
-            font-size: 1.5em;
-            font-weight: bold;
+            color: #666;
         }
-        .main-nav .nav-link {
-            text-decoration: none;
-            color: #333;
-            padding: 0 10px;
-        }
-
-        /* Стили Промо-Блока и Кнопки */
-        .promo-block {
-            background-color: #FFF8F3; 
-            border-left: 5px solid #D4A574; 
-            padding: 30px; 
-            margin: 2em auto;
-            border-radius: 5px; 
-        }
-        .button {
-            background: #D4A574; 
-            border-radius: 5px;
-            text-decoration: none !important;
-            color: #fff !important;
-            font-weight: bold;
-            padding: 12px 30px;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-            margin-top: 15px;
-            text-align: center;
-        }
-        .button:hover {
-            background: #A8815B;
+        .footer-column a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    
+
     <header class="site-header">
-        <div class="container">
+        <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="ВАШ_ПУТЬ_К_ЛОГОТИПУ.png" alt="Coffee Analysis Logo" style="height: 30px; vertical-align: middle;">
-                    <span>Coffee Analysis</span>
+                    ☕ Coffee Analysis
                 </a>
             </div>
 
             <nav class="main-nav">
-                <a href="index.html" class="nav-link">Главная</a> | 
-                <a href="specialty-micro-lots-2025.html" class="nav-link">Обзоры Сортов</a> | 
-                <a href="kak-hranit-kofe-guide.html" class="nav-link">Экспертные Гайды</a> | 
-                <a href="budget-barista-equipment-150.html" class="nav-link">Техника для Кофе</a> | 
-                <a href="promocodes.html" class="nav-link special-offer-btn">Специальные Предложения</a>
+                <a href="index.html">Главная</a>
+                <span style="color: #ddd;">|</span>
+                <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
+                <span style="color: #ddd;">|</span>
+                <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
+                <span style="color: #ddd;">|</span>
+                <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
+                <span style="color: #ddd;">|</span>
+                <a href="promocodes.html" class="special-offer-btn">Специальные Предложения</a>
             </nav>
         </div>
     </header>
-    <main>
-        <div class="container">
-            <div class="article-container">
-                <h1>🎁 Специальные Предложения и Партнерские Бонусы</h1>
-                <p>Мы проанализировали лучшие партнерские программы в кофейной индустрии, чтобы предоставить нашим читателям максимальную выгоду и открыть доступ к экспертному контенту.</p>
-                
-                <div class="promo-block">
-                    <h3>Экономия 7% на кофе для наших читателей!</h3>
-                    <p>Получите мгновенную скидку на первый заказ высококачественного кофе от нашего ключевого партнера. Промокод действует для новых покупателей.</p>
-                    
-                    <h4>⭐ Ваш Промокод:</h4>
-                    <code style="font-size: 1.5em; padding: 5px 10px; border: 2px solid #D4A574; background-color: #FFF8F3; display: inline-block; margin: 10px 0;">US7</code>
-                    
-                    <p>Нажмите кнопку, чтобы перейти на сайт и применить скидку.</p>
-                    <a href="https://www.torrefacto.ru/" target="_blank" class="button">Перейти и Активировать US7</a>
-                </div>
 
-                <h2>Наш Анализ Партнеров</h2>
-                <p>Как показал наш экспертный анализ, комбинация моделей дохода является самой устойчивой. Мы рекомендуем:</p>
-                <ul>
-                    <li>**Torrefacto:** Отлично подходит для лояльных клиентов и гурманов (используйте **US7**).</li>
-                    <li>**Tasty Coffee:** Для тех, кто ищет стабильный, рекуррентный доход (долгосрочное сотрудничество).</li>
-                    <li>**Coffee Project:** Для быстрого заработка с первой продажи.</li>
-                </ul>
+    <main>
+        <div class="page-container">
+            <h1>🎁 Специальные Предложения и Партнерские Бонусы</h1>
+            <p>Мы проанализировали лучшие партнерские программы в кофейной индустрии, чтобы предоставить нашим читателям максимальную выгоду и открыть доступ к экспертному контенту.</p>
+
+            <div class="promo-block">
+                <h3 style="margin-top: 0;">Экономия 7% на кофе для наших читателей!</h3>
+                <p>Получите мгновенную скидку на первый заказ высококачественного кофе от нашего ключевого партнера. Промокод действует для новых покупателей.</p>
                 
-                <p><i>Этот раздел будет дополняться по мере появления новых, проверенных партнерских предложений.</i></p>
+                <h4>⭐ Ваш Промокод:</h4>
+                <div class="promo-code">US7</div>
+                <br>
+                
+                <p>Нажмите кнопку ниже, чтобы перейти на сайт и применить скидку:</p>
+                <a href="https://www.torrefacto.ru/" target="_blank" class="button">Перейти и Активировать US7</a>
             </div>
+
+            <h2>Наш Анализ Партнеров</h2>
+            <p>Как показал наш экспертный анализ, комбинация моделей дохода является самой устойчивой. Мы рекомендуем:</p>
+            <ul>
+                <li><strong>Torrefacto:</strong> Отлично подходит для лояльных клиентов и гурманов (используйте код выше).</li>
+                <li><strong>Tasty Coffee:</strong> Для тех, кто ищет стабильный выбор.</li>
+                <li><strong>Coffee Project:</strong> Для быстрого старта.</li>
+            </ul>
+            
+            <p><i>Этот раздел будет дополняться по мере появления новых, проверенных партнерских предложений.</i></p>
         </div>
     </main>
 
-    <footer>
-        </footer>
-    </body>
+    <footer class="site-footer">
+        <div class="footer-content">
+            
+            <div class="footer-column">
+                <h3>Coffee Analysis</h3>
+                <p>Ваш экспертный источник гайдов и обзоров.</p>
+                <p>© 2025 Coffee Analysis.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="about.html">Наша Миссия</a></li> 
+                    <li><a href="contact.html">Контакты</a></li> 
+                    <li><a href="privacy-policy.html">Политика Конфиденциальности</a></li> 
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Партнеры</h3>
+                <ul>
+                    <li><a href="promocodes.html">Специальные Предложения</a></li>
+                    <li><a href="https://www.shoppinginfo.org/" target="_blank">ALIDROP (Shopping Info)</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
 </html>
