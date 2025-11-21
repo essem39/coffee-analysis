@@ -9,6 +9,46 @@
     <link rel="stylesheet" href="ВАШ_ФАЙЛ_СТИЛЕЙ.css"> 
     
     <style>
+        /* Стили для структуры и выравнивания */
+        .container { 
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .article-container { 
+            padding: 40px 0;
+        }
+
+        /* Стили Хедера: Центрирование Логотипа и Меню */
+        .site-header {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            text-align: center; /* Центрирует Логотип и Меню */
+        }
+        .main-nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .logo a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .main-nav .nav-link {
+            text-decoration: none;
+            color: #333;
+            padding: 0 10px;
+        }
+
+        /* Стили Промо-Блока и Кнопки */
+        .promo-block {
+            background-color: #FFF8F3; 
+            border-left: 5px solid #D4A574; 
+            padding: 30px; 
+            margin: 2em auto;
+            border-radius: 5px; 
+        }
         .button {
             background: #D4A574; 
             border-radius: 5px;
@@ -24,27 +64,19 @@
         .button:hover {
             background: #A8815B;
         }
-        .promo-block {
-            background-color: #FFF8F3; 
-            border-left: 5px solid #D4A574; 
-            padding: 30px; 
-            margin: 2em auto; /* Изменено на auto, чтобы центрировать контейнер */
-            border-radius: 5px; 
-        }
-        .container { 
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .article-container { 
-            padding: 40px 0;
-        }
     </style>
 </head>
 <body>
     
-    <header>
+    <header class="site-header">
         <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="ВАШ_ПУТЬ_К_ЛОГОТИПУ.png" alt="Coffee Analysis Logo" style="height: 30px; vertical-align: middle;">
+                    <span>Coffee Analysis</span>
+                </a>
+            </div>
+
             <nav class="main-nav">
                 <a href="index.html" class="nav-link">Главная</a> | 
                 <a href="specialty-micro-lots-2025.html" class="nav-link">Обзоры Сортов</a> | 
@@ -59,7 +91,7 @@
             <div class="article-container">
                 <h1>🎁 Специальные Предложения и Партнерские Бонусы</h1>
                 <p>Мы проанализировали лучшие партнерские программы в кофейной индустрии, чтобы предоставить нашим читателям максимальную выгоду и открыть доступ к экспертному контенту.</p>
-
+                
                 <div class="promo-block">
                     <h3>Экономия 7% на кофе для наших читателей!</h3>
                     <p>Получите мгновенную скидку на первый заказ высококачественного кофе от нашего ключевого партнера. Промокод действует для новых покупателей.</p>
@@ -85,8 +117,6 @@
     </main>
 
     <footer>
-        <div class="container">
-            </div>
-    </footer>
+        </footer>
     </body>
 </html>
