@@ -3,142 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сравнительный Анализ Партнеров | Coffee Analysis</title>
+    <title>Партнерские Программы и Скидки | Coffee Analysis</title>
     
     <link rel="stylesheet" href="sapphire_deep_blue.css"> 
 
     <style>
-        /* --- ВАШИ СТАНДАРТНЫЕ СТИЛИ --- */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-            background-color: #f9f9f9; /* Светлый фон */
-        }
+        /* ВСТРОЕННЫЕ СТИЛИ ДЛЯ ИДЕАЛЬНОГО МЕНЮ И ДИЗАЙНА */
+        body { margin: 0; padding: 0; font-family: sans-serif; color: #333; background: #f9f9f9; }
         
-        /* Контейнеры */
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-        .page-content { background: #fff; padding: 40px; margin: 30px auto; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); max-width: 1000px; }
+        /* ХЕДЕР */
+        .site-header { background: #fff; border-bottom: 1px solid #e0e0e0; padding: 15px 0; }
+        .header-container { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo a { text-decoration: none; display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: bold; color: #2C1810; }
+        .main-nav { display: flex; gap: 15px; align-items: center; }
+        .main-nav a { text-decoration: none; color: #333; font-size: 16px; }
+        .main-nav .special-offer-btn { color: #D4A574; font-weight: bold; }
 
-        /* Заголовки */
-        h1 { color: #2C1810; border-bottom: 3px solid #D4A574; padding-bottom: 15px; margin-bottom: 30px; }
-        h2 { color: #2C1810; margin-top: 40px; }
-        h3 { color: #D4A574; }
-
-        /* Таблицы сравнения */
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        th, td { padding: 12px; border: 1px solid #eee; text-align: left; }
-        th { background-color: #2C1810; color: #fff; }
-        tr:nth-child(even) { background-color: #f8f8f8; }
-
-        /* Кнопки */
-        .btn { display: inline-block; padding: 10px 20px; background: #D4A574; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; }
+        /* КОНТЕНТ */
+        .container { width: 90%; max-width: 1000px; margin: 40px auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h1 { color: #2C1810; border-bottom: 3px solid #D4A574; padding-bottom: 15px; }
+        h2 { color: #2C1810; margin-top: 30px; }
+        
+        /* КАРТОЧКИ ПАРТНЕРОВ */
+        .partner-card { border: 1px solid #eee; padding: 20px; margin-bottom: 20px; border-radius: 8px; background: #fff; }
+        .partner-card.highlight { background: #FFF8F3; border-left: 5px solid #D4A574; }
+        
+        .btn { display: inline-block; padding: 10px 25px; background: #D4A574; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
         .btn:hover { background: #b88655; }
+        
+        /* ФУТЕР */
+        .site-footer { background: #f9f9f9; border-top: 1px solid #e0e0e0; padding: 40px 0; margin-top: 40px; }
+        .footer-content { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; }
     </style>
 </head>
 <body>
 
-    <header style="background: #fff; border-bottom: 1px solid #e0e0e0; padding: 15px 0; width: 100%;">
-        <div style="width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
-            
-            <div class="logo-area">
-                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 24px;">☕</span> 
-                    <span style="font-family: sans-serif; font-weight: 700; font-size: 20px; color: #2C1810;">
-                        Coffee Analysis
-                    </span>
-                </a>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">☕ Coffee Analysis</a>
             </div>
-
-            <nav style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
-                <a href="index.html" style="text-decoration: none; color: #333; font-family: sans-serif; font-size: 16px;">Главная</a>
-                <span style="color: #ddd;">|</span>
-                <a href="specialty-micro-lots-2025.html" style="text-decoration: none; color: #333; font-family: sans-serif; font-size: 16px;">Обзоры Сортов</a>
-                <span style="color: #ddd;">|</span>
-                <a href="kak-hranit-kofe-guide.html" style="text-decoration: none; color: #333; font-family: sans-serif; font-size: 16px;">Экспертные Гайды</a>
-                <span style="color: #ddd;">|</span>
-                <a href="budget-barista-equipment-150.html" style="text-decoration: none; color: #333; font-family: sans-serif; font-size: 16px;">Техника для Кофе</a>
-                <span style="color: #ddd;">|</span>
-                <a href="promocodes.html" style="text-decoration: none; color: #D4A574; font-family: sans-serif; font-weight: bold; font-size: 16px;">Специальные Предложения</a>
+            <nav class="main-nav">
+                <a href="index.html">Главная</a> | 
+                <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a> | 
+                <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a> | 
+                <a href="budget-barista-equipment-150.html">Техника для Кофе</a> | 
+                <a href="promocodes.html" class="special-offer-btn">Специальные Предложения</a>
             </nav>
-
         </div>
     </header>
-    <div class="page-content">
-        <h1>📊 Аналитический Отчет: Рынок Кофе 2025</h1>
-        
-        <p>В данном отчете мы провели сравнение ключевых игроков кофейного рынка, чтобы определить лучшие условия как для покупателей, так и для партнеров.</p>
 
-        <h2>1. Сравнительная таблица</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Компания</th>
-                    <th>Модель</th>
-                    <th>Преимущества</th>
-                    <th>Для кого</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Tasty Coffee</strong></td>
-                    <td>Рекуррентный доход (LTV)</td>
-                    <td>Стабильность, широкий ассортимент</td>
-                    <td>Для постоянных клиентов</td>
-                </tr>
-                <tr>
-                    <td><strong>Coffee Project</strong></td>
-                    <td>Разовая продажа</td>
-                    <td>Высокий % с первой покупки</td>
-                    <td>Для быстрого старта</td>
-                </tr>
-                <tr>
-                    <td><strong>Torrefacto</strong></td>
-                    <td>Лояльность + Сообщество</td>
-                    <td>Уникальные сорта, система скидок</td>
-                    <td>Для гурманов и экспертов</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="container">
+        <h1>Сравнительный анализ и Партнерские ссылки</h1>
+        <p>Мы отобрали лучшие предложения для старта и экономии.</p>
 
-        <h2>2. Глубокий Анализ Torrefacto (Наш Выбор)</h2>
-        <p>Мы выбрали Torrefacto как ключевого партнера из-за их уникального подхода к качеству продукта. </p>
-        <ul>
-            <li><strong>Качество:</strong> Обжарка под заказ и строгий контроль Q-грейдеров.</li>
-            <li><strong>Выгода:</strong> Накопительная система скидок до 15%.</li>
-            <li><strong>Бонус:</strong> Специально для наших читателей мы получили промокод.</li>
-        </ul>
-
-        <div style="background: #FFF8F3; border-left: 4px solid #D4A574; padding: 20px; margin-top: 20px;">
-            <h3>🔥 Актуальное Предложение</h3>
-            <p>Используйте промокод <strong>US7</strong> для получения скидки 7% на первый заказ.</p>
-            <a href="promocodes.html" class="btn">Перейти к активации кода</a>
+        <div class="partner-card">
+            <h2>☕ Coffee Project</h2>
+            <p><strong>Модель:</strong> Максимизация выгоды с первого заказа.</p>
+            <p>Идеально для тех, кто хочет получить качественный кофе с быстрой доставкой и скидками.</p>
+            <a href="https://www.coffeeproject.ru/?ref=YUd3ag" target="_blank" class="btn">Перейти в Coffee Project (Скидки)</a>
         </div>
 
-        <h2>3. Выводы</h2>
-        <p>Для построения устойчивой стратегии мы рекомендуем комбинированный подход: использовать Torrefacto для экспертной аудитории и Tasty Coffee для массового сегмента.</p>
+        <div class="partner-card highlight">
+            <h2>💎 Torrefacto (Наш Выбор)</h2>
+            <p><strong>Промокод:</strong> <span style="font-family:monospace; font-size:1.2em; background:#fff; padding:2px 5px;">US7</span></p>
+            <p>Скидка 7% на первый заказ. Лучший выбор для гурманов.</p>
+            <a href="https://www.torrefacto.ru/" target="_blank" class="btn">Активировать код US7</a>
+        </div>
+
+        <div class="partner-card">
+            <h2>🌱 Tasty Coffee</h2>
+            <p>Стабильное качество и свежая обжарка. Отличный вариант для подписки.</p>
+            <a href="https://shop.tastycoffee.ru/" target="_blank" class="btn" style="background-color: #555;">Перейти в магазин</a>
+        </div>
+
     </div>
 
-    <footer style="background: #f9f9f9; border-top: 1px solid #e0e0e0; padding: 40px 0; margin-top: 40px;">
-        <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
-                <h3 style="color: #2C1810;">Coffee Analysis</h3>
-                <p style="color: #666;">Ваш экспертный источник в мире кофе.</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div>
+                <h3>Coffee Analysis</h3>
+                <p>© 2025 Все права защищены.</p>
             </div>
-            <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
-                <h3 style="color: #2C1810;">Навигация</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="about.html" style="color: #666; text-decoration: none;">Наша Миссия</a></li>
-                    <li><a href="contact.html" style="color: #666; text-decoration: none;">Контакты</a></li>
-                </ul>
+            <div>
+                <h3>Навигация</h3>
+                <a href="about.html" style="color:#666; text-decoration:none;">Наша Миссия</a><br>
+                <a href="contact.html" style="color:#666; text-decoration:none;">Контакты</a>
             </div>
-            <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
-                <h3 style="color: #2C1810;">Партнеры</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="promocodes.html" style="color: #666; text-decoration: none;">Специальные Предложения</a></li>
-                </ul>
+            <div>
+                <h3>Партнеры</h3>
+                <a href="promocodes.html" style="color:#666; text-decoration:none;">Спецпредложения</a>
             </div>
         </div>
     </footer>
