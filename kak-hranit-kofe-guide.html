@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -6,268 +7,553 @@
     <meta name="description" content="Научные методы хранения кофейных зерен: 4 врага свежести, почему холодильник вреден, секреты вакуума и дегазации. Экспертное руководство 2025.">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/unnamed%20(6).webp">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #fafafa;
-            color: #333;
+        /* Coffee Analysis Design System - Professional Coffee Blog Theme */
+        :root {
+            --background: hsl(0, 0%, 100%);
+            --foreground: hsl(25, 25%, 15%);
+            --card: hsl(0, 0%, 100%);
+            --card-foreground: hsl(25, 25%, 15%);
+            --popover: hsl(0, 0%, 100%);
+            --popover-foreground: hsl(25, 25%, 15%);
+            
+            /* Orange primary theme for coffee blog */
+            --primary: hsl(25, 95%, 53%);
+            --primary-foreground: hsl(0, 0%, 100%);
+            --primary-glow: hsl(30, 100%, 65%);
+            
+            --secondary: hsl(30, 20%, 96%);
+            --secondary-foreground: hsl(25, 25%, 15%);
+            
+            --muted: hsl(30, 15%, 95%);
+            --muted-foreground: hsl(25, 15%, 45%);
+            
+            --accent: hsl(25, 95%, 53%);
+            --accent-foreground: hsl(0, 0%, 100%);
+            
+            --destructive: hsl(0, 84.2%, 60.2%);
+            --destructive-foreground: hsl(0, 0%, 100%);
+            
+            --border: hsl(30, 20%, 90%);
+            --input: hsl(30, 20%, 95%);
+            --ring: hsl(25, 95%, 53%);
+            
+            --radius: 0.75rem;
+            
+            /* Coffee-specific design tokens */
+            --coffee-brown: hsl(25, 40%, 25%);
+            --coffee-light: hsl(30, 30%, 85%);
+            --gradient-primary: linear-gradient(135deg, hsl(25, 95%, 53%), hsl(30, 100%, 65%));
+            --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 100%), hsl(30, 15%, 95%));
+            --shadow-elegant: 0 10px 30px -10px hsla(25, 95%, 53%, 0.2);
+            --shadow-glow: 0 0 40px hsla(30, 100%, 65%, 0.3);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .main-navigation {
-            background-color: #f5f5f5; 
-            padding: 10px 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .main-navigation ul {
-            list-style: none;
+        * {
+            margin: 0;
             padding: 0;
-            margin: 0 auto;
-            text-align: center;
-            max-width: 800px;
+            box-sizing: border-box;
         }
-
-        .main-navigation li {
-            display: inline-block;
-            margin: 0 5px; /* Уменьшено */
-        }
-
-        .main-navigation a {
-            text-decoration: none;
-            color: #555;
-            font-weight: 500;
-            font-size: 0.85em; /* Уменьшено */
-            padding: 5px 5px; /* Уменьшено */
-            transition: color 0.3s;
-        }
-
-        .main-navigation a:hover {
-            color: #d68d00;
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--foreground);
+            background-color: var(--background);
         }
         
         .container {
-            max-width: 800px;
+            max-width: 800px; /* Уменьшен для контентной страницы */
             margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 0 1rem;
+            background-color: var(--background);
+            box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Легкая тень для выделения контентной области */
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
         
+        /* Header Styles */
+        .header {
+            border-bottom: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+            max-width: 1200px; /* Шире для шапки */
+            margin: 0 auto;
+            padding: 1rem 1rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--foreground);
+        }
+        
+        /* Desktop Navigation */
+        .desktop-nav {
+            display: none;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .desktop-nav a {
+            color: var(--muted-foreground);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            font-size: 0.875rem; 
+        }
+        
+        .desktop-nav a:hover,
+        .desktop-nav a.special {
+            color: var(--primary);
+        }
+        
+        .desktop-nav .separator {
+            color: var(--border);
+        }
+        
+        @media (min-width: 768px) {
+            .desktop-nav {
+                display: flex;
+            }
+        }
+        
+        /* Mobile Menu Toggle (Hamburger) */
+        .menu-toggle {
+            display: block; 
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem; 
+            z-index: 101; 
+            margin-right: -0.5rem; 
+        }
+        @media (min-width: 768px) {
+            .menu-toggle {
+                display: none; 
+            }
+        }
+
+        .hamburger-icon {
+            width: 24px;
+            height: 2px;
+            background: var(--foreground);
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .hamburger-icon::before,
+        .hamburger-icon::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background: var(--foreground);
+            transition: var(--transition-smooth);
+        }
+
+        .hamburger-icon::before {
+            top: -7px; 
+        }
+
+        .hamburger-icon::after {
+            top: 7px; 
+        }
+
+        /* Open state styles (for X icon) */
+        .menu-toggle.active .hamburger-icon {
+            background: transparent;
+        }
+
+        .menu-toggle.active .hamburger-icon::before {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .menu-toggle.active .hamburger-icon::after {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* Mobile Overlay Menu (full screen, non-shifting) */
+        #mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--background);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s;
+        }
+
+        #mobile-menu.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin-top: -50px; 
+        }
+
+        .mobile-nav-links li {
+            margin: 0; 
+        }
+
+        .mobile-nav-links a {
+            font-size: 1.125rem; /* ИСПРАВЛЕНО: Увеличен размер для удобства нажатия на мобильном */
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--foreground);
+            transition: var(--transition-smooth);
+            display: block;
+            padding: 0.8rem 0.5rem; /* ИСПРАВЛЕНО: Увеличенный вертикальный отступ */
+        }
+
+        .mobile-nav-links a:hover,
+        .mobile-nav-links a.special {
+            color: var(--primary);
+        }
+        
+        /* General Content Styles (for the guide page) */
+        
         h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #d68d00;
+            color: var(--foreground);
+            border-bottom: 3px solid var(--primary);
             padding-bottom: 10px;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+             h1 {
+                font-size: 1.5rem;
+            }
         }
         
         h2 {
-            color: #34495e;
+            color: var(--foreground);
             margin-top: 30px;
+            font-size: 1.5rem;
         }
-        
-        .enemy-card {
-            background-color: #f8d7da;
+
+        h3 {
+            color: var(--primary);
+            margin-top: 25px;
+            font-size: 1.25rem;
+            border-left: 3px solid var(--primary);
+            padding-left: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            color: var(--foreground);
+        }
+
+        .danger-box {
+            background-color: #fcebeb;
+            border: 1px solid #d9534f;
+            color: #d9534f;
             padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-            border-left: 4px solid #dc3545;
-        }
-        
-        .warning {
-            background-color: #fff3cd;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #ffc107;
+            border-radius: var(--radius);
             margin: 20px 0;
+            font-weight: bold;
         }
-        
-        .tip {
-            background-color: #d4edda;
+
+        .tip-box {
+            background-color: var(--secondary);
+            border-left: 4px solid var(--primary);
             padding: 15px;
-            border-left: 4px solid #28a745;
+            border-radius: var(--radius);
             margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        .tip-box strong {
+            color: var(--primary);
         }
         
-        .timeline {
-            background-color: #e9ecef;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
+        ul, ol {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        ul li, ol li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+            color: var(--muted-foreground);
         }
         
-        .storage-method {
-            background-color: #f8f9fa;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 8px;
-            border-left: 4px solid #6c757d;
+        /* Footer (using new index styles) */
+        .footer {
+            background: var(--coffee-brown);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: grid;
+            gap: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: var(--transition-smooth);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
         }
     </style>
 </head>
 <body>
-<header style="background: #fff; border-bottom: 1px solid #e0e0e0; padding: 15px 0; width: 100%;">
-    <div style="width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+
+<header class="header">
+    <div class="header-content">
         
         <div class="logo-area">
-            <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+            <a href="index.html" class="logo">
                 <span style="font-size: 24px;">☕</span> 
-                <span style="font-family: sans-serif; font-weight: 700; font-size: 20px; color: #2C1810;">
+                <span class="logo-text">
                     Coffee Analysis
                 </span>
             </a>
         </div>
 
-        <nav style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
-            <a href="index.html" style="text-decoration: none; color: #333; font-family: sans-serif; font-size: 14px;">Главная</a>
-            <span style="color: #ddd;">|</span>
-            
-            <a href="specialty-micro-lots-2025.html" style="text-decoration: none; color: #333; font-family: sans-serif; font-size: 14px;">Обзоры Сортов</a>
-            <span style="color: #ddd;">|</span>
-            
-            <a href="kak-hranit-kofe-guide.html" style="text-decoration: none; color: #333; font-family: sans-serif; font-size: 14px;">Экспертные Гайды</a>
-            <span style="color: #ddd;">|</span>
-            
-            <a href="budget-barista-equipment-150.html" style="text-decoration: none; color: #333; font-family: sans-serif; font-size: 14px;">Техника для Кофе</a>
-            <span style="color: #ddd;">|</span>
-            
-            <a href="links.html" style="text-decoration: none; color: #D4A574; font-family: sans-serif; font-weight: bold; font-size: 14px;">Специальные Предложения</a>
+        <nav class="desktop-nav">
+            <a href="index.html">Главная</a>
+            <span class="separator">|</span>
+            <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
+            <span class="separator">|</span>
+            <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
+            <span class="separator">|</span>
+            <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
+            <span class="separator">|</span>
+            <a href="links.html" class="special" style="font-weight: bold;">Специальные Предложения</a>
         </nav>
+        
+        <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
+            <div class="hamburger-icon"></div>
+        </button>
 
     </div>
 </header>
-    <div class="container">
-        <h1>Как правильно хранить кофе: научный подход к сохранению свежести</h1>
-        
-        <h2>Четыре врага свежести кофе</h2>
-        
-        <div class="enemy-card">
-            <h3>1. Кислород</h3>
-            <p><strong>Враг №1:</strong> Окисляет масла в кофе, вызывая прогорклость. Уже через 15 минут после помола начинается активная деградация вкуса.</p>
-        </div>
-        
-        <div class="enemy-card">
-            <h3>2. Влага</h3>
-            <p><strong>Критический фактор:</strong> Влажность выше 60% запускает процессы плесневения и ферментации. Идеальная влажность для хранения: 50-55%.</p>
-        </div>
-        
-        <div class="enemy-card">
-            <h3>3. Тепло</h3>
-            <p><strong>Ускоритель деградации:</strong> Каждые 10°C повышения температуры удваивают скорость химических реакций. Оптимальная температура: 15-20°C.</p>
-        </div>
-        
-        <div class="enemy-card">
-            <h3>4. Свет</h3>
-            <p><strong>УФ-разрушитель:</strong> Ультрафиолет разрушает хлорогеновые кислоты и ароматические соединения. Храните в темном месте.</p>
-        </div>
-        
-        <h2>Почему холодильник — враг кофе</h2>
-        
-        <div class="warning">
-            <h3>⚠️ Никогда не храните кофе в холодильнике!</h3>
-            <ul>
-                <li><strong>Конденсат:</strong> Перепады температуры создают влагу</li>
-                <li><strong>Посторонние запахи:</strong> Кофе впитывает ароматы других продуктов</li>
-                <li><strong>Нестабильная среда:</strong> Постоянные открывания дверцы</li>
-                <li><strong>Кристаллизация масел:</strong> Холод разрушает структуру кофейных масел</li>
-            </ul>
-        </div>
-        
-        <h2>Секреты вакуума и дегазации</h2>
-        
-        <div class="storage-method">
-            <h3>Вакуумное хранение</h3>
-            <p><strong>Принцип:</strong> Удаление кислорода замедляет окисление в 10 раз</p>
-            <p><strong>Лучшие решения:</strong></p>
-            <ul>
-                <li>Вакуумные контейнеры Airscape</li>
-                <li>Пакеты с односторонним клапаном</li>
-                <li>Домашние вакууматоры</li>
-            </ul>
-        </div>
-        
-        <div class="storage-method">
-            <h3>Дегазационные клапаны</h3>
-            <p><strong>Функция:</strong> Выпускают CO2, не впуская кислород</p>
-            <p><strong>Важность:</strong> Свежеобжаренный кофе выделяет CO2 до 2 недель. Клапан предотвращает разрыв упаковки и окисление.</p>
-        </div>
-        
-        <div class="timeline">
-            <h3>Временные рамки свежести:</h3>
-            <ul>
-                <li><strong>Зерно в заводской упаковке:</strong> 6-12 месяцев</li>
-                <li><strong>Зерно после вскрытия:</strong> 2-4 недели</li>
-                <li><strong>Молотый кофе:</strong> 3-7 дней</li>
-                <li><strong>Эспрессо-смесь:</strong> 7-14 дней после обжарки</li>
-            </ul>
-        </div>
-        
-        <h2>Идеальные условия хранения</h2>
-        
-        <div class="tip">
-            <h3>✅ Правильное хранение:</h3>
-            <ul>
-                <li><strong>Температура:</strong> 15-20°C (комнатная)</li>
-                <li><strong>Влажность:</strong> 50-55%</li>
-                <li><strong>Освещение:</strong> Темное место</li>
-                <li><strong>Контейнер:</strong> Герметичный, непрозрачный</li>
-                <li><strong>Объем:</strong> Минимум воздуха в емкости</li>
-            </ul>
-        </div>
-        
-        <div class="tip">
-            <h3>🔬 Научный факт:</h3>
-            <p>Исследования показывают: правильное хранение сохраняет до 85% ароматических соединений в течение месяца, в то время как неправильное — только 30% за неделю.</p>
-        </div>
-        
-        <h2>Рекомендации по контейнерам</h2>
-        
-        <div class="storage-method">
-            <h3>Лучшие материалы:</h3>
-            <ul>
-                <li><strong>Керамика с герметичной крышкой</strong> — идеальный выбор</li>
-                <li><strong>Нержавеющая сталь</strong> — долговечность и нейтральность</li>
-                <li><strong>Стекло темное</strong> — защита от света</li>
-            </ul>
-        </div>
-        
-        <div class="warning">
-            <h3>❌ Избегайте:</h3>
-            <ul>
-                <li>Пластиковые контейнеры (впитывают запахи)</li>
-                <li>Прозрачное стекло (пропускает свет)</li>
-                <li>Металлические банки без покрытия (окисление)</li>
-            </ul>
-        </div>
+<div id="mobile-menu">
+    <button id="close-menu" class="menu-toggle active" aria-label="Закрыть меню" style="position: absolute; top: 1rem; right: 1rem;">
+        <div class="hamburger-icon"></div>
+    </button>
+    
+    <ul class="mobile-nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="specialty-micro-lots-2025.html">Обзоры Сортов</a></li>
+        <li><a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a></li>
+        <li><a href="budget-barista-equipment-150.html">Техника для Кофе</a></li>
+        <li><a href="links.html" class="special">Специальные Предложения</a></li>
+    </ul>
+</div>
+    
+<div class="container">
+    <h1>Как правильно хранить кофе: научный подход к сохранению свежести</h1>
+    
+    <p>Многие кофеманы ошибочно полагают, что достаточно купить дорогой кофе, чтобы наслаждаться его вкусом. На самом деле, неправильное хранение может уничтожить богатый аромат и вкус всего за несколько дней. Мы составили подробный гайд, основанный на научных данных, о том, как сохранить свежесть кофейных зерен.</p>
+    
+    <h2>Четыре главных врага свежести кофе</h2>
+    <p>Чтобы понять, как правильно хранить кофе, нужно знать, что разрушает его аромат и вкус:</p>
+    
+    <div class="tip-box">
+        <strong>1. Кислород (Окисление):</strong> Кислород вступает в реакцию с маслами в кофейных зернах, что приводит к прогорклости и потере вкусовых дескрипторов. Это главный враг.
     </div>
-<footer style="background: #f4f4f4; border-top: 1px solid #e0e0e0; padding: 40px 0; margin-top: 60px;">
-    <div style="width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
-        
-        <div style="flex: 1; min-width: 200px;">
-            <h3 style="color: #2C1810; font-size: 18px; margin-bottom: 15px;">☕ Coffee Analysis</h3>
-            <p style="color: #666; font-size: 14px; margin-bottom: 10px;">Ваш экспертный источник гайдов и стратегий.</p>
-            <p style="color: #666; font-size: 14px;">Email: <a href="mailto:ESEM39@GMAIL.COM" style="color: #333; text-decoration: none;">ESEM39@GMAIL.COM</a></p>
-            <p style="color: #666; font-size: 14px; margin-top: 10px;">&copy; 2025 Все права защищены.</p>
-        </div>
-        
-        <div style="flex: 1; min-width: 150px;">
-            <h3 style="color: #2C1810; font-size: 18px; margin-bottom: 15px;">Навигация</h3>
-            <a href="index.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Главная</a>
-            <a href="specialty-micro-lots-2025.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Обзоры Сортов</a>
-            <a href="kak-hranit-kofe-guide.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Экспертные Гайды</a>
-            <a href="budget-barista-equipment-150.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Техника для Кофе</a>
-            <a href="promocodes.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Спецпредложения</a>
-        </div>
-        
-        <div style="flex: 1; min-width: 200px;">
-            <h3 style="color: #2C1810; font-size: 18px; margin-bottom: 15px;">Партнеры и Документы</h3>
-            <a href="https://alidropinfo.com/" target="_blank" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">ALIDROP (Партнер)</a>
-            
-            <a href="privacy-policy.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Политика конфиденциальности</a>
-            <a href="terms.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Условия использования</a>
-        </div>
+    
+    <div class="tip-box">
+        <strong>2. Свет (УФ-излучение):</strong> Прямой солнечный свет разрушает эфирные масла, содержащиеся в зернах, ускоряя процесс порчи.
+    </div>
+    
+    <div class="tip-box">
+        <strong>3. Тепло:</strong> Высокая температура ускоряет выход углекислого газа и эфирных масел, что приводит к быстрому "выветриванию" аромата.
+    </div>
+    
+    <div class="tip-box">
+        <strong>4. Влага:</strong> Кофе гигроскопичен, то есть легко впитывает влагу и запахи из окружающей среды, что непоправимо портит его вкус.
+    </div>
+    
+    <h2>Место хранения: Почему холодильник — это ошибка</h2>
+    
+    <p>Самая распространенная ошибка, которую совершают любители кофе, — хранение зерен в холодильнике или морозильной камере.</p>
+    
+    <div class="danger-box">
+        🔥 ВНИМАНИЕ: Холодильник — враг свежести!
+    </div>
+    
+    <p>Холодильник — это зона высокой влажности и сильных запахов. Помните о гигроскопичности кофе? Зерна впитывают запахи сыра, лука и других продуктов, и ваш утренний напиток может приобрести неожиданные вкусовые ноты. Кроме того, постоянные колебания температуры (когда вы достаете и убираете кофе) вызывают конденсацию, что ускоряет порчу.</p>
+    
+    <h3>Правило хранения: Темное, сухое, прохладное место</h3>
+    
+    <ul>
+        <li>Идеальная температура: комнатная (18-22°C).</li>
+        <li>Место: кухонный шкаф, подальше от плиты, окна и посудомоечной машины.</li>
+    </ul>
+    
+    <h2>Лучшие контейнеры для хранения кофейных зерен</h2>
+    
+    <p>Правильная упаковка должна минимизировать контакт с кислородом и блокировать свет.</p>
+    
+    <h3>1. Вакуумные контейнеры (Лучший выбор)</h3>
+    <p>Контейнеры с клапаном, который позволяет выпустить углекислый газ, но не впустить кислород (как в пачке от обжарщика). Самые эффективные — с вакуумным насосом, который откачивает воздух.
+    </p>
+    
+    <div class="tip-box">
+        <strong>Рекомендация:</strong> Ищите контейнеры с клапаном дегазации (One-Way Valve) или с системой вакуума. Они стоят дороже, но это лучшая инвестиция в вкус.
+    </div>
+    
+    <h3>2. Непрозрачные керамические или металлические банки</h3>
+    <p>Если нет вакуума, используйте герметичные непрозрачные банки. Они защищают от света, но не решают проблему наличия воздуха внутри. Поэтому важно максимально заполнять их зернами.</p>
+    
+    <div class="danger-box">
+        ❌ Избегайте прозрачных стеклянных банок и пакетов с зип-локом. Они пропускают свет, а зип-лок не гарантирует полной герметичности.
+    </div>
+    
+    <h2>Молоть или не молоть? Вопрос свежести</h2>
+    
+    <p>Как только вы перемалываете зерна, площадь поверхности, контактирующая с кислородом, увеличивается в тысячи раз. Это катастрофически ускоряет потерю свежести.</p>
+    
+    <ul>
+        <li><strong>Золотое правило:</strong> Всегда храните кофе в **зернах**.</li>
+        <li>**Исключение:** Если у вас нет кофемолки, покупайте небольшие порции молотого кофе, которые вы используете за 3-5 дней.</li>
+    </ul>
+    
+    <h2>Секрет дегазации (Degassing)</h2>
+    
+    <p>После обжарки зерна выделяют углекислый газ (CO2). Этот процесс называется дегазацией и может длиться до двух недель. Этот CO2, на самом деле, помогает сохранить свежесть, вытесняя кислород.</p>
+    
+    <div class="tip-box">
+        <strong>Совет обжарщика:</strong> Лучшее время для приготовления — через 5-14 дней после обжарки. Дайте зернам время "отдохнуть" и дегазироваться.
+    </div>
 
+</div>
+
+<section style="text-align: center; padding: 60px 0; background: #FFF8F3; border-top: 3px solid #D4A574;">
+    <div style="width: 90%; max-width: 800px; margin: 0 auto;">
+        
+        <h2 style="font-size: 20px; color: #2C1810; margin-bottom: 15px;"> ☕ Получите ЭКСКЛЮЗИВНЫЕ Скидки на Кофе!
+        </h2>
+        <p style="font-size: 16px; color: #666; margin-bottom: 30px;">
+            Читайте наш сравнительный анализ сортов и забирайте промокод до 7%.
+        </p>
+        
+        <a href="links.html" 
+           style="display: inline-block; padding: 15px 35px; background-color: #D4A574; color: white !important; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 18px; transition: 0.3s;">
+            Перейти к Анализу и Выгоде →
+        </a>
+        
+    </div>
+</section>
+<footer style="background: var(--coffee-brown); color: white; padding: 3rem 0; margin-top: 0;">
+    <div class="footer-grid">
+        
+        <div class="footer-section">
+            <h3 style="color: white; font-size: 1rem; margin-bottom: 1rem;">☕ Coffee Analysis</h3> <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-bottom: 10px;">Ваш экспертный источник гайдов и стратегий.</p>
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">Email: <a href="mailto:ESEM39@GMAIL.COM" style="color: white; text-decoration: none;">ESEM39@GMAIL.COM</a></p>
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-top: 10px;">&copy; 2025 Все права защищены.</p>
+        </div>
+        
+        <div class="footer-section">
+            <h3 style="color: white; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Навигация</h3> 
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
+                <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
+                <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
+                <a href="links.html" style="color: var(--primary);">Спецпредложения</a>
+            </div>
+        </div>
+        
+        <div class="footer-section" style="grid-column: span 2;">
+            <h3 style="color: white; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Партнеры и Документы</h3> 
+            <div class="footer-links">
+                <a href="https://alidropinfo.com/" target="_blank">ALIDROP (мощный дропшиппинг)</a>
+                <a href="privacy-policy.html">Политика конфиденциальности</a>
+                <a href="terms.html">Условия использования</a>
+            </div>
+        </div>
     </div>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleButton = document.getElementById('menu-toggle');
+        const closeButton = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+        const navLinks = document.querySelectorAll('.mobile-nav-links a');
+
+        const openMenu = () => {
+            mobileMenu.classList.add('open');
+            toggleButton.classList.add('active');
+            body.style.overflow = 'hidden'; 
+        };
+
+        const closeMenu = () => {
+            mobileMenu.classList.remove('open');
+            toggleButton.classList.remove('active');
+            body.style.overflow = '';
+        };
+
+        toggleButton.addEventListener('click', () => {
+            if (mobileMenu.classList.contains('open')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+        
+        closeButton.addEventListener('click', closeMenu);
+
+        // Закрытие меню при нажатии на ссылку
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    });
+</script>
 </body>
 </html>
