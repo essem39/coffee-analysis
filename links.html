@@ -3,168 +3,638 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сравнительный анализ партнерских программ | Coffee Analysis</title>
-     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/unnamed%20(6).webp">
+    <title>Coffee Project — Полный Каталог Specialty Кофе, Чая и Аксессуаров от Coffee Analysis</title>
+    <meta name="description" content="Полный каталог хитов продаж, свежеобжаренного specialty кофе, чая и аксессуаров для бариста от нашего партнера Coffee Project.">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/unnamed%20(6).webp">
     <style>
-        /* ОСНОВНЫЕ НАСТРОЙКИ */
-        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #333; background: #f9f9f9; line-height: 1.8; }
+        /* Coffee Analysis Design System - Professional Coffee Blog Theme */
+        :root {
+            --background: hsl(0, 0%, 100%);
+            --foreground: hsl(25, 25%, 15%);
+            --card: hsl(0, 0%, 100%);
+            --primary: hsl(25, 95%, 53%); /* Orange */
+            --primary-foreground: hsl(0, 0%, 100%);
+            --secondary: hsl(30, 20%, 96%);
+            --muted-foreground: hsl(25, 15%, 45%);
+            --border: hsl(30, 20%, 90%);
+            --radius: 0.75rem;
+            --coffee-brown: hsl(25, 40%, 25%);
+            --gradient-primary: linear-gradient(135deg, hsl(25, 95%, 53%), hsl(30, 100%, 65%));
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --discount-color: hsl(0, 70%, 50%); /* Red for sale */
+            --tea-color: hsl(140, 40%, 45%); /* Green/Tea color */
+            --accessory-color: hsl(200, 50%, 50%); /* Blue/Accessory color */
+        }
         
-        /* ХЕДЕР (МЕНЮ) - ЛОГОТИП СЛЕВА, МЕНЮ СПРАВА */
-        .site-header { background: #fff; border-bottom: 1px solid #e0e0e0; padding: 15px 0; }
-        .header-container { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo a { text-decoration: none; display: flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 700; color: #2C1810; }
-        .main-nav { display: flex; gap: 20px; align-items: center; }
-        .main-nav a { text-decoration: none; color: #555; font-size: 16px; font-weight: 500; }
-        .main-nav a:hover { color: #D4A574; }
-        .main-nav .special-offer-btn { color: #D4A574; font-weight: bold; }
-
-        /* КОНТЕЙНЕР СТАТЬИ */
-        .container { width: 90%; max-width: 900px; margin: 40px auto; background: #fff; padding: 50px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* ТИПОГРАФИКА СТАТЬИ */
-        h1 { font-size: 32px; color: #2C1810; margin-bottom: 10px; line-height: 1.2; }
-        .subtitle { font-size: 18px; color: #D4A574; font-style: italic; margin-bottom: 40px; border-bottom: 2px solid #eee; padding-bottom: 20px; }
-        h2 { font-size: 24px; color: #2C1810; margin-top: 40px; border-left: 4px solid #D4A574; padding-left: 15px; }
-        h3 { font-size: 20px; color: #444; margin-top: 30px; }
-        p { margin-bottom: 20px; font-size: 16px; }
-        ul { margin-bottom: 20px; }
-        li { margin-bottom: 10px; }
-
-        /* ВРЕЗКИ И КНОПКИ (LINKS) */
-        .partner-box { background: #FFF8F3; border: 1px solid #D4A574; padding: 25px; border-radius: 8px; margin: 30px 0; }
-        .btn { display: inline-block; padding: 12px 30px; background: #D4A574; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
-        .btn:hover { background: #b88655; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--foreground);
+            background-color: var(--background);
+        }
         
-        /* ТАБЛИЦА */
-        table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 15px; }
-        th, td { border: 1px solid #eee; padding: 15px; text-align: left; }
-        th { background: #2C1810; color: #fff; }
+        .container {
+            max-width: 1100px; 
+            margin: 0 auto;
+            padding: 0 1rem;
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+        
+        /* Header/Navigation Styles */
+        .header {
+            border-bottom: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            width: 100%;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1rem;
+        }
 
-        /* ФУТЕР */
-        .site-footer { background: #f4f4f4; border-top: 1px solid #e0e0e0; padding: 40px 0; margin-top: 60px; }
-        .footer-content { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
-        .footer-col h3 { font-size: 16px; margin-bottom: 15px; color: #2C1810; }
-        .footer-col a { display: block; color: #666; text-decoration: none; margin-bottom: 8px; }
+        .logo-text { font-weight: 700; color: var(--coffee-brown); font-size: 1.125rem; }
+
+        /* --- БУРГЕР-МЕНЮ И МОБИЛЬНАЯ НАВИГАЦИЯ --- */
+        .burger-menu { 
+            display: block; /* Показываем на мобильных */
+            cursor: pointer;
+            z-index: 60;
+            padding: 5px;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--coffee-brown); /* Делаем его видимым */
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%; /* Под шапкой */
+            left: 0;
+            width: 100%;
+            background-color: var(--background);
+            border-top: 1px solid var(--border);
+            padding: 10px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding: 10px 1rem;
+            color: var(--foreground);
+            text-decoration: none;
+            border-bottom: 1px solid var(--secondary);
+        }
+
+        /* --- ДЕСКТОП НАВИГАЦИЯ --- */
+        .desktop-nav { display: none; }
+        .burger-menu { display: block; } /* По умолчанию бургер видим */
+
+        @media (min-width: 768px) {
+            .desktop-nav { display: flex; align-items: center; gap: 1.5rem; }
+            .desktop-nav a { color: var(--muted-foreground); text-decoration: none; transition: var(--transition-smooth); font-size: 0.875rem; }
+            .desktop-nav a:hover, .desktop-nav a.special { color: var(--primary); }
+            .desktop-nav .separator { color: var(--border); }
+            .burger-menu { display: none; } /* Скрываем бургер на десктопе */
+        }
+        /* JS-класс для открытия меню (можно реализовать позже) */
+        .header-content.open .mobile-nav { display: block; }
+        /* Конец Навигации */
+
+
+        /* --- БОЛЬШОЙ ПРОМО-БАННЕР --- */
+        .promo-banner {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                        url('https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/coffee-project-promo-bg.webp');
+            background-size: cover;
+            background-position: center 40%;
+            height: 380px; 
+            border-radius: var(--radius);
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .promo-banner h1 { font-size: 3.5rem; margin-bottom: 15px; line-height: 1.1; text-shadow: 0 2px 5px rgba(0,0,0,0.7); color: white; }
+        .promo-banner p { font-size: 1.35rem; margin-bottom: 30px; max-width: 800px; color: rgba(255, 255, 255, 0.95); font-weight: 300; }
+
+        .promo-button {
+            display: inline-block; padding: 16px 35px; background: var(--gradient-primary); color: white; text-decoration: none;
+            border-radius: 5px; font-weight: 700; font-size: 1.2rem; transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px hsla(25, 95%, 53%, 0.6);
+        }
+
+        .promo-button:hover { opacity: 0.9; transform: translateY(-2px); }
+        
+        /* --- СТИЛИ ДЛЯ КАРТОЧЕК ТОВАРОВ --- */
+        
+        h2 {
+            color: var(--coffee-brown);
+            margin-top: 30px;
+            font-size: 1.8rem;
+            border-left: 6px solid var(--primary);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .product-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-card:hover { box-shadow: 0 8px 20px rgba(0,0,0,0.15); transform: translateY(-5px); }
+        
+        .image-placeholder {
+            height: 180px;
+            background: #e9e9e9 url('https://via.placeholder.com/280x180?text=Coffee') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+        /* Специфический фон для чая и аксессуаров */
+        .tea-placeholder { background-image: url('https://via.placeholder.com/280x180?text=Premium+Tea'); background-position: center; }
+        .accessory-placeholder { background-image: url('https://via.placeholder.com/280x180?text=Accessory+Kit'); background-position: center; }
+
+        .image-placeholder span {
+            position: absolute; top: 10px; right: 10px; background-color: var(--primary); color: white;
+            padding: 4px 10px; border-radius: 3px; font-size: 0.85rem; font-weight: 600;
+        }
+
+        .card-content { padding: 15px 20px 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-content h3 { font-size: 1.25rem; color: var(--coffee-brown); margin-bottom: 5px; }
+        .card-content p { font-size: 0.9rem; color: var(--muted-foreground); margin-bottom: 15px; }
+
+        .price-section { margin-top: auto; display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
+        .current-price { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        .old-price { font-size: 1rem; color: var(--muted-foreground); text-decoration: line-through; margin-left: 10px; }
+        
+        .buy-button {
+            display: block; width: 100%; padding: 12px 0; background: var(--primary); color: white;
+            text-align: center; text-decoration: none; border-radius: 5px; font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .buy-button.tea { background: var(--tea-color); }
+        .buy-button.accessory { background: var(--accessory-color); }
+
+        .buy-button:hover { background: hsl(25, 95%, 45%); }
+        .buy-button.tea:hover { background: hsl(140, 40%, 35%); }
+        .buy-button.accessory:hover { background: hsl(200, 50%, 40%); }
+
+
+        /* --- ФУТЕР (ПОДВАЛ) СТИЛИ --- */
+        .footer {
+            background-color: var(--coffee-brown); /* Темный фон */
+            color: white;
+            padding: 40px 1rem;
+        }
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            padding: 0 1rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary); /* Выделяем заголовок */
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        /* Конец Футер Стили */
+
     </style>
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="header-container">
-            <div class="logo">
-                <a href="index.html">☕ Coffee Analysis</a>
-            </div>
-            <nav class="main-nav">
-                <a href="index.html">Главная</a>
-                <span style="color:#eee">|</span>
-                <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
-                <span style="color:#eee">|</span>
-                <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
-                <span style="color:#eee">|</span>
-                <a href="budget-barista-equipment-150.html">Техника</a>
-                <span style="color:#eee">|</span>
-               <a href="promocodes.html" class="nav-link special-offer-btn" style="text-decoration: none; color: #D4A574; font-family: sans-serif; font-weight: bold; font-size: 16px;">
-    Партнеры и Выгода
-</a>
-            </nav>
-        </div>
-    </header>
-
-    <div class="container">
-        <h1>Сравнительный анализ партнерских программ в кофейной индустрии</h1>
-        <div class="subtitle">От разовых бонусов к рекуррентному доходу</div>
-
-        <p>В последние годы рынок specialty кофе переживает рост. Перед каждым автором встает стратегический выбор модели монетизации:</p>
-        <ul>
-            <li><strong>Быстрый заработок:</strong> Высокий процент с первой продажи.</li>
-            <li><strong>Долгосрочный доход:</strong> Низкий, но пожизненный процент (LTV).</li>
-        </ul>
-        <p>Цель данной статьи — провести глубокий разбор ведущих программ, чтобы выстроить устойчивый доход.</p>
-
-        <h2>1. Tasty Coffee: Ставка на LTV</h2>
-        <p>Tasty Coffee строит программу на принципах долгосрочного сотрудничества. Партнеры получают процент за первую покупку и, что важно, за все последующие.</p>
-        <p><strong>Плюсы:</strong> Пассивный доход, высокая лояльность клиентов.<br>
-        <strong>Минусы:</strong> Низкий доход на старте.</p>
-
-        <h2>2. Coffee Project: Максимизация с первого контакта</h2>
-        <p>Coffee Project предлагает диаметрально противоположный подход — классическую модель "быстрых денег". Это идеально подходит для рекламного трафика.</p>
+<header class="header">
+    <div class="header-content">
         
-        <div class="partner-box">
-            <h3>🚀 Предложение Coffee Project</h3>
-            <p>Высокое вознаграждение (до 30%) за покупку. Отличный вариант для монетизации акций.</p>
-            <a href="https://www.coffeeproject.ru/?ref=YUd3ag" target="_blank" class="btn">Перейти в Coffee Project</a>
+        <div class="logo-area">
+            <a href="index.html" class="logo">
+                <span style="font-size: 24px;">☕</span> 
+                <span class="logo-text">
+                    Coffee Analysis
+                </span>
+            </a>
         </div>
 
-        <h2>3. Torrefacto: Удержание через уникальность</h2>
-        <p>Torrefacto работает через программу лояльности и уникальные сорта. Это создает сообщество "гурманов".</p>
-        
-        <div class="partner-box" style="border-color: #2C1810;">
-            <h3>💎 Эксклюзив для читателей</h3>
-            <p>Для нашей аудитории мы договорились о специальной скидке на первый заказ качественного зерна.</p>
-            <p>Промокод: <strong style="background:#eee; padding:5px;">US7</strong></p>
-            <a href="https://www.torrefacto.ru/" target="_blank" class="btn" style="background:#2C1810;">Активировать скидку 7%</a>
+        <nav class="desktop-nav">
+            <a href="index.html">Главная</a>
+            <span class="separator">|</span>
+            <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
+            <span class="separator">|</span>
+            <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
+            <span class="separator">|</span>
+            <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
+            <span class="separator">|</span>
+            <a href="links.html" class="special" style="font-weight: bold; color: var(--primary);">Coffee Project</a>
+        </nav>
+
+        <div class="burger-menu" onclick="toggleMobileMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
 
-        <h2>Синтез: "Многополярная" модель</h2>
-        <p>Наиболее мудрая стратегия — не выбирать "или-или", а комбинировать модели:</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Бренд</th>
-                    <th>Модель</th>
-                    <th>Использование</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Tasty Coffee</td>
-                    <td>Рекуррентная</td>
-                    <td>База подписчиков</td>
-                </tr>
-                <tr>
-                    <td>Coffee Project</td>
-                    <td>Разовая (CPA)</td>
-                    <td>Рекламный трафик</td>
-                </tr>
-                <tr>
-                    <td>Torrefacto</td>
-                    <td>Лояльность</td>
-                    <td>Экспертный контент</td>
-                </tr>
-            </tbody>
-        </table>
+        <nav class="mobile-nav" id="mobileMenu">
+            <a href="index.html">Главная</a>
+            <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
+            <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
+            <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
+            <a href="links.html" style="font-weight: bold; color: var(--primary);">Coffee Project</a>
+        </nav>
 
-        <p><i>Дата публикации анализа: Ноябрь 2025</i></p>
     </div>
+</header>
+    
+<main class="container">
+    
+    <div class="promo-banner">
+        <h1>Coffee Project — Полный Каталог Specialty</h1>
+        <p>
+            Мы отобрали лучшие сорта кофе, натуральный чай и профессиональные аксессуары от нашего надежного партнера.
+        </p>
+        <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="promo-button">
+            Перейти в Каталог Coffee Project →
+        </a>
+    </div>
+    
+    <h2>🔥 Хиты продаж и популярные сорта кофе</h2>
+    
+    <div class="product-grid">
+        
+        <div class="product-card">
+            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Зимний+Бленд');">
+                <span>Рекомендуем</span>
+            </div>
+            <div class="card-content">
+                <h3>Новогодний кофе «Зимнее настроение»</h3>
+                <p>Плотный и ароматный эспрессо. Кофе пропитанный духом Нового года. Упаковка 250 г.</p>
+                <div class="price-section">
+                    <span class="current-price">635₽</span>
+                    <span class="old-price">668₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Купить со скидкой</a>
+            </div>
+        </div>
 
-<footer style="background: #f4f4f4; border-top: 1px solid #e0e0e0; padding: 40px 0; margin-top: 60px;">
-    <div style="width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
-        
-        <div style="flex: 1; min-width: 200px;">
-            <h3 style="color: #2C1810; font-size: 18px; margin-bottom: 15px;">☕ Coffee Analysis</h3>
-            <p style="color: #666; font-size: 14px; margin-bottom: 10px;">Ваш экспертный источник гайдов и стратегий.</p>
-            <p style="color: #666; font-size: 14px;">Email: <a href="mailto:ESEM39@GMAIL.COM" style="color: #333; text-decoration: none;">ESEM39@GMAIL.COM</a></p>
-            <p style="color: #666; font-size: 14px; margin-top: 10px;">&copy; 2025 Все права защищены.</p>
+        <div class="product-card">
+            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Бразилия+Fine+Cup');">
+                <span>Распродажа</span>
+            </div>
+            <div class="card-content">
+                <h3>Бразилия Файн Кап</h3>
+                <p>Шоколадный и сладкий кофе. Классический вкус. Идеален для дома и офиса. Упаковка 250 г.</p>
+                <div class="price-section">
+                    <span class="current-price" style="color: var(--discount-color);">664₽</span>
+                    <span class="old-price">699₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Перейти к покупке</a>
+            </div>
         </div>
         
-        <div style="flex: 1; min-width: 150px;">
-            <h3 style="color: #2C1810; font-size: 18px; margin-bottom: 15px;">Навигация</h3>
-            <a href="index.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Главная</a>
-            <a href="specialty-micro-lots-2025.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Обзоры Сортов</a>
-            <a href="kak-hranit-kofe-guide.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Экспертные Гайды</a>
-            <a href="budget-barista-equipment-150.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Техника для Кофе</a>
-            <a href="promocodes.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Спецпредложения</a>
-        </div>
-        
-        <div style="flex: 1; min-width: 200px;">
-            <h3 style="color: #2C1810; font-size: 18px; margin-bottom: 15px;">Партнеры и Документы</h3>
-            <a href="https://alidropinfo.com/" target="_blank" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">ALIDROP (Партнеры)</a>
-            
-            <a href="privacy-policy.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Политика конфиденциальности</a>
-            <a href="terms.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Условия использования</a>
+        <div class="product-card">
+            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Sweet+Chocolate+Blend');">
+                <span>Наш выбор</span>
+            </div>
+            <div class="card-content">
+                <h3>Эспрессо-смесь Свит Чоколейт</h3>
+                <p>Ароматный и насыщенный кофе. Плотный и шоколадный вкус с приятной сладостью. Упаковка 250 г.</p>
+                <div class="price-section">
+                    <span class="current-price">669₽</span>
+                    <span class="old-price">789₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Заказать</a>
+            </div>
         </div>
 
+        <div class="product-card">
+            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Кения+Фильтр');">
+                <span>SCA 87.50</span>
+            </div>
+            <div class="card-content">
+                <h3>Кения Ньери Альгенуби (Фильтр)</h3>
+                <p>Яркий и сладкий кофе. Высочайшая оценка SCA (87.50). Идеален для фильтра. Упаковка 250 г.</p>
+                <div class="price-section">
+                    <span class="current-price">1340₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Купить</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Ethiopia+Guji');">
+                <span>Яркая Кислотность</span>
+            </div>
+            <div class="card-content">
+                <h3>Эфиопия Гуджи Гигеса (Фильтр)</h3>
+                <p>Яркий, цветочный кофе с нотами бергамота. Один из самых популярных сортов Эфиопии. Упаковка 250 г.</p>
+                <div class="price-section">
+                    <span class="current-price">980₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Купить</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Colombia+Supremo');">
+                <span>Классика Эспрессо</span>
+            </div>
+            <div class="card-content">
+                <h3>Колумбия Сьюпремо</h3>
+                <p>Плотный и сбалансированный кофе. Классика, которую любят все. Упаковка 250 г.</p>
+                <div class="price-section">
+                    <span class="current-price">790₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Заказать</a>
+            </div>
+        </div>
+    </div>
+    
+    <h2 style="border-left-color: var(--accessory-color); color: var(--accessory-color);">🛠️ Аксессуары, Гаджеты и Подарки</h2>
+    <p style="margin-bottom: 20px; font-size: 1.1rem; color: var(--foreground);">
+        Все необходимое для настоящего любителя кофе или профессионального бариста.
+    </p>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=AeroPress');">
+                <span style="background-color: var(--accessory-color);">Гаджет</span>
+            </div>
+            <div class="card-content">
+                <h3>Аэропресс</h3>
+                <p>Один из самых популярных гаджетов для альтернативного заваривания кофе.</p>
+                <div class="price-section">
+                    <span class="current-price" style="color: var(--accessory-color);">4000₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button accessory">Купить Аэропресс</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Hario+Scale');">
+                <span style="background-color: var(--accessory-color);">Must Have</span>
+            </div>
+            <div class="card-content">
+                <h3>Весы Hario</h3>
+                <p>Точные весы для идеального приготовления кофе, как для фильтра, так и для эспрессо.</p>
+                <div class="price-section">
+                    <span class="current-price" style="color: var(--accessory-color);">6000₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button accessory">Заказать Весы</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Cupping+Spoon');">
+                <span style="background-color: var(--accessory-color);">Для Профи</span>
+            </div>
+            <div class="card-content">
+                <h3>Ложка для Каппинга</h3>
+                <p>Стандартная ложка для профессиональной оценки кофе (каппинга). Удобно использовать дома.</p>
+                <div class="price-section">
+                    <span class="current-price" style="color: var(--accessory-color);">250₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button accessory">Купить Ложку</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Hario+V60');">
+                <span style="background-color: var(--accessory-color);">Для Фильтра</span>
+            </div>
+            <div class="card-content">
+                <h3>Hario V60 (прозрачный)</h3>
+                <p>Классический керамический пуровер Hario V60. Отличный инструмент для альтернативы.</p>
+                <div class="price-section">
+                    <span class="current-price" style="color: var(--accessory-color);">700₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button accessory">Купить V60</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=KeepCup');">
+                <span style="background-color: var(--discount-color);">Скидка</span>
+            </div>
+            <div class="card-content">
+                <h3>Термостакан "Одноразовость не в моде"</h3>
+                <p>Стильный многоразовый термостакан со встроенной трубочкой. Забота об экологии.</p>
+                <div class="price-section">
+                    <span class="current-price" style="color: var(--discount-color);">450₽</span>
+                    <span class="old-price">899₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button accessory">Купить Стакан</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Gift+Card');">
+                <span style="background-color: var(--accessory-color);">Подарок</span>
+            </div>
+            <div class="card-content">
+                <h3>Подарочный Сертификат на 1000 ₽</h3>
+                <p>Отличный подарок для любого кофемана, чтобы он выбрал свой идеальный сорт.</p>
+                <div class="price-section">
+                    <span class="current-price" style="color: var(--accessory-color);">1000₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button accessory">Купить Сертификат</a>
+            </div>
+        </div>
+    </div>
+    
+    <h2 style="border-left-color: var(--tea-color); color: var(--tea-color);">🍵 Каталог НАТУРАЛЬНОГО ЧАЯ и Дрипов</h2>
+    
+    <div class="product-grid">
+
+        <div class="product-card">
+            <div class="image-placeholder tea-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Рождественский+Чай');">
+                <span style="background-color: var(--tea-color);">Новинка</span>
+            </div>
+            <div class="card-content">
+                <h3>Рождественский чай</h3>
+                <p>Ароматный зимний бленд. Отличное дополнение к кофе. Упаковка 100 г.</p>
+                <div class="price-section">
+                    <span class="current-price" style="color: var(--tea-color);">599₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button tea">Купить Чай</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="image-placeholder tea-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Улун');">
+                <span style="background-color: var(--tea-color);">Премиум</span>
+            </div>
+            <div class="card-content">
+                <h3>Молочный Улун</h3>
+                <p>Изысканный китайский чай. Насыщенный молочно-сливочный вкус. Упаковка 100 г.</p>
+                <div class="price-section">
+                    <span class="current-price" style="color: var(--tea-color);">600₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button tea">Заказать Улун</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="image-placeholder tea-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Ассам');">
+                <span style="background-color: var(--tea-color);">Классика</span>
+            </div>
+            <div class="card-content">
+                <h3>Черный чай Ассам</h3>
+                <p>Классический индийский черный чай. Крепкий и насыщенный. Упаковка 100 г.</p>
+                <div class="price-section">
+                    <span class="current-price" style="color: var(--tea-color);">300₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button tea">Купить Чай</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="image-placeholder tea-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Иван+Чай');">
+                <span style="background-color: var(--tea-color);">Традиции</span>
+            </div>
+            <div class="card-content">
+                <h3>Русский чай Иван-чай</h3>
+                <p>Напиток с богатыми русскими традициями. Натуральный, без кофеина. Упаковка 100 г.</p>
+                <div class="price-section">
+                    <span class="current-price" style="color: var(--tea-color);">550₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button tea">Заказать</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Дрип+Ассорти');">
+                <span style="background-color: var(--primary);">Набор</span>
+            </div>
+            <div class="card-content">
+                <h3>Ассорти 8 сортов (Микс Дрипов)</h3>
+                <p>Набор дрип-кофе (6 стран, 8 сортов). Идеально для подарка или путешествий. Упаковка 80 г.</p>
+                <div class="price-section">
+                    <span class="current-price">790₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Заказать набор</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Decaf+Drip');">
+                <span style="background-color: var(--primary);">Декаф</span>
+            </div>
+            <div class="card-content">
+                <h3>Колумбия Декаф в дрип-пакете</h3>
+                <p>Шоколадный и плотный кофе без кофеина. 8 шт. в коробке. Быстро и удобно. Упаковка 80 г.</p>
+                <div class="price-section">
+                    <span class="current-price">754₽</span>
+                </div>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Купить Дрипы</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <p style="text-align: center; font-style: italic; font-size: 0.95rem; color: var(--muted-foreground); margin-top: 50px;">
+        *Все цены и ассортимент актуальны на момент публикации. Нажимая на кнопку "Купить", вы переходите на сайт Coffee Project, используя нашу партнерскую ссылку (<span style="color: var(--primary);">?ref=YUdQUA</span>), что поддерживает наш проект Coffee Analysis.
+    </p>
+    
+</main>
+
+
+<footer class="footer">
+    <div class="footer-grid">
+        
+        <div class="footer-section">
+            <h3 style="color: white; font-size: 1rem; margin-bottom: 1rem;">☕ Coffee Analysis</h3> 
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-bottom: 10px;">Ваш экспертный источник гайдов по specialty кофе.</p>
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">Email: <a href="mailto:ESEM39@GMAIL.COM" style="color: white; text-decoration: none;">ESEM39@GMAIL.COM</a></p>
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-top: 10px;">&copy; 2025 Все права защищены.</p>
+        </div>
+        
+        <div class="footer-section">
+            <h3 style="color: var(--primary); font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Навигация</h3> 
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
+                <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
+                <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
+                <a href="links.html" style="color: var(--primary);">Coffee Project</a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3 style="color: var(--primary); font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Документы</h3> 
+            <div class="footer-links">
+                <a href="privacy-policy.html">Политика конфиденциальности</a>
+                <a href="terms.html">Условия использования</a>
+            </div>
+        </div>
     </div>
 </footer>
+
+<script>
+    function toggleMobileMenu() {
+        var mobileMenu = document.getElementById('mobileMenu');
+        var headerContent = document.querySelector('.header-content');
+        if (mobileMenu.style.display === 'block') {
+            mobileMenu.style.display = 'none';
+        } else {
+            mobileMenu.style.display = 'block';
+        }
+    }
+</script>
+
 </body>
 </html>
