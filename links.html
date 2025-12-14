@@ -67,7 +67,7 @@
 
         /* --- БУРГЕР-МЕНЮ И МОБИЛЬНАЯ НАВИГАЦИЯ --- */
         .burger-menu { 
-            display: block; /* Показываем на мобильных */
+            display: block; 
             cursor: pointer;
             z-index: 60;
             padding: 5px;
@@ -76,7 +76,7 @@
         .bar {
             width: 25px;
             height: 3px;
-            background-color: var(--coffee-brown); /* Делаем его видимым */
+            background-color: var(--coffee-brown); 
             margin: 4px 0;
             transition: 0.4s;
         }
@@ -84,7 +84,7 @@
         .mobile-nav {
             display: none;
             position: absolute;
-            top: 100%; /* Под шапкой */
+            top: 100%; 
             left: 0;
             width: 100%;
             background-color: var(--background);
@@ -103,49 +103,68 @@
 
         /* --- ДЕСКТОП НАВИГАЦИЯ --- */
         .desktop-nav { display: none; }
-        .burger-menu { display: block; } /* По умолчанию бургер видим */
+        .burger-menu { display: block; } 
 
         @media (min-width: 768px) {
             .desktop-nav { display: flex; align-items: center; gap: 1.5rem; }
             .desktop-nav a { color: var(--muted-foreground); text-decoration: none; transition: var(--transition-smooth); font-size: 0.875rem; }
             .desktop-nav a:hover, .desktop-nav a.special { color: var(--primary); }
             .desktop-nav .separator { color: var(--border); }
-            .burger-menu { display: none; } /* Скрываем бургер на десктопе */
+            .burger-menu { display: none; } 
         }
-        /* JS-класс для открытия меню (можно реализовать позже) */
         .header-content.open .mobile-nav { display: block; }
         /* Конец Навигации */
 
 
-        /* --- БОЛЬШОЙ ПРОМО-БАННЕР --- */
+        /* --- БОЛЬШОЙ ПРОМО-БАHHЕР (ЧИСТЫЙ БАННЕР С КНОПКОЙ ВНИЗУ) --- */
         .promo-banner {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
-                        url('https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/coffee-project-promo-bg.webp');
+            /* Градиентный оверлей для читаемости кнопки */
+            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.5) 75%, rgba(0,0,0,0.3) 100%), 
+                        url('https://i.postimg.cc/bJMnD8fF/Gifka-s-Gifius-ru-(2).gif'); 
             background-size: cover;
             background-position: center 40%;
-            height: 380px; 
+            height: 420px; 
             border-radius: var(--radius);
             margin-bottom: 50px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-end; /* СМЕЩЕНИЕ КОНТЕНТА ВНИЗ */
             align-items: center;
-            color: white;
+            color: white; 
             text-align: center;
             padding: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        .promo-banner h1 { font-size: 3.5rem; margin-bottom: 15px; line-height: 1.1; text-shadow: 0 2px 5px rgba(0,0,0,0.7); color: white; }
-        .promo-banner p { font-size: 1.35rem; margin-bottom: 30px; max-width: 800px; color: rgba(255, 255, 255, 0.95); font-weight: 300; }
-
         .promo-button {
-            display: inline-block; padding: 16px 35px; background: var(--gradient-primary); color: white; text-decoration: none;
-            border-radius: 5px; font-weight: 700; font-size: 1.2rem; transition: var(--transition-smooth);
-            box-shadow: 0 4px 15px hsla(25, 95%, 53%, 0.6);
+            /* Стилизация кнопки как прозрачной обводки */
+            display: inline-block; 
+            padding: 14px 30px; 
+            
+            /* Фон почти полностью прозрачный */
+            background: rgba(255, 255, 255, 0.05); 
+            /* Чистая белая обводка */
+            border: 2px solid white; 
+            
+            color: white; 
+            text-decoration: none;
+            border-radius: 5px; 
+            font-weight: 700; 
+            font-size: 1.1rem; 
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            /* Увеличенный отступ, чтобы поднять кнопку */
+            margin-bottom: 40px; 
         }
 
-        .promo-button:hover { opacity: 0.9; transform: translateY(-2px); }
+        .promo-button:hover { 
+            /* При наведении делаем фон ярким оранжевым */
+            background: var(--gradient-primary); 
+            border-color: var(--primary); /* Оранжевая обводка при наведении */
+            opacity: 1; 
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 15px hsla(25, 95%, 53%, 0.6);
+        }
         
         /* --- СТИЛИ ДЛЯ КАРТОЧЕК ТОВАРОВ --- */
         
@@ -156,6 +175,12 @@
             border-left: 6px solid var(--primary);
             padding-left: 15px;
             margin-bottom: 30px;
+        }
+
+        /* Увеличиваем размер H2 для нового главного заголовка */
+        .container h2:first-of-type {
+            font-size: 2rem;
+            margin-bottom: 40px;
         }
         
         .product-grid {
@@ -216,7 +241,7 @@
 
         /* --- ФУТЕР (ПОДВАЛ) СТИЛИ --- */
         .footer {
-            background-color: var(--coffee-brown); /* Темный фон */
+            background-color: var(--coffee-brown); 
             color: white;
             padding: 40px 1rem;
         }
@@ -231,7 +256,7 @@
         }
 
         .footer-section h3 {
-            color: var(--primary); /* Выделяем заголовок */
+            color: var(--primary); 
             font-size: 1rem;
             margin-bottom: 1rem;
         }
@@ -252,7 +277,6 @@
         .footer-links a:hover {
             color: var(--primary);
         }
-        /* Конец Футер Стили */
 
     </style>
 </head>
@@ -302,21 +326,19 @@
 <main class="container">
     
     <div class="promo-banner">
-        <h1>Coffee Project — Полный Каталог Specialty</h1>
-        <p>
-            Мы отобрали лучшие сорта кофе, натуральный чай и профессиональные аксессуары от нашего надежного партнера.
-        </p>
         <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="promo-button">
             Перейти в Каталог Coffee Project →
         </a>
     </div>
     
-    <h2>🔥 Хиты продаж и популярные сорта кофе</h2>
+    <h2 style="font-size: 2rem;">
+        🔥 Coffee Project — Полный Каталог Specialty
+    </h2>
     
     <div class="product-grid">
         
         <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Зимний+Бленд');">
+            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/560-sticker.jpg');">
                 <span>Рекомендуем</span>
             </div>
             <div class="card-content">
@@ -331,7 +353,7 @@
         </div>
 
         <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Бразилия+Fine+Cup');">
+            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/3-sticker.jpg');">
                 <span>Распродажа</span>
             </div>
             <div class="card-content">
@@ -346,7 +368,7 @@
         </div>
         
         <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Sweet+Chocolate+Blend');">
+            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/18-sticker.jpg');">
                 <span>Наш выбор</span>
             </div>
             <div class="card-content">
@@ -361,7 +383,7 @@
         </div>
 
         <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Кения+Фильтр');">
+            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/543-sticker.jpg');">
                 <span>SCA 87.50</span>
             </div>
             <div class="card-content">
@@ -375,7 +397,7 @@
         </div>
 
         <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Ethiopia+Guji');">
+            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/503.jpg');">
                 <span>Яркая Кислотность</span>
             </div>
             <div class="card-content">
@@ -389,7 +411,7 @@
         </div>
         
         <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Colombia+Supremo');">
+            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/6.jpg');">
                 <span>Классика Эспрессо</span>
             </div>
             <div class="card-content">
@@ -411,7 +433,7 @@
     <div class="product-grid">
 
         <div class="product-card">
-            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=AeroPress');">
+            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/accessory/27.jpg');">
                 <span style="background-color: var(--accessory-color);">Гаджет</span>
             </div>
             <div class="card-content">
@@ -425,7 +447,7 @@
         </div>
 
         <div class="product-card">
-            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Hario+Scale');">
+            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/accessory/34-sticker.jpg');">
                 <span style="background-color: var(--accessory-color);">Must Have</span>
             </div>
             <div class="card-content">
@@ -439,7 +461,7 @@
         </div>
 
         <div class="product-card">
-            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Cupping+Spoon');">
+            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/accessory/95.jpg');">
                 <span style="background-color: var(--accessory-color);">Для Профи</span>
             </div>
             <div class="card-content">
@@ -453,7 +475,7 @@
         </div>
 
         <div class="product-card">
-            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Hario+V60');">
+            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/accessory/101-sticker.jpg');">
                 <span style="background-color: var(--accessory-color);">Для Фильтра</span>
             </div>
             <div class="card-content">
@@ -467,7 +489,7 @@
         </div>
 
         <div class="product-card">
-            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=KeepCup');">
+            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/accessory/433-sticker.jpg');">
                 <span style="background-color: var(--discount-color);">Скидка</span>
             </div>
             <div class="card-content">
@@ -482,7 +504,7 @@
         </div>
         
         <div class="product-card">
-            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Gift+Card');">
+            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/accessory/149-sticker.jpg');">
                 <span style="background-color: var(--accessory-color);">Подарок</span>
             </div>
             <div class="card-content">
@@ -501,7 +523,7 @@
     <div class="product-grid">
 
         <div class="product-card">
-            <div class="image-placeholder tea-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Рождественский+Чай');">
+            <div class="image-placeholder tea-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/chaj/427.jpg');">
                 <span style="background-color: var(--tea-color);">Новинка</span>
             </div>
             <div class="card-content">
@@ -515,7 +537,7 @@
         </div>
         
         <div class="product-card">
-            <div class="image-placeholder tea-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Улун');">
+            <div class="image-placeholder tea-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/chaj/83.jpg');">
                 <span style="background-color: var(--tea-color);">Премиум</span>
             </div>
             <div class="card-content">
@@ -529,7 +551,7 @@
         </div>
         
         <div class="product-card">
-            <div class="image-placeholder tea-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Ассам');">
+            <div class="image-placeholder tea-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/chaj/77.jpg');">
                 <span style="background-color: var(--tea-color);">Классика</span>
             </div>
             <div class="card-content">
@@ -543,7 +565,7 @@
         </div>
         
         <div class="product-card">
-            <div class="image-placeholder tea-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Иван+Чай');">
+            <div class="image-placeholder tea-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/chaj/88.jpg');">
                 <span style="background-color: var(--tea-color);">Традиции</span>
             </div>
             <div class="card-content">
@@ -557,7 +579,7 @@
         </div>
 
         <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Дрип+Ассорти');">
+            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/542.jpg');">
                 <span style="background-color: var(--primary);">Набор</span>
             </div>
             <div class="card-content">
@@ -571,7 +593,7 @@
         </div>
         
         <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://via.placeholder.com/280x180?text=Decaf+Drip');">
+            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/504.jpg');">
                 <span style="background-color: var(--primary);">Декаф</span>
             </div>
             <div class="card-content">
@@ -637,4 +659,4 @@
 </script>
 
 </body>
-</html>
+                    </html>
