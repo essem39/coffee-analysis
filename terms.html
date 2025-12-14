@@ -4,31 +4,285 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Условия использования - Coffee Analysis</title>
+    <meta name="description" content="Условия использования сайта Coffee Analysis. Информация о правах на контент, отказе от ответственности и партнерских ссылках.">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/unnamed%20(6).webp">
-    </head>
-<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-
-    <div style="width: 90%; max-width: 800px; margin: 50px auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
-        <h1 style="color: #2C1810; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px;">Условия использования</h1>
-
-        <p>Дата последнего обновления: 24 ноября 2025 г.</p>
-
-        <h2 style="color: #444; margin-top: 25px;">1. Принятие Условий</h2>
-        <p>Получая доступ к сайту "Coffee Analysis" (<a href="https://essem39.github.io/coffee-analysis/" style="color: #007bff; text-decoration: none;">essem39.github.io/coffee-analysis/</a>), Вы соглашаетесь соблюдать настоящие Условия использования и все применимые законы и правила.</p>
-
-        <h2 style="color: #444; margin-top: 25px;">2. Интеллектуальная собственность</h2>
-        <p>Весь контент, включая статьи, гайды и изображения, является собственностью "Coffee Analysis" или используется с разрешения. Копирование и распространение материалов без нашего письменного согласия запрещено.</p>
-
-        <h2 style="color: #444; margin-top: 25px;">3. Отказ от ответственности</h2>
-        <p>Информация на сайте предоставляется "как есть" и предназначена только для информационных целей. Мы не несем ответственности за Ваши решения, принятые на основе информации, полученной с нашего сайта.</p>
-
-        <h2 style="color: #444; margin-top: 25px;">4. Изменение Условий</h2>
-        <p>Мы оставляем за собой право изменять настоящие Условия использования в любое время. Изменения вступают в силу немедленно после их публикации на этой странице.</p>
+    <style>
+        /* Coffee Analysis Design System - Professional Coffee Blog Theme */
+        :root {
+            --background: hsl(0, 0%, 100%);
+            --foreground: hsl(25, 25%, 15%);
+            --card: hsl(0, 0%, 100%);
+            --primary: hsl(25, 95%, 53%); /* Orange */
+            --primary-foreground: hsl(0, 0%, 100%);
+            --secondary: hsl(30, 20%, 96%);
+            --muted-foreground: hsl(25, 15%, 45%);
+            --border: hsl(30, 20%, 90%);
+            --radius: 0.75rem;
+            --coffee-brown: hsl(25, 40%, 25%);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
         
-        <h2 style="color: #444; margin-top: 25px;">5. Партнерские ссылки</h2>
-        <p>Сайт содержит партнерские ссылки, что означает, что мы можем получать комиссию, если Вы совершите покупку/регистрацию, перейдя по такой ссылке. Это не влияет на цену продукта для Вас.</p>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--foreground);
+            background-color: var(--background);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
 
-        <p style="text-align: center; margin-top: 40px; font-size: 12px; color: #888;">По всем вопросам обращайтесь: <a href="mailto:ESEM39@GMAIL.COM" style="color: #888; text-decoration: none;">ESEM39@GMAIL.COM</a></p>
+        /* --- HEADER/NAVIGATION STYLES (скопированы с links.html) --- */
+        .header {
+            border-bottom: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            width: 100%;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1rem;
+        }
+
+        .logo-text { font-weight: 700; color: var(--coffee-brown); font-size: 1.125rem; }
+
+        .desktop-nav { display: none; }
+        .burger-menu { 
+            display: block; 
+            cursor: pointer;
+            z-index: 60;
+            padding: 5px;
+        }
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--coffee-brown); 
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--background);
+            border-top: 1px solid var(--border);
+            padding: 10px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .mobile-nav a {
+            display: block;
+            padding: 10px 1rem;
+            color: var(--foreground);
+            text-decoration: none;
+            border-bottom: 1px solid var(--secondary);
+        }
+
+        @media (min-width: 768px) {
+            .desktop-nav { display: flex; align-items: center; gap: 1.5rem; }
+            .desktop-nav a { color: var(--muted-foreground); text-decoration: none; transition: var(--transition-smooth); font-size: 0.875rem; }
+            .desktop-nav a:hover, .desktop-nav a.special { color: var(--primary); }
+            .desktop-nav .separator { color: var(--border); }
+            .burger-menu { display: none; } 
+        }
+        /* --- END HEADER/NAVIGATION STYLES --- */
+
+        /* --- CONTENT STYLES --- */
+        h1 {
+            color: var(--coffee-brown);
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            border-left: 4px solid var(--primary);
+            padding-left: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--foreground);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: var(--coffee-brown);
+        }
+        
+        /* --- ФУТЕР (ПОДВАЛ) СТИЛИ (скопированы с links.html) --- */
+        .footer {
+            background-color: var(--coffee-brown); 
+            color: white;
+            padding: 40px 1rem;
+            margin-top: 40px;
+        }
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            padding: 0 1rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        /* Конец Футер Стили */
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-content">
+        <div class="logo-area">
+            <a href="index.html" class="logo">
+                <span style="font-size: 24px;">☕</span> 
+                <span class="logo-text">Coffee Analysis</span>
+            </a>
+        </div>
+
+        <nav class="desktop-nav">
+            <a href="index.html">Главная</a>
+            <span class="separator">|</span>
+            <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
+            <span class="separator">|</span>
+            <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
+            <span class="separator">|</span>
+            <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
+            <span class="separator">|</span>
+            <a href="links.html">Coffee Project</a>
+        </nav>
+
+        <div class="burger-menu" onclick="toggleMobileMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="mobile-nav" id="mobileMenu">
+            <a href="index.html">Главная</a>
+            <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
+            <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
+            <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
+            <a href="links.html">Coffee Project</a>
+        </nav>
     </div>
+</header>
+    
+<main class="container">
+    
+    <h1>Условия использования</h1>
+
+    <p style="color: var(--muted-foreground);">Дата последнего обновления: 24 ноября 2025 г.</p>
+
+    <h2>1. Принятие Условий</h2>
+    <p>Получая доступ к сайту "Coffee Analysis" (<a href="https://coffeespecialty.ru/">https://coffeespecialty.ru/</a>), Вы соглашаетесь соблюдать настоящие Условия использования и все применимые законы и правила.</p>
+
+    <h2>2. Интеллектуальная собственность</h2>
+    <p>Весь контент, включая статьи, гайды и изображения, является собственностью "Coffee Analysis" или используется с разрешения. Копирование и распространение материалов без нашего письменного согласия запрещено.</p>
+
+    <h2>3. Отказ от ответственности</h2>
+    <p>Информация на сайте предоставляется "как есть" и предназначена только для информационных целей. Мы не несем ответственности за Ваши решения, принятые на основе информации, полученной с нашего сайта.</p>
+
+    <h2>4. Изменение Условий</h2>
+    <p>Мы оставляем за собой право изменять настоящие Условия использования в любое время. Изменения вступают в силу немедленно после их публикации на этой странице.</p>
+    
+    <h2>5. Партнерские ссылки</h2>
+    <p>Сайт содержит партнерские ссылки, что означает, что мы можем получать комиссию, если Вы совершите покупку/регистрацию, перейдя по такой ссылке. Это не влияет на цену продукта для Вас.</p>
+
+    <p style="text-align: right; margin-top: 40px; font-size: 0.9rem; color: var(--muted-foreground);">По всем вопросам обращайтесь: <a href="mailto:ESEM39@GMAIL.COM">ESEM39@GMAIL.COM</a></p>
+    
+</main>
+
+
+<footer class="footer">
+    <div class="footer-grid">
+        
+        <div class="footer-section">
+            <h3 style="color: white; font-size: 1rem; margin-bottom: 1rem;">☕ Coffee Analysis</h3> 
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-bottom: 10px;">Ваш экспертный источник гайдов по specialty кофе.</p>
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">Email: <a href="mailto:ESEM39@GMAIL.COM" style="color: white; text-decoration: none;">ESEM39@GMAIL.COM</a></p>
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-top: 10px;">&copy; 2025 Все права защищены.</p>
+        </div>
+        
+        <div class="footer-section">
+            <h3 style="color: var(--primary); font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Навигация</h3> 
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
+                <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
+                <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
+                <a href="links.html">Coffee Project</a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3 style="color: var(--primary); font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Документы</h3> 
+            <div class="footer-links">
+                <a href="privacy-policy.html">Политика конфиденциальности</a>
+                <a href="terms.html" style="color: var(--primary);">Условия использования</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // JS для работы мобильного меню
+    function toggleMobileMenu() {
+        var mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenu.style.display === 'block') {
+            mobileMenu.style.display = 'none';
+        } else {
+            mobileMenu.style.display = 'block';
+        }
+    }
+</script>
+
 </body>
 </html>
