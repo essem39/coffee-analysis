@@ -7,81 +7,274 @@
     <meta name="description" content="Эксклюзивные микролоты specialty coffee 2025: анаэробная ферментация, карбоническая мацерация, Direct Trade. Гид по премиальному кофе от экспертов SCA.">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/unnamed%20(6).webp">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #fafafa;
-            color: #333;
+        /* Coffee Analysis Design System - Professional Coffee Blog Theme */
+        :root {
+            --background: hsl(0, 0%, 100%);
+            --foreground: hsl(25, 25%, 15%);
+            --card: hsl(0, 0%, 100%);
+            --card-foreground: hsl(25, 25%, 15%);
+            --popover: hsl(0, 0%, 100%);
+            --popover-foreground: hsl(25, 25%, 15%);
+            
+            /* Orange primary theme for coffee blog */
+            --primary: hsl(25, 95%, 53%);
+            --primary-foreground: hsl(0, 0%, 100%);
+            --primary-glow: hsl(30, 100%, 65%);
+            
+            --secondary: hsl(30, 20%, 96%);
+            --secondary-foreground: hsl(25, 25%, 15%);
+            
+            --muted: hsl(30, 15%, 95%);
+            --muted-foreground: hsl(25, 15%, 45%);
+            
+            --accent: hsl(25, 95%, 53%);
+            --accent-foreground: hsl(0, 0%, 100%);
+            
+            --destructive: hsl(0, 84.2%, 60.2%);
+            --destructive-foreground: hsl(0, 0%, 100%);
+            
+            --border: hsl(30, 20%, 90%);
+            --input: hsl(30, 20%, 95%);
+            --ring: hsl(25, 95%, 53%);
+            
+            --radius: 0.75rem;
+            
+            /* Coffee-specific design tokens */
+            --coffee-brown: hsl(25, 40%, 25%);
+            --coffee-light: hsl(30, 30%, 85%);
+            --gradient-primary: linear-gradient(135deg, hsl(25, 95%, 53%), hsl(30, 100%, 65%));
+            --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 100%), hsl(30, 15%, 95%));
+            --shadow-elegant: 0 10px 30px -10px hsla(25, 95%, 53%, 0.2);
+            --shadow-glow: 0 0 40px hsla(30, 100%, 65%, 0.3);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .main-navigation {
-            background-color: #f5f5f5; 
-            padding: 10px 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .main-navigation ul {
-            list-style: none;
+        * {
+            margin: 0;
             padding: 0;
-            margin: 0 auto;
-            text-align: center;
-            max-width: 800px;
+            box-sizing: border-box;
         }
-
-        .main-navigation li {
-            display: inline-block;
-            margin: 0 5px; /* Уменьшено */
-        }
-
-        .main-navigation a {
-            text-decoration: none;
-            color: #555;
-            font-weight: 500;
-            font-size: 0.85em; /* Уменьшено */
-            padding: 5px 5px; /* Уменьшено */
-            transition: color 0.3s;
-        }
-
-        .main-navigation a:hover {
-            color: #d68d00;
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--foreground);
+            background-color: var(--background);
         }
         
         .container {
-            max-width: 800px;
+            max-width: 800px; /* Уменьшен для контентной страницы */
             margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 0 1rem;
+            background-color: var(--background);
+            box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Легкая тень для выделения контентной области */
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
         
+        /* Header Styles */
+        .header {
+            border-bottom: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+            max-width: 1200px; /* Шире для шапки */
+            margin: 0 auto;
+            padding: 1rem 1rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--foreground);
+        }
+        
+        /* Desktop Navigation */
+        .desktop-nav {
+            display: none;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .desktop-nav a {
+            color: var(--muted-foreground);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            font-size: 0.875rem; 
+        }
+        
+        .desktop-nav a:hover,
+        .desktop-nav a.special {
+            color: var(--primary);
+        }
+        
+        .desktop-nav .separator {
+            color: var(--border);
+        }
+        
+        @media (min-width: 768px) {
+            .desktop-nav {
+                display: flex;
+            }
+        }
+        
+        /* Mobile Menu Toggle (Hamburger) */
+        .menu-toggle {
+            display: block; 
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem; 
+            z-index: 101; 
+            margin-right: -0.5rem; 
+        }
+        @media (min-width: 768px) {
+            .menu-toggle {
+                display: none; 
+            }
+        }
+
+        .hamburger-icon {
+            width: 24px;
+            height: 2px;
+            background: var(--foreground);
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .hamburger-icon::before,
+        .hamburger-icon::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background: var(--foreground);
+            transition: var(--transition-smooth);
+        }
+
+        .hamburger-icon::before {
+            top: -7px; 
+        }
+
+        .hamburger-icon::after {
+            top: 7px; 
+        }
+
+        /* Open state styles (for X icon) */
+        .menu-toggle.active .hamburger-icon {
+            background: transparent;
+        }
+
+        .menu-toggle.active .hamburger-icon::before {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .menu-toggle.active .hamburger-icon::after {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* Mobile Overlay Menu (full screen, non-shifting) */
+        #mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--background);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s;
+        }
+
+        #mobile-menu.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin-top: -50px; 
+        }
+
+        .mobile-nav-links li {
+            margin: 0; 
+        }
+
+        .mobile-nav-links a {
+            font-size: 0.8rem; 
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--foreground);
+            transition: var(--transition-smooth);
+            display: block;
+            padding: 0.3rem 0.5rem; 
+        }
+
+        .mobile-nav-links a:hover,
+        .mobile-nav-links a.special {
+            color: var(--primary);
+        }
+        
+        /* General Content Styles (Adapted for the content page) */
+        
         h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #d68d00;
+            color: var(--foreground);
+            border-bottom: 3px solid var(--primary);
             padding-bottom: 10px;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
         
         h2 {
-            color: #34495e;
+            color: var(--foreground);
             margin-top: 30px;
+            font-size: 1.5rem;
         }
         
         .microlot-definition {
-            background-color: #e8f4f8;
+            background-color: var(--secondary);
             padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #17a2b8;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
             margin: 20px 0;
         }
         
         .microlot-card {
-            background-color: #f8f9fa;
+            background-color: var(--card);
             padding: 20px;
             margin: 20px 0;
-            border-radius: 8px;
-            border-left: 4px solid #d68d00;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: var(--transition-smooth);
+        }
+
+        .microlot-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
         }
         
         .score {
@@ -91,21 +284,23 @@
             border-radius: 20px;
             font-weight: bold;
             display: inline-block;
-            margin: 5px 0;
+            margin: 5px 0 10px;
+            font-size: 0.8em;
         }
         
         .processing-method {
-            background-color: #6f42c1;
+            background-color: var(--coffee-brown);
             color: white;
             padding: 3px 8px;
             border-radius: 12px;
-            font-size: 0.8em;
+            font-size: 0.75em;
             display: inline-block;
             margin: 2px;
         }
         
         .tasting-notes {
-            background-color: #fff3cd;
+            background-color: var(--muted);
+            color: var(--muted-foreground);
             padding: 10px;
             border-radius: 5px;
             font-style: italic;
@@ -113,269 +308,389 @@
         }
         
         .price-range {
-            color: #dc3545;
+            color: var(--destructive);
             font-weight: bold;
             font-size: 1.1em;
+            margin-top: 10px;
         }
         
         .cupping-guide {
-            background-color: #d4edda;
+            background-color: #e6ffe6;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: var(--radius);
             border-left: 4px solid #28a745;
             margin: 20px 0;
         }
         
         .direct-trade {
-            background-color: #f8d7da;
+            background-color: #f7e6ff;
             padding: 15px;
-            border-left: 4px solid #dc3545;
+            border-left: 4px solid #6f42c1;
             margin: 20px 0;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+            color: var(--muted-foreground);
+            font-size: 0.95em;
+        }
+
+        /* Footer (using new index styles) */
+        .footer {
+            background: var(--coffee-brown);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: grid;
+            gap: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: var(--transition-smooth);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
         }
     </style>
 </head>
 <body>
-<header style="background: #fff; border-bottom: 1px solid #e0e0e0; padding: 15px 0; width: 100%;">
-    <div style="width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+
+<header class="header">
+    <div class="header-content">
         
         <div class="logo-area">
-            <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+            <a href="index.html" class="logo">
                 <span style="font-size: 24px;">☕</span> 
-                <span style="font-family: sans-serif; font-weight: 700; font-size: 20px; color: #2C1810;">
+                <span class="logo-text">
                     Coffee Analysis
                 </span>
             </a>
         </div>
 
-        <nav style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
-            <a href="index.html" style="text-decoration: none; color: #333; font-family: sans-serif; font-size: 14px;">Главная</a>
-            <span style="color: #ddd;">|</span>
-            
-            <a href="specialty-micro-lots-2025.html" style="text-decoration: none; color: #333; font-family: sans-serif; font-size: 14px;">Обзоры Сортов</a>
-            <span style="color: #ddd;">|</span>
-            
-            <a href="kak-hranit-kofe-guide.html" style="text-decoration: none; color: #333; font-family: sans-serif; font-size: 14px;">Экспертные Гайды</a>
-            <span style="color: #ddd;">|</span>
-            
-            <a href="budget-barista-equipment-150.html" style="text-decoration: none; color: #333; font-family: sans-serif; font-size: 14px;">Техника для Кофе</a>
-            <span style="color: #ddd;">|</span>
-            
-            <a href="links.html" style="text-decoration: none; color: #D4A574; font-family: sans-serif; font-weight: bold; font-size: 14px;">Специальные Предложения</a>
+        <nav class="desktop-nav">
+            <a href="index.html">Главная</a>
+            <span class="separator">|</span>
+            <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
+            <span class="separator">|</span>
+            <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
+            <span class="separator">|</span>
+            <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
+            <span class="separator">|</span>
+            <a href="links.html" class="special" style="font-weight: bold;">Специальные Предложения</a>
         </nav>
+        
+        <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
+            <div class="hamburger-icon"></div>
+        </button>
 
     </div>
 </header>
-
-    <div class="container">
-        <h1>Specialty Coffee 2025: ТОП-10 микролотов для истинных ценителей</h1>
+<div id="mobile-menu">
+    <button id="close-menu" class="menu-toggle active" aria-label="Закрыть меню" style="position: absolute; top: 1rem; right: 1rem;">
+        <div class="hamburger-icon"></div>
+    </button>
+    
+    <ul class="mobile-nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="specialty-micro-lots-2025.html">Обзоры Сортов</a></li>
+        <li><a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a></li>
+        <li><a href="budget-barista-equipment-150.html">Техника для Кофе</a></li>
+        <li><a href="links.html" class="special">Специальные Предложения</a></li>
+    </ul>
+</div>
+    
+<div class="container">
+    <h1>Specialty Coffee 2025: ТОП-10 микролотов для истинных ценителей</h1>
+    
+    <div class="microlot-definition">
+        <h2>Что такое микролот?</h2>
+        <p><strong>Микролот</strong> — это небольшая партия кофе (обычно 5-50 мешков) с уникальными характеристиками, выращенная на конкретном участке фермы. Каждый микролот имеет свой неповторимый профиль вкуса, обусловленный терруаром, методом обработки и мастерством фермера.</p>
         
-        <div class="microlot-definition">
-            <h2>Что такое микролот?</h2>
-            <p><strong>Микролот</strong> — это небольшая партия кофе (обычно 5-50 мешков) с уникальными характеристиками, выращенная на конкретном участке фермы. Каждый микролот имеет свой неповторимый профиль вкуса, обусловленный терруаром, методом обработки и мастерством фермера.</p>
-            
-            <p><strong>Критерии Specialty Coffee Association (SCA):</strong></p>
-            <ul>
-                <li>Оценка каппинга: 80+ баллов из 100</li>
-                <li>Прослеживаемость до конкретной фермы</li>
-                <li>Уникальный вкусовой профиль</li>
-                <li>Этичное производство</li>
-            </ul>
-        </div>
-        
-        <h2>ТОП-10 исключительных микролотов 2025</h2>
-        
-        <div class="microlot-card">
-            <h3>1. Ethiopia Sidamo Bensa Anaerobic Natural</h3>
-            <div class="score">SCA: 87.5</div>
-            <div class="processing-method">Анаэробная ферментация</div>
-            <p><strong>Ферма:</strong> Bensa Washing Station, высота 2100м</p>
-            <p><strong>Сорт:</strong> Heirloom varieties</p>
-            <div class="tasting-notes">
-                <strong>Дескрипторы:</strong> Тропические фрукты, манго, ананас, цветочные ноты жасмина, винная кислотность
-            </div>
-            <p class="price-range">Цена: €45-55/кг</p>
-        </div>
-        
-        <div class="microlot-card">
-            <h3>2. Colombia Nariño Carbonic Maceration</h3>
-            <div class="score">SCA: 86.2</div>
-            <div class="processing-method">Карбоническая мацерация</div>
-            <p><strong>Ферма:</strong> Finca El Paraíso, высота 1950м</p>
-            <p><strong>Сорт:</strong> Pink Bourbon</p>
-            <div class="tasting-notes">
-                <strong>Дескрипторы:</strong> Красные ягоды, вишня, шоколад, карамель, сбалансированная кислотность
-            </div>
-            <p class="price-range">Цена: €40-50/кг</p>
-        </div>
-        
-        <div class="microlot-card">
-            <h3>3. Costa Rica Tarrazú Honey Process</h3>
-            <div class="score">SCA: 85.8</div>
-            <div class="processing-method">Honey Process</div>
-            <p><strong>Ферма:</strong> Hacienda Alsacia, высота 1600м</p>
-            <p><strong>Сорт:</strong> Geisha</p>
-            <div class="tasting-notes">
-                <strong>Дескрипторы:</strong> Бергамот, лимонная цедра, мёд, чёрный чай, элегантная кислотность
-            </div>
-            <p class="price-range">Цена: €65-80/кг</p>
-        </div>
-        
-        <div class="microlot-card">
-            <h3>4. Panama Boquete Geisha Washed</h3>
-            <div class="score">SCA: 89.1</div>
-            <div class="processing-method">Мытая обработка</div>
-            <p><strong>Ферма:</strong> Hacienda La Esmeralda, высота 1700м</p>
-            <p><strong>Сорт:</strong> Geisha</p>
-            <div class="tasting-notes">
-                <strong>Дескрипторы:</strong> Жасмин, бергамот, персик, чёрный чай, кристальная чистота
-            </div>
-            <p class="price-range">Цена: €120-150/кг</p>
-        </div>
-        
-        <div class="microlot-card">
-            <h3>5. Jamaica Blue Mountain Peaberry</h3>
-            <div class="score">SCA: 84.7</div>
-            <div class="processing-method">Мытая обработка</div>
-            <p><strong>Ферма:</strong> Wallenford Estate, высота 1200м</p>
-            <p><strong>Сорт:</strong> Typica Peaberry</p>
-            <div class="tasting-notes">
-                <strong>Дескрипторы:</strong> Молочный шоколад, орехи, лёгкая кислотность, полное тело
-            </div>
-            <p class="price-range">Цена: €90-110/кг</p>
-        </div>
-        
-        <div class="microlot-card">
-            <h3>6. Guatemala Huehuetenango Pacamara</h3>
-            <div class="score">SCA: 85.3</div>
-            <div class="processing-method">Мытая обработка</div>
-            <p><strong>Ферма:</strong> Finca El Injerto, высота 1800м</p>
-            <p><strong>Сорт:</strong> Pacamara</p>
-            <div class="tasting-notes">
-                <strong>Дескрипторы:</strong> Тёмный шоколад, апельсин, специи, полное тело, долгое послевкусие
-            </div>
-            <p class="price-range">Цена: €35-45/кг</p>
-        </div>
-        
-        <div class="microlot-card">
-            <h3>7. Yemen Mocha Matari</h3>
-            <div class="score">SCA: 83.9</div>
-            <div class="processing-method">Натуральная обработка</div>
-            <p><strong>Регион:</strong> Bani Mattar, высота 2000м</p>
-            <p><strong>Сорт:</strong> Heirloom Mocha</p>
-            <div class="tasting-notes">
-                <strong>Дескрипторы:</strong> Вино, сухофрукты, специи, землистость, уникальная дикость
-            </div>
-            <p class="price-range">Цена: €55-70/кг</p>
-        </div>
-        
-        <div class="microlot-card">
-            <h3>8. Hawaii Kona Extra Fancy</h3>
-            <div class="score">SCA: 84.2</div>
-            <div class="processing-method">Мытая обработка</div>
-            <p><strong>Ферма:</strong> Greenwell Farms, высота 600м</p>
-            <p><strong>Сорт:</strong> Typica</p>
-            <div class="tasting-notes">
-                <strong>Дескрипторы:</strong> Орехи макадамия, карамель, лёгкая кислотность, мягкое тело
-            </div>
-            <p class="price-range">Цена: €80-100/кг</p>
-        </div>
-        
-        <div class="microlot-card">
-            <h3>9. Brazil Cerrado Pulped Natural</h3>
-            <div class="score">SCA: 83.5</div>
-            <div class="processing-method">Pulped Natural</div>
-            <p><strong>Ферма:</strong> Fazenda Santa Ines, высота 1100м</p>
-            <p><strong>Сорт:</strong> Yellow Bourbon</p>
-            <div class="tasting-notes">
-                <strong>Дескрипторы:</strong> Молочный шоколад, карамель, орехи, низкая кислотность, сладость
-            </div>
-            <p class="price-range">Цена: €25-35/кг</p>
-        </div>
-        
-        <div class="microlot-card">
-            <h3>10. Rwanda Nyamasheke Washed</h3>
-            <div class="score">SCA: 85.0</div>
-            <div class="processing-method">Мытая обработка</div>
-            <p><strong>Кооператив:</strong> Buf Coffee, высота 1700м</p>
-            <p><strong>Сорт:</strong> Red Bourbon</p>
-            <div class="tasting-notes">
-                <strong>Дескрипторы:</strong> Красные ягоды, цитрус, чёрный чай, яркая кислотность, чистота
-            </div>
-            <p class="price-range">Цена: €30-40/кг</p>
-        </div>
-        
-        <h2>Искусство дегустации specialty coffee</h2>
-        
-        <div class="cupping-guide">
-            <h3>Протокол каппинга SCA:</h3>
-            <ol>
-                <li><strong>Помол:</strong> Средне-крупный, 8.25г кофе на 150мл воды</li>
-                <li><strong>Температура воды:</strong> 93°C</li>
-                <li><strong>Время заваривания:</strong> 4 минуты</li>
-                <li><strong>Оценка аромата:</strong> Сухого и влажного</li>
-                <li><strong>Дегустация:</strong> Через 8-10 минут после заваривания</li>
-                <li><strong>Критерии оценки:</strong> Аромат, вкус, послевкусие, кислотность, тело, баланс, чистота, сладость, общее впечатление</li>
-            </ol>
-        </div>
-        
-        <h2>Как приобрести эти лоты</h2>
-        
-        <div class="direct-trade">
-            <h3>🌍 Direct Trade и третья волна кофе</h3>
-            <p><strong>Рекомендуемые обжарщики в России:</strong></p>
-            <ul>
-                <li><strong>Tasty Coffee</strong> — крупнейший каталог specialty</li>
-                <li><strong>Bravos Coffee</strong> — эксклюзивные микролоты</li>
-                <li><strong>Torrefacto</strong> — премиальные лоты</li>
-                <li><strong>Double B Coffee Roasters</strong> — авторские профили обжарки</li>
-            </ul>
-            
-            <p><strong>Международные платформы:</strong></p>
-            <ul>
-                <li><strong>Sweet Maria's Coffee Supply</strong> — зелёный кофе</li>
-                <li><strong>Coffee Project</strong> — европейские микролоты</li>
-                <li><strong>Onyx Coffee Lab</strong> — американские specialty</li>
-            </ul>
-        </div>
-        
-        <div class="cupping-guide">
-            <h3>💡 Советы по покупке микролотов:</h3>
-            <ul>
-                <li>Покупайте небольшими партиями (250-500г) для сохранения свежести</li>
-                <li>Обращайте внимание на дату обжарки (не более 2-4 недель)</li>
-                <li>Изучайте информацию о ферме и методе обработки</li>
-                <li>Начинайте с более доступных лотов, постепенно развивая вкус</li>
-                <li>Ведите дневник дегустаций для отслеживания предпочтений</li>
-            </ul>
-        </div>
+        <p><strong>Критерии Specialty Coffee Association (SCA):</strong></p>
+        <ul>
+            <li>Оценка каппинга: 80+ баллов из 100</li>
+            <li>Прослеживаемость до конкретной фермы</li>
+            <li>Уникальный вкусовой профиль</li>
+            <li>Этичное производство</li>
+        </ul>
     </div>
-<footer style="background: #f4f4f4; border-top: 1px solid #e0e0e0; padding: 40px 0; margin-top: 60px;">
-    <div style="width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
+    
+    <h2>ТОП-10 исключительных микролотов 2025</h2>
+    
+    <div class="microlot-card">
+        <h3>1. Ethiopia Sidamo Bensa Anaerobic Natural</h3>
+        <div class="score">SCA: 87.5</div>
+        <div class="processing-method">Анаэробная ферментация</div>
+        <p><strong>Ферма:</strong> Bensa Washing Station, высота 2100м</p>
+        <p><strong>Сорт:</strong> Heirloom varieties</p>
+        <div class="tasting-notes">
+            <strong>Дескрипторы:</strong> Тропические фрукты, манго, ананас, цветочные ноты жасмина, винная кислотность
+        </div>
+        <p class="price-range">Цена: €45-55/кг</p>
+    </div>
+    
+    <div class="microlot-card">
+        <h3>2. Colombia Nariño Carbonic Maceration</h3>
+        <div class="score">SCA: 86.2</div>
+        <div class="processing-method">Карбоническая мацерация</div>
+        <p><strong>Ферма:</strong> Finca El Paraíso, высота 1950м</p>
+        <p><strong>Сорт:</strong> Pink Bourbon</p>
+        <div class="tasting-notes">
+            <strong>Дескрипторы:</strong> Красные ягоды, вишня, шоколад, карамель, сбалансированная кислотность
+        </div>
+        <p class="price-range">Цена: €40-50/кг</p>
+    </div>
+    
+    <div class="microlot-card">
+        <h3>3. Costa Rica Tarrazú Honey Process</h3>
+        <div class="score">SCA: 85.8</div>
+        <div class="processing-method">Honey Process</div>
+        <p><strong>Ферма:</strong> Hacienda Alsacia, высота 1600м</p>
+        <p><strong>Сорт:</strong> Geisha</p>
+        <div class="tasting-notes">
+            <strong>Дескрипторы:</strong> Бергамот, лимонная цедра, мёд, чёрный чай, элегантная кислотность
+        </div>
+        <p class="price-range">Цена: €65-80/кг</p>
+    </div>
+    
+    <div class="microlot-card">
+        <h3>4. Panama Boquete Geisha Washed</h3>
+        <div class="score">SCA: 89.1</div>
+        <div class="processing-method">Мытая обработка</div>
+        <p><strong>Ферма:</strong> Hacienda La Esmeralda, высота 1700м</p>
+        <p><strong>Сорт:</strong> Geisha</p>
+        <div class="tasting-notes">
+            <strong>Дескрипторы:</strong> Жасмин, бергамот, персик, чёрный чай, кристальная чистота
+        </div>
+        <p class="price-range">Цена: €120-150/кг</p>
+    </div>
+    
+    <div class="microlot-card">
+        <h3>5. Jamaica Blue Mountain Peaberry</h3>
+        <div class="score">SCA: 84.7</div>
+        <div class="processing-method">Мытая обработка</div>
+        <p><strong>Ферма:</strong> Wallenford Estate, высота 1200м</p>
+        <p><strong>Сорт:</strong> Typica Peaberry</p>
+        <div class="tasting-notes">
+            <strong>Дескрипторы:</strong> Молочный шоколад, орехи, лёгкая кислотность, полное тело
+        </div>
+        <p class="price-range">Цена: €90-110/кг</p>
+    </div>
+    
+    <div class="microlot-card">
+        <h3>6. Guatemala Huehuetenango Pacamara</h3>
+        <div class="score">SCA: 85.3</div>
+        <div class="processing-method">Мытая обработка</div>
+        <p><strong>Ферма:</strong> Finca El Injerto, высота 1800м</p>
+        <p><strong>Сорт:</strong> Pacamara</p>
+        <div class="tasting-notes">
+            <strong>Дескрипторы:</strong> Тёмный шоколад, апельсин, специи, полное тело, долгое послевкусие
+        </div>
+        <p class="price-range">Цена: €35-45/кг</p>
+    </div>
+    
+    <div class="microlot-card">
+        <h3>7. Yemen Mocha Matari</h3>
+        <div class="score">SCA: 83.9</div>
+        <div class="processing-method">Натуральная обработка</div>
+        <p><strong>Регион:</strong> Bani Mattar, высота 2000м</p>
+        <p><strong>Сорт:</strong> Heirloom Mocha</p>
+        <div class="tasting-notes">
+            <strong>Дескрипторы:</strong> Вино, сухофрукты, специи, землистость, уникальная дикость
+        </div>
+        <p class="price-range">Цена: €55-70/кг</p>
+    </div>
+    
+    <div class="microlot-card">
+        <h3>8. Hawaii Kona Extra Fancy</h3>
+        <div class="score">SCA: 84.2</div>
+        <div class="processing-method">Мытая обработка</div>
+        <p><strong>Ферма:</strong> Greenwell Farms, высота 600м</p>
+        <p><strong>Сорт:</strong> Typica</p>
+        <div class="tasting-notes">
+            <strong>Дескрипторы:</strong> Орехи макадамия, карамель, лёгкая кислотность, мягкое тело
+        </div>
+        <p class="price-range">Цена: €80-100/кг</p>
+    </div>
+    
+    <div class="microlot-card">
+        <h3>9. Brazil Cerrado Pulped Natural</h3>
+        <div class="score">SCA: 83.5</div>
+        <div class="processing-method">Pulped Natural</div>
+        <p><strong>Ферма:</strong> Fazenda Santa Ines, высота 1100м</p>
+        <p><strong>Сорт:</strong> Yellow Bourbon</p>
+        <div class="tasting-notes">
+            <strong>Дескрипторы:</strong> Молочный шоколад, карамель, орехи, низкая кислотность, сладость
+        </div>
+        <p class="price-range">Цена: €25-35/кг</p>
+    </div>
+    
+    <div class="microlot-card">
+        <h3>10. Rwanda Nyamasheke Washed</h3>
+        <div class="score">SCA: 85.0</div>
+        <div class="processing-method">Мытая обработка</div>
+        <p><strong>Кооператив:</strong> Buf Coffee, высота 1700м</p>
+        <p><strong>Сорт:</strong> Red Bourbon</p>
+        <div class="tasting-notes">
+            <strong>Дескрипторы:</strong> Красные ягоды, цитрус, чёрный чай, яркая кислотность, чистота
+        </div>
+        <p class="price-range">Цена: €30-40/кг</p>
+    </div>
+    
+    <h2>Искусство дегустации specialty coffee</h2>
+    
+    <div class="cupping-guide">
+        <h3>Протокол каппинга SCA:</h3>
+        <ol>
+            <li><strong>Помол:</strong> Средне-крупный, 8.25г кофе на 150мл воды</li>
+            <li><strong>Температура воды:</strong> 93°C</li>
+            <li><strong>Время заваривания:</strong> 4 минуты</li>
+            <li><strong>Оценка аромата:</strong> Сухого и влажного</li>
+            <li><strong>Дегустация:</strong> Через 8-10 минут после заваривания</li>
+            <li><strong>Критерии оценки:</strong> Аромат, вкус, послевкусие, кислотность, тело, баланс, чистота, сладость, общее впечатление</li>
+        </ol>
+    </div>
+    
+    <h2>Как приобрести эти лоты</h2>
+    
+    <div class="direct-trade">
+        <h3>🌍 Direct Trade и третья волна кофе</h3>
+        <p><strong>Рекомендуемые обжарщики в России:</strong></p>
+        <ul>
+            <li><strong>Tasty Coffee</strong> — крупнейший каталог specialty</li>
+            <li><strong>Bravos Coffee</strong> — эксклюзивные микролоты</li>
+            <li><strong>Torrefacto</strong> — премиальные лоты</li>
+            <li><strong>Double B Coffee Roasters</strong> — авторские профили обжарки</li>
+        </ul>
         
-        <div style="flex: 1; min-width: 200px;">
-            <h3 style="color: #2C1810; font-size: 18px; margin-bottom: 15px;">☕ Coffee Analysis</h3>
-            <p style="color: #666; font-size: 14px; margin-bottom: 10px;">Ваш экспертный источник гайдов и стратегий.</p>
-            <p style="color: #666; font-size: 14px;">Email: <a href="mailto:ESEM39@GMAIL.COM" style="color: #333; text-decoration: none;">ESEM39@GMAIL.COM</a></p>
-            <p style="color: #666; font-size: 14px; margin-top: 10px;">&copy; 2025 Все права защищены.</p>
+        <p><strong>Международные платформы:</strong></p>
+        <ul>
+            <li><strong>Sweet Maria's Coffee Supply</strong> — зелёный кофе</li>
+            <li><strong>Coffee Project</strong> — европейские микролоты</li>
+            <li><strong>Onyx Coffee Lab</strong> — американские specialty</li>
+        </ul>
+    </div>
+    
+    <div class="cupping-guide">
+        <h3>💡 Советы по покупке микролотов:</h3>
+        <ul>
+            <li>Покупайте небольшими партиями (250-500г) для сохранения свежести</li>
+            <li>Обращайте внимание на дату обжарки (не более 2-4 недель)</li>
+            <li>Изучайте информацию о ферме и методе обработки</li>
+            <li>Начинайте с более доступных лотов, постепенно развивая вкус</li>
+            <li>Ведите дневник дегустаций для отслеживания предпочтений</li>
+        </ul>
+    </div>
+</div>
+
+<section style="text-align: center; padding: 60px 0; background: #FFF8F3; border-top: 3px solid #D4A574;">
+    <div style="width: 90%; max-width: 800px; margin: 0 auto;">
+        
+        <h2 style="font-size: 20px; color: #2C1810; margin-bottom: 15px;"> ☕ Получите ЭКСКЛЮЗИВНЫЕ Скидки на Кофе!
+        </h2>
+        <p style="font-size: 16px; color: #666; margin-bottom: 30px;">
+            Читайте наш сравнительный анализ сортов и забирайте промокод до 7%.
+        </p>
+        
+        <a href="links.html" 
+           style="display: inline-block; padding: 15px 35px; background-color: #D4A574; color: white !important; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 18px; transition: 0.3s;">
+            Перейти к Анализу и Выгоде →
+        </a>
+        
+    </div>
+</section>
+<footer style="background: var(--coffee-brown); color: white; padding: 3rem 0; margin-top: 0;">
+    <div class="footer-grid">
+        
+        <div class="footer-section">
+            <h3 style="color: white; font-size: 1rem; margin-bottom: 1rem;">☕ Coffee Analysis</h3> <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-bottom: 10px;">Ваш экспертный источник гайдов и стратегий.</p>
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">Email: <a href="mailto:ESEM39@GMAIL.COM" style="color: white; text-decoration: none;">ESEM39@GMAIL.COM</a></p>
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-top: 10px;">&copy; 2025 Все права защищены.</p>
         </div>
         
-        <div style="flex: 1; min-width: 150px;">
-            <h3 style="color: #2C1810; font-size: 18px; margin-bottom: 15px;">Навигация</h3>
-            <a href="index.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Главная</a>
-            <a href="specialty-micro-lots-2025.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Обзоры Сортов</a>
-            <a href="kak-hranit-kofe-guide.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Экспертные Гайды</a>
-            <a href="budget-barista-equipment-150.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Техника для Кофе</a>
-            <a href="promocodes.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Спецпредложения</a>
+        <div class="footer-section">
+            <h3 style="color: white; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Навигация</h3> 
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
+                <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
+                <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
+                <a href="links.html" style="color: var(--primary);">Спецпредложения</a>
+            </div>
         </div>
         
-        <div style="flex: 1; min-width: 200px;">
-            <h3 style="color: #2C1810; font-size: 18px; margin-bottom: 15px;">Партнеры и Документы</h3>
-            <a href="https://alidropinfo.com/" target="_blank" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">ALIDROP (мощный дропшиппинг)</a>
-            
-            <a href="privacy-policy.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Политика конфиденциальности</a>
-            <a href="terms.html" style="display: block; color: #666; text-decoration: none; margin-bottom: 8px; font-size: 14px;">Условия использования</a>
+        <div class="footer-section" style="grid-column: span 2;">
+            <h3 style="color: white; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Партнеры и Документы</h3> 
+            <div class="footer-links">
+                <a href="https://alidropinfo.com/" target="_blank">ALIDROP (мощный дропшиппинг)</a>
+                <a href="privacy-policy.html">Политика конфиденциальности</a>
+                <a href="terms.html">Условия использования</a>
+            </div>
         </div>
     </div>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleButton = document.getElementById('menu-toggle');
+        const closeButton = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+        const navLinks = document.querySelectorAll('.mobile-nav-links a');
+
+        const openMenu = () => {
+            mobileMenu.classList.add('open');
+            toggleButton.classList.add('active');
+            body.style.overflow = 'hidden'; 
+        };
+
+        const closeMenu = () => {
+            mobileMenu.classList.remove('open');
+            toggleButton.classList.remove('active');
+            body.style.overflow = '';
+        };
+
+        toggleButton.addEventListener('click', () => {
+            if (mobileMenu.classList.contains('open')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+        
+        closeButton.addEventListener('click', closeMenu);
+
+        // Закрытие меню при нажатии на ссылку
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    });
+</script>
 </body>
 </html>
