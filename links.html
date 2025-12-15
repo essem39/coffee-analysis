@@ -118,17 +118,18 @@
 
         /* --- БОЛЬШОЙ ПРОМО-БАHHЕР (ЧИСТЫЙ БАННЕР С КНОПКОЙ ВНИЗУ) --- */
         .promo-banner {
-            /* Градиентный оверлей для читаемости кнопки */
-            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.5) 75%, rgba(0,0,0,0.3) 100%), 
-                        url('https://i.postimg.cc/bJMnD8fF/Gifka-s-Gifius-ru-(2).gif'); 
+            /* ССЫЛКА НА PNG */
+            background: url('https://i.postimg.cc/wvWw8fvC/4c12bae5e1248c4e8960285d7b0f1fac-(1).png') no-repeat center center; 
             background-size: cover;
             background-position: center 40%;
+            /* ИСПРАВЛЕНО: УВЕЛИЧЕННАЯ ВЫСОТА ДО 420PX */
             height: 420px; 
+            background-color: var(--secondary); /* Запасной цвет фона */
             border-radius: var(--radius);
             margin-bottom: 50px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end; /* СМЕЩЕНИЕ КОНТЕНТА ВНИЗ */
+            justify-content: flex-end; 
             align-items: center;
             color: white; 
             text-align: center;
@@ -137,14 +138,12 @@
         }
 
         .promo-button {
-            /* Стилизация кнопки как прозрачной обводки */
+            /* ИСПРАВЛЕНО: ПРОЗРАЧНАЯ КНОПКА С БЕЛЫМ КОНТУРОМ */
             display: inline-block; 
             padding: 14px 30px; 
             
-            /* Фон почти полностью прозрачный */
-            background: rgba(255, 255, 255, 0.05); 
-            /* Чистая белая обводка */
-            border: 2px solid white; 
+            background: transparent; /* ПРОЗРАЧНЫЙ ФОН */
+            border: 2px solid white; /* БЕЛЫЙ КОНТУР */
             
             color: white; 
             text-decoration: none;
@@ -152,18 +151,16 @@
             font-weight: 700; 
             font-size: 1.1rem; 
             transition: var(--transition-smooth);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
             /* Увеличенный отступ, чтобы поднять кнопку */
             margin-bottom: 40px; 
         }
 
         .promo-button:hover { 
-            /* При наведении делаем фон ярким оранжевым */
-            background: var(--gradient-primary); 
-            border-color: var(--primary); /* Оранжевая обводка при наведении */
-            opacity: 1; 
+            background: rgba(255, 255, 255, 0.15); /* Слегка видимый фон при наведении */
+            border-color: var(--primary); /* Оранжевый контур при наведении */
             transform: translateY(-2px); 
-            box-shadow: 0 4px 15px hsla(25, 95%, 53%, 0.6);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
         
         /* --- СТИЛИ ДЛЯ КАРТОЧЕК ТОВАРОВ --- */
@@ -573,7 +570,7 @@
                 <p>Напиток с богатыми русскими традициями. Натуральный, без кофеина. Упаковка 100 г.</p>
                 <div class="price-section">
                     <span class="current-price" style="color: var(--tea-color);">550₽</span>
-                </div>
+                    </div>
                 <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button tea">Заказать</a>
             </div>
         </div>
@@ -659,4 +656,4 @@
 </script>
 
 </body>
-                    </html>
+</html>
