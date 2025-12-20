@@ -110,7 +110,7 @@
         .desktop-nav {
             display: none;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1rem; /* Adjusted for more items */
         }
         
         .desktop-nav a {
@@ -129,6 +129,19 @@
             color: var(--border);
         }
         
+        /* Login Button Style */
+        .login-btn {
+            background: var(--primary);
+            color: white !important;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-weight: 500;
+        }
+        
+        .login-btn:hover {
+            background: hsl(25, 95%, 45%);
+        }
+
         @media (min-width: 768px) {
             .desktop-nav {
                 display: flex;
@@ -686,7 +699,8 @@
             <span class="separator">|</span>
             <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
             <span class="separator">|</span>
-            <a href="links.html" class="special" style="font-weight: bold;">Специальные Предложения</a>
+            <a href="registration.html" style="font-weight: bold; color: var(--primary);">Регистрация</a>
+            <a href="login.html" class="login-btn">Логин</a>
         </nav>
         
         <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
@@ -705,7 +719,8 @@
         <li><a href="specialty-micro-lots-2025.html">Обзоры Сортов</a></li>
         <li><a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a></li>
         <li><a href="budget-barista-equipment-150.html">Техника для Кофе</a></li>
-        <li><a href="links.html" class="special">Специальные Предложения</a></li>
+        <li><a href="registration.html" style="color: var(--primary);">Регистрация</a></li>
+        <li><a href="login.html">Логин</a></li>
     </ul>
 </div>
 <section class="hero">
