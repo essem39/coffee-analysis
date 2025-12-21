@@ -1,631 +1,1705 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Ультимативный Гид по Кофе-Оборудованию 2025 | Coffee Specialty</title>
- <meta name="description" content="Полный навигатор по кофейному оборудованию 2025: от бюджетных эспрессо-машин до профессиональных кофемолок, аксессуаров для латте-арта и смарт-гаджетов.">
- 
- <!-- Open Graph -->
- <meta property="og:title" content="Ультимативный Гид по Кофе-Оборудованию 2025">
- <meta property="og:description" content="Полный навигатор по кофейному оборудованию: 15 категорий от эспрессо-машин до travel-наборов.">
- <meta property="og:type" content="article">
- 
- <!-- Tailwind CSS -->
- <script src="https://cdn.tailwindcss.com"></script>
- 
- <!-- Lucide Icons -->
- <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
- 
- <style>
- @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
- 
- body {
- font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
- }
- 
- .gradient-text {
- background: linear-gradient(135deg, #ea580c, #f97316);
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
- background-clip: text;
- }
- 
- .hero-bg {
- background: linear-gradient(135deg, #fff7ed 0%, #ffffff 50%, #fef3e2 100%);
- }
- 
- .cta-bg {
- background: linear-gradient(135deg, #ea580c, #f97316);
- }
- 
- .card-hover {
- transition: all 0.3s ease;
- }
- 
- .card-hover:hover {
- transform: translateY(-4px);
- box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
- }
- 
- .btn-primary {
- background: linear-gradient(135deg, #ea580c, #f97316);
- transition: all 0.3s ease;
- }
- 
- .btn-primary:hover {
- background: linear-gradient(135deg, #c2410c, #ea580c);
- transform: translateY(-1px);
- }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экспертный гид по кофейному оборудованию 2025 | Coffee Specialty</title>
+    <meta name="description" content="Полный гид по выбору кофейного оборудования: от бюджетных эспрессо-машин до профессиональных инструментов. 15 экспертных разделов с фото и рекомендациями.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Экспертный гид по кофейному оборудованию 2025">
+    <meta property="og:description" content="Полный гид по выбору кофейного оборудования: от бюджетных эспрессо-машин до профессиональных инструментов. 15 экспертных разделов с фото и рекомендациями.">
+    <meta property="og:type" content="article">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #ea580c, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(255, 247, 237, 0.95) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(254, 243, 226, 0.95) 100%),
+                        url('./public/images/hero_coffee_equipment_20251221_132942.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .cta-bg {
+            background: linear-gradient(135deg, #ea580c, #f97316);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ea580c, #f97316);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #c2410c, #ea580c);
+            transform: translateY(-1px);
+        }
 
- /* Mobile Menu Styles */
- .mobile-menu {
- transform: translateX(-100%);
- transition: transform 0.3s ease-in-out;
- }
- 
- .mobile-menu.open {
- transform: translateX(0);
- }
- 
- .mobile-menu-overlay {
- opacity: 0;
- visibility: hidden;
- transition: all 0.3s ease-in-out;
- }
- 
- .mobile-menu-overlay.open {
- opacity: 1;
- visibility: visible;
- }
+        /* Accordion Styles */
+        .accordion-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
 
- .hamburger {
- cursor: pointer;
- width: 24px;
- height: 24px;
- transition: all 0.25s;
- position: relative;
- }
+        .accordion-item:hover {
+            border-color: #ea580c;
+            box-shadow: 0 4px 12px rgba(234, 88, 12, 0.1);
+        }
 
- .hamburger-top,
- .hamburger-middle,
- .hamburger-bottom {
- position: absolute;
- width: 24px;
- height: 2px;
- top: 0;
- left: 0;
- background: #374151;
- transform: rotate(0);
- transition: all 0.5s;
- }
+        .accordion-header {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
- .hamburger-middle {
- transform: translateY(7px);
- }
+        .accordion-header:hover {
+            background-color: #fef7f0;
+        }
 
- .hamburger-bottom {
- transform: translateY(14px);
- }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
 
- .open .hamburger-top {
- transform: rotate(45deg) translateY(6px) translateX(6px);
- }
+        .accordion-content.open {
+            max-height: 1000px;
+        }
 
- .open .hamburger-middle {
- display: none;
- }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
 
- .open .hamburger-bottom {
- transform: rotate(-45deg) translateY(6px) translateX(-6px);
- }
- 
- .equipment-card {
- border: 2px solid #f3f4f6;
- transition: all 0.3s ease;
- }
- 
- .equipment-card:hover {
- border-color: #ea580c;
- }
- </style>
+        .accordion-icon.rotate {
+            transform: rotate(180deg);
+        }
+
+        /* Enhanced Slider Styles */
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 280px; /* Increased height */
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .slider-slide {
+            min-width: 100%;
+            flex-shrink: 0;
+            height: 100%;
+        }
+
+        .slider-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .slider-nav:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-prev {
+            left: 15px;
+        }
+
+        .slider-next {
+            right: 15px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .slider-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-dot.active {
+            background: #ea580c;
+            transform: scale(1.2);
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        .mobile-menu-overlay {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .mobile-menu-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .hamburger {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            transition: all 0.25s;
+            position: relative;
+        }
+
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            top: 0;
+            left: 0;
+            background: #374151;
+            transform: rotate(0);
+            transition: all 0.5s;
+        }
+
+        .hamburger-middle {
+            transform: translateY(7px);
+        }
+
+        .hamburger-bottom {
+            transform: translateY(14px);
+        }
+
+        .open .hamburger-top {
+            transform: rotate(45deg) translateY(6px) translateX(6px);
+        }
+
+        .open .hamburger-middle {
+            display: none;
+        }
+
+        .open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(6px) translateX(-6px);
+        }
+
+        .equipment-title-icon {
+            width: 40px;
+            height: 40px;
+            background-image: url('./public/images/coffee_equipment_title_20251221_141512.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
 </head>
 <body class="bg-white">
- <!-- Header -->
- <header class="border-b bg-white/95 backdrop-blur sticky top-0 z-50">
- <div class="container mx-auto px-4 py-4 flex items-center justify-between max-w-7xl">
- <div class="flex items-center space-x-2">
- <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
- <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
- </div>
- <span class="text-xl font-bold text-gray-900">Coffee Specialty</span>
- </div>
- 
- <!-- Desktop Navigation -->
- <nav class="hidden md:flex items-center space-x-8">
- <a href="index.html" class="text-gray-600 hover:text-gray-900 transition-colors">Главная</a>
- <a href="dekaf-guide.html" class="text-gray-600 hover:text-gray-900 transition-colors">Декаф гайд</a>
- <a href="specialty-micro-lots-2025.html" class="text-gray-600 hover:text-gray-900 transition-colors">Обзоры</a>
- <a href="budget-barista-equipment-150.html" class="text-orange-600 font-medium">Техника</a>
- </nav>
- 
- <!-- Desktop Buttons -->
- <div class="hidden md:flex items-center space-x-4">
- <button onclick="window.open('https://www.coffeeproject.ru/user/profile')" class="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">Войти</button>
- <button onclick="window.open('https://www.coffeeproject.ru/?ref=YUdQUA')" class="btn-primary text-white px-6 py-2 rounded-md">
- Регистрация
- </button>
- </div>
+    <!-- Header -->
+    <header class="border-b bg-white/95 backdrop-blur sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between max-w-7xl">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
+                    <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="text-xl font-bold text-slate-900">Coffee Specialty</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-slate-600 hover:text-slate-900 transition-colors">Главная</a>
+                <a href="decaf-guide.html" class="text-slate-600 hover:text-slate-900 transition-colors">Декаф гайд</a>
+                <a href="#" class="text-orange-600 font-medium">Оборудование</a>
+                <a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Микролоты</a>
+            </nav>
+            
+            <!-- Desktop Buttons -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="https://www.coffeeproject.ru/user/login" target="_blank" class="px-4 py-2 border border-slate-300 rounded-md hover:bg-slate-50 transition-colors">Вход</a>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="btn-primary text-white px-6 py-2 rounded-md">
+                    Регистрация
+                </a>
+            </div>
 
- <!-- Mobile Menu Button -->
- <button class="md:hidden hamburger" id="menu-btn">
- <span class="hamburger-top"></span>
- <span class="hamburger-middle"></span>
- <span class="hamburger-bottom"></span>
- </button>
- </div>
- </header>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden hamburger" id="menu-btn">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+    </header>
 
- <!-- Mobile Menu Overlay -->
- <div class="mobile-menu-overlay fixed inset-0 bg-black bg-opacity-50 z-40" id="menu-overlay"></div>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay fixed inset-0 bg-black bg-opacity-50 z-40" id="menu-overlay"></div>
 
- <!-- Mobile Menu -->
- <div class="mobile-menu fixed top-0 left-0 w-80 h-full bg-white z-50 shadow-2xl" id="mobile-menu">
- <div class="p-6">
- <div class="flex items-center justify-between mb-8">
- <div class="flex items-center space-x-2">
- <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
- <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
- </div>
- <span class="text-xl font-bold text-gray-900">Coffee Specialty</span>
- </div>
- <button class="p-2" id="close-menu">
- <i data-lucide="x" class="w-6 h-6 text-gray-600"></i>
- </button>
- </div>
- 
- <nav class="space-y-6">
- <a href="index.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
- <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
- <i data-lucide="home" class="w-5 h-5"></i>
- <span>Главная</span>
- </div>
- </a>
- <a href="dekaf-guide.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
- <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
- <i data-lucide="book-open" class="w-5 h-5"></i>
- <span>Декаф гайд</span>
- </div>
- </a>
- <a href="specialty-micro-lots-2025.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
- <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
- <i data-lucide="star" class="w-5 h-5"></i>
- <span>Обзоры</span>
- </div>
- </a>
- <a href="budget-barista-equipment-150.html" class="block text-lg text-orange-600 font-medium mobile-menu-link">
- <div class="flex items-center space-x-3 p-3 rounded-lg bg-orange-50">
- <i data-lucide="edit-3" class="w-5 h-5"></i>
- <span>Техника</span>
- </div>
- </a>
- </nav>
- 
- <div class="mt-8 space-y-4">
- <button onclick="window.open('https://www.coffeeproject.ru/user/profile')"class="w-full px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
- Войти
- </button>
- <button onclick="window.open('https://www.coffeeproject.ru/?ref=YUdQUA')" class="w-full btn-primary text-white px-4 py-3 rounded-lg">
- Регистрация
- </button>
- </div>
- </div>
- </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu fixed top-0 left-0 w-80 h-full bg-white z-50 shadow-2xl" id="mobile-menu">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
+                        <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="text-xl font-bold text-slate-900">Coffee Specialty</span>
+                </div>
+                <button class="p-2" id="close-menu">
+                    <i data-lucide="x" class="w-6 h-6 text-slate-600"></i>
+                </button>
+            </div>
+            
+            <nav class="space-y-6">
+                <a href="index.html" class="block text-lg text-slate-700 hover:text-orange-600 transition-colors mobile-menu-link">
+                    <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-50">
+                        <i data-lucide="home" class="w-5 h-5"></i>
+                        <span>Главная</span>
+                    </div>
+                </a>
+                <a href="decaf-guide.html" class="block text-lg text-slate-700 hover:text-orange-600 transition-colors mobile-menu-link">
+                    <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-50">
+                        <i data-lucide="book-open" class="w-5 h-5"></i>
+                        <span>Декаф гайд</span>
+                    </div>
+                </a>
+                <a href="#" class="block text-lg text-orange-600 font-medium mobile-menu-link">
+                    <div class="flex items-center space-x-3 p-3 rounded-lg bg-orange-50">
+                        <i data-lucide="settings" class="w-5 h-5"></i>
+                        <span>Оборудование</span>
+                    </div>
+                </a>
+                <a href="#" class="block text-lg text-slate-700 hover:text-orange-600 transition-colors mobile-menu-link">
+                    <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-50">
+                        <i data-lucide="star" class="w-5 h-5"></i>
+                        <span>Микролоты</span>
+                    </div>
+                </a>
+            </nav>
+            
+            <div class="mt-8 space-y-4">
+                <a href="https://www.coffeeproject.ru/user/login" target="_blank" class="w-full px-4 py-3 border border-slate-300 rounded-lg hover:bg-slate-50 transition-colors block text-center">
+                    Вход
+                </a>
+                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="w-full btn-primary text-white px-4 py-3 rounded-lg block text-center">
+                    Регистрация
+                </a>
+            </div>
+        </div>
+    </div>
 
- <!-- Hero Section -->
- <section class="hero-bg py-16 md:py-24">
- <div class="container mx-auto px-4 max-w-7xl">
- <div class="text-center max-w-4xl mx-auto">
- <div class="inline-flex items-center space-x-2 bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
- <i data-lucide="package" class="w-4 h-4"></i>
- <span>Навигатор по оборудованию 2025</span>
- </div>
- <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
- Ультимативный <span class="gradient-text">Гид по Оборудованию</span>
- </h1>
- <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
- 15 категорий кофейного оборудования: от эспрессо-машин до travel-наборов. Найдите идеальную технику для вашего уровня и бюджета.
- </p>
- <div class="flex flex-col sm:flex-row gap-4 justify-center">
- <button onclick="window.open('https://www.coffeeproject.ru/?ref=YUdQUA', '_blank')" class="btn-primary text-white text-lg px-8 py-4 rounded-lg flex items-center justify-center">
- Перейти в каталог
- <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
- </button>
- <button class="border border-gray-300 text-gray-700 text-lg px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors">
- Промокод: YUdQUA
- </button>
- </div>
- </div>
- </div>
- </section>
+    <!-- Hero Section with Visible Background Image -->
+    <section class="hero-bg py-16 md:py-20 relative min-h-[600px] flex items-center">
+        <div class="container mx-auto px-4 max-w-7xl relative z-10">
+            <div class="text-center">
+                <div class="inline-flex items-center space-x-2 bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                    <span>Экспертный навигатор 2025</span>
+                </div>
+                <div class="flex items-center justify-center mb-6">
+                    <div class="equipment-title-icon mr-4"></div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        Гид по <span class="gradient-text">кофейному оборудованию</span>
+                    </h1>
+                </div>
+                <p class="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed max-w-4xl mx-auto">
+                    15 экспертных разделов с подробными обзорами, фотографиями и рекомендациями. 
+                    От бюджетных решений до профессионального оборудования.
+                </p>
+               <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="https://www.coffeeproject.ru/?ref=YUdQUA" 
+       target="_blank" 
+       class="btn-primary text-white text-lg px-8 py-4 rounded-lg flex items-center justify-center">
+        Продвижение кофейного бизнеса
+        <i data-lucide="external-link" class="ml-2 w-5 h-5"></i>
+    </a>
 
- <!-- Equipment Grid -->
- <section class="py-16 bg-white">
- <div class="container mx-auto px-4 max-w-7xl">
- 
- <!-- 1. Home Espresso Budget -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="home" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">1. Домашний Эспрессо (бюджет)</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Новички, бюджет до 50 000₽</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Рожковые машины (Delonghi EC685, Gaggia Classic)</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Давление 15 бар, бойлер 1.5L</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Ручной капучинатор</li>
- <li class="flex items-center"><i data-lucide="check" class
-<li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Простота обслуживания</li>
- </ul>
- </div>
- </div>
- </div>
+    <a href="https://raw.githubusercontent.com/essem39/coffee-analysis/main/grind-guide%20(1).png" 
+       download="Grind_Guide_Specialty_Coffee.png" 
+       class="inline-block border border-slate-300 text-slate-700 text-lg px-8 py-4 rounded-lg hover:bg-slate-50 transition-colors text-center">
+        Скачать гайд
+    </a>
+</div>
+            </div>
+        </div>
+    </section>
 
- <!-- 2. Prosumer Segment -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="trophy" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">2. Prosumer сегмент (премиум)</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Энтузиасты, бюджет 150 000 - 500 000₽</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Rocket Appartamento, Lelit Bianca</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> E61 группа, теплообменник или dual boiler</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> PID контроль температуры</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Профилирование давления</li>
- </ul>
- </div>
- </div>
- </div>
+    <!-- Equipment Sections -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="space-y-6">
+                
+                <!-- 1. Домашний Эспрессо (бюджет) -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(0)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="home" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Домашний Эспрессо (бюджет)</h3>
+                                <p class="text-slate-600">Для начинающих кофеманов с ограниченным бюджетом</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-0">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/zvJKm5py/Homemade_Espresso1.png" alt="Бюджетная эспрессо-машина">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/kM0Dt7Wy/5e1d536430b9fb5de976e56461f9c092.png" alt="Панель управления">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(0)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(0)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(0, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(0, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Новички в мире эспрессо, студенты, семьи с ограниченным бюджетом до 30 000 рублей.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Давление 15-19 бар</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Встроенная кофемолка</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Автоматическое приготовление</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Компактные размеры</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Экспертный совет:</strong> Начните с простых автоматических моделей. 
+                                            Они прощают ошибки новичков и позволяют сосредоточиться на изучении основ кофейной культуры.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- 3. Manual Lever Machines -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="hand" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">3. Мануальные рычажные машины</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Перфекционисты, ценители ритуала</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> La Pavoni, Flair Signature</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Полный контроль давления</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Без электроники</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Долговечность 50+ лет</li>
- </ul>
- </div>
- </div>
- </div>
+                <!-- 2. Prosumer сегмент (премиум) -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(1)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="crown" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Prosumer сегмент (премиум)</h3>
+                                <p class="text-slate-600">Профессиональное качество для дома</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-1">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/g0gnwRK0/latest-coffee-machines-4.png" alt="Премиум эспрессо-машина">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/PrbYMSzj/makro.png" alt="Двойной бойлер">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(1)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(1)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(1, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(1, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Опытные кофеманы, домашние бариста, ценители качества с бюджетом 100-500 тысяч рублей.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Двойной бойлер</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>PID контроль температуры</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Профилирование давления</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Ротационная помпа</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Профессиональный подход:</strong> Эти машины требуют понимания процесса. 
+                                            Инвестируйте время в изучение техники - результат превзойдет ожидания.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- 4. Espresso Grinders -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="disc-3" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">4. Эспрессо-кофемолки</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Владельцы эспрессо-машин</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Eureka Mignon, Niche Zero</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Плоские жернова 55-64мм</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Микрорегулировка помола</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Минимальная retention (остатки)</li>
- </ul>
- </div>
- </div>
- </div>
+                <!-- 3. Мануальные рычажные машины -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(2)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="wrench" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Мануальные рычажные машины</h3>
+                                <p class="text-slate-600">Классика и полный контроль процесса</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-2">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/X7hSQgVZ/Manual-lever-machines.png" alt="Рычажная машина">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/FFMwSHGj/Manual-machines.png" alt="Механизм рычага">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(2)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(2)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(2, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(2, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Ценители традиций, коллекционеры, бариста-перфекционисты, любители ретро-дизайна.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Ручное управление давлением</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Винтажный дизайн</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Долговечность</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Уникальный вкус</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Искусство эспрессо:</strong> Рычажные машины - это медитация и мастерство. 
+                                            Каждая чашка становится произведением искусства, созданным вашими руками.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- 5. Filter Grinders -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="circle-dot" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">5. Кофемолки для фильтра</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Любители альтернативных методов</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Comandante C40, Timemore C3</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Конические жернова</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Ручные и электрические</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Универсальность помола</li>
- </ul>
- </div>
- </div>
- </div>
+                <!-- 4. Эспрессо-кофемолки -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(3)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="settings" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Эспрессо-кофемолки</h3>
+                                <p class="text-slate-600">Точный помол для идеального эспрессо</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-3">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/3RBWvqQD/Espresso-grinders.png" alt="Эспрессо кофемолка">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/3RBWvqQD/Espresso-grinders2.png" alt="Жернова">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(3)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(3)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(3, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(3, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Владельцы эспрессо-машин, домашние бариста, кофейни, ценители свежемолотого кофе.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Плоские жернова 64-83мм</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Микрорегулировка помола</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Низкие обороты (RPM)</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Антистатическое покрытие</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Основа качества:</strong> Хорошая кофемолка важнее дорогой машины. 
+                                            Равномерный помол - залог стабильной экстракции и великолепного вкуса.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- 6. Immersion Systems -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="cylinder" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">6. Иммерсионные системы</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Путешественники, офисные работники</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Aeropress, French Press, Clever Dripper</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Полное погружение кофе в воду</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Простота использования</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Плотное тело напитка</li>
- </ul>
- </div>
- </div>
- </div>
+                <!-- 5. Кофемолки для фильтра -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(4)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="filter" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Кофемолки для фильтра</h3>
+                                <p class="text-slate-600">Равномерный помол для альтернативных методов</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-4">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/KYT0xPhy/Coffee-grinders-for-filters.png" alt="Фильтр кофемолка">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/8CbrRchw/Coffee-grinders-for-filters2.png" alt="Конические жернова">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(4)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(4)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(4, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(4, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Любители пуровера, френч-пресса, кемекса, аэропресса и других альтернативных методов заваривания.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Конические жернова</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Широкий диапазон помола</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Равномерность частиц</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Минимум пыли</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Универсальность:</strong> Одна качественная фильтр-кофемолка откроет мир 
+                                            альтернативных методов заваривания - от нежного пуровера до насыщенного френч-пресса.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- 7. Gravity Methods -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="filter" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">7. Гравитационные методы</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Ценители чистоты вкуса</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Hario V60, Chemex, Kalita Wave</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Проливной метод заваривания</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Яркая кислотность</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Требует навыка</li>
- </ul>
- </div>
- </div>
- </div>
+                <!-- 6. Иммерсионные системы -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(5)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="droplets" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Иммерсионные системы</h3>
+                                <p class="text-slate-600">Аэропресс, френч-пресс и другие методы погружения</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-5">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/nzZgWR9Z/Immersion-systems1.png" alt="Аэропресс">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/qMnYkHcH/Immersion-systems2.png" alt="Френч-пресс">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(5)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(5)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(5, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(5, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Новички в альтернативном заваривании, путешественники, офисные работники, любители экспериментов.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Простота использования</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Портативность</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Полное погружение</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Доступная цена</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Идеальный старт:</strong> Аэропресс - лучший способ начать знакомство с 
+                                            альтернативными методами. Прощает ошибки и всегда дает вкусный результат.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- 8. Cold Brew Stations -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="snowflake" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">8. Cold Brew станции</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Любители холодного кофе</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Toddy, Hario Mizudashi</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Холодная экстракция 12-24 часа</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Сладкий, мягкий вкус</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Концентрат на неделю</li>
- </ul>
- </div>
- </div>
- </div>
+                <!-- 7. Гравитационные методы -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(6)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="triangle" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Гравитационные методы</h3>
+                                <p class="text-slate-600">V60, Кемекс, Калита и другие пуроверы</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-6">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/d15FjPHm/Gravitational-methods.png" alt="V60 Dripper">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/PqRsCzCj/Gravitational-methods.png" alt="Кемекс">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(6)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(6)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(6, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(6, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Ценители чистого вкуса, любители ритуала заваривания, кофейные гики, домашние бариста.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Чистый вкус</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Контроль экстракции</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Элегантный дизайн</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Разнообразие методик</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Искусство заваривания:</strong> Пуровер - это медитативный процесс, 
+                                            который превращает утренний кофе в ритуал осознанности и наслаждения.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- 9. Gooseneck Kettles -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="droplet" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">9. Электрические чайники Gooseneck</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Пользователи пуроверов</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Fellow Stagg EKG, Bonavita</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Контроль температуры 1°C</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Тонкий носик для точности</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Поддержание температуры</li>
- </ul>
- </div>
- </div>
- </div>
+                <!-- 8. Cold Brew станции -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(7)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="snowflake" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Cold Brew станции</h3>
+                                <p class="text-slate-600">Системы для холодного заваривания</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-7">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/BbJgsR4p/Cold-Brew-Stations-1.png" alt="Cold Brew Tower">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/R0QJ9hhM/Cold-Brew-Stations2.png" alt="Иммерсионная система">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(7)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(7)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(7, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(7, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Любители холодного кофе, летние гурманы, кофейни, офисы, ценители мягкого вкуса.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Медленная экстракция</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Низкая кислотность</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Концентрированный напиток</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Длительное хранение</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Летний фаворит:</strong> Cold brew - идеальное решение для жаркого времени года. 
+                                            Мягкий, сладковатый вкус без горечи покорит даже тех, кто не любит кофе.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- 10. Professional Scales -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="scale" class="w-8 h-8 text-orange-
-<i data-lucide="scale" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">10. Профессиональные весы</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Все, кто хочет стабильности</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Acaia Lunar, Timemore Black Mirror</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Точность 0.1г</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Встроенный таймер</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Bluetooth-подключение к приложениям</li>
- </ul>
- </div>
- </div>
- </div>
+                <!-- 9. Электрические чайники Gooseneck -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(8)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="thermometer" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Электрические чайники Gooseneck</h3>
+                                <p class="text-slate-600">Точный контроль температуры и потока</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-8">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/Fzh2qPqh/Cold-Brew-Stations(1).png" alt="Gooseneck чайник">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/nhqGjHrN/Cold-Brew-Stations2.png" alt="Контроль температуры">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(8)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(8)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(8, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(8, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Любители пуровера, домашние бариста, ценители точности, профессиональные дегустаторы.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Точность ±1°C</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Тонкий носик</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Поддержание температуры</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Быстрый нагрев</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Точность решает:</strong> Правильная температура воды - ключ к раскрытию 
+                                            всех нот вкуса. Gooseneck чайник превратит заваривание в точную науку.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- 11. Latte Art Tools -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="palette" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">11. Аксессуары для Латте-арта</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Начинающие бариста</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Питчеры (молочники) 350-600мл</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Тефлоновое покрытие для скольжения</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Термометры для молока</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Трафареты для рисунков</li>
- </ul>
- </div>
- </div>
- </div>
+                <!-- 10. Профессиональные весы -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(9)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="scale" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Профессиональные весы</h3>
+                                <p class="text-slate-600">Точное взвешивание и таймер</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-9">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/1zQhw5H0/Professional-scales.png" alt="Кофейные весы">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/tRKjp5xv/Professional-scales2.png" alt="Встроенный таймер">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(9)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(9)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(9, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(9, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Все любители кофе, домашние бариста, профессионалы, ценители точности и повторяемости.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Точность 0.1г</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Встроенный таймер</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Водостойкость</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Быстрый отклик</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Основа стабильности:</strong> Точные весы - первая покупка для серьезного 
+                                            кофемана. Они обеспечат повторяемость результата и помогут найти идеальный рецепт.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- 12. Distribution Tools -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="target" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">12. Инструменты распределения</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Владельцы эспрессо-машин</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> WDT-инструменты (иглы), левелеры</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Равномерное распределение кофе</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Калиброванные темперы 58мм</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Устранение каналирования</li>
- </ul>
- </div>
- </div>
- </div>
+                <!-- 11. Аксессуары для Латте-арта -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(10)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="palette" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Аксессуары для Латте-арта</h3>
+                                <p class="text-slate-600">Питчеры, инструменты для рисования</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-10">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/GtQJ7zw8/Latte-Art-Accessories1.png" alt="Питчер для молока">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/yNmJyxz8/Latte-Art-Accessories2.png" alt="Инструмент для этчинга">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(10)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(10)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(10, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(10, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Начинающие и опытные бариста, владельцы эспрессо-машин, любители красивого кофе, творческие натуры.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Разные объемы питчеров</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Точный носик</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Инструменты для этчинга</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Нержавеющая сталь</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Творческое самовыражение:</strong> Латте-арт превращает каждую чашку в 
+                                            произведение искусства. Начните с простых узоров - удовольствие гарантировано!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- 13. Water Treatment -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="droplets" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">13. Домашняя водоподготовка</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Перфекционисты вкуса</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> BWT фильтры, Third Wave Water</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Контроль TDS 70-120 mg/L</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Минерализация для экстракции</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Защита от накипи</li>
- </ul>
- </div>
- </div>
- </div>
+                <!-- 12. Инструменты распределения -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(11)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="target" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Инструменты распределения</h3>
+                                <p class="text-slate-600">WDT, пуш-темперы, левелеры</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-11">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/mkHW7c07/Distribution-tools1.png" alt="WDT инструмент">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/J0Nm9DPG/Distribution-tools1.png" alt="Пуш-темпер">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(11)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(11)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(11, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(11, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Продвинутые домашние бариста, перфекционисты, владельцы качественных кофемолок и машин.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Равномерное распределение</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Устранение комков</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Стабильная экстракция</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Профессиональное качество</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Секрет профессионалов:</strong> WDT инструмент кажется простым, но он 
+                                            кардинально улучшает экстракцию. Инвестиция в стабильность каждой чашки.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- 14. Smart Gadgets -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="smartphone" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">14. Смарт-гаджеты и приложения</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Технологичные энтузиасты</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Acaia App, Beanconqueror</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Дневники заваривания</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Графики экстракции</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Синхронизация с весами</li>
- </ul>
- </div>
- </div>
- </div>
+                <!-- 13. Домашняя водоподготовка -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(12)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="droplet" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Домашняя водоподготовка</h3>
+                                <p class="text-slate-600">Фильтры и системы очистки воды</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-12">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/dVXXjQjR/Home-water-treatment1.png" alt="Фильтр для воды">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/xjt6PT0T/Home-water-treatment2.png" alt="TDS метр">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(12)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(12)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(12, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(12, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Серьезные кофеманы, владельцы дорогого оборудования, жители регионов с жесткой водой, перфекционисты.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Удаление хлора</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Контроль жесткости</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Защита оборудования</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Улучшение вкуса</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Невидимый фактор:</strong> Качество воды влияет на вкус кофе на 98%. 
+                                            Правильная водоподготовка раскроет потенциал даже простого оборудования.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- 15. Travel Kits -->
- <div class="equipment-card bg-white p-6 rounded-xl mb-6">
- <div class="flex items-start space-x-4">
- <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="luggage" class="w-8 h-8 text-orange-600"></i>
- </div>
- <div class="flex-1">
- <h3 class="text-2xl font-bold text-slate-900 mb-2">15. Travel-наборы для путешествий</h3>
- <p class="text-orange-600 font-medium mb-3">Для кого: Путешественники, командировки</p>
- <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Aeropress Go, Wacaco Nanopresso</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Компактные ручные кофемолки</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Складные весы</li>
- <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-green-500"></i> Термокружки 350мл</li>
- </ul>
- </div>
- </div>
- </div>
+                <!-- 14. Смарт-гаджеты и приложения -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(13)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="smartphone" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Смарт-гаджеты и приложения</h3>
+                                <p class="text-slate-600">Цифровые помощники для кофе</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-13">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/8Pg0yk9S/Smart-gadgets-and-applications1.png" alt="Смартфон с приложением">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/Wb90dXGz/Smart-gadgets-and-applications2.png" alt="Умные весы">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(13)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(13)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(13, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(13, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Технологичные кофеманы, любители данных, начинающие бариста, ценители удобства и автоматизации.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Рецепты и гайды</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Трекинг заварок</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Bluetooth подключение</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Аналитика и статистика</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Цифровой помощник:</strong> Современные приложения превращают смартфон в 
+                                            персонального кофейного консультанта. Идеально для систематизации знаний.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- </div>
- </section>
+                <!-- 15. Travel-наборы для путешествий -->
+                <div class="accordion-item bg-white">
+                    <div class="accordion-header p-6 flex items-center justify-between" onclick="toggleAccordion(14)">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i data-lucide="luggage" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Travel-наборы для путешествий</h3>
+                                <p class="text-slate-600">Портативное кофейное оборудование</p>
+                            </div>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-6 h-6 text-slate-400 accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="slider-container">
+                                    <div class="slider-track" id="slider-14">
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/FHQDxPfr/Travel-kits-for-travel-1.png" alt="Дорожный набор">
+                                        </div>
+                                        <div class="slider-slide">
+                                            <img src="https://i.postimg.cc/nhjpvhDD/Travel-kits-for-travel2.png" alt="Портативная кофемолка">
+                                        </div>
+                                    </div>
+                                    <button class="slider-nav slider-prev" onclick="prevSlide(14)">
+                                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                                    </button>
+                                    <button class="slider-nav slider-next" onclick="nextSlide(14)">
+                                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                                    </button>
+                                    <div class="slider-dots">
+                                        <div class="slider-dot active" onclick="goToSlide(14, 0)"></div>
+                                        <div class="slider-dot" onclick="goToSlide(14, 1)"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900 mb-3">Для кого это:</h4>
+                                    <p class="text-slate-600 mb-4">Путешественники, командировочные, кемперы, офисные работники, студенты, любители кофе везде.</p>
+                                    
+                                    <h4 class="font-semibold text-slate-900 mb-3">Ключевые характеристики:</h4>
+                                    <ul class="space-y-2 text-slate-600">
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Компактность</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Прочность</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Все в одном наборе</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                                            <span>Легкий вес</span>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="mt-4 p-4 bg-orange-50 rounded-lg">
+                                        <p class="text-sm text-slate-700">
+                                            <strong>Кофе без границ:</strong> Качественный travel-набор позволит наслаждаться 
+                                            любимым напитком в любой точке мира. Свобода и вкус в одном комплекте.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <!-- CTA Section -->
- <section class="py-16 cta-bg text-white">
- <div class="container mx-auto px-4 text-center max-w-7xl">
- <h2 class="text-3xl md:text-4xl font-bold mb-6">
- Готовы собрать свою кофейную станцию?
- </h2>
- <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
- Используйте наш навигатор, чтобы найти идеальное оборудование для вашего уровня и бюджета. 
- Каждая категория — это путь к идеальной чашке.
- </p>
- <div class="flex flex-col sm:flex-row gap-4 justify-center">
- <button onclick="window.open('https://www.coffeeproject.ru/?ref=YUdQUA')" class="text-lg px-8 py-4 bg-white text-orange-600 hover:bg-gray-100 rounded-lg transition-colors flex items-center justify-center">
- Перейти в каталог
- <i data-lucide="external-link" class="ml-2 w-5 h-5"></i>
- </button>
- <button class="text-lg px-8 py-4 border border-white text-white hover:bg-white hover:text-orange-600 rounded-lg transition-colors">
- Промокод: YUdQUA
- </button>
- </div>
- </div>
- </section>
+            </div>
+        </div>
+    </section>
 
- <!-- Footer -->
- <footer class="bg-gray-900 text-white py-12">
- <div class="container mx-auto px-4 max-w-7xl">
- <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
- <div class="col-span-2 md:col-span-1">
- <div class="flex items-center space-x-2 mb-4">
- <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
- <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
- </div>
- <span class="text-xl font-bold">Coffee Specialty</span>
- </div>
- <p class="text-gray-400 mb-4">
- Независимый центр анализа кофейной индустрии
- </p>
- </div>
- 
- <div>
- <h4 class="font-semibold mb-4">Контент</h4>
- <ul class="space-y-2 text-gray-400 text-sm">
- <li><a href="#" class="hover:text-white transition-colors">Экспертные обзоры</a></li>
- <li><a href="#" class="hover:text-white transition-colors">Гайды по выбору</a></li>
- <li><a href="#" class="hover:text-white transition-colors">Кофейный блог</a></li>
- </ul>
- </div>
- 
- <div>
- <h4 class="font-semibold mb-4">Каталог</h4>
- <ul class="space-y-2 text-gray-400 text-sm">
- <li><a href="#" class="hover:text-white transition-colors">Каталог кофе</a></li>
- <li><a href="#" class="hover:text-white transition-colors">Каталог чая</a></li>
- <li><a href="https://www.coffeeproject.ru/?ref=YUdQUA" class="hover:text-white transition-colors">Партнерство</a></li>
- </ul>
- </div>
- 
- <div>
- <h4 class="font-semibold mb-4">Поддержка</h4>
- <ul class="space-y-2 text-gray-400 text-sm">
- <li><a href="#" class="hover:text-white transition-colors">Связаться с нами</a></li>
- <li><a href="#" class="hover:text-white transition-colors">Реклама</a></li>
- <li><a href="#" class="hover:text-white transition-colors">Политика</a></li>
- </ul>
- </div>
- </div>
- 
- <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
- <p>© 2025 Coffee Specialty. Все права защищены.</p> <p class="mt-2"> Продвижение кофейного бизнеса: <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" rel="noopener noreferrer" class="text-orange-400 hover:text-orange-300 ml-1"> Coffee Project </a> </p> </div> </div> </footer>
+   <section class="py-16 cta-bg text-white">
+    <div class="container mx-auto px-4 text-center max-w-7xl">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Готовы выбрать идеальное оборудование?
+        </h2>
+        <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+            Используйте наш экспертный гид и найдите оборудование, которое превратит ваш дом в профессиональную кофейню
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://www.coffeeproject.ru/?ref=YUdQUA" 
+               target="_blank" 
+               class="text-lg px-8 py-4 bg-white text-orange-600 hover:bg-gray-100 rounded-lg transition-colors flex items-center justify-center">
+                Продвижение кофейного бизнеса
+                <i data-lucide="external-link" class="ml-2 w-5 h-5"></i>
+            </a>
 
-<script> // Initialize Lucide icons lucide.createIcons();
+            <a href="https://raw.githubusercontent.com/essem39/coffee-analysis/main/grind-guide%20(1).png" 
+               download="Grind_Guide_Specialty_Coffee.png" 
+               class="text-lg px-8 py-4 border border-white text-white hover:bg-white hover:text-orange-600 rounded-lg transition-colors flex items-center justify-center">
+                Скачать PDF-гайд
+            </a>
+        </div>
+    </div>
+</section>
 
-// Mobile menu functionality const menuBtn = document.getElementById('menu-btn'); const mobileMenu = document.getElementById('mobile-menu'); const menuOverlay = document.getElementById('menu-overlay'); const closeMenuBtn = document.getElementById('close-menu'); const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+ <footer class="bg-slate-900 text-white py-16">
+    <div class="container mx-auto px-4 max-w-7xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="col-span-2 md:col-span-1">
+                <div class="flex items-center space-x-2 mb-6">
+                    <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
+                        <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="text-xl font-bold">Coffee Specialty</span>
+                </div>
+                <p class="text-slate-400 mb-6">
+                    Независимый центр анализа кофейной индустрии. Профессиональный взгляд на Specialty сегмент.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-6 text-lg">Навигация</h4>
+                <ul class="space-y-3 text-slate-400">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Главная</a></li>
+                    <li><a href="promocodes.html" class="hover:text-white transition-colors">Промокоды</a></li>
+                    <li><a href="links.html" class="hover:text-white transition-colors">Полезные ссылки</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-6 text-lg">Контент</h4>
+                <ul class="space-y-3 text-slate-400">
+                    <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Декаф навигатор</a></li>
+                    <li><a href="espresso-masterclass.html" class="hover:text-white transition-colors">Мастер-класс Эспрессо</a></li>
+                    <li><a href="budget-barista-equipment-150.html" class="hover:text-white transition-colors">Оборудование до 150к</a></li>
+                    <li><a href="kak-hranit-kofe-guide.html" class="hover:text-white transition-colors">Секреты хранения</a></li>
+                    <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Микролоты 2025</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-6 text-lg">Партнеры</h4>
+                <div class="space-y-4">
+                    <div class="bg-slate-800 p-4 rounded-lg">
+                        <h5 class="font-semibold mb-2">Coffee Project</h5>
+                        <p class="text-slate-400 text-sm mb-3">Премиальный кофе с доставкой</p>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-orange-400 font-mono text-sm">YUdQUA</span>
+                            <span class="text-slate-400 text-xs">промокод</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-slate-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 Coffee Specialty. Все права защищены.
+                </p>
+                <div class="flex items-center space-x-6 text-sm">
+                    <a href="privacy-policy.html" class="text-slate-400 hover:text-white transition-colors">Приватность</a>
+                    <a href="terms.html" class="text-slate-400 hover:text-white transition-colors">Условия</a>
+                    <a href="https://elama.ru/" target="_blank" rel="noopener noreferrer" class="text-orange-400 hover:text-orange-300 transition-colors">Продвижение: elama.ru</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
-function openMenu() { menuBtn.classList.add('open'); mobileMenu.classList.add('open'); menuOverlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu functionality
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const closeMenuBtn = document.getElementById('close-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
 
-function closeMenu() { menuBtn.classList.remove('open'); mobileMenu.classList.remove('open'); menuOverlay.classList.remove('open'); document.body.style.overflow = ''; }
+        function openMenu() {
+            menuBtn.classList.add('open');
+            mobileMenu.classList.add('open');
+            menuOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
 
-menuBtn.addEventListener('click', openMenu); closeMenuBtn.addEventListener('click', closeMenu); menuOverlay.addEventListener('click', closeMenu);
+        function closeMenu() {
+            menuBtn.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            menuOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
 
-// Close menu when clicking on menu links mobileMenuLinks.forEach(link => { link.addEventListener('click', closeMenu); });
+        menuBtn.addEventListener('click', openMenu);
+        closeMenuBtn.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
 
-// Smooth scrolling for anchor links document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); });
+        // Close menu when clicking on menu links
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
 
-// Close mobile menu on window resize window.addEventListener('resize', () => { if (window.innerWidth >= 768) { closeMenu(); } });
+        // Accordion functionality
+        function toggleAccordion(index) {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            const currentItem = accordionItems[index];
+            const content = currentItem.querySelector('.accordion-content');
+            const icon = currentItem.querySelector('.accordion-icon');
+            
+            // Close all other accordions
+            accordionItems.forEach((item, i) => {
+                if (i !== index) {
+                    const otherContent = item.querySelector('.accordion-content');
+                    const otherIcon = item.querySelector('.accordion-icon');
+                    otherContent.classList.remove('open');
+                    otherIcon.classList.remove('rotate');
+                }
+            });
+            
+            // Toggle current accordion
+            content.classList.toggle('open');
+            icon.classList.toggle('rotate');
+        }
 
-// Smooth hover animations for equipment cards const equipmentCards = document.querySelectorAll('.equipment-card'); equipmentCards.forEach(card => { card.addEventListener('mouseenter', function() { this.style.transform = 'translateY(-2px)'; }); card.addEventListener('mouseleave', function() { this.style.transform = 'translateY(0)'; }); }); </script> </body> </html>
+        // Slider functionality
+        const sliders = {};
+
+        function initSlider(index) {
+            sliders[index] = {
+                currentSlide: 0,
+                totalSlides: document.querySelectorAll(`#slider-${index} .slider-slide`).length
+            };
+        }
+
+        function updateSlider(index) {
+            const track = document.getElementById(`slider-${index}`);
+            const dots = track.parentElement.querySelectorAll('.slider-dot');
+            
+            track.style.transform = `translateX(-${sliders[index].currentSlide * 100}%)`;
+            
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === sliders[index].currentSlide);
+            });
+        }
+
+        function nextSlide(index) {
+            if (!sliders[index]) initSlider(index);
+            sliders[index].currentSlide = (sliders[index].currentSlide + 1) % sliders[index].totalSlides;
+            updateSlider(index);
+        }
+
+        function prevSlide(index) {
+            if (!sliders[index]) initSlider(index);
+            sliders[index].currentSlide = sliders[index].currentSlide === 0 
+                ? sliders[index].totalSlides - 1 
+                : sliders[index].currentSlide - 1;
+            updateSlider(index);
+        }
+
+        function goToSlide(index, slideIndex) {
+            if (!sliders[index]) initSlider(index);
+            sliders[index].currentSlide = slideIndex;
+            updateSlider(index);
+        }
+
+        // Initialize all sliders
+        for (let i = 0; i < 15; i++) {
+            initSlider(i);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close mobile menu on window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                closeMenu();
+            }
+        });
+    </script>
+</body>
+</html>
