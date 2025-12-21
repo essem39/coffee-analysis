@@ -13,6 +13,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .mobile-menu-active { display: flex !important; }
+        .product-card img { transition: transform 0.5s ease; }
+        .product-card:hover img { transform: scale(1.05); }
     </style>
 </head>
 <body class="bg-white text-slate-900">
@@ -36,10 +38,10 @@
     </div>
 
     <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-100 flex-col p-4 space-y-4 md:hidden shadow-xl">
+        <a href="registration.html" class="text-orange-500 font-bold border-b pb-2 bg-orange-50 p-2 rounded-lg text-center">Регистрация</a>
         <a href="index.html" class="font-bold border-b pb-2">Главная</a>
         <a href="specialty-micro-lots-2025.html" class="font-bold border-b pb-2">Обзоры</a>
         <a href="kak-hranit-kofe-guide.html" class="font-bold border-b pb-2">Гайды</a>
-        <a href="registration.html" class="text-orange-500 font-bold">Регистрация</a>
         <a href="login.html" class="bg-orange-500 text-white p-3 rounded-lg text-center font-bold">Логин</a>
     </div>
 </header>
@@ -169,35 +171,38 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-slate-50 rounded-[2.5rem] p-8 border border-slate-100 hover:shadow-xl transition-all group">
-                <span class="bg-orange-500 text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full">Хит продаж</span>
+            <a href="https://www.coffeeproject.ru/net-market-reg?nmrefid=da0b87d5-1f4d-4645-b50c-c832dd685643" target="_blank" class="product-card bg-slate-50 rounded-[2.5rem] p-8 border border-slate-100 hover:shadow-xl transition-all group flex flex-col">
+                <img src="https://www.coffeeproject.ru/images/products/coffee/560-sticker.jpg" class="h-48 object-contain mb-6" alt="Зимнее настроение">
+                <span class="bg-orange-500 text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full w-fit">Хит продаж</span>
                 <h3 class="text-2xl font-extrabold text-slate-900 mt-6 mb-2 uppercase tracking-tighter italic">Зимнее настроение</h3>
-                <p class="text-slate-500 text-sm mb-6">Плотный и ароматный эспрессо. Идеальный баланс для зимнего утра.</p>
+                <p class="text-slate-500 text-sm mb-6 flex-grow">Плотный и ароматный эспрессо. Идеальный баланс для зимнего утра.</p>
                 <div class="flex justify-between items-center pt-6 border-t border-slate-200">
                     <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">250г / 1000г</span>
                     <span class="text-orange-600 font-bold text-xs uppercase">Coffee Project</span>
                 </div>
-            </div>
+            </a>
 
-            <div class="bg-[#0f172a] rounded-[2.5rem] p-8 border border-slate-800 shadow-2xl transform hover:-translate-y-1 transition-all">
-                <span class="bg-white text-slate-900 text-[10px] font-bold uppercase px-3 py-1 rounded-full">Новый урожай</span>
+            <a href="https://www.coffeeproject.ru/net-market-reg?nmrefid=da0b87d5-1f4d-4645-b50c-c832dd685643" target="_blank" class="product-card bg-[#0f172a] rounded-[2.5rem] p-8 border border-slate-800 shadow-2xl transform hover:-translate-y-1 transition-all flex flex-col text-white">
+                <img src="https://www.coffeeproject.ru/images/products/coffee/561-sticker.jpg" class="h-48 object-contain mb-6" alt="Волшебство Праздника">
+                <span class="bg-white text-slate-900 text-[10px] font-bold uppercase px-3 py-1 rounded-full w-fit">Новый урожай</span>
                 <h3 class="text-2xl font-extrabold text-orange-500 mt-6 mb-2 uppercase tracking-tighter italic">Волшебство Праздника</h3>
-                <p class="text-slate-400 text-sm mb-6 font-medium text-white">Кофе, пропитанный духом праздника. Наш главный выбор сезона.</p>
+                <p class="text-slate-400 text-sm mb-6 flex-grow">Кофе, пропитанный духом праздника. Наш главный выбор сезона.</p>
                 <div class="flex justify-between items-center pt-6 border-t border-slate-800">
                     <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest italic text-white/50">Limited Edition</span>
                     <span class="text-white font-bold text-xs uppercase tracking-widest">Екатеринбург</span>
                 </div>
-            </div>
+            </a>
 
-            <div class="bg-slate-50 rounded-[2.5rem] p-8 border border-slate-100 hover:shadow-xl transition-all">
-                <span class="bg-slate-200 text-slate-600 text-[10px] font-bold uppercase px-3 py-1 rounded-full">Наш выбор</span>
+            <a href="https://www.coffeeproject.ru/net-market-reg?nmrefid=da0b87d5-1f4d-4645-b50c-c832dd685643" target="_blank" class="product-card bg-slate-50 rounded-[2.5rem] p-8 border border-slate-100 hover:shadow-xl transition-all group flex flex-col">
+                <img src="https://www.coffeeproject.ru/images/products/coffee/562.jpg" class="h-48 object-contain mb-6" alt="Крепкие Объятия">
+                <span class="bg-slate-200 text-slate-600 text-[10px] font-bold uppercase px-3 py-1 rounded-full w-fit">Наш выбор</span>
                 <h3 class="text-2xl font-extrabold text-slate-900 mt-6 mb-2 uppercase tracking-tighter italic">Крепкие Объятия</h3>
-                <p class="text-slate-500 text-sm mb-6">Плотный и насыщенный эспрессо. Новый урожай с глубоким вкусом.</p>
+                <p class="text-slate-500 text-sm mb-6 flex-grow">Плотный и насыщенный эспрессо. Новый урожай с глубоким вкусом.</p>
                 <div class="flex justify-between items-center pt-6 border-t border-slate-200">
                     <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">250г / 1000г</span>
                     <span class="text-orange-600 font-bold text-xs uppercase">Coffee Project</span>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </section>
@@ -241,48 +246,6 @@
         </div>
     </div>
 </section>
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Analysis: Экспертные Гайды и Уникальные Сорта</title>
-    <meta name="yandex-verification" content="6233c44c1fd26495" />
-    <meta name="description" content="Независимый центр анализа кофейной индустрии. Экспертные обзоры кофе и уникальные сорта.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/unnamed%20(6).webp">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        .mobile-menu-active { display: flex !important; }
-    </style>
-</head>
-<body class="bg-white text-slate-900">
-
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
-    <div class="container mx-auto px-4 h-20 flex items-center justify-between max-w-7xl">
-        <a href="index.html" class="flex items-center space-x-2">
-            <span class="text-2xl">☕</span>
-            <span class="text-xl font-bold tracking-tight text-slate-900 uppercase">Coffee <span class="text-orange-500 font-black">Analysis</span></span>
-        </a>
-        <nav class="hidden md:flex items-center space-x-6">
-            <a href="index.html" class="text-sm font-semibold hover:text-orange-500 transition-colors">Главная</a>
-            <a href="specialty-micro-lots-2025.html" class="text-sm font-semibold hover:text-orange-500 transition-colors">Обзоры</a>
-            <a href="kak-hranit-kofe-guide.html" class="text-sm font-semibold hover:text-orange-500 transition-colors">Гайды</a>
-            <a href="registration.html" class="text-sm font-bold text-orange-500">Регистрация</a>
-            <a href="login.html" class="bg-orange-500 text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-orange-600 transition-shadow">Логин</a>
-        </nav>
-        <button id="menu-btn" class="md:hidden text-slate-900 p-2"><i data-lucide="menu"></i></button>
-    </div>
-    <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-100 flex-col p-4 space-y-4 md:hidden shadow-xl">
-        <a href="index.html" class="font-bold border-b pb-2">Главная</a>
-        <a href="specialty-micro-lots-2025.html" class="font-bold border-b pb-2">Обзоры</a>
-        <a href="kak-hranit-kofe-guide.html" class="font-bold border-b pb-2">Гайды</a>
-        <a href="login.html" class="bg-orange-500 text-white p-3 rounded-lg text-center font-bold">Логин</a>
-    </div>
-</header>
 
 <section class="py-20 bg-white border-y border-slate-100">
     <div class="container mx-auto px-4 max-w-7xl">
@@ -343,27 +306,6 @@
 
 <footer class="bg-[#0f172a] text-white py-16">
     <div class="container mx-auto px-4 max-w-7xl">
-        <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">&copy; 2025 Coffee Specialty. Проект coffeespecialty.ru</p>
-            <a href="https://elama.ru/net-market-reg?nmrefid=da0b87d5-1f4d-4645-b50c-c832dd685643" target="_blank" class="text-orange-500 text-[10px] font-bold uppercase tracking-widest hover:underline">SEO: elama.ru</a>
-        </div>
-    </div>
-</footer>
-
-<script>
-    lucide.createIcons();
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => {
-        menu.classList.toggle('mobile-menu-active');
-    });
-</script>
-</body>
-</html>
-
-
-<footer class="bg-[#0f172a] text-white py-16">
-    <div class="container mx-auto px-4 max-w-7xl">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div class="col-span-2 md:col-span-1 space-y-6">
                 <div class="flex items-center space-x-2">
@@ -420,7 +362,6 @@
 
 <script>
     lucide.createIcons();
-    // Мобильное меню
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
     btn.addEventListener('click', () => {
