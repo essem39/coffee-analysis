@@ -3,7 +3,7 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Обзор сортов кофе 2025: от классики до редких микролотов | Coffee Specialty</title>
+ <title>Обзор сортов кофе 2025: от классики до редких микролотов | Coffee Analysis</title>
  <meta name="description" content="Экспертный обзор лучших сортов кофе 2025 года. Сравнение по географии и способам обработки, гид по выбору арабики, редкие микролоты и популярные сорта для эспрессо и фильтра.">
  
  <!-- Open Graph -->
@@ -17,8 +17,10 @@
  <!-- Lucide Icons -->
  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
  
+ <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/unnamed%20(6).webp">
+ 
  <style>
- @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
  
  body {
  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -153,35 +155,38 @@
  }
  </style>
 </head>
-<body class="bg-white">
+<body class="bg-white text-slate-900">
  <!-- Header -->
  <header class="border-b bg-white/95 backdrop-blur sticky top-0 z-50">
  <div class="container mx-auto px-4 py-4 flex items-center justify-between max-w-7xl">
- <div class="flex items-center space-x-2">
+ <a href="index.html" class="flex items-center space-x-2">
  <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
  <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
  </div>
- <span class="text-xl font-bold text-gray-900">Coffee Specialty</span>
- </div>
+ <span class="text-xl font-bold text-gray-900">Coffee <span class="text-orange-500">Analysis</span></span>
+ </a>
  
  <!-- Desktop Navigation -->
  <nav class="hidden md:flex items-center space-x-8">
- <a href="index.html" class="text-gray-600 hover:text-gray-900 transition-colors">Главная</a>
- <a href="dekaf-guide.html" class="text-gray-600 hover:text-gray-900 transition-colors">Декаф гайд</a>
- <a href="specialty-micro-lots-2025.html" class="text-orange-600 font-medium">Обзоры</a>
- <a href="budget-barista-equipment-150.html" class="text-gray-600 hover:text-gray-900 transition-colors">Техника </a>
- </nav>
+ <a href="index.html" class="text-gray-600 hover:text-orange-600 transition-colors">Главная</a>
+ <a href="specialty-micro-lots-2025.html" class="text-orange-600 font-bold border-b-2 border-orange-500">Обзоры</a>
+ <a href="dekaf-guide.html" class="text-gray-600 hover:text-orange-600 transition-colors">Гайды</a>
  
- <!-- Desktop Buttons -->
- <div class="hidden md:flex items-center space-x-4">
- <button onclick="window.open('https://www.coffeeproject.ru/user/profile')" class="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">Войти</button>
- <button onclick="window.open('https://www.coffeeproject.ru/?ref=YUdQUA')" class="btn-primary text-white px-6 py-2 rounded-md">
- Регистрация
- </button>
+ <div class="relative group cursor-pointer py-2">
+ <span class="flex items-center text-gray-600 group-hover:text-orange-600 uppercase text-[11px] font-black tracking-widest">Ещё <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></span>
+ <div class="hidden group-hover:block absolute top-full left-0 w-52 bg-white shadow-xl border border-gray-100 rounded-xl p-4 space-y-3">
+ <a href="espresso-masterclass.html" class="block text-sm hover:text-orange-600">Мастер-класс эспрессо</a>
+ <a href="budget-barista-equipment-150.html" class="block text-sm hover:text-orange-600 font-medium">Оборудование</a>
+ <a href="kak-hranit-kofe-guide.html" class="block text-sm hover:text-orange-600">Хранение кофе</a>
+ <hr class="border-gray-50">
+ <a href="affiliate-coffee-top-7.html" class="block text-[10px] uppercase tracking-tighter text-gray-400 hover:text-orange-600">Партнерки</a>
+ <a href="links.html" class="block text-[10px] uppercase tracking-tighter text-gray-400 hover:text-orange-600">Полезные ссылки</a>
  </div>
+ </div>
+ </nav>
 
  <!-- Mobile Menu Button -->
-<button class="md:hidden hamburger" id="menu-btn">
+ <button class="md:hidden hamburger" id="menu-btn">
  <span class="hamburger-top"></span>
  <span class="hamburger-middle"></span>
  <span class="hamburger-bottom"></span>
@@ -200,7 +205,7 @@
  <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
  <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
  </div>
- <span class="text-xl font-bold text-gray-900">Coffee Specialty</span>
+ <span class="text-xl font-bold text-gray-900">Coffee Analysis</span>
  </div>
  <button class="p-2" id="close-menu">
  <i data-lucide="x" class="w-6 h-6 text-gray-600"></i>
@@ -214,34 +219,31 @@
  <span>Главная</span>
  </div>
  </a>
- <a href="dekaf-guide.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
- <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
- <i data-lucide="book-open" class="w-5 h-5"></i>
- <span>Декаф гайд</span>
- </div>
- </a>
  <a href="specialty-micro-lots-2025.html" class="block text-lg text-orange-600 font-medium mobile-menu-link">
  <div class="flex items-center space-x-3 p-3 rounded-lg bg-orange-50">
  <i data-lucide="star" class="w-5 h-5"></i>
- <span>Обзоры</span>
+ <span>Обзоры сортов</span>
+ </div>
+ </a>
+ <a href="dekaf-guide.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
+ <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
+ <i data-lucide="book-open" class="w-5 h-5"></i>
+ <span>Гайды</span>
  </div>
  </a>
  <a href="budget-barista-equipment-150.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
  <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
- <i data-lucide="edit-3" class="w-5 h-5"></i>
- <span>Техника </span>
+ <i data-lucide="package" class="w-5 h-5"></i>
+ <span>Оборудование</span>
+ </div>
+ </a>
+ <a href="links.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
+ <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
+ <i data-lucide="link" class="w-5 h-5"></i>
+ <span>Ссылки</span>
  </div>
  </a>
  </nav>
- 
- <div class="mt-8 space-y-4">
- <button onclick="window.open('https://www.coffeeproject.ru/user/profile')"class="w-full px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
- Войти
- </button>
- <button onclick="window.open('https://www.coffeeproject.ru/?ref=YUdQUA')" class="w-full btn-primary text-white px-4 py-3 rounded-lg">
- Регистрация
- </button>
- </div>
  </div>
  </div>
 
@@ -257,18 +259,13 @@
  <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
  <span class="gradient-text">Обзор сортов кофе</span>: Ваш гид в мире вкуса
  </h1>
- <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+ <p class="text-xl md:text-2xl text-gray-600 mb-6 leading-relaxed">
  Откройте для себя лучшие сорта 2025 года. От популярных лотов из Бразилии и Эфиопии до редких микролотов с экспериментальной обработкой.
  </p>
- <div class="flex flex-col sm:flex-row gap-4">
- <button onclick="window.open('https://www.coffeeproject.ru/?ref=YUdQUA', '_blank')" class="btn-primary text-white text-lg px-8 py-4 rounded-lg flex items-center justify-center">
- Смотреть каталог
- <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
- </button>
- <button class="border border-gray-300 text-gray-700 text-lg px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors">
- Ваш промо-код: YUdQUA
- </button>
- </div>
+ <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+ В этом подробном гайде мы расскажем, как география, высота произрастания, способ обработки и степень обжарки влияют на вкус вашей чашки. 
+ Вы научитесь выбирать кофе под свой метод заваривания и вкусовые предпочтения.
+ </p>
  </div>
  <div class="relative">
  <div class="w-full h-96 bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl shadow-2xl overflow-hidden">
@@ -283,75 +280,137 @@
  </div>
  </section>
 
- <!-- Geography Section -->
+ <!-- Introduction Section -->
  <section class="py-16 bg-white">
- <div class="container mx-auto px-4 max-w-7xl">
- <div class="text-center mb-16">
- <h2 class="text-3xl md:text-4xl font-bold mb-4">
- География вкуса: как <span class="gradient-text">регион</span> влияет на кофе
- </h2>
- <p class="text-xl text-gray-600 max-w-3xl mx-auto">
- Терруар — климат, почва и высота — создаёт уникальный вкусовой профиль каждого сорта.
+ <div class="container mx-auto px-4 max-w-4xl">
+ <div class="prose prose-lg max-w-none">
+ <h2 class="text-3xl font-bold mb-6">Что делает кофе особенным?</h2>
+ <p class="text-gray-600 text-lg leading-relaxed mb-6">
+ Specialty кофе — это не просто напиток, эторезультат многолетнего труда фермеров, обжарщиков и бариста. Каждая чашка рассказывает историю о месте произрастания, 
+ климате, почве и людях, которые заботились о зерне от семени до заваривания.
  </p>
- </div>
-
- <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
- <div class="text-center card-hover p-6 rounded-xl bg-gray-50">
- <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
- <i data-lucide="globe" class="w-8 h-8 text-blue-600"></i>
- </div>
- <h3 class="text-xl font-bold mb-3">Латинская Америка</h3>
- <p class="text-gray-600">
- Сбалансированный вкус с нотами шоколада, орехов и карамели. Идеально для эспрессо.
+ <p class="text-gray-600 text-lg leading-relaxed mb-6">
+ По классификации Specialty Coffee Association (SCA), кофе получает статус specialty только при оценке 80+ баллов из 100. 
+ Это означает отсутствие дефектов, чистоту вкуса, сложность ароматического профиля и прослеживаемость происхождения до конкретной фермы или региона.
  </p>
- </div>
-
- <div class="text-center card-hover p-6 rounded-xl bg-gray-50">
- <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
- <i data-lucide="flower" class="w-8 h-8 text-green-600"></i>
- </div>
- <h3 class="text-xl font-bold mb-3">Африка</h3>
- <p class="text-gray-600">
- Яркая, сочная кислотность с нотами цитрусов, ягод и цветов. Отлично для фильтр-кофе.
- </p>
- </div>
-
- <div class="text-center card-hover p-6 rounded-xl bg-gray-50">
- <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
- <i data-lucide="mountain" class="w-8 h-8 text-purple-600"></i>
- </div>
- <h3 class="text-xl font-bold mb-3">Азия и Океания</h3>
- <p class="text-gray-600">
- Плотное тело, низкая кислотность, с нотами специй, земли и табака.
- </p>
- </div>
-
- <div class="text-center card-hover p-6 rounded-xl bg-gray-50">
- <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 mx-auto">
- <i data-lucide="gem" class="w-8 h-8 text-orange-600"></i>
- </div>
- <h3 class="text-xl font-bold mb-3">Редкие микролоты</h3>
- <p class="text-gray-600">
- Уникальные сорта с ограниченным урожаем, часто с экспериментальной обработкой.
+ <div class="bg-orange-50 border-l-4 border-orange-500 p-6 my-8 rounded-r-lg">
+ <p class="text-gray-700 font-medium">
+ <strong>Интересный факт:</strong> Только 10-15% мирового производства кофе соответствует стандартам specialty. 
+ Остальное — коммерческий кофе массового производства с оценкой ниже 80 баллов.
  </p>
  </div>
  </div>
  </div>
  </section>
 
- <!-- Processing Methods Section -->
+ <!-- Geography Section -->
  <section class="py-16 bg-gray-50">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-16">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ География вкуса: как <span class="gradient-text">регион</span> влияет на кофе
+ </h2>
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ Терруар — климат, почва, высота и микроклимат — создаёт уникальный вкусовой профиль каждого сорта
+ </p>
+ </div>
+
+ <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+ <div class="text-center card-hover p-6 rounded-xl bg-white">
+ <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+ <i data-lucide="globe" class="w-8 h-8 text-blue-600"></i>
+ </div>
+ <h3 class="text-xl font-bold mb-3">Латинская Америка</h3>
+ <p class="text-gray-600 mb-4">
+ Сбалансированный вкус с нотами шоколада, орехов и карамели. Идеально для эспрессо и универсальных смесей.
+ </p>
+ <div class="text-sm text-gray-500 space-y-1">
+ <p><strong>Регионы:</strong> Бразилия, Колумбия, Коста-Рика</p>
+ <p><strong>Высота:</strong> 1000-2000м</p>
+ </div>
+ </div>
+
+ <div class="text-center card-hover p-6 rounded-xl bg-white">
+ <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+ <i data-lucide="flower" class="w-8 h-8 text-green-600"></i>
+ </div>
+ <h3 class="text-xl font-bold mb-3">Африка</h3>
+ <p class="text-gray-600 mb-4">
+ Яркая, сочная кислотность с нотами цитрусов, ягод и цветов. Отлично для фильтр-кофе и альтернативных методов.
+ </p>
+ <div class="text-sm text-gray-500 space-y-1">
+ <p><strong>Регионы:</strong> Эфиопия, Кения, Руанда</p>
+ <p><strong>Высота:</strong> 1500-2300м</p>
+ </div>
+ </div>
+
+ <div class="text-center card-hover p-6 rounded-xl bg-white">
+ <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+ <i data-lucide="mountain" class="w-8 h-8 text-purple-600"></i>
+ </div>
+ <h3 class="text-xl font-bold mb-3">Азия и Океания</h3>
+ <p class="text-gray-600 mb-4">
+ Плотное тело, низкая кислотность, с нотами специй, земли и табака. Для тех, кто любит насыщенный вкус.
+ </p>
+ <div class="text-sm text-gray-500 space-y-1">
+ <p><strong>Регионы:</strong> Индонезия, Папуа, Йемен</p>
+ <p><strong>Высота:</strong> 800-1800м</p>
+ </div>
+ </div>
+
+ <div class="text-center card-hover p-6 rounded-xl bg-white">
+ <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+ <i data-lucide="gem" class="w-8 h-8 text-orange-600"></i>
+ </div>
+ <h3 class="text-xl font-bold mb-3">Редкие микролоты</h3>
+ <p class="text-gray-600 mb-4">
+ Уникальные сорта с ограниченным урожаем, часто с экспериментальной обработкой и оценкой 85+.
+ </p>
+ <div class="text-sm text-gray-500 space-y-1">
+ <p><strong>Примеры:</strong> Панама Гейша, Ямайка Blue Mountain</p>
+ <p><strong>Цена:</strong> От $30-50 за 250г</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+ <h3 class="text-2xl font-bold mb-6">Влияние высоты на вкус</h3>
+ <p class="text-gray-600 mb-6 leading-relaxed">
+ Высота произрастания — один из ключевых факторов, определяющих качество кофе. Чем выше растет кофе, 
+ тем медленнее созревают ягоды, что позволяет накопить больше сахаров и развить сложный вкусовой профиль.
+ </p>
+ <div class="grid md:grid-cols-3 gap-6">
+ <div class="bg-orange-50 p-6 rounded-xl">
+ <h4 class="font-bold mb-2 text-orange-900">800-1200м</h4>
+ <p class="text-sm text-gray-600">Низкая высота. Простой вкус, низкая кислотность, ноты земли и орехов</p>
+ </div>
+ <div class="bg-orange-50 p-6 rounded-xl">
+ <h4 class="font-bold mb-2 text-orange-900">1200-1600м</h4>
+ <p class="text-sm text-gray-600">Средняя высота. Сбалансированный профиль, умеренная кислотность</p>
+ </div>
+ <div class="bg-orange-50 p-6 rounded-xl">
+ <h4 class="font-bold mb-2 text-orange-900">1600м+</h4>
+ <p class="text-sm text-gray-600">Высокогорный кофе. Яркая кислотность, сложный вкус, цветочные ноты</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Processing Methods Section -->
+ <section class="py-16 bg-white">
  <div class="container mx-auto px-4 max-w-7xl">
  <div class="text-center mb-16">
  <h2 class="text-3xl md:text-4xl font-bold mb-4">
  Обработка: <span class="gradient-text">ключ к потенциалу</span> зерна
  </h2>
  <p class="text-xl text-gray-600 max-w-3xl mx-auto">
- От способа обработки зависит, будет ли ваш кофе ярким и кислотным или сладким и плотным.
+ От способа обработки зависит, будет ли ваш кофе ярким и кислотным или сладким и плотным
  </p>
  </div>
 
- <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+ <div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden p-8 mb-12">
+ <div class="overflow-x-auto">
  <table class="comparison-table w-full">
  <thead>
  <tr>
@@ -373,7 +432,7 @@
  <td class="text-center method-good">Чистый, яркий</td>
  <td class="text-center method-good">Высокая</td>
  <td class="text-center method-neutral">Лёгкое</td>
- <td class="text-center method-good">Для фильтра</td>
+ <td class="text-center method-good">✓ Для фильтра</td>
  </tr>
  <tr>
  <td class="font-semibold">
@@ -385,20 +444,19 @@
  <td class="text-center method-good">Сладкий, фруктовый</td>
  <td class="text-center method-neutral">Низкая</td>
  <td class="text-center method-good">Плотное</td>
- <td class="text-center
-<td class="text-center method-good">Для эспрессо</td>
+ <td class="text-center method-good">✓ Для эспрессо</td>
  </tr>
  <tr>
  <td class="font-semibold">
  <div class="flex items-center space-x-2">
- <i data-lucide="blender" class="w-5 h-5 text-yellow-600"></i>
+ <i data-lucide="droplet" class="w-5 h-5 text-yellow-600"></i>
  <span>Хани (Honey)</span>
  </div>
  </td>
  <td class="text-center method-good">Сладкий, сбалансированный</td>
  <td class="text-center method-neutral">Средняя</td>
  <td class="text-center method-neutral">Среднее</td>
- <td class="text-center method-good">Универсальный</td>
+ <td class="text-center method-good">✓ Универсальный</td>
  </tr>
  <tr>
  <td class="font-semibold">
@@ -410,68 +468,182 @@
  <td class="text-center method-good">Непредсказуемый, сложный</td>
  <td class="text-center method-neutral">Варьируется</td>
  <td class="text-center method-neutral">Варьируется</td>
- <td class="text-center method-neutral">Для энтузиастов</td>
+ <td class="text-center method-neutral">~ Для энтузиастов</td>
  </tr>
  </tbody>
  </table>
  </div>
+ </div>
 
- <div class="mt-12 grid md:grid-cols-2 gap-8">
- <div class="bg-white p-8 rounded-xl shadow-lg">
+ <div class="grid md:grid-cols-2 gap-8 mb-12">
+ <div class="bg-gray-50 p-8 rounded-xl shadow-sm border border-blue-100">
  <div class="flex items-center space-x-3 mb-4">
  <i data-lucide="award" class="w-8 h-8 text-orange-600"></i>
  <h3 class="text-2xl font-bold">Мытая обработка</h3>
  </div>
- <p class="text-gray-600 mb-4">
- Золотой стандарт для раскрытия терруара. Кофе получается с чистым, ярким и кислотным вкусом, 
- идеально подходящим для заваривания в пуровере или аэропрессе.
+ <p class="text-gray-600 mb-4 leading-relaxed">
+ Золотой стандарт для раскрытия терруара. После сбора ягоды депульпируют (удаляют мякоть), ферментируют в воде 12-48 часов, 
+ промывают и сушат. Кофе получается с чистым, ярким и кислотным вкусом.
  </p>
- <div class="flex items-center space-x-2 text-green-600">
+ <p class="text-gray-600 mb-4 leading-relaxed">
+ Идеально подходит для заваривания в пуровере, аэропрессе или кемексе, где можно оценить все нюансы терруара.
+ </p>
+ <div class="flex items-center space-x-2 text-green-600 font-medium">
  <i data-lucide="check-circle" class="w-5 h-5"></i>
- <span class="font-medium">Выбор чемпионов</span>
+ <span>Выбор чемпионов бариста</span>
  </div>
  </div>
 
- <div class="bg-white p-8 rounded-xl shadow-lg">
+ <div class="bg-gray-50 p-8 rounded-xl shadow-sm border border-red-100">
  <div class="flex items-center space-x-3 mb-4">
  <i data-lucide="zap" class="w-8 h-8 text-blue-600"></i>
  <h3 class="text-2xl font-bold">Натуральная обработка</h3>
  </div>
- <p class="text-gray-600 mb-4">
- Ягоды сушатся целиком, что придаёт кофе интенсивную сладость, ноты спелых фруктов и плотное тело. 
- Идеально для насыщенного эспрессо или сладкого фильтра.
+ <p class="text-gray-600 mb-4 leading-relaxed">
+ Ягоды сушатся целиком на патио или африканских кроватях под солнцем 3-4 недели. Мякоть ферментируется вместе с зерном, 
+ что придаёт кофе интенсивную сладость, ноты спелых фруктов, ягод и вина.
  </p>
- <div class="flex items-center space-x-2 text-green-600">
+  <p class="text-gray-600 mb-4 leading-relaxed">
+ Плотное тело и низкая кислотность делают натуральную обработку идеальной для насыщенного эспрессо или сладкого фильтра. 
+ Популярна в Бразилии и Эфиопии.
+ </p>
+ <div class="flex items-center space-x-2 text-green-600 font-medium">
  <i data-lucide="check-circle" class="w-5 h-5"></i>
- <span class="font-medium">Фруктовая бомба</span>
+ <span>Фруктовая бомба</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-8 md:p-12 rounded-2xl border border-purple-200">
+ <h3 class="text-2xl font-bold mb-6">Экспериментальная обработка: будущее specialty</h3>
+ <p class="text-gray-600 mb-6 leading-relaxed">
+ Современные фермеры и обжарщики экспериментируют с новыми методами обработки, создавая уникальные вкусовые профили:
+ </p>
+ <div class="grid md:grid-cols-3 gap-6">
+ <div class="bg-white p-6 rounded-xl shadow-sm">
+ <h4 class="font-bold mb-2 text-purple-900">Анаэробная ферментация</h4>
+ <p class="text-sm text-gray-600 mb-3">Ферментация в герметичных резервуарах без доступа кислорода. Создает винные, фруктовые ноты.</p>
+ <span class="text-xs text-purple-600 font-medium">Популярно в Колумбии</span>
+ </div>
+ <div class="bg-white p-6 rounded-xl shadow-sm">
+ <h4 class="font-bold mb-2 text-purple-900">Carbonic Maceration</h4>
+ <p class="text-sm text-gray-600 mb-3">Метод из виноделия. Ягоды ферментируются в среде CO2, создавая яркие фруктовые ноты.</p>
+ <span class="text-xs text-purple-600 font-medium">Тренд 2024-2025</span>
+ </div>
+ <div class="bg-white p-6 rounded-xl shadow-sm">
+ <h4 class="font-bold mb-2 text-purple-900">Thermal Shock</h4>
+ <p class="text-sm text-gray-600 mb-3">Контрастные температуры во время обработки. Усиливает сладость и комплексность.</p>
+ <span class="text-xs text-purple-600 font-medium">Эксклюзивные лоты</span>
  </div>
  </div>
  </div>
  </div>
  </section>
 
- <!-- Promotion Block -->
- <section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+ <!-- Roast Levels Section -->
+ <section class="py-16 bg-gray-50">
  <div class="container mx-auto px-4 max-w-7xl">
- <div class="text-center">
- <div class="inline-flex items-center space-x-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
- <i data-lucide="trending-up" class="w-4 h-4"></i>
- <span>Для кофейных предпринимателей</span>
- </div>
- <h2 class="text-3xl md:text-4xl font-bold mb-6">
- Поделитесь кофе с друзьями и Получите 200 ₽!
+ <div class="text-center mb-16">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ Степень обжарки: от <span class="gradient-text">светлой до тёмной</span>
  </h2>
- <p class="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-Бонусные рубли будут зачислены после того как друг оплатит свой первый заказ на сумму более 1000 ₽.
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ Обжарка раскрывает потенциал зерна или может его полностью скрыть
  </p>
- <div class="flex flex-col sm:flex-row gap-4 justify-center">
- <button onclick="window.open('https://www.coffeeproject.ru/?ref=YUdQUA')" class="text-lg px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg transition-colors flex items-center justify-center">
- Регистрация
- <i data-lucide="external-link" class="ml-2 w-5 h-5"></i>
- </button>
- <button class="text-lg px-8 py-4 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg transition-colors">
- Ваш промо-код: YUdQUA
- </button>
+ </div>
+
+ <div class="grid md:grid-cols-4 gap-6 mb-12">
+ <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+ <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+ <span class="text-2xl">☕</span>
+ </div>
+ <h3 class="font-bold mb-2">Светлая</h3>
+ <p class="text-sm text-gray-600 mb-3">Максимум кислотности, цветочные и фруктовые ноты</p>
+ <div class="text-xs text-gray-500">
+ <p>Для: фильтр, V60</p>
+ <p>Регионы: Африка</p>
+ </div>
+ </div>
+
+ <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+ <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+ <span class="text-2xl">☕</span>
+ </div>
+ <h3 class="font-bold mb-2">Средне-светлая</h3>
+ <p class="text-sm text-gray-600 mb-3">Баланс кислотности и сладости, ореховые ноты</p>
+ <div class="text-xs text-gray-500">
+ <p>Для: универсальная</p>
+ <p>Регионы: Латинская Америка</p>
+ </div>
+ </div>
+
+ <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+ <div class="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mb-4 mx-auto">
+ <span class="text-2xl">☕</span>
+ </div>
+ <h3 class="font-bold mb-2">Средняя</h3>
+ <p class="text-sm text-gray-600 mb-3">Сбалансированный вкус, шоколад и карамель</p>
+ <div class="text-xs text-gray-500">
+ <p>Для: эспрессо, фильтр</p>
+ <p>Регионы: все</p>
+ </div>
+ </div>
+
+ <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+ <div class="w-16 h-16 bg-amber-800 rounded-full flex items-center justify-center mb-4 mx-auto">
+ <span class="text-2xl text-white">☕</span>
+ </div>
+ <h3 class="font-bold mb-2">Тёмная</h3>
+ <p class="text-sm text-gray-600 mb-3">Низкая кислотность, ноты дыма и горького шоколада</p>
+ <div class="text-xs text-gray-500">
+ <p>Для: эспрессо</p>
+ <p>Скрывает терруар</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+ <h3 class="text-2xl font-bold mb-6">Как обжарка меняет вкус</h3>
+ <div class="space-y-6">
+ <div class="flex items-start space-x-4">
+ <i data-lucide="thermometer" class="w-6 h-6 text-orange-500 flex-shrink-0 mt-1"></i>
+ <div>
+ <h4 class="font-bold mb-2">Светлая обжарка (Light Roast)</h4>
+ <p class="text-gray-600 leading-relaxed">
+ Температура 195-205°C. Зерно достигает "первого крэка" и останавливается. Сохраняет максимум оригинальных характеристик терруара: 
+ яркую кислотность, цветочные и фруктовые ноты. Идеально для высококачественной арабики из Африки и Центральной Америки.
+ </p>
+ </div>
+ </div>
+
+ <div class="flex items-start space-x-4">
+ <i data-lucide="flame" class="w-6 h-6 text-orange-500 flex-shrink-0 mt-1"></i>
+ <div>
+ <h4 class="font-bold mb-2">Средняя обжарка (Medium Roast)</h4>
+ <p class="text-gray-600 leading-relaxed">
+ Температура 210-220°C. Баланс между кислотностью и сладостью. Появляются ноты карамели, шоколада и орехов, 
+ но терруар все еще различим. Универсальная обжарка для большинства методов заваривания.
+ </p>
+ </div>
+ </div>
+
+ <div class="flex items-start space-x-4">
+ <i data-lucide="alert-circle" class="w-6 h-6 text-orange-500 flex-shrink-0 mt-1"></i>
+ <div>
+ <h4 class="font-bold mb-2">Тёмная обжарка (Dark Roast)</h4>
+ <p class="text-gray-600 leading-relaxed">
+ Температура 225-230°C и выше. Достигается "второй крэк". Кислотность почти исчезает, появляются ноты дыма, горького шоколада и пепла. 
+ Скрывает оригинальные характеристики зерна. Подходит для тех, кто любит крепкий, горький вкус без кислинки.
+ </p>
+ </div>
+ </div>
+ </div>
+
+ <div class="mt-8 p-6 bg-orange-50 rounded-xl border-l-4 border-orange-500">
+ <p class="text-gray-700 leading-relaxed">
+ <strong>Совет эксперта:</strong> Для specialty кофе рекомендуется светлая или средняя обжарка, чтобы раскрыть уникальные характеристики терруара. 
+ Тёмная обжарка больше подходит для коммерческого кофе, где нужно скрыть дефекты зерна.
+ </p>
  </div>
  </div>
  </div>
@@ -492,128 +664,350 @@
  <div class="grid lg:grid-cols-2 gap-12 items-start">
  <div class="space-y-8">
  <div class="flex items-start space-x-4">
- <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
- <span class="text-orange-600 font-bold text-sm">1</span>
+ <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+ <span class="text-orange-600 font-bold">1</span>
  </div>
  <div>
- <h3 class="text-xl font-bold mb-2">Определите способ заваривания</h3>
- <p class="text-gray-600">
- Для эспрессо подойдут сорта с низкой кислотностью (Бразилия, натуральная обработка). 
- Для фильтра (V60, Chemex) — с высокой кислотностью (Эфиопия, Кения, мытая обработка).
+ <h3 class="text-xl font-bold mb-3">Определите способ заваривания</h3>
+ <p class="text-gray-600 leading-relaxed mb-3">
+ Для эспрессо подойдут сорта с низкой кислотностью и плотным телом (Бразилия, натуральная обработка, средняя обжарка). 
+ Для фильтра (V60, Chemex, аэропресс) — с высокой кислотностью и чистым вкусом (Эфиопия, Кения, мытая обработка, светлая обжарка).
  </p>
+ <div class="bg-blue-50 p-4 rounded-lg">
+ <p class="text-sm text-blue-900">
+ <strong>Френч-пресс:</strong> Средняя обжарка, плотное тело<br>
+ <strong>Турка:</strong> Тёмная обжарка, мелкий помол<br>
+ <strong>Капельная кофеварка:</strong> Средняя обжарка, универсальные сорта
+ </p>
+ </div>
  </div>
  </div>
 
  <div class="flex items-start space-x-4">
- <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
- <span class="text-orange-600 font-bold text-sm">2</span>
+ <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+ <span class="text-orange-600 font-bold">2</span>
  </div>
  <div>
- <h3 class="text-xl font-bold mb-2">Выберите вкусовой профиль</h3>
- <p class="text-gray-600">
- Любите шоколад и орехи? Выбирайте Центральную и Южную Америку. 
- Предпочитаете ягоды и цветы? Ваш выбор — Африка. Хотите что-то необычное? 
- Ищите экспериментальную обработку.
+ <h3 class="text-xl font-bold mb-3">Выберите вкусовой профиль</h3>
+ <p class="text-gray-600 leading-relaxed mb-3">
+ Любите шоколад, орехи и карамель? Выбирайте Центральную и Южную Америку (Бразилия, Колумбия, Гватемала). 
+ Предпочитаете ягоды, цветы и цитрусы? Ваш выбор — Африка (Эфиопия, Кения, Руанда). 
+ Хотите что-то необычное? Ищите экспериментальную обработку или азиатские сорта.
  </p>
+ <div class="grid grid-cols-2 gap-3">
+ <div class="bg-orange-50 p-3 rounded-lg text-sm">
+ <p class="font-semibold text-orange-900">Сладкий</p>
+ <p class="text-gray-600">Натуральная, хани</p>
+ </div>
+ <div class="bg-blue-50 p-3 rounded-lg text-sm">
+ <p class="font-semibold text-blue-900">Кислотный</p>
+ <p class="text-gray-600">Мытая, светлая</p>
+ </div>
+ </div>
  </div>
  </div>
 
  <div class="flex items-start space-x-4">
- <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
- <span class="text-orange-600 font-bold text-sm">3</span>
+ <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+ <span class="text-orange-600 font-bold">3</span>
  </div>
  <div>
- <h3 class="text-xl font-bold mb-2">Смотрите на дату обжарки</h3>
- <p class="text-gray-600">
- Кофе достигает пика вкуса через 7-30 дней после обжарки. 
- Не покупайте кофе, обжаренный более двух месяцев назад. Ищите свежую обжарку.
+ <h3 class="text-xl font-bold mb-3">Смотрите на дату обжарки</h3>
+ <p class="text-gray-600 leading-relaxed mb-3">
+ Кофе достигает пика вкуса через 7-30 дней после обжарки. В первые 3-5 дней зерно "дегазируется" и может давать неравномерную экстракцию. 
+ Не покупайте кофе, обжаренный более двух месяцев назад — он потеряет большую часть аромата и вкуса.
  </p>
+ <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+ <p class="text-sm text-green-900">
+ <strong>Золотое правило:</strong> Покупайте кофе с датой обжарки не старше 2-4 недель. 
+ Лучше всего — у местных обжарщиков, которые жарят небольшими партиями.
+ </p>
+ </div>
  </div>
  </div>
 
  <div class="flex items-start space-x-4">
- <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
- <span class="text-orange-600 font-bold text-sm">4</span>
+ <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+ <span class="text-orange-600 font-bold">4</span>
  </div>
  <div>
- <h3 class="text-xl font-bold mb-2">Не бойтесь экспериментировать</h3>
- <p class="text-gray-600">
- Лучший способ найти свой кофе — пробовать. Покупайте небольшие пачки разных сортов 
- и ведите дневник дегустаций, чтобы понять свои предпочтения.
+ <h3 class="text-xl font-bold mb-3">Читайте этикетку</h3>
+ <p class="text-gray-600 leading-relaxed mb-3">
+ Качественный specialty кофе всегда содержит подробную информацию на упаковке:
+ </p>
+ <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+ <li>Страна и регион происхождения (иногда даже ферма)</li>
+ <li>Высота произрастания</li>
+ <li>Способ обработки (мытая, натуральная, хани)</li>
+ <li>Дата обжарки (не срок годности!)</li>
+ <li>Степень обжарки</li>
+ <li>Вкусовые дескрипторы (ноты вкуса)</li>
+ <li>Оценка Q-грейдера (если есть)</li>
+ </ul>
+ </div>
+ </div>
+
+ <div class="flex items-start space-x-4">
+ <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+ <span class="text-orange-600 font-bold">5</span>
+ </div>
+ <div>
+ <h3 class="text-xl font-bold mb-3">Не бойтесь экспериментировать</h3>
+ <p class="text-gray-600 leading-relaxed mb-3">
+ Лучший способ найти свой кофе — пробовать разные сорта, регионы и обработки. 
+ Покупайте небольшие пачки (100-250г) разных сортов и ведите дневник дегустаций, 
+ чтобы понять свои предпочтения.
+ </p>
+ <p class="text-gray-600 leading-relaxed">
+ Попробуйте кофе из одного региона, но с разной обработкой, чтобы понять, как обработка влияет на вкус. 
+ Затем сравните кофе из разных регионов с одинаковой обработкой — так вы почувствуете влияние терруара.
  </p>
  </div>
  </div>
  </div>
 
- <div class="bg-gray-50 p-8 rounded-2xl">
- <h3 class="text-2xl font-bold mb-6">Популярные сорта 2025</h3>
+ <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl border border-orange-200 sticky top-24">
+ <h3 class="text-2xl font-bold mb-6">Топ-10 сортов 2025</h3>
+ <p class="text-gray-600 mb-6 text-sm">
+ На основе оценок Q-грейдеров, отзывов бариста и популярности среди specialty-энтузиастов
+ </p>
+ <div class="space-y-3">
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <div class="flex-grow">
+ <h4 class="font-bold text-base">Эфиопия Иргачефф</h4>
+ <p class="text-xs text-gray-600">Мытая, цветочные ноты, для фильтра</p>
+ </div>
+ <div class="flex items-center space-x-1 ml-4">
+ <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-sm font-bold">4.9</span>
+ </div>
+ </div>
+
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <div class="flex-grow">
+ <h4 class="font-bold text-base">Бразилия Сантос</h4>
+ <p class="text-xs text-gray-600">Натуральная, шоколад, для эспрессо</p>
+ </div>
+ <div class="flex items-center space-x-1 ml-4">
+ <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-sm font-bold">4.7</span>
+ </div>
+ </div>
+
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <div class="flex-grow">
+ <h4 class="font-bold text-base">Колумбия Супремо</h4>
+ <p class="text-xs text-gray-600">Мытая, универсальный, карамель</p>
+ </div>
+ <div class="flex items-center space-x-1 ml-4">
+ <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-sm font-bold">4.8</span>
+ </div>
+ </div>
+
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <div class="flex-grow">
+ <h4 class="font-bold text-base">Коста-Рика Тарразу</h4>
+ <p class="text-xs text-gray-600">Хани, сбалансированный, для фильтра</p>
+ </div>
+ <div class="flex items-center space-x-1 ml-4">
+ <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-sm font-bold">4.8</span>
+ </div>
+ </div>
+
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border-2 border-orange-300">
+ <div class="flex-grow">
+ <h4 class="font-bold text-base">Панама Гейша</h4>
+ <p class="text-xs text-gray-600">Мытая, жасмин, редкий микролот</p>
+ </div>
+ <div class="flex items-center space-x-1 ml-4">
+ <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-sm font-bold">5.0</span>
+ </div>
+ </div>
+
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <div class="flex-grow">
+ <h4 class="font-bold text-base">Кения AA</h4>
+ <p class="text-xs text-gray-600">Мытая, ягоды, высокая кислотность</p>
+ </div>
+ <div class="flex items-center space-x-1 ml-4">
+ <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-sm font-bold">4.9</span>
+ </div>
+ </div>
+
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <div class="flex-grow">
+ <h4 class="font-bold text-base">Гватемала Антигуа</h4>
+ <p class="text-xs text-gray-600">Мытая, какао, сбалансированный</p>
+ </div>
+ <div class="flex items-center space-x-1 ml-4">
+ <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-sm font-bold">4.7</span>
+ </div>
+ </div>
+
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <div class="flex-grow">
+ <h4 class="font-bold text-base">Руанда Бурбон</h4>
+ <p class="text-xs text-gray-600">Мытая, цитрусы, яркая</p>
+ </div>
+ <div class="flex items-center space-x-1 ml-4">
+ <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-sm font-bold">4.6</span>
+ </div>
+ </div>
+
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <div class="flex-grow">
+ <h4 class="font-bold text-base">Индонезия Суматра</h4>
+ <p class="text-xs text-gray-600">Wet-hulled, землистая, плотная</p>
+ </div>
+ <div class="flex items-center space-x-1 ml-4">
+ <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-sm font-bold">4.5</span>
+ </div>
+ </div>
+
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <div class="flex-grow">
+ <h4 class="font-bold text-base">Гондурас Марагоджип</h4>
+ <p class="text-xs text-gray-600">Хани, крупное зерно, сладкий</p>
+ </div>
+ <div class="flex items-center space-x-1 ml-4">
+ <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-sm font-bold">4.6</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="mt-6 p-6 bg-white rounded-xl border-2 border-orange-300">
+ <h4 class="font-bold mb-3 flex items-center text-orange-600">
+ <i data-lucide="trophy" class="w-5 h-5 mr-2"></i>
+ Выбор редакции 2025
+ </h4>
+ <p class="text-sm text-gray-600 leading-relaxed">
+ Для эспрессо рекомендуем <strong>Бразилия Сантос</strong> или <strong>Колумбия Супремо</strong>. 
+ Для фильтра — <strong>Эфиопия Иргачефф</strong> или <strong>Кения AA</strong>. 
+ Если хотите попробовать что-то экстраординарное — <strong>Панама Гейша</strong> (но будьте готовы к высокой цене).
+ </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Microlots Section -->
+ <section class="py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-16">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ Редкие <span class="text-orange-400">микролоты</span>: эксклюзив для ценителей
+ </h2>
+ <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+ Ограниченные партии с уникальным вкусом и прослеживаемостью до конкретной фермы
+ </p>
+ </div>
+
+ <div class="grid md:grid-cols-3 gap-8">
+ <div class="bg-white/10 backdrop-blur p-8 rounded-xl border border-white/20">
+ <div class="flex items-center justify-between mb-4">
+ <h3 class="text-xl font-bold">Панама Гейша</h3>
+ <span class="bg-orange-500 text-white text-xs px-3 py-1 rounded-full font-bold">92+</span>
+ </div>
+ <p class="text-slate-300 mb-4 leading-relaxed">
+ Легендарный сорт с фермы Hacienda La Esmeralda. Ноты жасмина, бергамота и персика. 
+ Один из самых дорогих кофе в мире — до $350 за фунт на аукционах.
+ </p>
+ <div class="flex items-center space-x-2 text-sm text-slate-400">
+ <i data-lucide="map-pin" class="w-4 h-4"></i>
+ <span>Boquete, Панама | 1600-1800м</span>
+ </div>
+ </div>
+
+ <div class="bg-white/10 backdrop-blur p-8 rounded-xl border border-white/20">
+ <div class="flex items-centerjustify-between mb-4">
+ <h3 class="text-xl font-bold">Ямайка Blue Mountain</h3>
+ <span class="bg-blue-500 text-white text-xs px-3 py-1 rounded-full font-bold">88+</span>
+ </div>
+ <p class="text-slate-300 mb-4 leading-relaxed">
+ Выращивается только в горах Блю-Маунтин на высоте 900-1500м. Мягкий, сбалансированный вкус без горечи. 
+ Большая часть урожая экспортируется в Японию по высоким ценам.
+ </p>
+ <div class="flex items-center space-x-2 text-sm text-slate-400">
+ <i data-lucide="map-pin" class="w-4 h-4"></i>
+ <span>Blue Mountains, Ямайка | 900-1500м</span>
+ </div>
+ </div>
+
+ <div class="bg-white/10 backdrop-blur p-8 rounded-xl border border-white/20">
+ <div class="flex items-center justify-between mb-4">
+ <h3 class="text-xl font-bold">Йемен Мокка</h3>
+ <span class="bg-purple-500 text-white text-xs px-3 py-1 rounded-full font-bold">86+</span>
+ </div>
+ <p class="text-slate-300 mb-4 leading-relaxed">
+ Один из древнейших сортов кофе. Дикая ферментация создает уникальный винный профиль с нотами специй, 
+ сухофруктов и шоколада. Ограниченное производство из-за политической ситуации.
+ </p>
+ <div class="flex items-center space-x-2 text-sm text-slate-400">
+ <i data-lucide="map-pin" class="w-4 h-4"></i>
+ <span>Регион Мокка, Йемен | 1000-2300м</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="mt-12 bg-white/5 backdrop-blur p-8 md:p-12 rounded-2xl border border-white/10">
+ <h3 class="text-2xl font-bold mb-6">Что такое микролот?</h3>
+ <div class="grid md:grid-cols-2 gap-8">
+ <div>
+ <p class="text-slate-300 leading-relaxed mb-4">
+ Микролот — это небольшая партия кофе (обычно 5-50 мешков по 60кг), выращенная на конкретном участке фермы 
+ с уникальными характеристиками терруара. Такой кофе проходит тщательный отбор, обработку и оценку Q-грейдера.
+ </p>
+ <p class="text-slate-300 leading-relaxed">
+ Микролоты позволяют фермерам получать премиальную цену за качество, а потребителям — наслаждаться 
+ уникальным вкусом с полной прослеживаемостью происхождения.
+ </p>
+ </div>
  <div class="space-y-4">
- <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+ <div class="flex items-start space-x-3">
+ <i data-lucide="check-circle" class="w-6 h-6 text-green-400 flex-shrink-0 mt-1"></i>
  <div>
- <h4 class="font-semibold">Эфиопия Иргачефф</h4>
- <p class="text-sm text-gray-600">Мытая, для фильтра</p>
- </div>
- <div class="flex items-center space-x-1">
- <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
- <span class="text-sm font-medium">4.9</span>
+ <h4 class="font-bold mb-1">Прослеживаемость</h4>
+ <p class="text-sm text-slate-400">Известна конкретная ферма, участок, высота</p>
  </div>
  </div>
-
- <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+ <div class="flex items-start space-x-3">
+ <i data-lucide="check-circle" class="w-6 h-6 text-green-400 flex-shrink-0 mt-1"></i>
  <div>
- <h4 class="font-semibold">Бразилия Сантос</h4>
- <p class="text-sm text-gray-600">Натуральная, для эспрессо</p>
- </div>
- <div class="flex items-center space-x-1">
- <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
- <span class="text-sm font-medium">4.7</span>
+ <h4 class="font-bold mb-1">Высокая оценка</h4>
+ <p class="text-sm text-slate-400">Обычно 85+ баллов по системе SCA</p>
  </div>
  </div>
-
- <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+ <div class="flex items-start space-x-3">
+ <i data-lucide="check-circle" class="w-6 h-6 text-green-400 flex-shrink-0 mt-1"></i>
  <div>
- <h4 class="font-semibold">Колумбия Супремо</h4>
- <p class="text-sm text-gray-600">Мытая, универсальный</p>
- </div>
- <div class="flex items-center space-x-1">
- <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
- <span class="text-sm font-medium">4.6</span>
+ <h4 class="font-bold mb-1">Ограниченность</h4>
+ <p class="text-sm text-slate-400">Малые объемы, часто распродаются за недели</p>
  </div>
  </div>
-
- <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+ <div class="flex items-start space-x-3">
+ <i data-lucide="check-circle" class="w-6 h-6 text-green-400 flex-shrink-0 mt-1"></i>
  <div>
- <h4 class="font-semibold">Коста-Рика Тарразу</h4>
- <p class="text-sm text-gray-600">Хани, для фильтра</p>
- </div>
- <div class="flex items-center space-x-1">
- <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
- <span class="text-sm font-medium">4.8</span>
- </div>
- </div>
-
- <div class="flex items-center justify-between p-4 bg-white rounded-lg">
- <div>
- <h4 class="font-semibold">Панама Гейша</h4>
- <p class="text-sm text-gray-600">Мытая, редкий лот</p>
- </div>
- <div class="flex items-center space-x-1">
- <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
- <span class="text-sm font-medium">5.0</span>
+ <h4 class="font-bold mb-1">Премиальная цена</h4>
+ <p class="text-sm text-slate-400">От $15-20 за 250г для specialty микролотов</p>
  </div>
  </div>
  </div>
-
- <button onclick="window.open('https://www.coffeeproject.ru/?ref=YUdQUA')" class="w-full mt-6 btn-primary text-white py-3 rounded-lg font-medium">
- Найти лучшие предложения
- </button>
  </div>
  </div>
  </div>
  </section>
 
  <!-- FAQ Section -->
- <section class="py-16 bg-gray-50">
+ <section class="py-16 bg-white">
  <div class="container mx-auto px-4 max-w-4xl">
  <div class="text-center mb-16">
  <h2 class="text-3xl md:text-4xl font-bold mb-4">
@@ -625,36 +1019,103 @@
  </div>
 
  <div class="space-y-6">
- <div class="bg-white p-6 rounded-xl shadow-sm">
- <h3 class="text-xl font-bold mb-3">Что такое "микролот"?</h3>
- <p class="text-gray-600">
- Микролот — это небольшая, ограниченная партия кофе с одной фермы или даже с одного её участка. 
- Такой кофе обладает уникальным вкусом, отслеживаемым происхождением и обычно стоит дороже.
+ <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <h3 class="text-xl font-bold mb-3 flex items-start">
+ <i data-lucide="help-circle" class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0 mt-1"></i>
+ Что такое "микролот"?
+ </h3>
+ <p class="text-gray-600 leading-relaxed ml-9">
+ Микролот — это небольшая, ограниченная партия кофе (обычно 5-50 мешков) с одной фермы или даже с одного её участка. 
+ Такой кофе обладает уникальным вкусом, полной прослеживаемостью происхождения и обычно стоит дороже. 
+ Микролоты получают высокие оценки Q-грейдеров (85+ баллов) и позволяют фермерам получать справедливую премиальную цену за качество.
  </p>
  </div>
 
- <div class="bg-white p-6 rounded-xl shadow-sm">
- <h3 class="text-xl font-bold mb-3">Арабика или робуста: в чём разница?</h3>
- <p class="text-gray-600">
- Арабика имеет сложный, кислотный вкус и аромат, содержит меньше кофеина. Робуста — более крепкая, 
- горькая, с высоким содержанием кофеина. В specialty-индустрии используется почти исключительно арабика.
+ <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <h3 class="text-xl font-bold mb-3 flex items-start">
+ <i data-lucide="help-circle" class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0 mt-1"></i>
+ Арабика или робуста: в чём разница?
+ </h3>
+ <p class="text-gray-600 leading-relaxed ml-9 mb-4">
+ Арабика (Coffea arabica) имеет сложный, многогранный вкус с кислотностью и ароматом, содержит 1-1.5% кофеина. 
+ Растет на высоте 600-2000м, более требовательна к условиям выращивания. Составляет 60-70% мирового производства.
+ </p>
+ <p class="text-gray-600 leading-relaxed ml-9">
+ Робуста (Coffea canephora) — более крепкая, горькая, с высоким содержанием кофеина (2-2.7%). 
+ Растет на низких высотах, устойчива к болезням. В specialty-индустрии используется почти исключительно арабика, 
+ так как робуста имеет более грубый, плоский вкус с нотами жженой резины и земли.
  </p>
  </div>
 
- <div class="bg-white p-6 rounded-xl shadow-sm">
- <h3 class="text-xl font-bold mb-3">Как степень обжарки влияет на вкус?</h3>
- <p class="text-gray-600">
- Светлая обжарка подчёркивает кислотность и уникальные ноты терруара. Тёмная обжарка 
- придаёт кофе ноты шоколада, карамели и дыма, но скрывает оригинальные дескрипторы зерна.
+ <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <h3 class="text-xl font-bold mb-3 flex items-start">
+ <i data-lucide="help-circle" class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0 mt-1"></i>
+ Как степень обжарки влияет на вкус?
+ </h3>
+ <p class="text-gray-600 leading-relaxed ml-9 mb-4">
+ Степень обжарки кардинально меняет вкусовой профиль зерна:
+ </p>
+ <ul class="list-disc list-inside text-gray-600 space-y-2 ml-12">
+ <li><strong>Светлая обжарка:</strong> Подчёркивает кислотность и уникальные ноты терруара (цветы, фрукты, цитрусы). 
+ Максимум оригинальных характеристик зерна.</li>
+ <li><strong>Средняя обжарка:</strong> Баланс между кислотностью и сладостью. Появляются ноты карамели, шоколада, орехов, 
+ но терруар все еще различим.</li>
+ <li><strong>Тёмная обжарка:</strong> Кислотность исчезает, появляются ноты дыма, горького шоколада и пепла. 
+ Скрывает оригинальные характеристики зерна и дефекты.</li>
+ </ul>
+ </div>
+
+ <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <h3 class="text-xl font-bold mb-3 flex items-start">
+ <i data-lucide="help-circle" class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0 mt-1"></i>
+ Что значат цифры в оценке Q-грейдера (например, 85+)?
+ </h3>
+ <p class="text-gray-600 leading-relaxed ml-9 mb-4">
+ Это оценка качества кофе по 100-балльной системе Specialty Coffee Association (SCA). Q-грейдеры — сертифицированные 
+ дегустаторы, которые оценивают кофе по 10 параметрам: аромат, вкус, послевкусие, кислотность, тело, баланс, 
+ однородность, чистота чашки, сладость и общее впечатление.
+ </p>
+ <div class="ml-9 space-y-2">
+ <p class="text-gray-600"><strong>80-84.99:</strong> Specialty кофе хорошего качества</p>
+ <p class="text-gray-600"><strong>85-89.99:</strong> Отличный specialty кофе</p>
+ <p class="text-gray-600"><strong>90+:</strong> Выдающийся кофе, редкие микролоты</p>
+ <p class="text-gray-600"><strong>Ниже 80:</strong> Коммерческий кофе, не specialty</p>
+ </div>
+ </div>
+
+ <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <h3 class="text-xl font-bold mb-3 flex items-start">
+ <i data-lucide="help-circle" class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0 mt-1"></i>
+ Почему кофе из Африки такой кислотный?
+ </h3>
+ <p class="text-gray-600 leading-relaxed ml-9">
+ Высокая кислотность африканского кофе (особенно из Эфиопии и Кении) связана с несколькими факторами: 
+ высота произрастания (1500-2300м), вулканические почвы, богатые минералами, мытая обработка и генетика сортов. 
+ Эта кислотность — не недостаток, а желаемая характеристика specialty кофе, придающая яркость и комплексность вкусу. 
+ Если вам не нравится высокая кислотность, выбирайте кофе из Латинской Америки или Азии с натуральной обработкой.
  </p>
  </div>
 
- <div class="bg-white p-6 rounded-xl shadow-sm">
- <h3 class="text-xl font-bold mb-3">Что значат цифры в оценке Q-грейдера (например, 85+)?</h3>
- <p class="text-gray-600">
- Это оценка качества кофе по 100-балльной системе SCA. Кофе с оценкой 80+ считается specialty. 
- Чем выше балл, тем чище, сложнее и качественнее вкус кофе.
+ <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+ <h3 class="text-xl font-bold mb-3 flex items-start">
+ <i data-lucide="help-circle" class="w-6 h-6 text-orange-500 mr-3 flex-shrink-0 mt-1"></i>
+ Как правильно хранить кофе?
+ </h3>
+ <p class="text-gray-600 leading-relaxed ml-9 mb-4">
+ Кофе — капризный продукт, который быстро теряет вкус при неправильном хранении. Главные враги: кислород, свет, влага и тепло.
  </p>
+ <div class="ml-9 bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+ <p class="text-sm text-blue-900 mb-2"><strong>Правильное хранение:</strong></p>
+ <ul class="list-disc list-inside text-sm text-blue-900 space-y-1">
+ <li>Герметичная непрозрачная упаковка с клапаном</li>
+ <li>Прохладное темное место (15-20°C)</li>
+ <li>Вдали от сильных запахов</li>
+ <li>Не в холодильнике! (конденсат убьет вкус)</li>
+ <li>
+Молотый кофе — не дольше 7 дней</li>
+ <li>Зерновой кофе — до 3-4 недель после вскрытия</li>
+ </ul>
+ </div>
  </div>
  </div>
  </div>
@@ -666,84 +1127,140 @@
  <h2 class="text-3xl md:text-4xl font-bold mb-6">
  Готовы найти свой идеальный кофе?
  </h2>
- <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+ <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
  Используйте наш гид, чтобы исследовать мир кофейных сортов. 
- Найдите свой любимый регион, обработку и начните своё кофейное путешествие.
+ Найдите свой любимый регион, обработку и начните своё кофейное путешествие. 
+ Помните: лучший кофе — тот, который нравится именно вам!
  </p>
  <div class="flex flex-col sm:flex-row gap-4 justify-center">
- <button onclick="window.open('https://www.coffeeproject.ru/?ref=YUdQUA')" class="text-lg px-8 py-4 bg-white text-orange-600 hover:bg-gray-100 rounded-lg transition-colors flex items-center justify-center">
- Перейти в каталог сортов
- <i data-lucide="search" class="ml-2 w-5 h-5"></i>
- </button>
+ <a href="index.html" class="inline-block text-lg px-8 py-4 bg-white text-orange-600 hover:bg-gray-100 rounded-lg transition-colors font-bold">
+ Вернуться на главную
+ </a>
+ <a href="kak-hranit-kofe-guide.html" class="inline-block text-lg px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-orange-600 rounded-lg transition-colors font-bold">
+ Как хранить кофе
+ </a>
+ </div>
+ </div>
+ </section>
+
+ <!-- Related Articles Section -->
+ <section class="py-16 bg-gray-50">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl font-bold mb-4">Читайте также</h2>
+ <p class="text-gray-600">Другие полезные материалы от Coffee Analysis</p>
+ </div>
+
+ <div class="grid md:grid-cols-3 gap-8">
+ <a href="espresso-masterclass.html" class="group block bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all">
+ <div class="h-48 bg-gradient-to-br from-orange-100 to-amber-100"></div>
+ <div class="p-6">
+ <h3 class="text-xl font-bold mb-2 group-hover:text-orange-600 transition-colors">Мастер-класс по эспрессо</h3>
+ <p class="text-gray-600 text-sm">Секреты приготовления идеального эспрессо: от выбора зерна до техники экстракции</p>
+ </div>
+ </a>
+
+ <a href="kak-hranit-kofe-guide.html" class="group block bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all">
+ <div class="h-48 bg-gradient-to-br from-blue-100 to-cyan-100"></div>
+ <div class="p-6">
+ <h3 class="text-xl font-bold mb-2 group-hover:text-orange-600 transition-colors">Как правильно хранить кофе</h3>
+ <p class="text-gray-600 text-sm">Научный подход к сохранению свежести и аромата кофейных зерен</p>
+ </div>
+ </a>
+
+ <a href="budget-barista-equipment-150.html" class="group block bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all">
+ <div class="h-48 bg-gradient-to-br from-green-100 to-emerald-100"></div>
+ <div class="p-6">
+ <h3 class="text-xl font-bold mb-2 group-hover:text-orange-600 transition-colors">Оборудование бариста</h3>
+ <p class="text-gray-600 text-sm">Полный гайд по выбору кофемолки, весов и аксессуаров для дома</p>
+ </div>
+ </a>
  </div>
  </div>
  </section>
 
 <footer class="bg-[#0f172a] text-white py-16">
-    <div class="container mx-auto px-4 max-w-7xl">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div class="col-span-2 md:col-span-1">
-                <div class="flex items-center space-x-2 mb-6">
-                    <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
-                        <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
-                    </div>
-                    <span class="text-xl font-bold">Coffee Specialty</span>
-                </div>
-                <p class="text-slate-400 mb-6">
-                    Независимый центр анализа кофейной индустрии. Профессиональный взгляд на Specialty сегмент.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                    <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
-                </div>
-            </div>
-            
-            <div>
-                <h4 class="font-semibold mb-6 text-lg text-white">Разделы</h4>
-                <ul class="space-y-3 text-slate-400">
-                    <li><a href="index.html" class="hover:text-white transition-colors">Главная</a></li>
-                    <li><a href="promocodes.html" class="hover:text-white transition-colors">Промокоды</a></li>
-                    <li><a href="links.html" class="hover:text-white transition-colors">Полезные ссылки</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h4 class="font-semibold mb-6 text-lg text-white">Контент</h4>
-                <ul class="space-y-3 text-slate-400">
-                    <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Декаф навигатор</a></li>
-                    <li><a href="espresso-masterclass.html" class="hover:text-white transition-colors">Мастер-класс Эспрессо</a></li>
-                    <li><a href="budget-barista-equipment-150.html" class="hover:text-white transition-colors">Гид по оборудованию</a></li>
-                    <li><a href="kak-hranit-kofe-guide.html" class="hover:text-white transition-colors">Секреты хранения</a></li>
-                    <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Микролоты 2025</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h4 class="font-semibold mb-6 text-lg text-white">Партнеры</h4>
-                <div class="space-y-4">
-                    <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
-                        <h5 class="font-semibold mb-1 text-orange-500">Coffee Project</h5>
-                        <p class="text-slate-400 text-xs mb-3">Премиальный кофе и помол</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-white font-mono text-sm bg-slate-700 px-2 py-1 rounded">YUdQUA</span>
-                            <span class="text-slate-500 text-[10px] uppercase">промокод</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="border-t border-slate-800 mt-12 pt-8 text-slate-500 text-sm">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <p>&copy; 2025 Coffee Specialty. Проект coffeespecialty.ru</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="privacy-policy.html" class="hover:text-white transition-colors">Приватность</a>
-                    <a href="terms.html" class="hover:text-white transition-colors">Условия</a>
-                    <a href="https://elama.ru/net-market-reg?nmrefid=da0b87d5-1f4d-4645-b50c-c832dd685643" target="_blank" class="text-orange-600/80 hover:text-orange-500 font-medium">SEO: elama.ru</a>
-                </div>
-            </div>
-        </div>
-    </div>
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+ <div class="col-span-2 md:col-span-1 space-y-6">
+ <div class="flex items-center space-x-2">
+ <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
+ <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
+ </div>
+ <span class="text-xl font-bold">Coffee Analysis</span>
+ </div>
+ <p class="text-slate-400 text-sm leading-relaxed">
+ Независимый центр анализа кофейной индустрии. Профессиональный взгляд на Specialty сегмент. 
+ Мы помогаем разобраться в мире качественного кофе через объективные обзоры и экспертные гайды.
+ </p>
+ <div class="flex space-x-4">
+ <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+ <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+ <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+ </div>
+ </div>
+ 
+ <div>
+ <h4 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">Разделы</h4>
+ <ul class="space-y-3 text-slate-400 text-sm">
+ <li><a href="index.html" class="hover:text-white transition-colors">Главная</a></li>
+ <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Обзоры кофе</a></li>
+ <li><a href="kak-hranit-kofe-guide.html" class="hover:text-white transition-colors">Гайды</a></li>
+ <li><a href="links.html" class="hover:text-white transition-colors">Полезные ссылки</a></li>
+ </ul>
+ </div>
+ 
+ <div>
+ <h4 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">Популярное</h4>
+ <ul class="space-y-3 text-slate-400 text-sm">
+ <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Декаф навигатор</a></li>
+ <li><a href="espresso-masterclass.html" class="hover:text-white transition-colors">Мастер-класс Эспрессо</a></li>
+ <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Микролоты 2025</a></li>
+ <li><a href="budget-barista-equipment-150.html" class="hover:text-white transition-colors">Оборудование бариста</a></li>
+ <li><a href="affiliate-coffee-top-7.html" class="hover:text-white transition-colors">Партнерские программы</a></li>
+ </ul>
+ </div>
+ 
+ <div>
+ <h4 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">О проекте</h4>
+ <div class="space-y-4 text-slate-400 text-sm">
+ <p>Coffee Analysis — это команда сертифицированных Q-грейдеров и профессиональных бариста.</p>
+ <p>Наша миссия: делать мир specialty кофе доступным и понятным для всех.</p>
+ <div class="pt-4 border-t border-slate-800">
+ <p class="text-xs text-slate-500 mb-2">Контакты для сотрудничества:</p>
+ <a href="mailto:info@coffeeanalysis.ru" class="text-orange-500 hover:text-orange-400 text-sm font-medium">info@coffeeanalysis.ru</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="border-t border-slate-800 mt-12 pt-8">
+ <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+ <div class="text-slate-500 text-xs text-center md:text-left">
+ <p class="uppercase font-bold tracking-[0.2em] mb-2">&copy; 2025 Coffee Analysis. Все права защищены.</p>
+ <p class="text-slate-600">coffeeanalysis.ru — Независимая аналитика кофейной индустрии</p>
+ </div>
+ <div class="flex space-x-6 text-slate-500 text-xs">
+ <a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Политика конфиденциальности</a>
+ <a href="terms.html" class="hover:text-orange-500 transition-colors">Пользовательское соглашение</a>
+ </div>
+ </div>
+ 
+ <div class="mt-8 pt-8 border-t border-slate-800">
+ <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+ <div class="text-slate-600 text-xs italic text-center md:text-left">
+ <p>Сайт использует технологии SEO-оптимизации для лучшей доступности контента</p>
+ </div>
+ <div class="flex items-center space-x-4">
+ <span class="text-slate-600 text-xs">Партнер:</span>
+ <a href="https://elama.ru/" target="_blank" class="text-slate-400 hover:text-orange-500 transition-colors text-xs font-medium underline decoration-orange-500/20">
+ elama.ru
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
 </footer>
 
  <script>
@@ -800,6 +1317,58 @@
  closeMenu();
  }
  });
- </script>
-</body>
-</html>
+
+ // Animate elements on scroll
+ const observerOptions = {
+ threshold: 0.1,
+ rootMargin: '0px 0px -50px 0px'
+ };
+
+ const observer = new IntersectionObserver((entries) => {
+ entries.forEach(entry => {
+ if (entry.isIntersecting) {
+ entry.target.style.opacity = '1';
+ entry.target.style.transform = 'translateY(0)';
+ }
+ });
+ }, observerOptions);
+
+ // Apply animation to cards
+ document.querySelectorAll('.card-hover').forEach(el => {
+ el.style.opacity = '0';
+ el.style.transform = 'translateY(20px)';
+ el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+ observer.observe(el);
+ });
+
+ // Reading progress bar
+ const progressBar = document.createElement('div');
+ progressBar.style.cssText = 'position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #ea580c, #f97316); z-index: 9999; transition: width 0.1s ease;';
+ document.body.appendChild(progressBar);
+
+ window.addEventListener('scroll', () => {
+ const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+ const scrolled = (window.scrollY / windowHeight) * 100;
+ progressBar.style.width = scrolled + '%';
+ });
+
+ // Lazy loading for images
+ if ('loading' in HTMLImageElement.prototype) {
+ const images = document.querySelectorAll('img');
+ images.forEach(img => {
+ img.loading = 'lazy';
+ });
+ }
+
+ console.log('%c☕ Coffee Analysis - Обзор сортов 2025', 'font-size: 20px; font-weight: bold; color: #f97316;');
+ console.log('%cДобро пожаловать в мир specialty кофе!', 'font-size: 14px; color: #64748b;');
+</script>
+
+<!-- Schema.org structured data for SEO -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Обзор сортов кофе 2025 : от классики до редких микролотов", "description": "Экспертный обзор лучших сортов кофе 2025 года. Сравнение по географии и способам обработки, гид по выбору арабики, редкие микролоты и популярные сорта для эспрессо и фильтра", "author": { "@type": "Organization", "name": "Coffee Analysis" }, "publisher": { "@type": "Organization", "name": "Coffee Analysis", "logo": { "@type": "ImageObject", "url": "https://coffeeanalysis.ru/logo.png" } }, "datePublished": "2025-01-15", "dateModified": "2025-01-15" } </script>
+
+</body> </html>
