@@ -3,283 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Политика конфиденциальности - Coffee Analysis</title>
-    <meta name="description" content="Официальная Политика конфиденциальности сайта Coffee Analysis. Условия использования партнерских ссылок и сторонних сервисов.">
+    <title>Privacy Policy | coffeespecialty.ru</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/unnamed%20(6).webp">
     <style>
-        /* Coffee Analysis Design System - Professional Coffee Blog Theme */
-        :root {
-            --background: hsl(0, 0%, 100%);
-            --foreground: hsl(25, 25%, 15%);
-            --card: hsl(0, 0%, 100%);
-            --primary: hsl(25, 95%, 53%); /* Orange */
-            --primary-foreground: hsl(0, 0%, 100%);
-            --secondary: hsl(30, 20%, 96%);
-            --muted-foreground: hsl(25, 15%, 45%);
-            --border: hsl(30, 20%, 90%);
-            --radius: 0.75rem;
-            --coffee-brown: hsl(25, 40%, 25%);
-            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--foreground);
-            background-color: var(--background);
-        }
-        
-        .container {
-            max-width: 900px; /* Немного уже для документов */
-            margin: 0 auto;
-            padding: 0 1rem;
-            padding-top: 30px;
-            padding-bottom: 50px;
-        }
-
-        /* --- HEADER/NAVIGATION STYLES (скопированы с links.html) --- */
-        .header {
-            border-bottom: 1px solid var(--border);
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            width: 100%;
-        }
-        
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 1rem;
-        }
-
-        .logo-text { font-weight: 700; color: var(--coffee-brown); font-size: 1.125rem; }
-
-        .desktop-nav { display: none; }
-        .burger-menu { 
-            display: block; 
-            cursor: pointer;
-            z-index: 60;
-            padding: 5px;
-        }
-        .bar {
-            width: 25px;
-            height: 3px;
-            background-color: var(--coffee-brown); 
-            margin: 4px 0;
-            transition: 0.4s;
-        }
-        .mobile-nav {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background-color: var(--background);
-            border-top: 1px solid var(--border);
-            padding: 10px 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .mobile-nav a {
-            display: block;
-            padding: 10px 1rem;
-            color: var(--foreground);
-            text-decoration: none;
-            border-bottom: 1px solid var(--secondary);
-        }
-
-        @media (min-width: 768px) {
-            .desktop-nav { display: flex; align-items: center; gap: 1.5rem; }
-            .desktop-nav a { color: var(--muted-foreground); text-decoration: none; transition: var(--transition-smooth); font-size: 0.875rem; }
-            .desktop-nav a:hover, .desktop-nav a.special { color: var(--primary); }
-            .desktop-nav .separator { color: var(--border); }
-            .burger-menu { display: none; } 
-        }
-        /* --- END HEADER/NAVIGATION STYLES --- */
-
-        /* --- CONTENT STYLES --- */
-        h1 {
-            color: var(--coffee-brown);
-            border-bottom: 3px solid var(--primary);
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            font-size: 2.2rem;
-        }
-
-        h2 {
-            color: var(--primary);
-            margin-top: 30px;
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            border-left: 4px solid var(--primary);
-            padding-left: 10px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            color: var(--foreground);
-        }
-
-        a {
-            color: var(--primary);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        a:hover {
-            color: var(--coffee-brown);
-        }
-        
-        /* --- ФУТЕР (ПОДВАЛ) СТИЛИ (скопированы с links.html) --- */
-        .footer {
-            background-color: var(--coffee-brown); 
-            color: white;
-            padding: 40px 1rem;
-            margin-top: 40px;
-        }
-
-        .footer-grid {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            padding: 0 1rem;
-        }
-
-        .footer-section h3 {
-            color: var(--primary);
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-        /* Конец Футер Стили */
-
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; color: #0f172a; scroll-behavior: smooth; }
+        #reading-progress { position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: #ea580c; z-index: 1000; transition: width 0.1s; }
+        .compact-header { font-size: 1.5rem; font-weight: 900; text-transform: uppercase; letter-spacing: -0.04em; line-height: 1; italic: true; }
+        .sidebar-link.active { color: #ea580c; border-left: 2px solid #ea580c; background: #fff7ed; }
+        .legal-card { border: 1px solid #f1f5f9; padding: 24px; border-radius: 16px; transition: all 0.2s; }
+        .legal-card:hover { border-color: #ea580c; background: #fafafa; }
     </style>
 </head>
-<body>
+<body class="bg-white">
 
-<header class="header">
-    <div class="header-content">
-        <div class="logo-area">
-            <a href="index.html" class="logo">
-                <span style="font-size: 24px;">☕</span> 
-                <span class="logo-text">Coffee Analysis</span>
+    <div id="reading-progress"></div>
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between max-w-7xl">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-slate-900 rounded flex items-center justify-center shadow-lg">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-white"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-sm font-black uppercase tracking-tighter leading-none italic">Coffee <span class="text-orange-600">Privacy</span></span>
+                    <span class="text-[8px] font-bold text-slate-400 uppercase tracking-widest">coffeespecialty.ru</span>
+                </div>
             </a>
+            <div class="hidden lg:flex items-center gap-6 text-[10px] font-black uppercase tracking-widest">
+                <a href="index.html" class="hover:text-orange-600">Главная</a>
+                <a href="specialty-micro-lots-2025.html" class="hover:text-orange-600">Обзоры</a>
+                <a href="links.html" class="text-orange-600">Project</a>
+            </div>
+            <button class="bg-orange-600 text-white px-5 py-2 rounded text-[10px] font-black uppercase tracking-widest hover:bg-slate-900 transition-all">Registration</button>
         </div>
+    </header>
 
-        <nav class="desktop-nav">
-            <a href="index.html">Главная</a>
-            <span class="separator">|</span>
-            <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
-            <span class="separator">|</span>
-            <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
-            <span class="separator">|</span>
-            <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
-            <span class="separator">|</span>
-            <a href="links.html">Coffee Project</a>
-        </nav>
+    <div class="container mx-auto px-4 py-12 max-w-7xl">
+        <div class="flex flex-col lg:flex-row gap-16">
+            
+            <aside class="lg:w-1/4">
+                <div class="sticky top-24 space-y-1">
+                    <p class="text-[9px] font-black text-slate-400 uppercase mb-4 tracking-widest italic">// Document Structure</p>
+                    <a href="#general" class="sidebar-link active block py-2 px-4 text-[10px] font-black uppercase tracking-widest border-l-2 border-transparent">01. Общие положения</a>
+                    <a href="#affiliate" class="sidebar-link block py-2 px-4 text-[10px] font-black uppercase tracking-widest border-l-2 border-transparent">02. Партнерские ссылки</a>
+                    <a href="#external" class="sidebar-link block py-2 px-4 text-[10px] font-black uppercase tracking-widest border-l-2 border-transparent">03. Сторонние сервисы</a>
+                    <a href="#contacts" class="sidebar-link block py-2 px-4 text-[10px] font-black uppercase tracking-widest border-l-2 border-transparent">04. Связь с нами</a>
+                </div>
+            </aside>
 
-        <div class="burger-menu" onclick="toggleMobileMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+            <main class="lg:w-3/4">
+                
+                <section id="general" class="scroll-mt-24 mb-20">
+                    <div class="flex items-baseline gap-4 mb-6">
+                        <span class="text-4xl font-black text-slate-100 italic">01</span>
+                        <h1 class="compact-header italic">Политика <span class="text-orange-600">Конфиденциальности</span></h1>
+                    </div>
+                    <p class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-8">Дата обновления: 24 ноября 2025 г.</p>
+                    <div class="legal-card">
+                        <p class="text-sm font-medium italic leading-relaxed text-slate-600">
+                            Сайт "Coffee Analysis" (<span class="text-slate-900 font-bold">essem39.github.io/coffee-analysis/</span>) придерживается принципа минимализма в сборе данных. Мы не требуем от вас ввода ФИО, адреса проживания или номера телефона напрямую. Ваша анонимность как исследователя кофе — наш приоритет.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="affiliate" class="scroll-mt-24 mb-20">
+                    <div class="flex items-baseline gap-4 mb-8">
+                        <span class="text-4xl font-black text-slate-100 italic">02</span>
+                        <h2 class="compact-header italic">Партнерские ссылки <span class="text-orange-600">(Affiliate)</span></h2>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="text-sm font-medium italic leading-relaxed text-slate-600">
+                            Наш ресурс содержит ссылки на экспертные инструменты и продукты (ALIDROP, Semrush и др.). Эти ссылки являются партнерскими.
+                        </p>
+                        <div class="bg-slate-900 text-white p-6 rounded-2xl relative overflow-hidden">
+                            <div class="flex items-center gap-4 relative z-10">
+                                <i data-lucide="info" class="text-orange-500 w-6 h-6"></i>
+                                <p class="text-[11px] font-bold uppercase tracking-wider italic">
+                                    При переходе по ссылке сторонний ресурс может использовать cookie для отслеживания перехода. Используя сайт, вы подтверждаете согласие с этой механикой.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+<section id="external" class="scroll-mt-24 mb-20">
+                    <div class="flex items-baseline gap-4 mb-8">
+                        <span class="text-4xl font-black text-slate-100 italic">03</span>
+                        <h2 class="compact-header italic">Сторонние <span class="text-orange-600">Сервисы</span></h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="legal-card">
+                            <h5 class="text-[10px] font-black uppercase text-orange-600 mb-3 italic">Внешний контроль</h5>
+                            <p class="text-[11px] font-medium italic text-slate-500 leading-relaxed">
+                                Мы не контролируем алгоритмы сбора данных на сайтах-партнерах. Любая информация, предоставленная вами на сторонних ресурсах, регулируется их собственной политикой приватности.
+                            </p>
+                        </div>
+                        <div class="legal-card">
+                            <h5 class="text-[10px] font-black uppercase text-slate-900 mb-3 italic">Рекомендация</h5>
+                            <p class="text-[11px] font-medium italic text-slate-500 leading-relaxed">
+                                Дирекция Coffee Analysis настоятельно рекомендует изучать Privacy Policy каждого ресурса, на который вы переходите из нашей базы знаний.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contacts" class="scroll-mt-24 mb-20">
+                    <div class="flex items-baseline gap-4 mb-8">
+                        <span class="text-4xl font-black text-slate-100 italic">04</span>
+                        <h2 class="compact-header italic">Связь с <span class="text-orange-600">Нами</span></h2>
+                    </div>
+                    <div class="bg-slate-50 border-2 border-dashed border-slate-200 rounded-3xl p-10 text-center">
+                        <i data-lucide="mail" class="w-10 h-10 mx-auto mb-4 text-orange-600"></i>
+                        <p class="text-xs font-black uppercase italic mb-4 tracking-widest">Официальный канал связи</p>
+                        <a href="mailto:ESEM39@GMAIL.COM" class="text-2xl font-black italic text-slate-900 hover:text-orange-600 transition-colors border-b-2 border-orange-600 pb-1">
+                            ESEM39@GMAIL.COM
+                        </a>
+                    </div>
+                </section>
+            </main>
         </div>
-        <nav class="mobile-nav" id="mobileMenu">
-            <a href="index.html">Главная</a>
-            <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
-            <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
-            <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
-            <a href="links.html">Coffee Project</a>
-        </nav>
     </div>
-</header>
-    
-<main class="container">
-    
-    <h1>Политика конфиденциальности</h1>
 
-    <p style="color: var(--muted-foreground);">Дата последнего обновления: 24 ноября 2025 г.</p>
-
-    <h2>1. Общие положения</h2>
-    <p>Сайт "Coffee Analysis" (<a href="https://essem39.github.io/coffee-analysis/">essem39.github.io/coffee-analysis/</a>) не собирает личную идентификационную информацию (имя, адрес, телефон) напрямую от своих посетителей.</p>
-
-    <h2>2. Партнерские ссылки (Affiliate Links)</h2>
-    <p>Наш сайт содержит ссылки на сторонние ресурсы и продукты (например, ALIDROP, Semrush). Эти ссылки являются партнерскими. При переходе по партнерской ссылке сторонний ресурс может использовать файлы cookie для отслеживания Вашего перехода и начисления нам комиссии в случае покупки/регистрации.</p>
-    <p style="font-style: italic; color: var(--muted-foreground);">Используя наш сайт, Вы соглашаетесь с использованием сторонних cookie для отслеживания партнерских переходов.</p>
-
-    <h2>3. Сторонние сервисы</h2>
-    <p>Мы не контролируем правила сбора данных на сторонних сайтах. Любая информация, которую Вы предоставляете третьим лицам, регулируется их собственной политикой конфиденциальности. Мы рекомендуем ознакомиться с политикой конфиденциальности любого сайта, который Вы посещаете.</p>
-
-    <h2>4. Связь с нами</h2>
-    <p>По любым вопросам, касающимся данной Политики конфиденциальности, Вы можете связаться с нами по электронной почте: <a href="mailto:ESEM39@GMAIL.COM">ESEM39@GMAIL.COM</a></p>
-    
-</main>
-
-
-<footer class="footer">
-    <div class="footer-grid">
-        
-        <div class="footer-section">
-            <h3 style="color: white; font-size: 1rem; margin-bottom: 1rem;">☕ Coffee Analysis</h3> 
-            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-bottom: 10px;">Ваш экспертный источник гайдов по specialty кофе.</p>
-            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">Email: <a href="mailto:ESEM39@GMAIL.COM" style="color: white; text-decoration: none;">ESEM39@GMAIL.COM</a></p>
-            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-top: 10px;">&copy; 2025 Все права защищены.</p>
-        </div>
-        
-        <div class="footer-section">
-            <h3 style="color: var(--primary); font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Навигация</h3> 
-            <div class="footer-links">
-                <a href="index.html">Главная</a>
-                <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
-                <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
-                <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
-                <a href="links.html">Coffee Project</a>
+    <footer class="bg-slate-950 text-white py-20 mt-20 border-t-4 border-orange-600">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div class="max-w-xs">
+                    <span class="text-xl font-black uppercase italic tracking-tighter italic">Coffee <span class="text-orange-600">Analysis</span></span>
+                    <p class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-4 leading-loose">
+                        Ваш экспертный источник гайдов по specialty кофе. <br>© 2025 Все права защищены.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-12 text-[10px] font-black uppercase tracking-widest italic text-slate-400">
+                    <div class="space-y-4">
+                        <a href="index.html" class="block hover:text-white">Главная</a>
+                        <a href="specialty-micro-lots-2025.html" class="block hover:text-white">Сорта</a>
+                    </div>
+                    <div class="space-y-4">
+                        <a href="privacy-policy.html" class="block text-orange-600">Privacy Policy</a>
+                        <a href="terms.html" class="block hover:text-white">Terms</a>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="footer-section">
-            <h3 style="color: var(--primary); font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Документы</h3> 
-            <div class="footer-links">
-                <a href="privacy-policy.html" style="color: var(--primary);">Политика конфиденциальности</a>
-                <a href="terms.html">Условия использования</a>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 
-<script>
-    // JS для работы мобильного меню
-    function toggleMobileMenu() {
-        var mobileMenu = document.getElementById('mobileMenu');
-        if (mobileMenu.style.display === 'block') {
-            mobileMenu.style.display = 'none';
-        } else {
-            mobileMenu.style.display = 'block';
-        }
-    }
-</script>
+    <script>
+        lucide.createIcons();
 
+        // Логика Прогресс-бара и Навигации
+        window.onscroll = function() {
+            // Линия прогресса
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("reading-progress").style.width = scrolled + "%";
+            
+            // Подсветка активного пункта в меню
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".sidebar-link");
+            let current = "";
+
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active");
+                }
+            });
+        };
+    </script>
 </body>
 </html>
