@@ -409,123 +409,218 @@
  </div>
 </section>
 
-<section class="py-20 bg-slate-900 text-white">
- <div class="container mx-auto px-4 max-w-7xl">
- <div class="text-center mb-12">
- <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">Присоединяйтесь к сообществу</h2>
- <p class="text-slate-400 max-w-2xl mx-auto">Будьте в курсе последних новостей кофейной индустрии, эксклюзивных обзоров и профессиональных советов</p>
- </div>
+<section class="py-16 bg-slate-50 border-y border-slate-200">
+    <div class="container mx-auto px-4 max-w-7xl">
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+            
+            <div class="lg:w-1/2 space-y-6">
+                <div class="flex items-center space-x-2 text-orange-500 mb-2">
+                    <i data-lucide="calculator" class="w-5 h-5"></i>
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em]">Smart Tools v1.0</span>
+                </div>
+                <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight leading-tight">
+                    Калькулятор <span class="text-orange-500 italic">идеальной чашки</span>
+                </h2>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Точные параметры на основе золотого стандарта SCA. Введите желаемый объем, и мы покажем формулу вашего успеха.
+                </p>
+                <div class="flex gap-4 pt-4">
+                    <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm flex-1">
+                        <span class="block text-xl font-black text-slate-900 leading-none">1:16</span>
+                        <span class="text-[9px] text-slate-400 uppercase font-bold tracking-widest">Ideal Ratio</span>
+                    </div>
+                    <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm flex-1">
+                        <span class="block text-xl font-black text-slate-900 leading-none">21%</span>
+                        <span class="text-[9px] text-slate-400 uppercase font-bold tracking-widest">Target EY</span>
+                    </div>
+                </div>
+            </div>
 
- <div class="max-w-md mx-auto bg-slate-800 rounded-3xl p-8 border border-slate-700">
- <div class="space-y-6">
- <div class="flex items-center space-x-3 text-slate-300">
- <i data-lucide="check-circle" class="w-5 h-5 text-orange-500"></i>
- <span class="text-sm">Еженедельные обзоры новых лотов</span>
- </div>
- <div class="flex items-center space-x-3 text-slate-300">
- <i data-lucide="check-circle" class="w-5 h-5 text-orange-500"></i>
- <span class="text-sm">Эксклюзивные рецепты и техники</span>
- </div>
- <div class="flex items-center space-x-3 text-slate-300">
- <i data-lucide="check-circle" class="w-5 h-5 text-orange-500"></i>
- <span class="text-sm">Доступ к закрытым материалам</span>
- </div>
- <div class="flex items-center space-x-3 text-slate-300">
- <i data-lucide="check-circle" class="w-5 h-5 text-orange-500"></i>
- <span class="text-sm">Скидки от партнеров</span>
- </div>
- </div>
+            <div class="lg:w-1/2 w-full">
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 relative overflow-hidden">
+                    <div class="relative z-10 space-y-8">
+                        <div>
+                            <div class="flex justify-between mb-4">
+                                <label class="text-xs font-bold uppercase tracking-widest text-slate-900">Объем воды (мл)</label>
+                                <span id="waterValue" class="text-orange-500 font-black text-lg">250</span>
+                            </div>
+                            <input type="range" id="waterInput" min="100" max="1000" value="250" step="10" 
+                                class="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-orange-500">
+                        </div>
 
- <form class="mt-8 space-y-4">
- <input type="email" placeholder="Ваш email" class="w-full px-4 py-3 rounded-xl bg-slate-700 border border-slate-600 text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 transition-colors">
- <button type="submit" class="w-full bg-orange-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-orange-600 transition-all shadow-lg">
- Подписаться бесплатно
- </button>
- <p class="text-slate-500 text-xs text-center">Никакого спама. Только качественный контент о кофе.</p>
- </form>
- </div>
- </div>
+                        <div>
+                            <div class="flex justify-between mb-4">
+                                <label class="text-xs font-bold uppercase tracking-widest text-slate-900">Коэффициент (Ratio)</label>
+                                <span id="ratioValue" class="text-orange-500 font-black text-lg">1:16</span>
+                            </div>
+                            <input type="range" id="ratioInput" min="12" max="18" value="16" step="0.5" 
+                                class="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-orange-500">
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-100">
+                            <div class="bg-slate-900 p-6 rounded-2xl flex items-center justify-between text-white">
+                                <div>
+                                    <span class="text-[9px] font-black uppercase text-slate-400 tracking-widest">Необходимо кофе:</span>
+                                    <div class="flex items-baseline gap-1">
+                                        <span id="coffeeResult" class="text-3xl font-black text-orange-500">15.6</span>
+                                        <span class="text-xs font-bold">грамм</span>
+                                    </div>
+                                </div>
+                                <i data-lucide="beaker" class="w-8 h-8 text-white/20"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<footer class="bg-[#0f172a] text-white py-16">
- <div class="container mx-auto px-4 max-w-7xl">
- <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
- <div class="col-span-2 md:col-span-1 space-y-6">
- <div class="flex items-center space-x-2">
- <span class="text-2xl">☕</span>
- <span class="text-xl font-bold">Coffee Analysis</span>
- </div>
- <p class="text-slate-400 text-sm leading-relaxed">Независимый центр анализа кофейной индустрии. Професс иональный взгляд на Specialty сегмент. Мы помогаем разобраться в мире качественного кофе через объективные обзоры и экспертные гайды.</p>
- <div class="flex space-x-4">
- <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
- <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
- <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
- </div>
- </div>
- 
- <div class="col-span-1">
- <h4 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">Разделы</h4>
- <ul class="space-y-3 text-slate-400 text-sm">
- <li><a href="index.html" class="hover:text-white transition-colors">Главная</a></li>
- <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Обзоры кофе</a></li>
- <li><a href="kak-hranit-kofe-guide.html" class="hover:text-white transition-colors">Гайды</a></li>
- <li><a href="links.html" class="hover:text-white transition-colors">Полезные ссылки</a></li>
- </ul>
- </div>
- 
- <div class="col-span-1">
- <h4 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">Популярное</h4>
- <ul class="space-y-3 text-slate-400 text-sm">
- <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Декаф навигатор</a></li>
- <li><a href="espresso-masterclass.html" class="hover:text-white transition-colors">Мастер-класс Эспрессо</a></li>
- <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Микролоты 2025</a></li>
- <li><a href="budget-barista-equipment-150.html" class="hover:text-white transition-colors">Оборудование бариста</a></li>
- <li><a href="affiliate-coffee-top-7.html" class="hover:text-white transition-colors">Партнерские программы</a></li>
- </ul>
- </div>
- 
- <div class="col-span-2 md:col-span-1">
- <h4 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">О проекте</h4>
- <div class="space-y-4 text-slate-400 text-sm">
- <p>Coffee Analysis — это команда сертифицированных Q-грейдеров и профессиональных бариста.</p>
- <p>Наша миссия: делать мир specialty кофе доступным и понятным для всех.</p>
- <div class="pt-4 border-t border-slate-800">
- <p class="text-xs text-slate-500">Контакты для сотрудничества:</p>
- <a href="mailto:info@coffeeanalysis.ru" class="text-orange-500 hover:text-orange-400 text-sm font-medium">info@coffeeanalysis.ru</a>
- </div>
- </div>
- </div>
- </div>
- 
- <div class="border-t border-slate-800 mt-16 pt-8">
- <div class="flex flex-col md:flex-row justify-between items-center gap-4">
- <div class="text-slate-500 text-xs text-center md:text-left">
- <p class="uppercase font-bold tracking-[0.2em] mb-2">&copy; 2025 Coffee Analysis. Все права защищены.</p>
- <p class="text-slate-600">coffeeanalysis.ru — Независимая аналитика кофейной индустрии</p>
- </div>
- <div class="flex space-x-6 text-slate-500 text-xs">
- <a href="#" class="hover:text-orange-500 transition-colors">Политика конфиденциальности</a>
- <a href="#" class="hover:text-orange-500 transition-colors">Пользовательское соглашение</a>
- </div>
- </div>
- 
- <div class="mt-8 pt-8 border-t border-slate-800">
- <div class="flex flex-col md:flex-row items-center justify-between gap-4">
- <div class="text-slate-600 text-xs italic text-center md:text-left">
- <p>Сайт использует технологии SEO-оптимизации для лучшей доступности контента</p>
- </div>
- <div class="flex items-center space-x-4">
- <span class="text-slate-600 text-xs">Партнер:</span>
- <a href="https://elama.ru/" target="_blank" class="text-slate-400 hover:text-orange-500 transition-colors text-xs font-medium underline decoration-orange-500/20">
- elama.ru
- </a>
- </div>
- </div>
- </div>
- </div>
- </div>
-</footer>
+<section class="py-16 bg-white border-t border-slate-100">
+    <div class="container mx-auto px-4 max-w-7xl">
+        <div class="mb-12">
+            <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight leading-none mb-4">
+                Аудит и <span class="text-orange-500">анализ рынка 2025</span>
+            </h2>
+            <div class="h-1 w-20 bg-orange-500"></div>
+        </div>
 
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div class="space-y-6">
+                <div class="prose prose-slate prose-sm max-w-none">
+                    <p class="text-lg text-slate-700 leading-relaxed font-medium italic border-l-4 border-orange-500 pl-4">
+                        "В 2025 году мы наблюдаем сдвиг в кофейной химии. Фермеры внедряют анаэробные процессы для сохранения плотности вкуса."
+                    </p>
+                    <p class="text-slate-600 text-base leading-relaxed mt-4">
+                        Наш Центр фиксирует уникальные молекулярные профили микролотов из Эфиопии. Методы хроматографии позволяют нам предсказать стабильность вкуса с точностью до 98%.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                    <h4 class="font-bold uppercase text-[10px] tracking-widest text-slate-900 mb-4">Технический протокол AC:</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-xs text-slate-600 font-bold">
+                            <i data-lucide="check" class="w-3.5 h-3.5 mr-2 text-green-500"></i> Контроль pH (6.5 - 7.5)
+                        </li>
+                        <li class="flex items-center text-xs text-slate-600 font-bold">
+                            <i data-lucide="check" class="w-3.5 h-3.5 mr-2 text-green-500"></i> Замеры TDS (VST)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-orange-500 p-8 rounded-[2.5rem] text-white shadow-lg">
+                    <h3 class="text-xl font-black uppercase mb-3 tracking-tight">Экономика Specialty</h3>
+                    <p class="text-orange-50 text-sm leading-relaxed">
+                        Использование данных Q-грейдеров повышает доверие покупателей и LTV клиента на 25%. Мы анализируем стратегии для вашего успеха.
+                    </p>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed text-justify">
+                    Прогноз на конец 2025: спрос на экспериментальные лоты "Гейши" превысит предложение. Аналитический Центр помогает быть на шаг впереди рынка.
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-slate-100">
+            <div class="text-center">
+                <span class="block text-2xl font-black text-slate-900">88.5</span>
+                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-1 block">SCA Score</span>
+            </div>
+            <div class="text-center">
+                <span class="block text-2xl font-black text-orange-500">24/7</span>
+                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-1 block">Prices</span>
+            </div>
+            <div class="text-center">
+                <span class="block text-2xl font-black text-slate-900">0.1g</span>
+                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-1 block">Precision</span>
+            </div>
+            <div class="text-center">
+                <span class="block text-2xl font-black text-slate-900">Global</span>
+                <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-1 block">Coverage</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// ЛОГИКА КАЛЬКУЛЯТОРА
+const waterInput = document.getElementById('waterInput');
+const ratioInput = document.getElementById('ratioInput');
+const waterValue = document.getElementById('waterValue');
+const ratioValue = document.getElementById('ratioValue');
+const coffeeResult = document.getElementById('coffeeResult');
+
+function calculateCoffee() {
+    const water = parseFloat(waterInput.value);
+    const ratio = parseFloat(ratioInput.value);
+    waterValue.innerText = water;
+    ratioValue.innerText = `1:${ratio}`;
+    coffeeResult.innerText = (water / ratio).toFixed(1);
+}
+
+waterInput.addEventListener('input', calculateCoffee);
+ratioInput.addEventListener('input', calculateCoffee);
+lucide.createIcons();
+</script>
+
+
+<footer class="bg-[#0f172a] text-white py-12 border-t border-slate-800">
+    <div class="container mx-auto px-4 max-w-7xl">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+            
+            <div class="col-span-1 space-y-4">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl">☕</span>
+                    <span class="text-lg font-bold uppercase tracking-tighter">Coffee <span class="text-orange-500">Analysis</span></span>
+                </div>
+                <p class="text-slate-500 text-xs leading-relaxed uppercase font-bold tracking-widest">
+                    Независимый центр <br>анализа индустрии
+                </p>
+            </div>
+
+            <div class="col-span-1">
+                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500 mb-6">Навигация</h4>
+                <ul class="space-y-3 text-sm font-bold text-slate-300">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Главная</a></li>
+                    <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Обзоры кофе</a></li>
+                    <li><a href="kak-hranit-kofe-guide.html" class="hover:text-white transition-colors">Гайды и рецепты</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-1">
+                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500 mb-6">База знаний</h4>
+                <ul class="space-y-3 text-sm font-bold text-slate-300">
+                    <li><a href="espresso-masterclass.html" class="hover:text-white transition-colors">Мастер-класс</a></li>
+                    <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Декаф навигатор</a></li>
+                    <li><a href="links.html" class="hover:text-white transition-colors">Полезные ссылки</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-1">
+                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500 mb-6">Сотрудничество</h4>
+                <a href="mailto:info@coffeeanalysis.ru" class="text-white hover:text-orange-500 font-black text-sm transition-colors border-b border-orange-500/30 pb-1">
+                    info@coffeeanalysis.ru
+                </a>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-slate-500 hover:text-white"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-white"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-16 pt-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-[10px] font-bold text-slate-600 uppercase tracking-widest">
+                © 2025 COFFEE ANALYSIS. ALL RIGHTS RESERVED.
+            </p>
+            <div class="flex space-x-6 text-[10px] font-bold text-slate-600 uppercase tracking-widest">
+                <a href="#" class="hover:text-slate-400">Privacy</a>
+                <a href="#" class="hover:text-slate-400">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
 <script>
  lucide.createIcons();
  
