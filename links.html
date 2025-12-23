@@ -1,659 +1,2680 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Project — Полный Каталог Specialty Кофе, Чая и Аксессуаров от Coffee Analysis</title>
-    <meta name="description" content="Полный каталог хитов продаж, свежеобжаренного specialty кофе, чая и аксессуаров для бариста от нашего партнера Coffee Project.">
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/unnamed%20(6).webp">
-    <style>
-        /* Coffee Analysis Design System - Professional Coffee Blog Theme */
-        :root {
-            --background: hsl(0, 0%, 100%);
-            --foreground: hsl(25, 25%, 15%);
-            --card: hsl(0, 0%, 100%);
-            --primary: hsl(25, 95%, 53%); /* Orange */
-            --primary-foreground: hsl(0, 0%, 100%);
-            --secondary: hsl(30, 20%, 96%);
-            --muted-foreground: hsl(25, 15%, 45%);
-            --border: hsl(30, 20%, 90%);
-            --radius: 0.75rem;
-            --coffee-brown: hsl(25, 40%, 25%);
-            --gradient-primary: linear-gradient(135deg, hsl(25, 95%, 53%), hsl(30, 100%, 65%));
-            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --discount-color: hsl(0, 70%, 50%); /* Red for sale */
-            --tea-color: hsl(140, 40%, 45%); /* Green/Tea color */
-            --accessory-color: hsl(200, 50%, 50%); /* Blue/Accessory color */
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--foreground);
-            background-color: var(--background);
-        }
-        
-        .container {
-            max-width: 1100px; 
-            margin: 0 auto;
-            padding: 0 1rem;
-            padding-top: 30px;
-            padding-bottom: 50px;
-        }
-        
-        /* Header/Navigation Styles */
-        .header {
-            border-bottom: 1px solid var(--border);
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            width: 100%;
-        }
-        
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 1rem;
-        }
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Tasty Coffee 2025: Полный гид по обжарщику №1 в России | Coffee Analysis</title>
+ <meta name="description" content="Экспертный обзор Tasty Coffee: ТОП-10 лотов, сравнение с конкурентами, промокоды, философия обжарки. Профессиональная оценка от Q-грейдеров. 15+ разделов с уникальной информацией.">
+ 
+ <!-- Open Graph -->
+ <meta property="og:title" content="Tasty Coffee 2025: Полный гид по обжарщику №1 в России">
+ <meta property="og:description" content="Экспертный обзор Tasty Coffee: ТОП-10 лотов, сравнение с конкурентами, промокоды, философия обжарки.">
+ <meta property="og:type" content="article">
+ 
+ <!-- Tailwind CSS -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ 
+ <!-- Lucide Icons -->
+ <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+ 
+ <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/unnamed%20(6).webp">
+ 
+ <style>
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+ 
+ body {
+ font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ }
+ 
+ .gradient-text {
+ background: linear-gradient(135deg, #ea580c, #f97316);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+ }
+ 
+ .cta-bg {
+ background: linear-gradient(135deg, #ea580c, #f97316);
+ }
+ 
+ .card-hover {
+ transition: all 0.3s ease;
+ }
+ 
+ .card-hover:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+ }
+ 
+ .btn-primary {
+ background: linear-gradient(135deg, #ea580c, #f97316);
+ transition: all 0.3s ease;
+ }
+ 
+ .btn-primary:hover {
+ background: linear-gradient(135deg, #c2410c, #ea580c);
+ transform: translateY(-1px);
+ }
 
-        .logo-text { font-weight: 700; color: var(--coffee-brown); font-size: 1.125rem; }
+ .mobile-menu {
+ transform: translateX(-100%);
+ transition: transform 0.3s ease-in-out;
+ }
+ 
+ .mobile-menu.open {
+ transform: translateX(0);
+ }
+ 
+ .mobile-menu-overlay {
+ opacity: 0;
+ visibility: hidden;
+ transition: all 0.3s ease-in-out;
+ }
+ 
+ .mobile-menu-overlay.open {
+ opacity: 1;
+ visibility: visible;
+ }
 
-        /* --- БУРГЕР-МЕНЮ И МОБИЛЬНАЯ НАВИГАЦИЯ --- */
-        .burger-menu { 
-            display: block; 
-            cursor: pointer;
-            z-index: 60;
-            padding: 5px;
-        }
+ .hamburger {
+ cursor: pointer;
+ width: 24px;
+ height: 24px;
+ transition: all 0.25s;
+ position: relative;
+ }
 
-        .bar {
-            width: 25px;
-            height: 3px;
-            background-color: var(--coffee-brown); 
-            margin: 4px 0;
-            transition: 0.4s;
-        }
+ .hamburger-top,
+ .hamburger-middle,
+ .hamburger-bottom {
+ position: absolute;
+ width: 24px;
+ height: 2px;
+ top: 0;
+ left: 0;
+ background: #374151;
+ transform: rotate(0);
+ transition: all 0.5s;
+ }
 
-        .mobile-nav {
-            display: none;
-            position: absolute;
-            top: 100%; 
-            left: 0;
-            width: 100%;
-            background-color: var(--background);
-            border-top: 1px solid var(--border);
-            padding: 10px 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+ .hamburger-middle {
+ transform: translateY(7px);
+ }
 
-        .mobile-nav a {
-            display: block;
-            padding: 10px 1rem;
-            color: var(--foreground);
-            text-decoration: none;
-            border-bottom: 1px solid var(--secondary);
-        }
+ .hamburger-bottom {
+ transform: translateY(14px);
+ }
 
-        /* --- ДЕСКТОП НАВИГАЦИЯ --- */
-        .desktop-nav { display: none; }
-        .burger-menu { display: block; } 
+ .open .hamburger-top {
+ transform: rotate(45deg) translateY(6px) translateX(6px);
+ }
 
-        @media (min-width: 768px) {
-            .desktop-nav { display: flex; align-items: center; gap: 1.5rem; }
-            .desktop-nav a { color: var(--muted-foreground); text-decoration: none; transition: var(--transition-smooth); font-size: 0.875rem; }
-            .desktop-nav a:hover, .desktop-nav a.special { color: var(--primary); }
-            .desktop-nav .separator { color: var(--border); }
-            .burger-menu { display: none; } 
-        }
-        .header-content.open .mobile-nav { display: block; }
-        /* Конец Навигации */
+ .open .hamburger-middle {
+ display: none;
+ }
 
+ .open .hamburger-bottom {
+ transform: rotate(-45deg) translateY(6px) translateX(-6px);
+ }
 
-        /* --- БОЛЬШОЙ ПРОМО-БАHHЕР (ЧИСТЫЙ БАННЕР С КНОПКОЙ ВНИЗУ) --- */
-        .promo-banner {
-            /* ССЫЛКА НА PNG */
-            background: url('https://i.postimg.cc/wvWw8fvC/4c12bae5e1248c4e8960285d7b0f1fac-(1).png') no-repeat center center; 
-            background-size: cover;
-            background-position: center 40%;
-            /* ИСПРАВЛЕНО: УВЕЛИЧЕННАЯ ВЫСОТА ДО 420PX */
-            height: 420px; 
-            background-color: var(--secondary); /* Запасной цвет фона */
-            border-radius: var(--radius);
-            margin-bottom: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end; 
-            align-items: center;
-            color: white; 
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
+ .rating-stars {
+ color: #f59e0b;
+ }
 
-        .promo-button {
-            /* ИСПРАВЛЕНО: ПРОЗРАЧНАЯ КНОПКА С БЕЛЫМ КОНТУРОМ */
-            display: inline-block; 
-            padding: 14px 30px; 
-            
-            background: transparent; /* ПРОЗРАЧНЫЙ ФОН */
-            border: 2px solid white; /* БЕЛЫЙ КОНТУР */
-            
-            color: white; 
-            text-decoration: none;
-            border-radius: 5px; 
-            font-weight: 700; 
-            font-size: 1.1rem; 
-            transition: var(--transition-smooth);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
-            /* Увеличенный отступ, чтобы поднять кнопку */
-            margin-bottom: 40px; 
-        }
+ .badge {
+ display: inline-block;
+ padding: 4px 12px;
+ border-radius: 20px;
+ font-size: 0.75rem;
+ font-weight: 600;
+ }
 
-        .promo-button:hover { 
-            background: rgba(255, 255, 255, 0.15); /* Слегка видимый фон при наведении */
-            border-color: var(--primary); /* Оранжевый контур при наведении */
-            transform: translateY(-2px); 
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-        
-        /* --- СТИЛИ ДЛЯ КАРТОЧЕК ТОВАРОВ --- */
-        
-        h2 {
-            color: var(--coffee-brown);
-            margin-top: 30px;
-            font-size: 1.8rem;
-            border-left: 6px solid var(--primary);
-            padding-left: 15px;
-            margin-bottom: 30px;
-        }
+ .badge-premium {
+ background: #fef3c7;
+ color: #92400e;
+ }
 
-        /* Увеличиваем размер H2 для нового главного заголовка */
-        .container h2:first-of-type {
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
-        
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-        
-        .product-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            overflow: hidden;
-            transition: var(--transition-smooth);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .product-card:hover { box-shadow: 0 8px 20px rgba(0,0,0,0.15); transform: translateY(-5px); }
-        
-        .image-placeholder {
-            height: 180px;
-            background: #e9e9e9 url('https://via.placeholder.com/280x180?text=Coffee') no-repeat center center;
-            background-size: cover;
-            position: relative;
-        }
-        /* Специфический фон для чая и аксессуаров */
-        .tea-placeholder { background-image: url('https://via.placeholder.com/280x180?text=Premium+Tea'); background-position: center; }
-        .accessory-placeholder { background-image: url('https://via.placeholder.com/280x180?text=Accessory+Kit'); background-position: center; }
+ .badge-best {
+ background: #dcfce7;
+ color: #166534;
+ }
 
-        .image-placeholder span {
-            position: absolute; top: 10px; right: 10px; background-color: var(--primary); color: white;
-            padding: 4px 10px; border-radius: 3px; font-size: 0.85rem; font-weight: 600;
-        }
+ .badge-new {
+ background: #dbeafe;
+ color: #1e40af;
+ }
 
-        .card-content { padding: 15px 20px 20px; flex-grow: 1; display: flex; flex-direction: column; }
-        .card-content h3 { font-size: 1.25rem; color: var(--coffee-brown); margin-bottom: 5px; }
-        .card-content p { font-size: 0.9rem; color: var(--muted-foreground); margin-bottom: 15px; }
+ .comparison-table {
+ border-collapse: collapse;
+ width: 100%;
+ }
 
-        .price-section { margin-top: auto; display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; }
-        .current-price { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
-        .old-price { font-size: 1rem; color: var(--muted-foreground); text-decoration: line-through; margin-left: 10px; }
-        
-        .buy-button {
-            display: block; width: 100%; padding: 12px 0; background: var(--primary); color: white;
-            text-align: center; text-decoration: none; border-radius: 5px; font-weight: 600;
-            transition: background-color 0.2s;
-        }
-        .buy-button.tea { background: var(--tea-color); }
-        .buy-button.accessory { background: var(--accessory-color); }
+ .comparison-table th,
+ .comparison-table td {
+ border: 1px solid #e5e7eb;
+ padding: 12px;
+ text-align: left;
+ }
 
-        .buy-button:hover { background: hsl(25, 95%, 45%); }
-        .buy-button.tea:hover { background: hsl(140, 40%, 35%); }
-        .buy-button.accessory:hover { background: hsl(200, 50%, 40%); }
+ .comparison-table th {
+ background-color: #f9fafb;
+ font-weight: 600;
+ }
 
+ .tab-button {
+ padding: 12px 24px;
+ border: 2px solid #e5e7eb;
+ background: white;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ font-weight: 500;
+ }
 
-        /* --- ФУТЕР (ПОДВАЛ) СТИЛИ --- */
-        .footer {
-            background-color: var(--coffee-brown); 
-            color: white;
-            padding: 40px 1rem;
-        }
+ .tab-button:hover {
+ border-color: #ea580c;
+ color: #ea580c;
+ }
 
-        .footer-grid {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            padding: 0 1rem;
-        }
+ .tab-button.active {
+ background: linear-gradient(135deg, #ea580c, #f97316);
+ color: white;
+ border-color: #ea580c;
+ }
 
-        .footer-section h3 {
-            color: var(--primary); 
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
+ .tab-content {
+ display: none;
+ }
 
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
+ .tab-content.active {
+ display: block;
+ animation: fadeIn 0.5s ease;
+ }
 
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.2s;
-        }
+ @keyframes fadeIn {
+ from { opacity: 0; transform: translateY(10px); }
+ to { opacity: 1; transform: translateY(0); }
+ }
 
-        .footer-links a:hover {
-            color: var(--primary);
-        }
+ .promo-code {
+ background: linear-gradient(135deg, #fef3c7, #fed7aa);
+ border: 2px dashed #f59e0b;
+ padding: 16px;
+ border-radius: 12px;
+ font-family: 'Courier New', monospace;
+ font-size: 1.5rem;
+ font-weight: bold;
+ text-align: center;
+ color: #92400e;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ }
 
-    </style>
+ .promo-code:hover {
+ transform: scale(1.05);
+ box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+ }
+
+ .timeline-item {
+ position: relative;
+ padding-left: 40px;
+ }
+
+ .timeline-item::before {
+ content: '';
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 16px;
+ height: 16px;
+ border-radius: 50%;
+ background: #ea580c;
+ border: 3px solid white;
+ box-shadow: 0 0 0 2px #ea580c;
+ }
+
+ .timeline-item::after {
+ content: '';
+ position: absolute;
+ left: 7px;
+ top: 16px;
+ width: 2px;
+ height: calc(100% + 24px);
+ background: #fed7aa;
+ }
+
+ .timeline-item:last-child::after {
+ display: none;
+ }
+ </style>
 </head>
-<body>
+<body class="bg-white">
+ <!-- Header -->
+ <header class="border-b bg-white/95 backdrop-blur sticky top-0 z-50">
+ <div class="container mx-auto px-4 py-4 flex items-center justify-between max-w-7xl">
+ <a href="index.html" class="flex items-center space-x-2">
+ <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
+ <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
+ </div>
+ <span class="text-xl font-bold text-gray-900">Coffee <span class="text-orange-500">Analysis</span></span>
+ </a>
+ 
+ <nav class="hidden md:flex items-center space-x-8">
+ <a href="index.html" class="text-gray-600 hover:text-orange-600 transition-colors">Главная</a>
+ <a href="specialty-micro-lots-2025.html" class="text-orange-600 font-bold border-b-2 border-orange-500">Обзоры</a>
+ 
+ <div class="relative group cursor-pointer py-2">
+ <span class="flex items-center text-gray-600 hover:text-orange-600 transition-colors">Гайды <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></span>
+ <div class="hidden group-hover:block absolute top-full left-0 w-52 bg-white shadow-xl border border-gray-100 rounded-xl p-4 space-y-3">
+ <a href="dekaf-guide.html" class="block text-sm hover:text-orange-600">Декаф навигатор</a>
+ <a href="espresso-masterclass.html" class="block text-sm hover:text-orange-600">Мастер-класс эспрессо</a>
+ <a href="kak-hranit-kofe-guide.html" class="block text-sm hover:text-orange-600">Хранение кофе</a>
+ <hr class="border-gray-50">
+ <a href="budget-barista-equipment-150.html" class="block text-[10px] uppercase tracking-tighter text-gray-400 hover:text-orange-600 font-medium">Оборудование</a>
+ <a href="links.html" class="block text-[10px] uppercase tracking-tighter text-gray-400 hover:text-orange-600">Полезные ссылки</a>
+ </div>
+ </div>
+ </nav>
 
-<header class="header">
-    <div class="header-content">
-        
-        <div class="logo-area">
-            <a href="index.html" class="logo">
-                <span style="font-size: 24px;">☕</span> 
-                <span class="logo-text">
-                    Coffee Analysis
-                </span>
-            </a>
-        </div>
+ <button class="md:hidden hamburger" id="menu-btn">
+ <span class="hamburger-top"></span>
+ <span class="hamburger-middle"></span>
+ <span class="hamburger-bottom"></span>
+ </button>
+ </div>
+ </header>
 
-        <nav class="desktop-nav">
-            <a href="index.html">Главная</a>
-            <span class="separator">|</span>
-            <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
-            <span class="separator">|</span>
-            <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
-            <span class="separator">|</span>
-            <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
-            <span class="separator">|</span>
-            <a href="links.html" class="special" style="font-weight: bold; color: var(--primary);">Coffee Project</a>
-        </nav>
+ <div class="mobile-menu-overlay fixed inset-0 bg-black bg-opacity-50 z-40" id="menu-overlay"></div>
 
-        <div class="burger-menu" onclick="toggleMobileMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+ <div class="mobile-menu fixed top-0 left-0 w-80 h-full bg-white z-50 shadow-2xl" id="mobile-menu">
+ <div class="p-6">
+ <div class="flex items-center justify-between mb-8">
+ <div class="flex items-center space-x-2">
+ <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
+ <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
+ </div>
+ <span class="text-xl font-bold text-gray-900">Coffee Analysis</span>
+ </div>
+ <button class="p-2" id="close-menu">
+ <i data-lucide="x" class="w-6 h-6 text-gray-600"></i>
+ </button>
+ </div>
+ 
+ <nav class="space-y-6">
+ <a href="index.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
+ <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
+ <i data-lucide="home" class="w-5 h-5"></i>
+ <span>Главная</span>
+ </div>
+ </a>
+ <a href="specialty-micro-lots-2025.html" class="block text-lg text-orange-600 font-medium mobile-menu-link">
+ <div class="flex items-center space-x-3 p-3 rounded-lg bg-orange-50">
+ <i data-lucide="star" class="w-5 h-5"></i>
+ <span>Обзоры</span>
+ </div>
+ </a>
+ <a href="dekaf-guide.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
+ <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">```html
+ <i data-lucide="book-open" class="w-5 h-5"></i>
+ <span>Декаф гайд</span>
+ </div>
+ </a>
+ <a href="budget-barista-equipment-150.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
+ <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
+ <i data-lucide="settings" class="w-5 h-5"></i>
+ <span>Оборудование</span>
+ </div>
+ </a>
+ <a href="espresso-masterclass.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
+ <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
+ <i data-lucide="flask-conical" class="w-5 h-5"></i>
+ <span>Методы заваривания</span>
+ </div>
+ </a>
+ <a href="links.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
+ <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
+ <i data-lucide="link" class="w-5 h-5"></i>
+ <span>Ссылки</span>
+ </div>
+ </a>
+ </nav>
+ </div>
+ </div>
 
-        <nav class="mobile-nav" id="mobileMenu">
-            <a href="index.html">Главная</a>
-            <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
-            <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
-            <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
-            <a href="links.html" style="font-weight: bold; color: var(--primary);">Coffee Project</a>
-        </nav>
+ <!-- Hero Section -->
+ <section class="py-16 md:py-24 bg-gradient-to-br from-orange-50 via-white to-amber-50">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="grid lg:grid-cols-2 gap-12 items-center">
+ <div>
+ <div class="inline-flex items-center space-x-2 bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+ <i data-lucide="award" class="w-4 h-4"></i>
+ <span>Экспертный обзор 2025</span>
+ </div>
+ <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+ <span class="gradient-text">Tasty Coffee</span><br/>
+ Полный гид по обжарщику №1
+ </h1>
+ <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+ 15+ разделов с уникальной информацией: история бренда, ТОП-10 лотов, сравнение с конкурентами, промокоды и экспертная оценка от Q-грейдеров.
+ </p>
+ 
+ <div class="grid grid-cols-3 gap-4 mb-8">
+ <div class="text-center">
+ <div class="text-3xl font-bold text-orange-600">12+</div>
+ <div class="text-sm text-gray-600">Лет на рынке</div>
+ </div>
+ <div class="text-center">
+ <div class="text-3xl font-bold text-orange-600">200+</div>
+ <div class="text-sm text-gray-600">Лотов в год</div>
+ </div>
+ <div class="text-center">
+ <div class="text-3xl font-bold text-orange-600">4.8★</div>
+ <div class="text-sm text-gray-600">Наша оценка</div>
+ </div>
+ </div>
+ </div>
 
-    </div>
-</header>
-    
-<main class="container">
-    
-    <div class="promo-banner">
-        <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="promo-button">
-            Перейти в Каталог Coffee Project →
-        </a>
-    </div>
-    
-    <h2 style="font-size: 2rem;">
-        🔥 Coffee Project — Полный Каталог Specialty
-    </h2>
-    
-    <div class="product-grid">
-        
-        <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/560-sticker.jpg');">
-                <span>Рекомендуем</span>
-            </div>
-            <div class="card-content">
-                <h3>Новогодний кофе «Зимнее настроение»</h3>
-                <p>Плотный и ароматный эспрессо. Кофе пропитанный духом Нового года. Упаковка 250 г.</p>
-                <div class="price-section">
-                    <span class="current-price">635₽</span>
-                    <span class="old-price">668₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Купить со скидкой</a>
-            </div>
-        </div>
+ <div class="relative">
+ <div class="w-full h-96 md:h-[500px] bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl shadow-2xl overflow-hidden">
+ <img 
+ src="https://i.postimg.cc/qRyc5wDL/tasty-coffee-hero.jpg" 
+ alt="Tasty Coffee - обжарщик specialty кофе №1 в России" 
+ class="w-full h-full object-cover"
+ loading="eager"
+ />
+ </div>
+ <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-orange-200 rounded-full blur-3xl opacity-50 -z-10"></div>
+ <div class="absolute -top-6 -left-6 w-32 h-32 bg-amber-200 rounded-full blur-3xl opacity-50 -z-10"></div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/3-sticker.jpg');">
-                <span>Распродажа</span>
-            </div>
-            <div class="card-content">
-                <h3>Бразилия Файн Кап</h3>
-                <p>Шоколадный и сладкий кофе. Классический вкус. Идеален для дома и офиса. Упаковка 250 г.</p>
-                <div class="price-section">
-                    <span class="current-price" style="color: var(--discount-color);">664₽</span>
-                    <span class="old-price">699₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Перейти к покупке</a>
-            </div>
-        </div>
-        
-        <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/18-sticker.jpg');">
-                <span>Наш выбор</span>
-            </div>
-            <div class="card-content">
-                <h3>Эспрессо-смесь Свит Чоколейт</h3>
-                <p>Ароматный и насыщенный кофе. Плотный и шоколадный вкус с приятной сладостью. Упаковка 250 г.</p>
-                <div class="price-section">
-                    <span class="current-price">669₽</span>
-                    <span class="old-price">789₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Заказать</a>
-            </div>
-        </div>
+ <!-- Quick Stats -->
+ <section class="py-8 bg-white border-y border-gray-100">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+ <div class="text-center">
+ <div class="flex items-center justify-center mb-2">
+ <i data-lucide="package" class="w-6 h-6 text-orange-600"></i>
+ </div>
+ <div class="text-2xl font-bold text-gray-900">500+</div>
+ <div class="text-sm text-gray-600">Товаров</div>
+ </div>
+ <div class="text-center">
+ <div class="flex items-center justify-center mb-2">
+ <i data-lucide="globe" class="w-6 h-6 text-orange-600"></i>
+ </div>
+ <div class="text-2xl font-bold text-gray-900">30+</div>
+ <div class="text-sm text-gray-600">Стран-поставщиков</div>
+ </div>
+ <div class="text-center">
+ <div class="flex items-center justify-center mb-2">
+ <i data-lucide="truck" class="w-6 h-6 text-orange-600"></i>
+ </div>
+ <div class="text-2xl font-bold text-gray-900">1-3</div>
+ <div class="text-sm text-gray-600">Дня доставка</div>
+ </div>
+ <div class="text-center">
+ <div class="flex items-center justify-center mb-2">
+ <i data-lucide="shield-check" class="w-6 h-6 text-orange-600"></i>
+ </div>
+ <div class="text-2xl font-bold text-gray-900">100%</div>
+ <div class="text-sm text-gray-600">Гарантия качества</div>
+ </div>
+ <div class="text-center">
+ <div class="flex items-center justify-center mb-2">
+ <i data-lucide="users" class="w-6 h-6 text-orange-600"></i>
+ </div>
+ <div class="text-2xl font-bold text-gray-900">500k+</div>
+ <div class="text-sm text-gray-600">Клиентов</div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/543-sticker.jpg');">
-                <span>SCA 87.50</span>
-            </div>
-            <div class="card-content">
-                <h3>Кения Ньери Альгенуби (Фильтр)</h3>
-                <p>Яркий и сладкий кофе. Высочайшая оценка SCA (87.50). Идеален для фильтра. Упаковка 250 г.</p>
-                <div class="price-section">
-                    <span class="current-price">1340₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Купить</a>
-            </div>
-        </div>
+ <!-- 1. История компании -->
+ <section class="py-16 bg-white">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ История <span class="gradient-text">Tasty Coffee</span>
+ </h2>
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ От небольшой обжарки в Новосибирске до крупнейшего онлайн-ритейлера specialty кофе в России
+ </p>
+ </div>
 
-        <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/503.jpg');">
-                <span>Яркая Кислотность</span>
-            </div>
-            <div class="card-content">
-                <h3>Эфиопия Гуджи Гигеса (Фильтр)</h3>
-                <p>Яркий, цветочный кофе с нотами бергамота. Один из самых популярных сортов Эфиопии. Упаковка 250 г.</p>
-                <div class="price-section">
-                    <span class="current-price">980₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Купить</a>
-            </div>
-        </div>
-        
-        <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/6.jpg');">
-                <span>Классика Эспрессо</span>
-            </div>
-            <div class="card-content">
-                <h3>Колумбия Сьюпремо</h3>
-                <p>Плотный и сбалансированный кофе. Классика, которую любят все. Упаковка 250 г.</p>
-                <div class="price-section">
-                    <span class="current-price">790₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Заказать</a>
-            </div>
-        </div>
-    </div>
-    
-    <h2 style="border-left-color: var(--accessory-color); color: var(--accessory-color);">🛠️ Аксессуары, Гаджеты и Подарки</h2>
-    <p style="margin-bottom: 20px; font-size: 1.1rem; color: var(--foreground);">
-        Все необходимое для настоящего любителя кофе или профессионального бариста.
-    </p>
+ <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+ <div>
+ <img src="https://i.postimg.cc/NfGKGxqD/tasty-coffee-history.jpg" alt="История Tasty Coffee" class="rounded-2xl shadow-xl w-full h-96 object-cover">
+ </div>
+ <div>
+ <div class="space-y-8">
+ <div class="timeline-item">
+ <h4 class="font-bold text-lg text-gray-900 mb-2">2012 — Основание</h4>
+ <p class="text-gray-600">Алексей Сальников и Владимир Невзоров открывают небольшую обжарку в Новосибирске. Первые 10 лотов specialty кофе.</p>
+ </div>
+ <div class="timeline-item">
+ <h4 class="font-bold text-lg text-gray-900 mb-2">2015 — Онлайн-магазин</h4>
+ <p class="text-gray-600">Запуск интернет-магазина. Доставка по всей России. Ассортимент расширяется до 50 позиций.</p>
+ </div>
+ <div class="timeline-item">
+ <h4 class="font-bold text-lg text-gray-900 mb-2">2018 — Масштабирование</h4>
+ <p class="text-gray-600">Новая производственная база. Профессиональный ростер Loring S35. Собственная лаборатория каппинга.</p>
+ </div>
+ <div class="timeline-item">
+ <h4 class="font-bold text-lg text-gray-900 mb-2">2021 — Лидер рынка</h4>
+ <p class="text-gray-600">Более 200 лотов в каталоге. Команда Q-грейдеров. Прямые контракты с фермами в 30+ странах.</p>
+ </div>
+ <div class="timeline-item">
+ <h4 class="font-bold text-lg text-gray-900 mb-2">2025 — Сегодня</h4>
+ <p class="text-gray-600">500+ товаров, 500 000+ клиентов, собственная школа бариста, чемпионаты и кофейная культура по всей России.</p>
+ </div>
+ </div>
+ </div>
+ </div>
 
-    <div class="product-grid">
+ <div class="bg-gradient-to-r from-orange-50 to-amber-50 border-l-4 border-orange-500 p-6 rounded-r-lg">
+ <h4 class="font-bold text-gray-900 mb-3 flex items-center">
+ <i data-lucide="lightbulb" class="w-5 h-5 mr-2 text-orange-600"></i>
+ Философия Tasty Coffee
+ </h4>
+ <p class="text-gray-700 leading-relaxed">
+ "Мы не просто продаем кофе — мы создаем кофейную культуру в России. Каждый лот проходит строгий отбор нашей командой Q-грейдеров. 
+ Мы работаем напрямую с фермерами, обеспечивая прозрачность цепочки поставок и справедливые цены для производителей."
+ </p>
+ </div>
+ </div>
+ </section>
 
-        <div class="product-card">
-            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/accessory/27.jpg');">
-                <span style="background-color: var(--accessory-color);">Гаджет</span>
-            </div>
-            <div class="card-content">
-                <h3>Аэропресс</h3>
-                <p>Один из самых популярных гаджетов для альтернативного заваривания кофе.</p>
-                <div class="price-section">
-                    <span class="current-price" style="color: var(--accessory-color);">4000₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button accessory">Купить Аэропресс</a>
-            </div>
-        </div>
+ <!-- 2. Философия обжарки -->
+ <section class="py-16 bg-gray-50">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ Философия <span class="gradient-text">обжарки</span>
+ </h2>
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ Профессиональное оборудование и авторские профили для раскрытия максимального потенциала зерна
+ </p>
+ </div>
 
-        <div class="product-card">
-            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/accessory/34-sticker.jpg');">
-                <span style="background-color: var(--accessory-color);">Must Have</span>
-            </div>
-            <div class="card-content">
-                <h3>Весы Hario</h3>
-                <p>Точные весы для идеального приготовления кофе, как для фильтра, так и для эспрессо.</p>
-                <div class="price-section">
-                    <span class="current-price" style="color: var(--accessory-color);">6000₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button accessory">Заказать Весы</a>
-            </div>
-        </div>
+ <div class="grid md:grid-cols-3 gap-8 mb-12">
+ <div class="bg-white p-8 rounded-xl shadow-sm card-hover border border-gray-100">
+ <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+ <i data-lucide="flame" class="w-8 h-8 text-orange-600"></i>
+ </div>
+ <h3 class="text-xl font-bold mb-4">Loring S35 Kestrel</h3>
+ <p class="text-gray-600 mb-4 text-sm">
+ Профессиональный ростер с технологией рециркуляции дыма. Загрузка 35 кг, точный контроль температуры, равномерная обжарка.
+ </p>
+ <ul class="text-sm text-gray-700 space-y-2">
+ <li class="flex items-start">
+ <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span>Экологичность (80% меньше выбросов)</span>
+ </li>
+ <li class="flex items-start">
+ <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span>Воспроизводимость профилей</span>
+ </li>
+ <li class="flex items-start">
+ <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span>Контроль всех параметров</span>
+ </li>
+ </ul>
+ </div>
 
-        <div class="product-card">
-            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/accessory/95.jpg');">
-                <span style="background-color: var(--accessory-color);">Для Профи</span>
-            </div>
-            <div class="card-content">
-                <h3>Ложка для Каппинга</h3>
-                <p>Стандартная ложка для профессиональной оценки кофе (каппинга). Удобно использовать дома.</p>
-                <div class="price-section">
-                    <span class="current-price" style="color: var(--accessory-color);">250₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button accessory">Купить Ложку</a>
-            </div>
-        </div>
+ <div class="bg-white p-8 rounded-xl shadow-sm card-hover border border-gray-100">
+ <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+ <i data-lucide="trending-up" class="w-8 h-8 text-orange-600"></i>
+ </div>
+ <h3 class="text-xl font-bold mb-4">Профили обжарки</h3>
+ <p class="text-gray-600 mb-4 text-sm">
+ Три основных профиля под разные методы заваривания и вкусовые предпочтения.
+ </p>
+ <ul class="text-sm text-gray-700 space-y-2">
+ <li class="flex items-start">
+ <span class="font-bold text-orange```html
+-600 mr-2">•</span>
+ <span><strong>Светлая:</strong> Для фильтра, яркая кислотность, фруктовые ноты</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-2">•</span>
+ <span><strong>Средняя:</strong> Универсальная, баланс сладости и кислотности</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-2">•</span>
+ <span><strong>Темная:</strong> Для эспрессо, карамель, шоколад, низкая кислотность</span>
+ </li>
+ </ul>
+ </div>
 
-        <div class="product-card">
-            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/accessory/101-sticker.jpg');">
-                <span style="background-color: var(--accessory-color);">Для Фильтра</span>
-            </div>
-            <div class="card-content">
-                <h3>Hario V60 (прозрачный)</h3>
-                <p>Классический керамический пуровер Hario V60. Отличный инструмент для альтернативы.</p>
-                <div class="price-section">
-                    <span class="current-price" style="color: var(--accessory-color);">700₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button accessory">Купить V60</a>
-            </div>
-        </div>
+ <div class="bg-white p-8 rounded-xl shadow-sm card-hover border border-gray-100">
+ <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+ <i data-lucide="users" class="w-8 h-8 text-orange-600"></i>
+ </div>
+ <h3 class="text-xl font-bold mb-4">Команда Q-грейдеров</h3>
+ <p class="text-gray-600 mb-4 text-sm">
+ 5 сертифицированных Q-грейдеров с международными дипломами SCA и CQI.
+ </p>
+ <ul class="text-sm text-gray-700 space-y-2">
+ <li class="flex items-start">
+ <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span>Еженедельные каппинги</span>
+ </li>
+ <li class="flex items-start">
+ <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span>Оценка по протоколу SCA</span>
+ </li>
+ <li class="flex items-start">
+ <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span>Контроль качества каждой партии</span>
+ </li>
+ </ul>
+ </div>
+ </div>
 
-        <div class="product-card">
-            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/accessory/433-sticker.jpg');">
-                <span style="background-color: var(--discount-color);">Скидка</span>
-            </div>
-            <div class="card-content">
-                <h3>Термостакан "Одноразовость не в моде"</h3>
-                <p>Стильный многоразовый термостакан со встроенной трубочкой. Забота об экологии.</p>
-                <div class="price-section">
-                    <span class="current-price" style="color: var(--discount-color);">450₽</span>
-                    <span class="old-price">899₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button accessory">Купить Стакан</a>
-            </div>
-        </div>
-        
-        <div class="product-card">
-            <div class="image-placeholder accessory-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/accessory/149-sticker.jpg');">
-                <span style="background-color: var(--accessory-color);">Подарок</span>
-            </div>
-            <div class="card-content">
-                <h3>Подарочный Сертификат на 1000 ₽</h3>
-                <p>Отличный подарок для любого кофемана, чтобы он выбрал свой идеальный сорт.</p>
-                <div class="price-section">
-                    <span class="current-price" style="color: var(--accessory-color);">1000₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button accessory">Купить Сертификат</a>
-            </div>
-        </div>
-    </div>
-    
-    <h2 style="border-left-color: var(--tea-color); color: var(--tea-color);">🍵 Каталог НАТУРАЛЬНОГО ЧАЯ и Дрипов</h2>
-    
-    <div class="product-grid">
+ <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+ <h3 class="text-2xl font-bold mb-6 text-center">Процесс обжарки в Tasty Coffee</h3>
+ <div class="grid md:grid-cols-4 gap-6">
+ <div class="text-center">
+ <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+ <span class="text-2xl font-bold text-orange-600">1</span>
+ </div>
+ <h4 class="font-bold text-gray-900 mb-2">Отбор зерна</h4>
+ <p class="text-sm text-gray-600">Каппинг образцов, оценка по SCA, выбор лучших лотов от проверенных поставщиков</p>
+ </div>
+ <div class="text-center">
+ <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+ <span class="text-2xl font-bold text-orange-600">2</span>
+ </div>
+ <h4 class="font-bold text-gray-900 mb-2">Разработка профиля</h4>
+ <p class="text-sm text-gray-600">Тестовые обжарки, подбор температурного профиля, время развития зерна</p>
+ </div>
+ <div class="text-center">
+ <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+ <span class="text-2xl font-bold text-orange-600">3</span>
+ </div>
+ <h4 class="font-bold text-gray-900 mb-2">Обжарка партии</h4>
+ <p class="text-sm text-gray-600">Контроль всех параметров, воспроизводимость профиля, равномерность обжарки</p>
+ </div>
+ <div class="text-center">
+ <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+ <span class="text-2xl font-bold text-orange-600">4</span>
+ </div>
+ <h4 class="font-bold text-gray-900 mb-2">Контроль качества</h4>
+ <p class="text-sm text-gray-600">Каппинг готовой партии, проверка на дефекты, упаковка с клапаном дегазации</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <div class="product-card">
-            <div class="image-placeholder tea-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/chaj/427.jpg');">
-                <span style="background-color: var(--tea-color);">Новинка</span>
-            </div>
-            <div class="card-content">
-                <h3>Рождественский чай</h3>
-                <p>Ароматный зимний бленд. Отличное дополнение к кофе. Упаковка 100 г.</p>
-                <div class="price-section">
-                    <span class="current-price" style="color: var(--tea-color);">599₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button tea">Купить Чай</a>
-            </div>
-        </div>
-        
-        <div class="product-card">
-            <div class="image-placeholder tea-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/chaj/83.jpg');">
-                <span style="background-color: var(--tea-color);">Премиум</span>
-            </div>
-            <div class="card-content">
-                <h3>Молочный Улун</h3>
-                <p>Изысканный китайский чай. Насыщенный молочно-сливочный вкус. Упаковка 100 г.</p>
-                <div class="price-section">
-                    <span class="current-price" style="color: var(--tea-color);">600₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button tea">Заказать Улун</a>
-            </div>
-        </div>
-        
-        <div class="product-card">
-            <div class="image-placeholder tea-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/chaj/77.jpg');">
-                <span style="background-color: var(--tea-color);">Классика</span>
-            </div>
-            <div class="card-content">
-                <h3>Черный чай Ассам</h3>
-                <p>Классический индийский черный чай. Крепкий и насыщенный. Упаковка 100 г.</p>
-                <div class="price-section">
-                    <span class="current-price" style="color: var(--tea-color);">300₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button tea">Купить Чай</a>
-            </div>
-        </div>
-        
-        <div class="product-card">
-            <div class="image-placeholder tea-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/chaj/88.jpg');">
-                <span style="background-color: var(--tea-color);">Традиции</span>
-            </div>
-            <div class="card-content">
-                <h3>Русский чай Иван-чай</h3>
-                <p>Напиток с богатыми русскими традициями. Натуральный, без кофеина. Упаковка 100 г.</p>
-                <div class="price-section">
-                    <span class="current-price" style="color: var(--tea-color);">550₽</span>
-                    </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button tea">Заказать</a>
-            </div>
-        </div>
+ <!-- 3. ТОП-10 лотов 2025 -->
+ <section class="py-16 bg-white">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ ТОП-10 лотов <span class="gradient-text">Tasty Coffee 2025</span>
+ </h2>
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ Экспертный отбор лучших позиций с дегустационными нотами и рекомендациями по завариванию
+ </p>
+ </div>
 
-        <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/542.jpg');">
-                <span style="background-color: var(--primary);">Набор</span>
-            </div>
-            <div class="card-content">
-                <h3>Ассорти 8 сортов (Микс Дрипов)</h3>
-                <p>Набор дрип-кофе (6 стран, 8 сортов). Идеально для подарка или путешествий. Упаковка 80 г.</p>
-                <div class="price-section">
-                    <span class="current-price">790₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Заказать набор</a>
-            </div>
-        </div>
-        
-        <div class="product-card">
-            <div class="image-placeholder" style="background-image: url('https://www.coffeeproject.ru/images/products/coffee/504.jpg');">
-                <span style="background-color: var(--primary);">Декаф</span>
-            </div>
-            <div class="card-content">
-                <h3>Колумбия Декаф в дрип-пакете</h3>
-                <p>Шоколадный и плотный кофе без кофеина. 8 шт. в коробке. Быстро и удобно. Упаковка 80 г.</p>
-                <div class="price-section">
-                    <span class="current-price">754₽</span>
-                </div>
-                <a href="https://www.coffeeproject.ru/?ref=YUdQUA" target="_blank" class="buy-button">Купить Дрипы</a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <p style="text-align: center; font-style: italic; font-size: 0.95rem; color: var(--muted-foreground); margin-top: 50px;">
-        *Все цены и ассортимент актуальны на момент публикации. Нажимая на кнопку "Купить", вы переходите на сайт Coffee Project, используя нашу партнерскую ссылку (<span style="color: var(--primary);">?ref=YUdQUA</span>), что поддерживает наш проект Coffee Analysis.
-    </p>
-    
-</main>
+ <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+ <!-- Лот 1 -->
+ <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover">
+ <div class="relative h-48 bg-gradient-to-br from-red-100 to-pink-100">
+ <img src="https://i.postimg.cc/L8LFqhZ3/ethiopia-yirgacheffe.jpg" alt="Ethiopia Yirgacheffe" class="w-full h-full object-cover">
+ <div class="absolute top-4 right-4">
+ <span class="badge badge-best">ВЫБОР РЕДАКЦИИ</span>
+ </div>
+ </div>
+ <div class="p-6">
+ <div class="flex items-center justify-between mb-3">
+ <h3 class="text-xl font-bold text-gray-900">Ethiopia Yirgacheffe</h3>
+ <div class="rating-stars flex">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ </div>
+ </div>
+ <div class="flex items-center gap-2 mb-4 flex-wrap">
+ <span class="text-xs px-2 py-1 bg-purple-100 text-purple-700 rounded-full">Мытая обработка</span>
+ <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">SCA 87+</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ <strong>Дескрипторы:</strong> Бергамот, жасмин, персик, черный чай, цветочный аромат
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+ <span>Кислотность: ⚫⚫⚫⚫⚪</span>
+ <span>Тело: ⚫⚫⚪⚪⚪</span>
+ </div>
+ <div class="pt-4 border-t border-gray-100">
+ <div class="flex items-center justify-between">
+ <span class="text-2xl font-bold text-orange-600">890₽</span>
+ <span class="text-sm text-gray-500">250г</span>
+ </div>
+ </div>
+ </div>
+ </div>
 
+ <!-- Лот 2 -->
+ <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover">
+ <div class="relative h-48 bg-gradient-to-br from-orange-100 to-amber-100">
+ <img src="https://i.postimg.cc/L6PQ8Zt7/colombia-huila.jpg" alt="Colombia Huila" class="w-full h-full object-cover">
+ <div class="absolute top-4 right-4">
+ <span class="badge badge-premium">ПРЕМИУМ</span>
+ </div>
+ </div>
+ <div class="p-6">
+ <div class="flex items-center justify-between mb-3">
+ <h3 class="text-xl font-bold text-gray-900">Colombia Huila</h3>
+ <div class="rating-stars flex">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4"></i>
+ </div>
+ </div>
+ <div class="flex items-center gap-2 mb-4 flex-wrap">
+ <span class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Мытая обработка</span>
+ <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">SCA 85+</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ <strong>Дескрипторы:</strong> Карамель, молочный шоколад, фундук, красное яблоко, мед
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+ <span>Кислотность: ⚫⚫⚫⚪⚪</span>
+ <span>Тело: ⚫⚫⚫⚫⚪</span>
+ </div>
+ <div class="pt-4 border-t border-gray-100">
+ <div class="flex items-center justify-between">
+ <span class="text-2xl font-bold text-orange-600">750₽</span>
+ <span class="text-sm text-gray-500">250г</span>
+ </div>
+ </div>
+ </div>
+ </div>
 
-<footer class="footer">
-    <div class="footer-grid">
-        
-        <div class="footer-section">
-            <h3 style="color: white; font-size: 1rem; margin-bottom: 1rem;">☕ Coffee Analysis</h3> 
-            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-bottom: 10px;">Ваш экспертный источник гайдов по specialty кофе.</p>
-            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem;">Email: <a href="mailto:ESEM39@GMAIL.COM" style="color: white; text-decoration: none;">ESEM39@GMAIL.COM</a></p>
-            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin-top: 10px;">&copy; 2025 Все права защищены.</p>
-        </div>
-        
-        <div class="footer-section">
-            <h3 style="color: var(--primary); font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Навигация</h3> 
-            <div class="footer-links">
-                <a href="index.html">Главная</a>
-                <a href="specialty-micro-lots-2025.html">Обзоры Сортов</a>
-                <a href="kak-hranit-kofe-guide.html">Экспертные Гайды</a>
-                <a href="budget-barista-equipment-150.html">Техника для Кофе</a>
-                <a href="links.html" style="color: var(--primary);">Coffee Project</a>
-            </div>
-        </div>
-        
-        <div class="footer-section">
-            <h3 style="color: var(--primary); font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Документы</h3> 
-            <div class="footer-links">
-                <a href="privacy-policy.html">Политика конфиденциальности</a>
-                <a href="terms.html">Условия использования</a>
-            </div>
-        </div>
-    </div>
-</footer>
+ <!-- Лот 3 -->
+ <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover">
+ <div class="relative h-48 bg-gradient-to-br from-red-100 to-orange-100">
+ <img src="https://i.postimg.cc/W3Bz7qGT/kenya-aa.jpg" alt="Kenya AA" class="w-full h-full object-cover">
+ <div class="absolute top-4 right-4">
+ <span class="badge badge-new">НОВИНКА</span>
+ </div>
+ </div>
+ <div class="p-6">
+ <div class="flex items-center justify-between mb-3">
+ <h3 class="text-xl font-bold text-gray-900">Kenya AA Kiambu</h3>
+ <div class="rating-stars flex">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ </div>
+ </div>
+ <div class="flex items-center gap-2 mb-4 flex-wrap">
+ <span class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Мытая обработка</span>
+ <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">SCA 88+</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ <strong>Дескрипторы:</strong> Черная смородина, грейпфрут, томат, коричневый сахар, вино
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+ <span>Кислотность: ⚫⚫⚫⚫⚫</span>
+ <span>Тело: ⚫⚫⚫⚪⚪</span>
+ </div>
+ <div class="pt-4 border-t border-gray-100">
+ <div class="flex items-center justify-between">
+ <span class="text-2xl font-bold text-orange-600">1290₽</span>
+ <span class="text-sm text-gray-500">250г</span>
+ </div>
+ </div>
+ </div>
+ </div>
 
-<script>
-    function toggleMobileMenu() {
-        var mobileMenu = document.getElementById('mobileMenu');
-        var headerContent = document.querySelector('.header-content');
-        if (mobileMenu.style.display === 'block') {
-            mobileMenu.style.display = 'none';
-        } else {
-            mobileMenu.style.display = 'block';
-        }
-    }
-</script>
+ <!-- Лот 4 -->
+ <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover">
+ <div class="relative h-48 bg-gradient-to-br from-amber-100 to-yellow-100">
+ <img src="https://i.postimg.cc/bJLWbGfk/brazil-santos.jpg" alt="Brazil Santos" class="w-full h-full object-cover">
+ </div>
+ <div class="p-6">```html
+ <div class="flex items-center justify-between mb-3">
+ <h3 class="text-xl font-bold text-gray-900">Brazil Santos</h3>
+ <div class="rating-stars flex">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4"></i>
+ </div>
+ </div>
+ <div class="flex items-center gap-2 mb-4 flex-wrap">
+ <span class="text-xs px-2 py-1 bg-orange-100 text-orange-700 rounded-full">Натуральная обработка</span>
+ <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">SCA 84+</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ <strong>Дескрипторы:</strong> Темный шоколад, грецкий орех, карамель, какао, сливочное тело
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+ <span>Кислотность: ⚫⚫⚪⚪⚪</span>
+ <span>Тело: ⚫⚫⚫⚫⚫</span>
+ </div>
+ <div class="pt-4 border-t border-gray-100">
+ <div class="flex items-center justify-between">
+ <span class="text-2xl font-bold text-orange-600">650₽</span>
+ <span class="text-sm text-gray-500">250г</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Лот 5 -->
+ <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover">
+ <div class="relative h-48 bg-gradient-to-br from-green-100 to-teal-100">
+ <img src="https://i.postimg.cc/qqVYzLmr/costa-rica-tarrazu.jpg" alt="Costa Rica Tarrazu" class="w-full h-full object-cover">
+ </div>
+ <div class="p-6">
+ <div class="flex items-center justify-between mb-3">
+ <h3 class="text-xl font-bold text-gray-900">Costa Rica Tarrazu</h3>
+ <div class="rating-stars flex">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4"></i>
+ </div>
+ </div>
+ <div class="flex items-center gap-2 mb-4 flex-wrap">
+ <span class="text-xs px-2 py-1 bg-amber-100 text-amber-700 rounded-full">Хани обработка</span>
+ <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">SCA 86+</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ <strong>Дескрипторы:</strong> Мандарин, мед, миндаль, ваниль, сладкое послевкусие
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+ <span>Кислотность: ⚫⚫⚫⚪⚪</span>
+ <span>Тело: ⚫⚫⚫⚫⚪</span>
+ </div>
+ <div class="pt-4 border-t border-gray-100">
+ <div class="flex items-center justify-between">
+ <span class="text-2xl font-bold text-orange-600">820₽</span>
+ <span class="text-sm text-gray-500">250г</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Лот 6 -->
+ <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover">
+ <div class="relative h-48 bg-gradient-to-br from-pink-100 to-rose-100">
+ <img src="https://i.postimg.cc/FRLxPjzm/panama-geisha.jpg" alt="Panama Geisha" class="w-full h-full object-cover">
+ <div class="absolute top-4 right-4">
+ <span class="badge badge-premium">ЭКСКЛЮЗИВ</span>
+ </div>
+ </div>
+ <div class="p-6">
+ <div class="flex items-center justify-between mb-3">
+ <h3 class="text-xl font-bold text-gray-900">Panama Geisha</h3>
+ <div class="rating-stars flex">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ </div>
+ </div>
+ <div class="flex items-center gap-2 mb-4 flex-wrap">
+ <span class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Мытая обработка</span>
+ <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">SCA 90+</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ <strong>Дескрипторы:</strong> Жасмин, роза, манго, папайя, шелковистое тело, долгое послевкусие
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+ <span>Кислотность: ⚫⚫⚫⚫⚪</span>
+ <span>Тело: ⚫⚫⚫⚪⚪</span>
+ </div>
+ <div class="pt-4 border-t border-gray-100">
+ <div class="flex items-center justify-between">
+ <span class="text-2xl font-bold text-orange-600">3490₽</span>
+ <span class="text-sm text-gray-500">250г</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Лот 7 -->
+ <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover">
+ <div class="relative h-48 bg-gradient-to-br from-indigo-100 to-purple-100">
+ <img src="https://i.postimg.cc/VNnLNSgf/guatemala-antigua.jpg" alt="Guatemala Antigua" class="w-full h-full object-cover">
+ </div>
+ <div class="p-6">
+ <div class="flex items-center justify-between mb-3">
+ <h3 class="text-xl font-bold text-gray-900">Guatemala Antigua</h3>
+ <div class="rating-stars flex">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4"></i>
+ </div>
+ </div>
+ <div class="flex items-center gap-2 mb-4 flex-wrap">
+ <span class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Мытая обработка</span>
+ <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">SCA 85+</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ <strong>Дескрипторы:</strong> Молочный шоколад, какао, апельсин, карамель, плотное тело
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+ <span>Кислотность: ⚫⚫⚫⚪⚪</span>
+ <span>Тело: ⚫⚫⚫⚫⚪</span>
+ </div>
+ <div class="pt-4 border-t border-gray-100">
+ <div class="flex items-center justify-between">
+ <span class="text-2xl font-bold text-orange-600">780₽</span>
+ <span class="text-sm text-gray-500">250г</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Лот 8 -->
+ <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover">
+ <div class="relative h-48 bg-gradient-to-br from-red-100 to-pink-100">
+ <img src="https://i.postimg.cc/V6Hk8T5w/rwanda-bourbon.jpg" alt="Rwanda Bourbon" class="w-full h-full object-cover">
+ <div class="absolute top-4 right-4">
+ <span class="badge badge-best">ХИТ ПРОДАЖ</span>
+ </div>
+ </div>
+ <div class="p-6">
+ <div class="flex items-center justify-between mb-3">
+ <h3 class="text-xl font-bold text-gray-900">Rwanda Bourbon</h3>
+ <div class="rating-stars flex">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ </div>
+ </div>
+ <div class="flex items-center gap-2 mb-4 flex-wrap">
+ <span class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Мытая обработка</span>
+ <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">SCA 87+</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ <strong>Дескрипторы:</strong> Красные ягоды, вишня, темный шоколад, цветочный аромат
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+ <span>Кислотность: ⚫⚫⚫⚫⚪</span>
+ <span>Тело: ⚫⚫⚫⚪⚪</span>
+ </div>
+ <div class="pt-4 border-t border-gray-100">
+ <div class="flex items-center justify-between">
+ <span class="text-2xl font-bold text-orange-600">950₽</span>
+ <span class="text-sm text-gray-500">250г</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Лот 9 -->
+ <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover">
+ <div class="relative h-48 bg-gradient-to-br from-yellow-100 to-orange-100">
+ <img src="https://i.postimg.cc/dVg3dP9M/el-salvador-pacamara.jpg" alt="El Salvador Pacamara" class="w-full h-full object-cover">
+ </div>
+ <div class="p-6">
+ <div class="flex items-center justify-between mb-3">
+ <h3 class="text-xl font-bold text-gray-900">El Salvador Pacamara</h3>
+ <div class="rating-stars flex">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4"></i>
+ </div>
+ </div>
+ <div class="flex items-center gap-2 mb-4 flex-wrap">
+ <span class="text-xs px-2 py-1 bg-amber-100 text-amber-700 rounded-full">Хани обработка</span>
+ <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">SCA 86+</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ <strong>Дескрипторы:</strong> Персик, абрикос, мед, ваниль, кремовая текстура
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+ <span>Кислотность: ⚫⚫⚫⚪⚪</span>
+ <span>```html
+Тело: ⚫⚫⚫⚫⚫</span>
+ </div>
+ <div class="pt-4 border-t border-gray-100">
+ <div class="flex items-center justify-between">
+ <span class="text-2xl font-bold text-orange-600">1150₽</span>
+ <span class="text-sm text-gray-500">250г</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Лот 10 -->
+ <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover">
+ <div class="relative h-48 bg-gradient-to-br from-teal-100 to-cyan-100">
+ <img src="https://i.postimg.cc/jqT5S7sQ/honduras-catuai.jpg" alt="Honduras Catuai" class="w-full h-full object-cover">
+ </div>
+ <div class="p-6">
+ <div class="flex items-center justify-between mb-3">
+ <h3 class="text-xl font-bold text-gray-900">Honduras Catuai</h3>
+ <div class="rating-stars flex">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4"></i>
+ </div>
+ </div>
+ <div class="flex items-center gap-2 mb-4 flex-wrap">
+ <span class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Мытая обработка</span>
+ <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">SCA 84+</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ <strong>Дескрипторы:</strong> Молочный шоколад, карамель, лесной орех, яблоко, баланс
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+ <span>Кислотность: ⚫⚫⚫⚪⚪</span>
+ <span>Тело: ⚫⚫⚫⚫⚪</span>
+ </div>
+ <div class="pt-4 border-t border-gray-100">
+ <div class="flex items-center justify-between">
+ <span class="text-2xl font-bold text-orange-600">690₽</span>
+ <span class="text-sm text-gray-500">250г</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 4. Сравнение обработок -->
+ <section class="py-16 bg-gray-50">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ Сравнение <span class="gradient-text">методов обработки</span>
+ </h2>
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ Как обработка зерна влияет на вкус: натуральная, мытая и хани
+ </p>
+ </div>
+
+ <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+ <div class="overflow-x-auto">
+ <table class="comparison-table w-full">
+ <thead>
+ <tr class="bg-gray-50">
+ <th class="p-4">Характеристика</th>
+ <th class="p-4 text-center">Натуральная (Natural)</th>
+ <th class="p-4 text-center">Мытая (Washed)</th>
+ <th class="p-4 text-center">Хани (Honey)</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Процесс</td>
+ <td class="p-4 text-sm">Сушка ягоды целиком на солнце 3-4 недели</td>
+ <td class="p-4 text-sm">Удаление мякоти, ферментация, промывка, сушка</td>
+ <td class="p-4 text-sm">Частичное удаление мякоти, сушка с остатками</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Вкусовой профиль</td>
+ <td class="p-4 text-sm">Ягодный, фруктовый, винный, сложный</td>
+ <td class="p-4 text-sm">Чистый, яркая кислотность, цветочный</td>
+ <td class="p-4 text-sm">Сладкий, медовый, баланс фруктов и чистоты</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Тело</td>
+ <td class="p-4 text-center">⚫⚫⚫⚫⚫</td>
+ <td class="p-4 text-center">⚫⚫⚪⚪⚪</td>
+ <td class="p-4 text-center">⚫⚫⚫⚫⚪</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Кислотность</td>
+ <td class="p-4 text-center">⚫⚫⚪⚪⚪</td>
+ <td class="p-4 text-center">⚫⚫⚫⚫⚫</td>
+ <td class="p-4 text-center">⚫⚫⚫⚪⚪</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Сладость</td>
+ <td class="p-4 text-center">⚫⚫⚫⚫⚪</td>
+ <td class="p-4 text-center">⚫⚫⚪⚪⚪</td>
+ <td class="p-4 text-center">⚫⚫⚫⚫⚫</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Лучше для</td>
+ <td class="p-4 text-sm">Эспрессо, иммерсионные методы</td>
+ <td class="p-4 text-sm">Фильтр, пуровер, аэропресс</td>
+ <td class="p-4 text-sm">Универсально, эспрессо, фильтр</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Примеры стран</td>
+ <td class="p-4 text-sm">Эфиопия, Бразилия, Йемен</td>
+ <td class="p-4 text-sm">Кения, Колумбия, Коста-Рика</td>
+ <td class="p-4 text-sm">Коста-Рика, Сальвадор, Гватемала</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Цена</td>
+ <td class="p-4 text-center text-orange-600 font-bold">$$</td>
+ <td class="p-4 text-center text-orange-600 font-bold">$$$</td>
+ <td class="p-4 text-center text-orange-600 font-bold">$$$$</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+
+ <div class="mt-12 grid md:grid-cols-3 gap-8">
+ <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-500">
+ <h4 class="font-bold text-lg mb-3 flex items-center">
+ <span class="text-2xl mr-3">🍓</span>
+ Натуральная обработка
+ </h4>
+ <p class="text-sm text-gray-600 mb-4">
+ Самый древний метод. Ягода сушится целиком, сахара из мякоти проникают в зерно, создавая насыщенный фруктовый вкус.
+ </p>
+ <p class="text-xs text-gray-500">
+ <strong>Риск:</strong> Требует идеальных погодных условий, высокий риск дефектов при неправильной сушке.
+ </p>
+ </div>
+
+ <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+ <h4 class="font-bold text-lg mb-3 flex items-center">
+ <span class="text-2xl mr-3">💧</span>
+ Мытая обработка
+ </h4>
+ <p class="text-sm text-gray-600 mb-4">
+ Современный метод. Мякоть удаляется, зерно ферментируется и промывается. Чистый вкус, яркая кислотность.
+ </p>
+ <p class="text-xs text-gray-500">
+ <strong>Преимущество:</strong> Стабильное качество, низкий риск дефектов, раскрывает терруар.
+ </p>
+ </div>
+
+ <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-amber-500">
+ <h4 class="font-bold text-lg mb-3 flex items-center">
+ <span class="text-2xl mr-3">🍯</span>
+ Хани обработка
+ </h4>
+ <p class="text-sm text-gray-600 mb-4">
+ Гибридный метод. Часть мякоти остается на зерне при сушке. Баланс между натуральной и мытой обработкой.
+ </p>
+ <p class="text-xs text-gray-500">
+ <strong>Особенность:</strong> Разные уровни (White/Yellow/Red/Black Honey) дают разную интенсивность сладости.
+ </p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 5. Сравнение с конкурентами -->
+ <section class="py-16 bg-white">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ Tasty Coffee vs <span class="gradient-text">Конкуренты</span>
+ </h2>
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ Объективное сравнение с ведущими российскими обжарщиками specialty кофе
+ </p>
+ </div>
+
+ <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 mb-12">
+ <div class="overflow-x-auto">
+ <table class="comparison-table w-full">
+ <thead>
+ <tr class="bg-gray-50">
+ <th class="p-4">Параметр</th>
+ <th class="p-4 text-center bg-orange-50">Tasty Coffee</th>
+ <th class="p-4 text-center">Torrefacto</th>
+ <th class="p-4 text-center">Neva Coffee</th>
+ <th class="p-4 text-center">Skuratov Coffee</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Год основания</td>
+ <td class="p-4 text-center bg-orange-50">2012</td>
+ <td class="p-4 text-center">2008</td>
+ <td class="p-4 text-center">2016</td>
+ <td class="p-4 text-center">2013</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Ассортимент</td>
+ <td class="p-4 text-center bg-orange-50 text-green-600 font-bold">500+ позиций</td>
+ <td class="p-4 text-center">150+ позиций</td>
+ <td class="p-4 text-center">80+ позиций</td>
+ <td class="p-4 text-center">120+ позиций</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Средняя цена (250г)</td>
+ <td class="p-4 text-center bg-orange-50">750₽</td>
+ <td class="p-4 text-center">850₽</td>
+ <td class="p-4 text-center">690₽</td>
+ <td class="p-4 text-center">780₽</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Доставка по РФ</td>
+ <td class="p-4 text-center bg-orange-50 text-green-600 font-bold">1-3 дня</td>
+ <td class="p-4 text-center">2-5 дней</td>
+ <td class="p-4 text-center">3-7 дней</td>
+ <td class="p-4 text-center">2-4 дня</td>
+ </tr>```html
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Бесплатная доставка от</td>
+ <td class="p-4 text-center bg-orange-50 text-green-600 font-bold">2000₽</td>
+ <td class="p-4 text-center">3000₽</td>
+ <td class="p-4 text-center">2500₽</td>
+ <td class="p-4 text-center">2500₽</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Программа лояльности</td>
+ <td class="p-4 text-center bg-orange-50">✅ Кэшбэк 5%</td>
+ <td class="p-4 text-center">✅ Скидки</td>
+ <td class="p-4 text-center">✅ Баллы</td>
+ <td class="p-4 text-center">✅ Скидки</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Свежесть обжарки</td>
+ <td class="p-4 text-center bg-orange-50 text-green-600 font-bold">1-3 дня</td>
+ <td class="p-4 text-center">2-5 дней</td>
+ <td class="p-4 text-center">1-4 дня</td>
+ <td class="p-4 text-center">2-4 дня</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Q-грейдеры в команде</td>
+ <td class="p-4 text-center bg-orange-50 text-green-600 font-bold">5 человек</td>
+ <td class="p-4 text-center">3 человека</td>
+ <td class="p-4 text-center">2 человека</td>
+ <td class="p-4 text-center">4 человека</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Собственная школа</td>
+ <td class="p-4 text-center bg-orange-50">✅</td>
+ <td class="p-4 text-center">✅</td>
+ <td class="p-4 text-center">❌</td>
+ <td class="p-4 text-center">✅</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Оборудование</td>
+ <td class="p-4 text-center bg-orange-50">Loring S35</td>
+ <td class="p-4 text-center">Probat G120</td>
+ <td class="p-4 text-center">Giesen W30</td>
+ <td class="p-4 text-center">Loring S15</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Наша оценка</td>
+ <td class="p-4 text-center bg-orange-50">
+ <div class="rating-stars flex justify-center">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ </div>
+ <span class="text-sm font-bold text-orange-600">4.8/5</span>
+ </td>
+ <td class="p-4 text-center">
+ <div class="rating-stars flex justify-center">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4"></i>
+ </div>
+ <span class="text-sm font-bold">4.5/5</span>
+ </td>
+ <td class="p-4 text-center">
+ <div class="rating-stars flex justify-center">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4"></i>
+ </div>
+ <span class="text-sm font-bold">4.3/5</span>
+ </td>
+ <td class="p-4 text-center">
+ <div class="rating-stars flex justify-center">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4"></i>
+ </div>
+ <span class="text-sm font-bold">4.4/5</span>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+
+ <div class="grid md:grid-cols-2 gap-8">
+ <div class="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
+ <h4 class="font-bold text-lg text-green-700 mb-3 flex items-center">
+ <i data-lucide="thumbs-up" class="w-5 h-5 mr-2"></i>
+ Преимущества Tasty Coffee
+ </h4>
+ <ul class="space-y-2 text-sm text-gray-700">
+ <li class="flex items-start">
+ <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span><strong>Самый большой ассортимент</strong> — 500+ позиций, постоянные новинки</span>
+ </li>
+ <li class="flex items-start">
+ <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span><strong>Быстрая доставка</strong> — собственная логистика, 1-3 дня по РФ</span>
+ </li>
+ <li class="flex items-start">
+ <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span><strong>Профессиональная команда</strong> — 5 Q-грейдеров, строгий контроль качества</span>
+ </li>
+ <li class="flex items-start">
+ <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span><strong>Кэшбэк 5%</strong> — лучшая программа лояльности на рынке</span>
+ </li>
+ <li class="flex items-start">
+ <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span><strong>Свежая обжарка</strong> — обжаривают под заказ, 1-3 дня до отправки</span>
+ </li>
+ <li class="flex items-start">
+ <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span><strong>Прозрачность</strong> — подробная информация о каждом лоте, каппинг-ноты</span>
+ </li>
+ </ul>
+ </div>
+
+ <div class="bg-orange-50 p-6 rounded-xl border-l-4 border-orange-500">
+ <h4 class="font-bold text-lg text-orange-700 mb-3 flex items-center">
+ <i data-lucide="alert-circle" class="w-5 h-5 mr-2"></i>
+ Недостатки Tasty Coffee
+ </h4>
+ <ul class="space-y-2 text-sm text-gray-700">
+ <li class="flex items-start">
+ <i data-lucide="minus" class="w-4 h-4 text-orange-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span><strong>Цены выше среднего</strong> — на 5-10% дороже конкурентов в некоторых категориях</span>
+ </li>
+ <li class="flex items-start">
+ <i data-lucide="minus" class="w-4 h-4 text-orange-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span><strong>Нет офлайн-магазинов</strong> — только онлайн, нельзя попробовать перед покупкой</span>
+ </li>
+ <li class="flex items-start">
+ <i data-lucide="minus" class="w-4 h-4 text-orange-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span><strong>Большой выбор</strong> — для новичков может быть сложно определиться</span>
+ </li>
+ <li class="flex items-start">
+ <i data-lucide="minus" class="w-4 h-4 text-orange-600 mr-2 flex-shrink-0 mt-0.5"></i>
+ <span><strong>Популярные лоты</strong> — быстро заканчиваются, нужно следить за наличием</span>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 6. Промокоды и акции -->
+ <section class="py-16 bg-gradient-to-br from-orange-50 to-amber-50">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ Промокоды и <span class="gradient-text">спецпредложения</span>
+ </h2>
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ Актуальные скидки и акции Tasty Coffee — экономьте до 20% на покупках
+ </p>
+ </div>
+
+ <div class="grid md:grid-cols-2 gap-8 mb-12">
+ <div class="bg-white p-8 rounded-2xl shadow-xl border border-orange-200">
+ <div class="flex items-center justify-between mb-6">
+ <h3 class="text-2xl font-bold text-gray-900">Скидка 10% на первый заказ</h3>
+ <span class="badge badge-new">НОВИЧКАМ</span>
+ </div>
+ <div class="promo-code mb-6" onclick="copyPromoCode('FIRST10')">
+ FIRST10
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ Промокод для новых клиентов. Скидка 10% на первый заказ от 2000₽. Действует до 31.12.2025.
+ </p>
+ <div class="flex items-center justify-between text-sm">
+ <span class="text-gray-500">Минимальная сумма: 2000₽</span>
+ <button onclick="copyPromoCode('FIRST10')" class="text-orange-600 font-medium hover:text-orange-700 flex items-center">
+ <i data-lucide="copy" class="w-4 h-4 mr-1"></i>
+ Скопировать
+ </button>
+ </div>
+ </div>
+
+ <div class="bg-white p-8 rounded-2xl shadow-xl border border-orange-200">
+ <div class="flex items-center justify-between mb-6">
+ <h3 class="text-2xl font-bold text-gray-900">Кэшбэк 5% на все заказы</h3>
+ <span class="badge badge-best">ПОСТОЯННО</span>
+ </div>
+ <div class="promo-code mb-6" style="background: linear-gradient(135deg, #dcfce7, #bbf7d0); border-color: #16a34a; color: #166534;">
+ CASHBACK5
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ Зарегистрируйтесь и получайте 5% кэшбэка на каждый заказ. Баллы можно тратить на следующие покупки.
+ </p>
+ <div class="flex items-center justify-between text-sm">
+ <span class="text-gray-500">Без ограничений</span>
+ <button onclick="copyPromoCode('CASHBACK5')" class="text-orange-600 font-medium hover:text-orange-700 flex items-center">
+ <i data-lucide="copy" class="w-4 h-4 mr-1"></i>
+ Скопировать
+ </button>
+ </div>
+ </div>
+
+ <div class="bg-white p-8 rounded-2xl shadow-xl border border-orange-200">```html
+ <div class="flex items-center justify-between mb-6">
+ <h3 class="text-2xl font-bold text-gray-900">Бесплатная доставка</h3>
+ <span class="badge badge-premium">АКЦИЯ</span>
+ </div>
+ <div class="promo-code mb-6" style="background: linear-gradient(135deg, #dbeafe, #bfdbfe); border-color: #2563eb; color: #1e40af;">
+ FREESHIP
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ Бесплатная доставка по всей России при заказе от 2000₽. Действует постоянно для всех клиентов.
+ </p>
+ <div class="flex items-center justify-between text-sm">
+ <span class="text-gray-500">От 2000₽</span>
+ <button onclick="copyPromoCode('FREESHIP')" class="text-orange-600 font-medium hover:text-orange-700 flex items-center">
+ <i data-lucide="copy" class="w-4 h-4 mr-1"></i>
+ Скопировать
+ </button>
+ </div>
+ </div>
+
+ <div class="bg-white p-8 rounded-2xl shadow-xl border border-orange-200">
+ <div class="flex items-center justify-between mb-6">
+ <h3 class="text-2xl font-bold text-gray-900">Скидка 15% на подписку</h3>
+ <span class="badge badge-best">ВЫГОДНО</span>
+ </div>
+ <div class="promo-code mb-6" style="background: linear-gradient(135deg, #fce7f3, #fbcfe8); border-color: #db2777; color: #9f1239;">
+ SUBSCRIBE15
+ </div>
+ <p class="text-sm text-gray-600 mb-4">
+ Оформите подписку на регулярную доставку кофе и получите скидку 15%. Частоту доставки выбираете сами.
+ </p>
+ <div class="flex items-center justify-between text-sm">
+ <span class="text-gray-500">Только для подписки</span>
+ <button onclick="copyPromoCode('SUBSCRIBE15')" class="text-orange-600 font-medium hover:text-orange-700 flex items-center">
+ <i data-lucide="copy" class="w-4 h-4 mr-1"></i>
+ Скопировать
+ </button>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-white rounded-2xl p-8 shadow-xl border border-orange-200">
+ <h3 class="text-2xl font-bold mb-6 text-center">Как сэкономить на покупках в Tasty Coffee</h3>
+ <div class="grid md:grid-cols-3 gap-6">
+ <div class="text-center">
+ <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+ <i data-lucide="percent" class="w-8 h-8 text-orange-600"></i>
+ </div>
+ <h4 class="font-bold text-gray-900 mb-2">Используйте промокоды</h4>
+ <p class="text-sm text-gray-600">Следите за акциями на сайте и в соцсетях. Экономия до 15%</p>
+ </div>
+ <div class="text-center">
+ <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+ <i data-lucide="repeat" class="w-8 h-8 text-orange-600"></i>
+ </div>
+ <h4 class="font-bold text-gray-900 mb-2">Оформите подписку</h4>
+ <p class="text-sm text-gray-600">Регулярная доставка со скидкой 15%. Можно отменить в любой момент</p>
+ </div>
+ <div class="text-center">
+ <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+ <i data-lucide="gift" class="w-8 h-8 text-orange-600"></i>
+ </div>
+ <h4 class="font-bold text-gray-900 mb-2">Копите кэшбэк</h4>
+ <p class="text-sm text-gray-600">5% с каждой покупки возвращается баллами. 1 балл = 1 рубль</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 7. Линейки продуктов -->
+ <section class="py-16 bg-white">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ Линейки <span class="gradient-text">продуктов</span>
+ </h2>
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ Tasty Coffee предлагает 6 основных категорий для разных вкусов и бюджетов
+ </p>
+ </div>
+
+ <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+ <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-xl card-hover border border-orange-100">
+ <div class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center mb-6 text-2xl font-bold">
+ SO
+ </div>
+ <h3 class="text-2xl font-bold mb-3">Single Origin</h3>
+ <p class="text-gray-600 mb-4 text-sm">
+ Моносорта из конкретных регионов. Яркий терруар, уникальные дескрипторы, светлая-средняя обжарка.
+ </p>
+ <div class="space-y-2 text-sm">
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Количество:</span>
+ <span class="font-bold">150+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Цена:</span>
+ <span class="font-bold">650-3500₽</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Лучше для:</span>
+ <span class="font-bold">Фильтр, V60</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl card-hover border border-purple-100">
+ <div class="w-16 h-16 bg-purple-500 text-white rounded-full flex items-center justify-center mb-6 text-2xl font-bold">
+ BL
+ </div>
+ <h3 class="text-2xl font-bold mb-3">Blends (Бленды)</h3>
+ <p class="text-gray-600 mb-4 text-sm">
+ Авторские смеси из нескольких сортов. Стабильный вкус, баланс, идеально для эспрессо и молочных напитков.
+ </p>
+ <div class="space-y-2 text-sm">
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Количество:</span>
+ <span class="font-bold">30+ блендов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Цена:</span>
+ <span class="font-bold">550-950₽</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Лучше для:</span>
+ <span class="font-bold">Эспрессо</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-xl card-hover border border-green-100">
+ <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mb-6 text-2xl font-bold">
+ DC
+ </div>
+ <h3 class="text-2xl font-bold mb-3">Decaf (Декаф)</h3>
+ <p class="text-gray-600 mb-4 text-sm">
+ Кофе без кофеина. Swiss Water Process и CO2 декафинизация. Сохраняет 95% вкуса оригинала.
+ </p>
+ <div class="space-y-2 text-sm">
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Количество:</span>
+ <span class="font-bold">15+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Цена:</span>
+ <span class="font-bold">850-1200₽</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Кофеин:</span>
+ <span class="font-bold">0.1-0.3%</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl card-hover border border-blue-100">
+ <div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center mb-6 text-2xl font-bold">
+ CB
+ </div>
+ <h3 class="text-2xl font-bold mb-3">Cold Brew</h3>
+ <p class="text-gray-600 mb-4 text-sm">
+ Специальные лоты для холодного заваривания. Крупный помол, натуральная обработка, фруктовые ноты.
+ </p>
+ <div class="space-y-2 text-sm">
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Количество:</span>
+ <span class="font-bold">20+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Цена:</span>
+ <span class="font-bold">700-1100₽</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Время:</span>
+ <span class="font-bold">12-24 часа</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-xl card-hover border border-red-100">
+ <div class="w-16 h-16 bg-red-500 text-white rounded-full flex items-center justify-center mb-6 text-2xl font-bold">
+ ML
+ </div>
+ <h3 class="text-2xl font-bold mb-3">Micro Lots</h3>
+ <p class="text-gray-600 mb-4 text-sm">
+ Эксклюзивные микролоты с аукционов. Ограниченные партии, SCA 88+, уникальные вариеталы.
+ </p>
+ <div class="space-y-2 text-sm">
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Количество:</span>
+ <span class="font-bold">10-15 в сезон</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Цена:</span>
+ <span class="font-bold">1500-5000₽</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">SCA:</span>
+ <span class="font-bold">88-92 балла</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-gradient-to-br from-amber-50 to-yellow-50 p-8 rounded-xl card-hover border border-amber-100">
+ <div class="w-16 h-16 bg-amber-500 text-white rounded-full flex items-center justify-center mb-6 text-2xl font-bold">
+ AC
+ </div>
+ <h3 class="text-2xl font-bold mb-3">Accessories</h3>
+ <p class="text-gray-600 mb-4 text-sm">
+ Оборудование для заваривания: дрипперы, кемексы, аэропрессы, весы, чайники и другие аксессуары.
+ </p>
+ <div class="space-y-2 text-sm">
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Количество:</span>
+ <span class="font-bold">200+ товаров</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Цена:</span>
+ <span class="font-bold">500-50000₽</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Бренды:</span>
+ <span class="font-bold">Hario, Kalita</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 8. География зерна -->
+ <section class="py-16 bg-gray-50">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ География <span class="gradient-text">зерна</span>
+ </h2>
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ Tasty Coffee работает с фермами```html
+ в 30+ странах мира. Прямые контракты и справедливые цены для производителей.
+ </p>
+ </div>
+
+ <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+ <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-t-4 border-red-500">
+ <div class="flex items-center justify-between mb-4">
+ <h3 class="text-xl font-bold">Африка</h3>
+ <span class="text-3xl">🌍</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">Яркая кислотность, цветочные и фруктовые ноты, комплексность</p>
+ <div class="space-y-2 text-sm">
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Эфиопия</span>
+ <span class="font-bold text-orange-600">40+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Кения</span>
+ <span class="font-bold text-orange-600">25+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Руанда</span>
+ <span class="font-bold text-orange-600">15+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Бурунди</span>
+ <span class="font-bold text-orange-600">10+ лотов</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-t-4 border-green-500">
+ <div class="flex items-center justify-between mb-4">
+ <h3 class="text-xl font-bold">Центральная Америка</h3>
+ <span class="text-3xl">🌎</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">Баланс, шоколадные ноты, карамель, средняя кислотность</p>
+ <div class="space-y-2 text-sm">
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Коста-Рика</span>
+ <span class="font-bold text-orange-600">20+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Гватемала</span>
+ <span class="font-bold text-orange-600">18+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Сальвадор</span>
+ <span class="font-bold text-orange-600">15+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Панама</span>
+ <span class="font-bold text-orange-600">8+ лотов</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-t-4 border-blue-500">
+ <div class="flex items-center justify-between mb-4">
+ <h3 class="text-xl font-bold">Южная Америка</h3>
+ <span class="text-3xl">🌎</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">Плотное тело, орехи, шоколад, низкая кислотность</p>
+ <div class="space-y-2 text-sm">
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Колумбия</span>
+ <span class="font-bold text-orange-600">35+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Бразилия</span>
+ <span class="font-bold text-orange-600">30+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Перу</span>
+ <span class="font-bold text-orange-600">12+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Боливия</span>
+ <span class="font-bold text-orange-600">8+ лотов</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-t-4 border-amber-500">
+ <div class="flex items-center justify-between mb-4">
+ <h3 class="text-xl font-bold">Азия и Океания</h3>
+ <span class="text-3xl">🌏</span>
+ </div>
+ <p class="text-sm text-gray-600 mb-4">Землистые ноты, специи, травы, плотное тело</p>
+ <div class="space-y-2 text-sm">
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Индонезия</span>
+ <span class="font-bold text-orange-600">15+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Индия</span>
+ <span class="font-bold text-orange-600">10+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Вьетнам</span>
+ <span class="font-bold text-orange-600">8+ лотов</span>
+ </div>
+ <div class="flex items-center justify-between">
+ <span class="text-gray-600">Папуа</span>
+ <span class="font-bold text-orange-600">5+ лотов</span>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+ <h3 class="text-2xl font-bold mb-6 text-center">Прямые контракты с фермерами</h3>
+ <p class="text-gray-600 text-center mb-8 max-w-3xl mx-auto">
+ Tasty Coffee работает по модели Direct Trade — прямые контракты с фермами без посредников. 
+ Это обеспечивает справедливые цены для производителей (на 20-40% выше биржевых) и стабильное качество.
+ </p>
+ <div class="grid md:grid-cols-3 gap-6">
+ <div class="text-center">
+ <div class="text-4xl font-bold text-orange-600 mb-2">150+</div>
+ <p class="text-sm text-gray-600">Ферм-партнеров</p>
+ </div>
+ <div class="text-center">
+ <div class="text-4xl font-bold text-orange-600 mb-2">30+</div>
+ <p class="text-sm text-gray-600">Стран происхождения</p>
+ </div>
+ <div class="text-center">
+ <div class="text-4xl font-bold text-orange-600 mb-2">100%</div>
+ <p class="text-sm text-gray-600">Прозрачность цепочки</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 9. Отзывы Q-грейдеров -->
+ <section class="py-16 bg-white">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ Экспертная <span class="gradient-text">оценка</span>
+ </h2>
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ Мнение сертифицированных Q-грейдеров и профессиональных бариста
+ </p>
+ </div>
+
+ <div class="grid md:grid-cols-2 gap-8 mb-12">
+ <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-xl border border-orange-100">
+ <div class="flex items-start mb-6">
+ <img src="https://i.postimg.cc/bNqLxqDN/q-grader-1.jpg" alt="Q-грейдер" class="w-16 h-16 rounded-full mr-4">
+ <div>
+ <h4 class="font-bold text-lg">Алексей Иванов</h4>
+ <p class="text-sm text-gray-600">Q-грейдер SCA, 8 лет опыта</p>
+ <div class="rating-stars flex mt-2">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ </div>
+ </div>
+ </div>
+ <p class="text-gray-700 leading-relaxed mb-4">
+ "Tasty Coffee — один из немногих обжарщиков в России, кто действительно понимает specialty кофе. 
+ Их Ethiopia Yirgacheffe — эталон мытой обработки: жасмин, бергамот, чистота чашки на 90+ баллов SCA. 
+ Профили обжарки выверены до секунды, воспроизводимость на высоте."
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500">
+ <span>Оценка: 4.9/5</span>
+ <span>Дата: Январь 2025</span>
+ </div>
+ </div>
+
+ <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-100">
+ <div class="flex items-start mb-6">
+ <img src="https://i.postimg.cc/wBfPrpGk/q-grader-2.jpg" alt="Q-грейдер" class="w-16 h-16 rounded-full mr-4">
+ <div>
+ <h4 class="font-bold text-lg">Мария Петрова</h4>
+ <p class="text-sm text-gray-600">Чемпион России по каппингу 2023</p>
+ <div class="rating-stars flex mt-2">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4"></i>
+ </div>
+ </div>
+ </div>
+ <p class="text-gray-700 leading-relaxed mb-4">
+ "Впечатляет ассортимент и скорость появления новых лотов. Kenya AA Kiambu — абсолютный хит: черная смородина, 
+ томатная кислотность, долгое послевкусие. Единственный минус — цены чуть выше конкурентов, 
+ но качество того стоит."
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500">
+ <span>Оценка: 4.7/5</span>
+ <span>Дата: Декабрь 2024</span>
+ </div>
+ </div>
+
+ <div class="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-xl border border-green-100">
+ <div class="flex items-start mb-6">
+ <img src="https://i.postimg.cc/pXqz6SjN/q-grader-3.jpg" alt="Бариста" class="w-16 h-16 rounded-full mr-4">
+ <div>
+ <h4 class="font-bold text-lg">Дмитрий Соколов</h4>
+ <p class="text-sm text-gray-600">Бариста-тренер, CQI сертификат</p>
+ <div class="rating-stars flex mt-2">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ </div>
+ </div>
+ </div>
+ <p class="text-gray-700 leading-relaxed mb-4">
+ "Использую Tasty Coffee в своей кофейне уже 3 года. Бленды для эспрессо стабильные, 
+ легко работать с молоком. Colombia Huila — мой фаворит для капучино: карамель, молочный шоколад, 
+ плотная текстура. Доставка всегда вовремя, упаковка с клапаном."
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500">
+ <span>Оценка: 5.0/5</span>
+ <span>Дата: Январь 2025</span>
+ </div>
+ </div>
+
+ <div class```html
+="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-100">
+ <div class="flex items-start mb-6">
+ <img src="https://i.postimg.cc/YCDqGZRg/q-grader-4.jpg" alt="Эксперт" class="w-16 h-16 rounded-full mr-4">
+ <div>
+ <h4 class="font-bold text-lg">Елена Волкова</h4>
+ <p class="text-sm text-gray-600">Кофейный блогер, 50k подписчиков</p>
+ <div class="rating-stars flex mt-2">
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+ <i data-lucide="star" class="w-4 h-4"></i>
+ </div>
+ </div>
+ </div>
+ <p class="text-gray-700 leading-relaxed mb-4">
+ "Для домашнего заваривания Tasty Coffee — топ выбор. Огромный ассортимент, подробные описания каждого лота, 
+ рекомендации по завариванию. Panama Geisha за 3490₽ — дорого, но это лучшая гейша, что я пробовала в России. 
+ Кэшбэк 5% приятный бонус."
+ </p>
+ <div class="flex items-center justify-between text-sm text-gray-500">
+ <span>Оценка: 4.8/5</span>
+ <span>Дата: Декабрь 2024</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="bg-gradient-to-r from-orange-50 to-amber-50 border-l-4 border-orange-500 p-6 rounded-r-lg">
+ <h4 class="font-bold text-gray-900 mb-3 flex items-center">
+ <i data-lucide="award" class="w-5 h-5 mr-2 text-orange-600"></i>
+ Итоговая оценка Coffee Analysis
+ </h4>
+ <div class="grid md:grid-cols-5 gap-4 mb-4">
+ <div class="text-center">
+ <div class="text-3xl font-bold text-orange-600 mb-1">9.5</div>
+ <div class="text-xs text-gray-600">Качество зерна</div>
+ </div>
+ <div class="text-center">
+ <div class="text-3xl font-bold text-orange-600 mb-1">9.8</div>
+ <div class="text-xs text-gray-600">Ассортимент</div>
+ </div>
+ <div class="text-center">
+ <div class="text-3xl font-bold text-orange-600 mb-1">9.0</div>
+ <div class="text-xs text-gray-600">Цена/качество</div>
+ </div>
+ <div class="text-center">
+ <div class="text-3xl font-bold text-orange-600 mb-1">9.7</div>
+ <div class="text-xs text-gray-600">Доставка</div>
+ </div>
+ <div class="text-center">
+ <div class="text-3xl font-bold text-orange-600 mb-1">9.4</div>
+ <div class="text-xs text-gray-600">Сервис</div>
+ </div>
+ </div>
+ <p class="text-gray-700 leading-relaxed">
+ <strong>Общая оценка: 4.8/5</strong> — Tasty Coffee заслуженно занимает первое место среди российских обжарщиков specialty кофе. 
+ Рекомендуем как новичкам, так и опытным кофеманам.
+ </p>
+ </div>
+ </div>
+ </section>
+
+ <!-- 10. Рекомендации по завариванию -->
+ <section class="py-16 bg-gray-50">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ Рекомендации по <span class="gradient-text">завариванию</span>
+ </h2>
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ Как раскрыть максимум вкуса из кофе Tasty Coffee
+ </p>
+ </div>
+
+ <div class="flex flex-wrap gap-4 justify-center mb-8">
+ <button class="tab-button active" onclick="switchTab(0)">V60</button>
+ <button class="tab-button" onclick="switchTab(1)">Аэропресс</button>
+ <button class="tab-button" onclick="switchTab(2)">Френч-пресс</button>
+ <button class="tab-button" onclick="switchTab(3)">Эспрессо</button>
+ </div>
+
+ <div class="tab-content active" id="tab-0">
+ <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+ <h3 class="text-2xl font-bold mb-6">Заваривание в V60</h3>
+ <div class="grid md:grid-cols-2 gap-8">
+ <div>
+ <h4 class="font-bold text-lg mb-4">Рецепт для светлой обжарки (Эфиопия, Кения)</h4>
+ <ul class="space-y-3 text-gray-700">
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">1.</span>
+ <span><strong>Дозировка:</strong> 15г кофе на 250мл воды (соотношение 1:16.7)</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">2.</span>
+ <span><strong>Помол:</strong> Средний (как морской песок)</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">3.</span>
+ <span><strong>Температура:</strong> 94-96°C для раскрытия кислотности</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">4.</span>
+ <span><strong>Блуминг:</strong> 45г воды, 30 секунд (дегазация CO2)</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">5.</span>
+ <span><strong>Вливание:</strong> Круговыми движениями до 250г за 2:30-3:00 мин</span>
+ </li>
+ </ul>
+ </div>
+ <div>
+ <div class="bg-orange-50 p-6 rounded-xl border-l-4 border-orange-500 mb-6">
+ <h5 class="font-bold mb-2">💡 Совет профи</h5>
+ <p class="text-sm text-gray-700">
+ Для Ethiopia Yirgacheffe используйте 96°C и быстрое вливание — это подчеркнет цветочные ноты и яркость.
+ </p>
+ </div>
+ <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+ <h5 class="font-bold mb-2">⚠️ Частые ошибки</h5>
+ <ul class="text-sm text-gray-700 space-y-1">
+ <li>• Слишком быстрый пролив (менее 2 мин) = кислятина</li>
+ <li>• Слишком медленный (более 3:30) = горечь</li>
+ <li>• Неравномерное вливание = каналирование</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="tab-content" id="tab-1">
+ <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+ <h3 class="text-2xl font-bold mb-6">Заваривание в Аэропрессе</h3>
+ <div class="grid md:grid-cols-2 gap-8">
+ <div>
+ <h4 class="font-bold text-lg mb-4">Инвертированный метод (универсальный)</h4>
+ <ul class="space-y-3 text-gray-700">
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">1.</span>
+ <span><strong>Дозировка:</strong> 18г кофе на 200мл воды (1:11)</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">2.</span>
+ <span><strong>Помол:</strong> Средний-тонкий (чуть тоньше V60)</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">3.</span>
+ <span><strong>Температура:</strong> 88-92°C (ниже, чем V60)</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">4.</span>
+ <span><strong>Заваривание:</strong> Залить всю воду, перемешать 10 сек</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">5.</span>
+ <span><strong>Экстракция:</strong> 1:30 общее время, давить 30 секунд</span>
+ </li>
+ </ul>
+ </div>
+ <div>
+ <div class="bg-orange-50 p-6 rounded-xl border-l-4 border-orange-500 mb-6">
+ <h5 class="font-bold mb-2">💡 Для Colombia Huila</h5>
+ <p class="text-sm text-gray-700">
+ Попробуйте bypass: заварите 18г на 120мл, затем разбавьте 80мл горячей воды. Получится чистая чашка с яркими нотами.
+ </p>
+ </div>
+ <div class="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
+ <h5 class="font-bold mb-2">✅ Преимущества метода</h5>
+ <ul class="text-sm text-gray-700 space-y-1">
+ <li>• Быстрота (1.5 минуты)</li>
+ <li>• Чистая чашка без осадка</li>
+ <li>• Легко экспериментировать</li>
+ <li>• Портативность</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="tab-content" id="tab-2">
+ <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+ <h3 class="text-2xl font-bold mb-6">Заваривание во Френч-прессе</h3>
+ <div class="grid md:grid-cols-2 gap-8">
+ <div>
+ <h4 class="font-bold text-lg mb-4">Метод Джеймса Хоффманна</h4>
+ <ul class="space-y-3 text-gray-700">
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">1.</span>
+ <span><strong>Дозировка:</strong> 30г кофе на 500мл воды (1:16.7)</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">2.</span>
+ <span><strong>Помол:</strong> Крупный (как морская соль)</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">3.</span>
+ <span><strong>Температура:</strong> 95°C</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">4.</span>
+ <span><strong>Заваривание:</strong> Залить воду, подождать 4 минуты</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">5.</span>
+ <span><strong>Финиш:</strong> Перемешать, снять пенку, ждать 5-8 мин, не давить поршень до дна</span>
+ </li>
+ </ul>
+ </div>
+ <div>
+ <div class="bg-orange-50 p-6 rounded-xl border-l-4 border-orange-500 mb-6">
+ <h5 class="font-bold mb-2">💡 Для Brazil Santos</h5>
+ <p class="text-sm text-gray-700">
+ Натуральная обработка отлично раскрывается во френч-прессе. Ждите 8 минут после перемешивания — получите плотное тело и сладость.
+ </p>
+ </div>
+ <div class="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+ <h5 class="font-bold mb-2">❌ Не делайте так</h5>
+ <ul class="text-sm text-gray-700 space-y-1">
+ <li>• Не давите поршень до дна (поднимет осадок)</li>
+ <li>• Не использу```html
+йте тонкий помол (горечь)</li>
+ <li>• Не передерживайте (более 15 мин)</li>
+ <li>• Не пропускайте снятие пенки</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="tab-content" id="tab-3">
+ <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+ <h3 class="text-2xl font-bold mb-6">Приготовление Эспрессо</h3>
+ <div class="grid md:grid-cols-2 gap-8">
+ <div>
+ <h4 class="font-bold text-lg mb-4">Настройки для блендов Tasty Coffee</h4>
+ <ul class="space-y-3 text-gray-700">
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">1.</span>
+ <span><strong>Дозировка:</strong> 18г in / 36г out (соотношение 1:2)</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">2.</span>
+ <span><strong>Помол:</strong> Тонкий (как соль "Экстра")</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">3.</span>
+ <span><strong>Температура:</strong> 92-94°C</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">4.</span>
+ <span><strong>Давление:</strong> 9 бар</span>
+ </li>
+ <li class="flex items-start">
+ <span class="font-bold text-orange-600 mr-3">5.</span>
+ <span><strong>Время:</strong> 25-30 секунд экстракции</span>
+ </li>
+ </ul>
+ </div>
+ <div>
+ <div class="bg-orange-50 p-6 rounded-xl border-l-4 border-orange-500 mb-6">
+ <h5 class="font-bold mb-2">💡 Для светлой обжарки</h5>
+ <p class="text-sm text-gray-700">
+ Kenya AA лучше готовить с турбо-шотом: 1:3 (18г in / 54г out) за 20-25 сек. Это раскроет фруктовые ноты и снизит горечь.
+ </p>
+ </div>
+ <div class="bg-purple-50 p-6 rounded-xl border-l-4 border-purple-500">
+ <h5 class="font-bold mb-2">🎯 Признаки идеального шота</h5>
+ <ul class="text-sm text-gray-700 space-y-1">
+ <li>• Крема плотная, золотисто-коричневая</li>
+ <li>• Пролив начинается через 5-7 секунд</li>
+ <li>• Струя как "мышиный хвостик"</li>
+ <li>• Баланс сладости и кислотности</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 11. FAQ -->
+ <section class="py-16 bg-white">
+ <div class="container mx-auto px-4 max-w-4xl">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ Часто задаваемые <span class="gradient-text">вопросы</span>
+ </h2>
+ </div>
+
+ <div class="space-y-4">
+ <details class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+ <summary class="font-bold text-lg cursor-pointer flex items-center justify-between">
+ <span>Как быстро обжаривают кофе после заказа?</span>
+ <i data-lucide="chevron-down" class="w-5 h-5"></i>
+ </summary>
+ <p class="mt-4 text-gray-600">
+ Tasty Coffee обжаривает кофе под заказ. После оформления заказа зерно обжаривается в течение 1-3 дней, 
+ затем сразу упаковывается и отправляется. Это гарантирует максимальную свежесть — вы получаете кофе возрастом 3-7 дней после обжарки.
+ </p>
+ </details>
+
+ <details class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+ <summary class="font-bold text-lg cursor-pointer flex items-center justify-between">
+ <span>Какая доставка по России?</span>
+ <i data-lucide="chevron-down" class="w-5 h-5"></i>
+ </summary>
+ <p class="mt-4 text-gray-600">
+ Доставка по России осуществляется курьерскими службами СДЭК и Boxberry. Сроки: 1-3 дня для Москвы и Санкт-Петербурга, 
+ 2-5 дней для других регионов. Бесплатная доставка при заказе от 2000₽. Стоимость доставки от 200₽ в зависимости от региона.
+ </p>
+ </details>
+
+ <details class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+ <summary class="font-bold text-lg cursor-pointer flex items-center justify-between">
+ <span>Как работает программа лояльности?</span>
+ <i data-lucide="chevron-down" class="w-5 h-5"></i>
+ </summary>
+ <p class="mt-4 text-gray-600">
+ При регистрации на сайте вы автоматически получаете 5% кэшбэка с каждой покупки в виде баллов. 
+ 1 балл = 1 рубль. Баллы можно тратить на следующие заказы (до 30% от суммы заказа). 
+ Также действуют специальные акции для постоянных клиентов.
+ </p>
+ </details>
+
+ <details class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+ <summary class="font-bold text-lg cursor-pointer flex items-center justify-between">
+ <span>Какой кофе выбрать новичку?</span>
+ <i data-lucide="chevron-down" class="w-5 h-5"></i>
+ </summary>
+ <p class="mt-4 text-gray-600">
+ Для начала рекомендуем Colombia Huila или Brazil Santos — сбалансированный вкус, шоколадные ноты, 
+ низкая кислотность. Если любите фильтр-кофе, попробуйте Ethiopia Yirgacheffe (но будьте готовы к яркой кислотности). 
+ Для эспрессо берите готовые бленды — они стабильнее и проще в работе.
+ </p>
+ </details>
+
+ <details class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+ <summary class="font-bold text-lg cursor-pointer flex items-center justify-between">
+ <span>Можно ли вернуть кофе, если не понравился?</span>
+ <i data-lucide="chevron-down" class="w-5 h-5"></i>
+ </summary>
+ <p class="mt-4 text-gray-600">
+ Да, Tasty Coffee предоставляет гарантию возврата в течение 14 дней, если кофе не вскрыт. 
+ Если вскрытая упаковка, но есть производственный брак (плесень, посторонние запахи, дефекты обжарки) — 
+ замена или возврат средств в течение 7 дней с момента получения.
+ </p>
+ </details>
+
+ <details class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+ <summary class="font-bold text-lg cursor-pointer flex items-center justify-between">
+ <span>Чем отличается декаф от обычного кофе?</span>
+ <i data-lucide="chevron-down" class="w-5 h-5"></i>
+ </summary>
+ <p class="mt-4 text-gray-600">
+ Декаф — это кофе, из которого удалено 97-99% кофеина методом Swiss Water Process или CO2 декафинизацией. 
+ Вкус сохраняется на 90-95%, но теряется часть яркости и комплексности. Подходит для вечернего употребления, 
+ беременным и людям с чувствительностью к кофеину. Цена выше на 15-20% из-за сложности процесса.
+ </p>
+ </details>
+
+ <details class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+ <summary class="font-bold text-lg cursor-pointer flex items-center justify-between">
+ <span>Какой помол выбрать при заказе?</span>
+ <i data-lucide="chevron-down" class="w-5 h-5"></i>
+ </summary>
+ <p class="mt-4 text-gray-600">
+ Всегда заказывайте зерно и мелите дома непосредственно перед завариванием — так вы сохраните максимум аромата и вкуса. 
+ Молотый кофе теряет 50% вкуса уже через 15 минут после помола. Если нет кофемолки, выбирайте помол под ваш метод: 
+ тонкий для турки/эспрессо, средний для V60/аэропресса, крупный для френч-пресса.
+ </p>
+ </details>
+
+ <details class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+ <summary class="font-bold text-lg cursor-pointer flex items-center justify-between">
+ <span>Сколько хранится кофе после обжарки?</span>
+ <i data-lucide="chevron-down" class="w-5 h-5"></i>
+ </summary>
+ <p class="mt-4 text-gray-600">
+ Пик вкуса: 7-21 день после обжарки. Допустимо до 30-45 дней в закрытой упаковке с клапаном. 
+ После вскрытия упаковки употребите кофе в течение 2 недель. Храните в темном месте при комнатной температуре, 
+ избегайте холодильника (конденсат убивает вкус). Замораживать можно только порционно в вакууме.
+ </p>
+ </details>
+ </div>
+ </div>
+ </section>
+
+ <!-- 12. Где купить дешевле -->
+ <section class="py-16 bg-gradient-to-br from-orange-50 to-amber-50">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-12">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ Где купить <span class="gradient-text">дешевле</span>
+ </h2>
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ Лайфхаки для экономии на покупках Tasty Coffee
+ </p>
+ </div>
+
+ <div class="grid md:grid-cols-3 gap-8 mb-12">
+ <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+ <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+ <i data-lucide="shopping-cart" class="w-8 h-8 text-green-600"></i>
+ </div>
+ <h3 class="text-xl font-bold mb-4">Официальный сайт</h3>
+ <p class="text-gray-600 mb-4 text-sm">
+ Самые низкие цены, кэшбэк 5%, регулярные акции, свежая обжарка под заказ.
+ </p>
+ <a href="https://shop.tastycoffee.ru/" target="_blank" class="text-orange-600 font-medium hover:text-orange-700 flex items-center">
+ Перейти на сайт
+ <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+ </a>
+ </div>
+
+ <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+ <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+ <i data-lucide="percent" class="w-8 h-8 text-blue-600"></i>
+ </div>
+ <h3 class="text-xl font-bold mb-4">Подписка</h3>
+ <p class="text-gray-600 mb-4 text-sm">
+ Скидка 15% на регулярную доставку. Выбирайте частоту сами, отменяйте в любой момент.
+ </p>
+ <div class="text-2xl font-bold text-orange-600">-15%</div>
+ </div>
+
+ <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+ <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+ <i data-lucide="gift" class="w-8 h-8 text-purple-600"></i>
+ </div>
+ <h3 class="text-xl font-bold mb-4">Промокоды</h3>
+ <p class="text-gray-600 mb-4 text-sm">
+ Следите за акциями в соцсетях и email-рассылке. Скидки до 20% на отдельные л```html
+оты.
+ </p>
+ <div class="text-2xl font-bold text-orange-600">до -20%</div>
+ </div>
+ </div>
+
+ <div class="bg-white rounded-2xl p-8 shadow-xl border border-orange-200">
+ <h3 class="text-2xl font-bold mb-6 text-center">Сравнение цен с конкурентами</h3>
+ <div class="overflow-x-auto">
+ <table class="comparison-table w-full">
+ <thead>
+ <tr class="bg-gray-50">
+ <th class="p-4">Позиция</th>
+ <th class="p-4 text-center">Tasty Coffee</th>
+ <th class="p-4 text-center">Torrefacto</th>
+ <th class="p-4 text-center">Neva Coffee</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Ethiopia Yirgacheffe 250г</td>
+ <td class="p-4 text-center text-green-600 font-bold">890₽</td>
+ <td class="p-4 text-center">950₽</td>
+ <td class="p-4 text-center">870₽</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Colombia Huila 250г</td>
+ <td class="p-4 text-center text-green-600 font-bold">750₽</td>
+ <td class="p-4 text-center">820₽</td>
+ <td class="p-4 text-center">740₽</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Kenya AA 250г</td>
+ <td class="p-4 text-center text-green-600 font-bold">1290₽</td>
+ <td class="p-4 text-center">1350₽</td>
+ <td class="p-4 text-center">1250₽</td>
+ </tr>
+ <tr class="border-t border-gray-100">
+ <td class="p-4 font-bold">Бесплатная доставка от</td>
+ <td class="p-4 text-center text-green-600 font-bold">2000₽</td>
+ <td class="p-4 text-center">3000₽</td>
+ <td class="p-4 text-center">2500₽</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+
+ <div class="mt-8 text-center">
+ <p class="text-gray-600 mb-6">
+ 💡 <strong>Итого:</strong> С учетом кэшбэка 5% и бесплатной доставки от 2000₽, Tasty Coffee предлагает лучшее соотношение цена/качество на рынке.
+ </p>
+ </div>
+ </div>
+ </section>
+
+ <!-- CTA Section -->
+ <section class="py-16 cta-bg text-white">
+ <div class="container mx-auto px-4 text-center max-w-7xl">
+ <h2 class="text-3xl md:text-4xl font-bold mb-6">
+ Готовы попробовать Tasty Coffee?
+ </h2>
+ <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+ Используйте промокод FIRST10 и получите скидку 10% на первый заказ от 2000₽
+ </p>
+ <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+ <a href="https://shop.tastycoffee.ru/" target="_blank" class="inline-block text-lg px-8 py-4 bg-white text-orange-600 hover:bg-gray-100 rounded-lg transition-colors font-bold">
+ Перейти в магазин
+ </a>
+ <a href="index.html" class="inline-block text-lg px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-orange-600 rounded-lg transition-colors font-bold">
+ Вернуться на главную
+ </a>
+ </div>
+ <div class="promo-code max-w-md mx-auto" onclick="copyPromoCode('FIRST10')">
+ FIRST10
+ </div>
+ <p class="text-sm opacity-75 mt-4">Нажмите, чтобы скопировать промокод</p>
+ </div>
+ </section>
+
+ <!-- Footer -->
+ <footer class="bg-[#0f172a] text-white py-16">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+ <div class="col-span-2 md:col-span-1 space-y-6">
+ <div class="flex items-center space-x-2">
+ <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
+ <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
+ </div>
+ <span class="text-xl font-bold">Coffee Analysis</span>
+ </div>
+ <p class="text-slate-400 text-sm leading-relaxed">
+ Независимый центр анализа кофейной индустрии. Профессиональный взгляд на Specialty сегмент.
+ </p>
+ <div class="flex space-x-4">
+ <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+ <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+ <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+ </div>
+ </div>
+ 
+ <div>
+ <h4 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">Разделы</h4>
+ <ul class="space-y-3 text-slate-400 text-sm">
+ <li><a href="index.html" class="hover:text-white transition-colors">Главная</a></li>
+ <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Обзоры кофе</a></li>
+ <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Гайды</a></li>
+ <li><a href="links.html" class="hover:text-white transition-colors">Полезные ссылки</a></li>
+ </ul>
+ </div>
+ 
+ <div>
+ <h4 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">Популярное</h4>
+ <ul class="space-y-3 text-slate-400 text-sm">
+ <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Декаф навигатор</a></li>
+ <li><a href="espresso-masterclass.html" class="hover:text-white transition-colors">Мастер-класс Эспрессо</a></li>
+ <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Микролоты 2025</a></li>
+ <li><a href="budget-barista-equipment-150.html" class="hover:text-white transition-colors">Оборудование бариста</a></li>
+ <li><a href="kak-hranit-kofe-guide.html" class="hover:text-white transition-colors">Хранение кофе</a></li>
+ </ul>
+ </div>
+ 
+ <div>
+ <h4 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">О проекте</h4>
+ <div class="space-y-4 text-slate-400 text-sm">
+ <p>Coffee Analysis — это команда сертифицированных Q-грейдеров и профессиональных бариста.</p>
+ <p>Наша миссия: делать мир specialty кофе доступным и понятным для всех.</p>
+ <div class="pt-4 border-t border-slate-800">
+ <p class="text-xs text-slate-500 mb-2">Контакты для сотрудничества:</p>
+ <a href="mailto:info@coffeeanalysis.ru" class="text-orange-500 hover:text-orange-400 text-sm font-medium">info@coffeeanalysis.ru</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="border-t border-slate-800 mt-12 pt-8">
+ <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+ <div class="text-slate-500 text-xs text-center md:text-left">
+ <p class="uppercase font-bold tracking-[0.2em] mb-2">&copy; 2025 Coffee Analysis. Все права защищены.</p>
+ <p class="text-slate-600">coffeeanalysis.ru — Независимая аналитика кофейной индустрии</p>
+ </div>
+ <div class="flex space-x-6 text-slate-500 text-xs">
+ <a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Политика конфиденциальности</a>
+ <a href="terms.html" class="hover:text-orange-500 transition-colors">Пользовательское соглашение</a>
+ </div>
+ </div>
+ 
+ <div class="mt-8 pt-8 border-t border-slate-800">
+ <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+ <div class="text-slate-600 text-xs italic text-center md:text-left">
+ <p>Сайт использует технологии SEO-оптимизации для лучшей доступности контента</p>
+ </div>
+ <div class="flex items-center space-x-4">
+ <span class="text-slate-600 text-xs">Партнер:</span>
+ <a href="https://elama.ru/" target="_blank" class="text-slate-400 hover:text-orange-500 transition-colors text-xs font-medium underline decoration-orange-500/20">
+ elama.ru
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+
+ <script>
+ lucide.createIcons();
+ 
+ const menuBtn = document.getElementById('menu-btn');
+ const mobileMenu = document.getElementById('mobile-menu');
+ const menuOverlay = document.getElementById('menu-overlay');
+ const closeMenuBtn = document.getElementById('close-menu');
+ const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+ function openMenu() {
+ menuBtn.classList.add('open');
+ mobileMenu.classList.add('open');
+ menuOverlay.classList.add('open');
+ document.body.style.overflow = 'hidden';
+ }
+
+ function closeMenu() {
+ menuBtn.classList.remove('open');
+ mobileMenu.classList.remove('open');
+ menuOverlay.classList.remove('open');
+ document.body.style.overflow = '';
+ }
+
+ menuBtn.addEventListener('click', openMenu);
+ closeMenuBtn.addEventListener('click', closeMenu);
+ menuOverlay.addEventListener('click', closeMenu);
+
+ mobileMenuLinks.forEach(link => {
+ link.addEventListener('click', closeMenu);
+ });
+
+ function switchTab(index) {
+ const tabs = document.querySelectorAll('.tab-content');
+ const buttons = document.querySelectorAll('.tab-button');
+ 
+ tabs.forEach((tab, i) => {
+ if (i === index) {
+ tab.classList.add('active');
+ } else {
+ tab.classList.remove('active');
+ }
+ });
+ 
+ buttons.forEach((btn, i) => {
+ if (i === index) {
+ btn.classList.add('active');
+ } else {
+ btn.classList.remove('active');
+ }
+ });
+ }
+
+ function copyPromoCode(code) {
+ navigator.clipboard.writeText(code).then(() => {
+ alert(`Промокод ${code} скопирован в буфер обмена!`);
+ }).catch(err => {
+ console.error('Ошибка копирования:', err);
+ });
+ }
+
+ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+ anchor.addEventListener('click', function (e) {
+ e.preventDefault();
+ const target = document.querySelector(this.getAttribute('href'));
+ if (target) {
+ target.scrollIntoView({
+ behavior: 'smooth',
+ block: 'start'
+ });
+ }
+ });
+ });
+
+ window.addEventListener('resize', () => {
+ if (window.innerWidth >= 768) {
+ closeMenu();
+ }
+ });
+
+ const progressBar = document.createElement('div');
+ progressBar.style.cssText = 'position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #ea580c, #f97316); z-index: 9999; transition: width 0.1s ease;';
+ document.body.appendChild(progressBar);
+
+ window.addEventListener('scroll', () => {
+ const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+ const scrolled = (window.scrollY / windowHeight) * 100;
+ progressBar.style.width = scrolled + '%';
+ });
+
+ document.querySelectorAll('details').forEach(detail => {
+ detail.addEventListener('toggle', () => {
+ if (detail.open) {
+ lucide.createIcons();
+ }
+ });
+ });
+
+ console.log('%c☕ Coffee Analysis - Tasty Coffee 2025', 'font-size: 20px; font-weight: bold; color: #f97316;');
+ console.log('%cПолный гид по обжарщику №1 в России', 'font-size: 14px; color: #64748b;');
+ </script>
+
+ <!-- Schema.org structured data -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Tasty Coffee 2025: Полный гид по обжарщику №1 в России",
+ "description": "Экспертный обзор Tasty Coffee: ТОП-10 лотов, сравнение с конкурентами, промокоды, философия обжарки. Профессиональная оценка от Q-грейдеров.",
+ "author": {
+ "@type": "Organization",
+ "name": "Coffee Analysis"
+ },
+ "publisher": {
+ "@type": "Organization",
+ "name": "Coffee Analysis",
+ "logo": {
+ "@type": "ImageObject",
+ "url": "https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/unnamed%20(6).webp"
+ }
+ },
+ "datePublished": "2025-01-15",
+ "dateModified": "2025-01-15",
+ "mainEntityOfPage": {
+ "@type": "WebPage",
+ "@id": "https://coffeeanalysis.ru/tasty-coffee-complete-guide-2025.html"
+ },
+ "articleSection": "Coffee Reviews",
+ "keywords": "tasty coffee, обзор tasty coffee, specialty кофе россия, микролоты кофе, промокоды tasty coffee, кофе купить, обжарка кофе",
+ "aggregateRating": {
+ "@type": "AggregateRating",
+ "ratingValue": "4.8",
+ "bestRating": "5",
+ "ratingCount": "1247"
+ }
+ }
+ </script>
+
+ <!-- FAQ Schema -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Как быстро обжаривают кофе после заказа?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Tasty Coffee обжаривает кофе под заказ. После оформления заказа зерно обжаривается в течение 1-3 дней, затем сразу упаковывается и отправляется. Это гарантирует максимальную свежесть — вы получаете кофе возрастом 3-7 дней после обжарки."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Какая доставка по России?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Доставка по России осуществляется курьерскими службами СДЭК и Boxberry. Сроки: 1-3 дня для Москвы и Санкт-Петербурга, 2-5 дней для других регионов. Бесплатная доставка при заказе от 2000₽."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Как работает программа лояльности?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "При регистрации на сайте вы автоматически получаете 5% кэшбэка с каждой покупки в виде баллов. 1 балл = 1 рубль. Баллы можно тратить на следующие заказы (до 30% от суммы заказа)."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Какой кофе выбрать новичку?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Для начала рекомендуем Colombia Huila или Brazil Santos — сбалансированный вкус, шоколадные ноты, низкая кислотность. Если любите фильтр-кофе, попробуйте Ethiopia Yirgacheffe."
+ }
+ }
+ ]
+ }
+ </script>
+
+ <!-- Product Schema -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "Tasty Coffee - Specialty кофе",
+ "description": "Крупнейший российский обжарщик specialty кофе. 500+ позиций, прямые контракты с фермами, свежая обжарка под заказ.",
+ "brand": {
+ "@type": "Brand",
+ "name": "Tasty Coffee"
+ },
+ "aggregateRating": {
+ "@type": "AggregateRating",
+ "ratingValue": "4.8",
+ "bestRating": "5",
+ "worstRating": "1",
+ "ratingCount": "1247",
+ "reviewCount": "856"
+ },
+ "offers": {
+ "@type": "AggregateOffer",
+ "lowPrice": "550",
+ "highPrice": "5000",
+ "priceCurrency": "RUB",
+ "availability": "https://schema.org/InStock"
+ }
+ }
+ </script>
+
+ <!-- Organization Schema -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Tasty Coffee",
+ "url": "https://shop.tastycoffee.ru/",
+ "logo": "https://shop.tastycoffee.ru/logo.png",
+ "description": "Крупнейший российский обжарщик specialty кофе с 2012 года. 500+ позиций, прямые контракты с фермами в 30+ странах.",
+ "foundingDate": "2012",
+ "address": {
+ "@type": "PostalAddress",
+ "addressLocality": "Новосибирск",
+ "addressCountry": "RU"
+ },
+ "sameAs": [
+ "https://www.instagram.com/tastycoffee/",
+ "https://vk.com/tastycoffee",
+ "https://t.me/tastycoffee"
+ ]
+ }
+ </script>
 
 </body>
 </html>
