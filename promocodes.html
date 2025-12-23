@@ -6,15 +6,12 @@
  <title>ТОП-10 Чая и Кофе 2025: Лучшие в мире | Coffee Analysis</title>
  <meta name="description" content="Экспертный рейтинг ТОП-10 элитных сортов чая и кофе со всего мира. От Panama Geisha до Да Хун Пао. Цены, дегустационные ноты, где купить.">
  
- <!-- Open Graph -->
  <meta property="og:title" content="ТОП-10 Чая и Кофе 2025: Лучшие в мире">
  <meta property="og:description" content="Экспертный рейтинг элитных сортов чая и кофе. Panama Geisha, Да Хун Пао, Jamaica Blue Mountain и другие легенды.">
  <meta property="og:type" content="article">
  
- <!-- Tailwind CSS -->
  <script src="https://cdn.tailwindcss.com"></script>
  
- <!-- Lucide Icons -->
  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
  
  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/unnamed%20(6).webp">
@@ -59,7 +56,7 @@
 
  .flip-card {
  perspective: 1000px;
- height: 450px;
+ height: 600px; /* Увеличено до 600px */
  }
 
  .flip-card-inner {
@@ -85,6 +82,7 @@
 
  .flip-card-back {
  transform: rotateY(180deg);
+ overflow-y: auto; /* Добавлена прокрутка для текста */
  }
  
  .btn-primary {
@@ -168,6 +166,9 @@
 
  .rating-stars {
  color: #f59e0b;
+ display: flex !important; /* Звезды в ряд */
+ justify-content: center !important;
+ gap: 4px;
  }
 
  .toggle-switch {
@@ -297,6 +298,10 @@
  background: linear-gradient(90deg, #059669, #10b981);
  }
  </style>
+</head>
+<body class="bg-white">
+ </body>
+</html>
 </head>
 <body class="bg-white">
  <!-- Header -->
