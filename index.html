@@ -16,37 +16,38 @@
  .product-card img { transition: transform 0.5s ease; }
  .product-card:hover img { transform: scale(1.05); }
  </style>
-<header class="sticky top-0 z-50 bg-white/98 backdrop-blur-md border-b border-slate-100">
-    <div class="container mx-auto px-4 h-20 md:h-32 flex items-center justify-between max-w-7xl">
-        <a href="index.html" class="flex items-center">
+<header class="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
+    <div class="container mx-auto px-4 h-24 md:h-40 flex items-center justify-between max-w-7xl">
+        
+        <a href="index.html" class="flex items-center min-w-[150px] md:min-w-[220px]">
             <img src="img/1601f59e45c93a87579f5c088fb77e81 (1).png" 
                  alt="Coffee Analysis" 
-                 class="h-10 md:h-24 w-auto object-contain transition-transform hover:scale-105 duration-300">
+                 class="h-14 md:h-32 w-auto object-contain transition-transform duration-300 hover:scale-110">
         </a>
         
-        <nav class="hidden md:flex items-center space-x-12">
-            <a href="index.html" class="text-[11px] font-bold text-slate-500 uppercase tracking-[0.2em] hover:text-orange-600 transition-colors">Главная</a>
-            <a href="specialty-micro-lots-2025.html" class="text-[11px] font-bold text-slate-500 uppercase tracking-[0.2em] hover:text-orange-600 transition-colors">Обзоры</a>
-            <a href="kak-hranit-kofe-guide.html" class="text-[11px] font-bold text-slate-500 uppercase tracking-[0.2em] hover:text-orange-600 transition-colors">Гайды</a>
-            <a href="links.html" class="text-[11px] font-bold text-slate-500 uppercase tracking-[0.25em] hover:text-orange-600 transition-colors">Ссылки</a>
+        <nav class="hidden md:flex items-center space-x-10 lg:space-x-16">
+            <a href="index.html" class="text-[12px] font-bold text-slate-700 uppercase tracking-[0.2em] hover:text-orange-600 transition-colors">Главная</a>
+            <a href="specialty-micro-lots-2025.html" class="text-[12px] font-bold text-slate-700 uppercase tracking-[0.2em] hover:text-orange-600 transition-colors">Обзоры</a>
+            <a href="kak-hranit-kofe-guide.html" class="text-[12px] font-bold text-slate-700 uppercase tracking-[0.2em] hover:text-orange-600 transition-colors">Гайды</a>
+            <a href="links.html" class="text-[12px] font-bold text-slate-700 uppercase tracking-[0.2em] hover:text-orange-600 transition-colors">Ссылки</a>
         </nav>
 
         <div class="flex items-center">
-            <button class="hidden sm:block border border-slate-900 text-slate-900 px-8 py-3 rounded-md text-[10px] font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all">
+            <button class="hidden sm:block border-2 border-slate-900 text-slate-900 px-8 py-3 rounded-md text-[11px] font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all">
                 Регистрация
             </button>
-            <button id="menu-btn" class="md:hidden text-slate-900 p-1">
-                <i data-lucide="menu" class="w-6 h-6"></i>
+            <button id="menu-btn" class="md:hidden text-slate-900 p-2">
+                <i data-lucide="menu" class="w-8 h-8"></i>
             </button>
         </div>
     </div>
 
-    <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white border-b border-slate-200 flex flex-col p-6 space-y-4 md:hidden shadow-xl">
-        <a href="index.html" class="text-[11px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-50 pb-2">Главная</a>
-        <a href="specialty-micro-lots-2025.html" class="text-[11px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-50 pb-2">Обзоры</a>
-        <a href="kak-hranit-kofe-guide.html" class="text-[11px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-50 pb-2">Гайды</a>
-        <a href="links.html" class="text-[11px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-50 pb-2">Ссылки</a>
-        <button class="w-full bg-orange-600 text-white py-4 rounded-lg text-[11px] font-bold uppercase tracking-widest">Регистрация</button>
+    <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full bg-white border-b border-slate-200 flex flex-col p-6 space-y-4 md:hidden shadow-xl">
+        <a href="index.html" class="text-[12px] font-bold text-slate-600 uppercase tracking-widest border-b pb-2">Главная</a>
+        <a href="specialty-micro-lots-2025.html" class="text-[12px] font-bold text-slate-600 uppercase tracking-widest border-b pb-2">Обзоры</a>
+        <a href="kak-hranit-kofe-guide.html" class="text-[12px] font-bold text-slate-600 uppercase tracking-widest border-b pb-2">Гайды</a>
+        <a href="links.html" class="text-[12px] font-bold text-slate-600 uppercase tracking-widest border-b pb-2">Ссылки</a>
+        <button class="w-full bg-orange-600 text-white py-4 rounded-lg text-[12px] font-bold uppercase tracking-widest">Регистрация</button>
     </div>
 </header>
 
