@@ -1,469 +1,462 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Coffee Analysis: Экспертные Гайды, Обзоры Кофе и Стратегии E-commerce</title>
- <meta name="yandex-verification" content="6233c44c1fd26495" />
- <meta name="description" content="Независимый центр анализа кофейной индустрии. Экспертные обзоры кофе, профессиональные гайды по приготовлению.">
- 
- <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
- <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
- <link rel="icon" type="image/png" sizes="512x512" href="img/android-chrome-512x512.png">
- <link rel="shortcut icon" href="img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Analysis: Экспертные Гайды, Обзоры Кофе и Стратегии E-commerce</title>
+    <meta name="yandex-verification" content="6233c44c1fd26495" />
+    <meta name="description" content="Независимый центр анализа кофейной индустрии. Экспертные обзоры кофе, профессиональные гайды по приготовлению.">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/android-chrome-512x512.png">
+    <link rel="shortcut icon" href="img/favicon.ico">
 
- <script src="https://cdn.tailwindcss.com"></script>
- <script src="https://unpkg.com/lucide@latest"></script>
- 
- <style>
- @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
- body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
- .mobile-menu-active { display: flex !important; }
- </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .mobile-menu-active { display: flex !important; }
+    </style>
 </head>
 <body class="bg-white text-slate-900">
 
-
 <header id="header" class="sticky top-0 z-50 bg-white/75 backdrop-blur-xl border-b border-slate-200 transition-all duration-300">
- <div id="header-inner" class="container mx-auto px-4 h-20 md:h-28 flex items-center justify-between max-w-7xl transition-all duration-300">
+    <div id="header-inner" class="container mx-auto px-4 h-20 md:h-28 flex items-center justify-between max-w-7xl transition-all duration-300">
+        <a href="index.html" class="flex items-center transition-all duration-300">
+            <img id="logo-img" src="img/1601f59e45c93a87579f5c088fb77e81 (1).png" alt="Coffee Analysis" class="h-14 md:h-24 w-auto object-contain transition-all duration-300">
+        </a>
+        <nav class="hidden md:flex items-center space-x-10">
+            <a href="index.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest hover:text-orange-600 transition-all">Главная</a>
+            <a href="specialty-micro-lots-2025.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest hover:text-orange-600 transition-all">Обзоры</a>
+            <a href="kak-hranit-kofe-guide.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest hover:text-orange-600 transition-all">Гайды</a>
+            <a href="links.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest hover:text-orange-600 transition-all">Ссылки</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <button class="hidden sm:block border border-slate-900 text-slate-900 px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all">Регистрация</button>
+            <button id="menu-btn" class="md:hidden text-slate-900 p-1">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+    </div>
 
- <a href="index.html" class="flex items-center transition-all duration-300">
- <img id="logo-img"
- src="img/1601f59e45c93a87579f5c088fb77e81 (1).png"
- alt="Coffee Analysis"
- class="h-14 md:h-24 w-auto object-contain transition-all duration-300">
- </a>
-
- <nav class="hidden md:flex items-center space-x-10">
- <a href="index.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest hover:text-orange-600 transition-all">Главная</a>
- <a href="specialty-micro-lots-2025.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest hover:text-orange-600 transition-all">Обзоры</a>
- <a href="kak-hranit-kofe-guide.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest hover:text-orange-600 transition-all">Гайды</a>
- <a href="links.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest hover:text-orange-600 transition-all">Ссылки</a>
- </nav>
-
- <div class="flex items-center space-x-4">
- <button class="hidden sm:block border border-slate-900 text-slate-900 px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all">Регистрация</button>
- <button id="menu-btn" class="md:hidden text-slate-900 p-1">
- <i data-lucide="menu" class="w-7 h-7"></i>
- </button>
- </div>
-
- </div>
-
- <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-xl border-b border-slate-200 flex flex-col p-6 space-y-4 md:hidden shadow-xl">
- <a href="index.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest">Главная</a>
- <a href="specialty-micro-lots-2025.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest">Обзоры</a>
- <a href="kak-hranit-kofe-guide.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest">Гайды</a>
- <a href="links.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest">Ссылки</a>
- <button class="w-full bg-orange-600 text-white py-3 rounded-full text-[11px] font-bold uppercase tracking-widest">Регистрация</button>
- </div>
+    <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-xl border-b border-slate-200 flex flex-col p-6 space-y-4 md:hidden shadow-xl">
+        <a href="index.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest">Главная</a>
+        <a href="specialty-micro-lots-2025.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest">Обзоры</a>
+        <a href="kak-hranit-kofe-guide.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest">Гайды</a>
+        <a href="links.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest">Ссылки</a>
+        <button class="w-full bg-orange-600 text-white py-3 rounded-full text-[11px] font-bold uppercase tracking-widest">Регистрация</button>
+    </div>
 </header>
 
 <script>
 // мобильное меню
 document.getElementById("menu-btn").addEventListener("click", () => {
- const menu = document.getElementById("mobile-menu");
- menu.classList.toggle("hidden");
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("hidden");
 });
 
 // эффект уменьшения шапки при прокрутке
 document.addEventListener("scroll", () => {
- const header = document.getElementById("header");
- const inner = document.getElementById("header-inner");
- const logo = document.getElementById("logo-img");
+    const header = document.getElementById("header");
+    const inner = document.getElementById("header-inner");
+    const logo = document.getElementById("logo-img");
 
- if (window.scrollY > 20) {
-   header.classList.add("shadow-lg");
-   inner.classList.remove("h-20", "md:h-28");
-   inner.classList.add("h-14", "md:h-20");
-   logo.classList.remove("h-14", "md:h-24");
-   logo.classList.add("h-10", "md:h-16");
- } else {
-   header.classList.remove("shadow-lg");
-   inner.classList.add("h-20", "md:h-28");
-   inner.classList.remove("h-14", "md:h-20");
-   logo.classList.add("h-14", "md:h-24");
-   logo.classList.remove("h-10", "md:h-16");
- }
+    if (window.scrollY > 20) {
+        header.classList.add("shadow-lg");
+        inner.classList.remove("h-20", "md:h-28");
+        inner.classList.add("h-14", "md:h-20");
+        logo.classList.remove("h-14", "md:h-24");
+        logo.classList.add("h-10", "md:h-16");
+    } else {
+        header.classList.remove("shadow-lg");
+        inner.classList.add("h-20", "md:h-28");
+        inner.classList.remove("h-14", "md:h-20");
+        logo.classList.add("h-14", "md:h-24");
+        logo.classList.remove("h-10", "md:h-16");
+    }
 });
 </script>
 
-</body>
-</html>
-
-
-
 <section class="py-12 md:py-20 bg-gradient-to-b from-slate-50 to-white">
- <div class="container mx-auto px-4 max-w-7xl flex flex-col md:flex-row items-center gap-12">
- <div class="md:w-1/2 space-y-6 text-center md:text-left">
- <h1 class="text-2xl md:text-4xl font-extrabold text-slate-900 leading-tight">
- Экспертные Гайды и Стратегии <span class="text-orange-500">E-commerce</span>
- </h1>
- <p class="text-lg text-slate-600">Независимый центр анализа кофейной индустрии. Мы превращаем страсть к кофе в профессиональную экспертизу и помогаем разобраться в мире specialty кофе.</p>
- <div class="flex items-center justify-center md:justify-start space-x-4 text-slate-500 font-medium">
- <span class="flex items-center text-sm md:text-base"><i data-lucide="users" class="w-5 h-5 mr-2 text-orange-500"></i> 15k читателей</span>
- <span class="flex items-center text-sm md:text-base"><i data-lucide="award" class="w-5 h-5 mr-2 text-orange-500"></i> Q-Grade стандарт</span>
- </div>
- </div>
- <div class="md:w-1/2 w-full">
- <img src="5umegappbb-round-corners (1).png" alt="Coffee Hero" class="rounded-3xl shadow-2xl w-full">
- </div>
- </div>
+    <div class="container mx-auto px-4 max-w-7xl flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 space-y-6 text-center md:text-left">
+            <h1 class="text-2xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+                Экспертные Гайды и Стратегии <span class="text-orange-500">E-commerce</span>
+            </h1>
+            <p class="text-lg text-slate-600">Независимый центр анализа кофейной индустрии. Мы превращаем страсть к кофе в профессиональную экспертизу и помогаем разобраться в мире specialty кофе.</p>
+            <div class="flex items-center justify-center md:justify-start space-x-4 text-slate-500 font-medium">
+                <span class="flex items-center text-sm md:text-base"><i data-lucide="users" class="w-5 h-5 mr-2 text-orange-500"></i> 15k читателей</span>
+                <span class="flex items-center text-sm md:text-base"><i data-lucide="award" class="w-5 h-5 mr-2 text-orange-500"></i> Q-Grade стандарт</span>
+            </div>
+        </div>
+        <div class="md:w-1/2 w-full">
+            <img src="5umegappbb-round-corners (1).png" alt="Coffee Hero" class="rounded-3xl shadow-2xl w-full">
+        </div>
+    </div>
 </section>
 
 <section class="py-16 md:py-20 bg-white">
- <div class="container mx-auto px-4 max-w-7xl flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16">
- <div class="md:w-1/2 space-y-6 text-center md:text-left">
- <h2 class="text-xl md:text-3xl font-bold leading-tight">Погружение в мир кофейного мастерства</h2>
- <p class="text-slate-600 text-lg">Мы анализируем всё: от экзотических микролотов до эффективных стратегий монетизации вашего кофейного проекта. Наша миссия — делиться знаниями и помогать профессионалам и любителям кофе находить идеальное зерно.</p>
- <p class="text-slate-600">Каждый обзор основан на слепой дегустации по стандартам SCA, замерах TDS и детальном анализе профилей обжарки. Мы покупаем зерно анонимно, чтобы наши оценки были максимально объективными.</p>
- <div class="flex flex-wrap justify-center md:justify-start gap-3">
- <span class="bg-slate-100 px-4 py-2 rounded-full text-[10px] md:text-sm font-bold border border-slate-200 uppercase tracking-tighter">SEO-оптимизация</span>
- <span class="bg-slate-100 px-4 py-2 rounded-full text-[10px] md:text-sm font-bold border border-slate-200 uppercase tracking-tighter">Анализ зерна</span>
- <span class="bg-slate-100 px-4 py-2 rounded-full text-[10px] md:text-sm font-bold border border-slate-200 uppercase tracking-tighter">Каппинг SCA</span>
- </div>
- </div>
- <div class="md:w-1/2 w-full">
- <img src="9NaNWm7jSafmcLVVK960O.png" alt="Coffee Analysis" class="rounded-3xl shadow-xl w-full">
- </div>
- </div>
+    <div class="container mx-auto px-4 max-w-7xl flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16">
+        <div class="md:w-1/2 space-y-6 text-center md:text-left">
+            <h2 class="text-xl md:text-3xl font-bold leading-tight">Погружение в мир кофейного мастерства</h2>
+            <p class="text-slate-600 text-lg">Мы анализируем всё: от экзотических микролотов до эффективных стратегий монетизации вашего кофейного проекта. Наша миссия — делиться знаниями и помогать профессионалам и любителям кофе находить идеальное зерно.</p>
+            <p class="text-slate-600">Каждый обзор основан на слепой дегустации по стандартам SCA, замерах TDS и детальном анализе профилей обжарки. Мы покупаем зерно анонимно, чтобы наши оценки были максимально объективными.</p>
+            <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                <span class="bg-slate-100 px-4 py-2 rounded-full text-[10px] md:text-sm font-bold border border-slate-200 uppercase tracking-tighter">SEO-оптимизация</span>
+                <span class="bg-slate-100 px-4 py-2 rounded-full text-[10px] md:text-sm font-bold border border-slate-200 uppercase tracking-tighter">Анализ зерна</span>
+                <span class="bg-slate-100 px-4 py-2 rounded-full text-[10px] md:text-sm font-bold border border-slate-200 uppercase tracking-tighter">Каппинг SCA</span>
+            </div>
+        </div>
+        <div class="md:w-1/2 w-full">
+            <img src="9NaNWm7jSafmcLVVK960O.png" alt="Coffee Analysis" class="rounded-3xl shadow-xl w-full">
+        </div>
+    </div>
 </section>
 
 <section class="py-16 md:py-20 bg-slate-50 border-y border-slate-200">
- <div class="container mx-auto px-4 max-w-7xl">
- <div class="text-center mb-12 md:mb-16 space-y-4">
- <h2 class="text-xl md:text-3xl font-bold uppercase tracking-tighter text-slate-900">Наша база знаний</h2>
- <p class="text-slate-500 italic text-lg">Профессиональный контент для тех, кто ценит вкус и качество</p>
- </div>
+    <div class="container mx-auto px-4 max-w-7xl">
+        <div class="text-center mb-12 md:mb-16 space-y-4">
+            <h2 class="text-xl md:text-3xl font-bold uppercase tracking-tighter text-slate-900">Наша база знаний</h2>
+            <p class="text-slate-500 italic text-lg">Профессиональный контент для тех, кто ценит вкус и качество</p>
+        </div>
 
- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
- <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group flex flex-col h-full">
- <div class="h-48 overflow-hidden"><img src="https://5ub947298z.skywork.website/images/coffee_beans_1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Decaf"></div>
- <div class="p-6 space-y-4 flex-grow flex flex-col">
- <h3 class="text-xl font-bold group-hover:text-orange-500 transition-colors">Декаф: Полный гид по выбору</h3>
- <p class="text-slate-500 text-sm line-clamp-3">Разбираем методы Swiss Water и CO2. Как найти идеальный вкус без кофеина и не потерять в качестве.</p>
- <div class="mt-auto pt-4">
- <a href="dekaf-guide.html" class="block w-full text-center py-3 bg-slate-50 group-hover:bg-orange-500 group-hover:text-white border border-slate-100 rounded-2xl font-bold transition-all">Читать статью</a>
- </div>
- </div>
- </article>
- 
- <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group flex flex-col h-full">
- <div class="h-48 overflow-hidden"><img src="https://5ub947298z.skywork.website/images/coffee_hero_4.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Espresso"></div>
- <div class="p-6 space-y-4 flex-grow flex flex-col">
- <h3 class="text-xl font-bold group-hover:text-orange-500 transition-colors">Идеальный эспрессо дома</h3>
- <p class="text-slate-500 text-sm line-clamp-3">Секреты контроля температуры и давления для домашнего бариста. Пошаговая инструкция от профессионалов.</p>
- <div class="mt-auto pt-4">
- <a href="espresso-masterclass.html" class="block w-full text-center py-3 bg-slate-50 group-hover:bg-orange-500 group-hover:text-white border border-slate-100 rounded-2xl font-bold transition-all">Читать статью</a>
- </div>
- </div>
- </article>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group flex flex-col h-full">
+                <div class="h-48 overflow-hidden"><img src="https://5ub947298z.skywork.website/images/coffee_beans_1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Decaf"></div>
+                <div class="p-6 space-y-4 flex-grow flex flex-col">
+                    <h3 class="text-xl font-bold group-hover:text-orange-500 transition-colors">Декаф: Полный гид по выбору</h3>
+                    <p class="text-slate-500 text-sm line-clamp-3">Разбираем методы Swiss Water и CO2. Как найти идеальный вкус без кофеина и не потерять в качестве.</p>
+                    <div class="mt-auto pt-4">
+                        <a href="dekaf-guide.html" class="block w-full text-center py-3 bg-slate-50 group-hover:bg-orange-500 group-hover:text-white border border-slate-100 rounded-2xl font-bold transition-all">Читать статью</a>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group flex flex-col h-full">
+                <div class="h-48 overflow-hidden"><img src="https://5ub947298z.skywork.website/images/coffee_hero_4.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Espresso"></div>
+                <div class="p-6 space-y-4 flex-grow flex flex-col">
+                    <h3 class="text-xl font-bold group-hover:text-orange-500 transition-colors">Идеальный эспрессо дома</h3>
+                    <p class="text-slate-500 text-sm line-clamp-3">Секреты контроля температуры и давления для домашнего бариста. Пошаговая инструкция от профессионалов.</p>
+                    <div class="mt-auto pt-4">
+                        <a href="espresso-masterclass.html" class="block w-full text-center py-3 bg-slate-50 group-hover:bg-orange-500 group-hover:text-white border border-slate-100 rounded-2xl font-bold transition-all">Читать статью</a>
+                    </div>
+                </div>
+            </article>
 
- <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group flex flex-col h-full">
- <div class="h-48 overflow-hidden"><img src="https://5ub947298z.skywork.website/images/coffee_hero_1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Affiliate"></div>
- <div class="p-6 space-y-4 flex-grow flex flex-col">
- <h3 class="text-xl font-bold group-hover:text-orange-500 transition-colors">Топ-7 партнерских программ</h3>
- <p class="text-slate-500 text-sm line-clamp-3">Детальный анализ партнерок для кофейных блогеров. Сравнение условий и реальные цифры заработка.</p>
- <div class="mt-auto pt-4">
- <a href="affiliate-coffee-top-7.html" class="block w-full text-center py-3 bg-slate-50 group-hover:bg-orange-500 group-hover:text-white border border-slate-100 rounded-2xl font-bold transition-all">Читать статью</a>
- </div>
- </div>
- </article>
+            <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group flex flex-col h-full">
+                <div class="h-48 overflow-hidden"><img src="https://5ub947298z.skywork.website/images/coffee_hero_1.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Affiliate"></div>
+                <div class="p-6 space-y-4 flex-grow flex flex-col">
+                    <h3 class="text-xl font-bold group-hover:text-orange-500 transition-colors">Топ-7 партнерских программ</h3>
+                    <p class="text-slate-500 text-sm line-clamp-3">Детальный анализ партнерок для кофейных блогеров. Сравнение условий и реальные цифры заработка.</p>
+                    <div class="mt-auto pt-4">
+                        <a href="affiliate-coffee-top-7.html" class="block w-full text-center py-3 bg-slate-50 group-hover:bg-orange-500 group-hover:text-white border border-slate-100 rounded-2xl font-bold transition-all">Читать статью</a>
+                    </div>
+                </div>
+            </article>
 
- <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group flex flex-col h-full">
- <div class="h-48 overflow-hidden"><img src="https://5ub947298z.skywork.website/images/coffee_beans_3.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Storage"></div>
- <div class="p-6 space-y-4 flex-grow flex flex-col">
- <h3 class="text-xl font-bold group-hover:text-orange-500 transition-colors">Правильное хранение кофе</h3>
- <p class="text-slate-500 text-sm line-clamp-3">Как уберечь зерно от кислорода и света. Научный подход к сохранению аромата и свежести.</p>
- <div class="mt-auto pt-4">
- <a href="kak-hranit-kofe-guide.html" class="block w-full text-center py-3 bg-slate-50 group-hover:bg-orange-500 group-hover:text-white border border-slate-100 rounded-2xl font-bold transition-all">Читать статью</a>
- </div>
- </div>
- </article>
+            <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group flex flex-col h-full">
+                <div class="h-48 overflow-hidden"><img src="https://5ub947298z.skywork.website/images/coffee_beans_3.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Storage"></div>
+                <div class="p-6 space-y-4 flex-grow flex flex-col">
+                    <h3 class="text-xl font-bold group-hover:text-orange-500 transition-colors">Правильное хранение кофе</h3>
+                    <p class="text-slate-500 text-sm line-clamp-3">Как уберечь зерно от кислорода и света. Научный подход к сохранению аромата и свежести.</p>
+                    <div class="mt-auto pt-4">
+                        <a href="kak-hranit-kofe-guide.html" class="block w-full text-center py-3 bg-slate-50 group-hover:bg-orange-500 group-hover:text-white border border-slate-100 rounded-2xl font-bold transition-all">Читать статью</a>
+                    </div>
+                </div>
+            </article>
 
- <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group flex flex-col h-full">
- <div class="h-48 overflow-hidden"><img src="https://5ub947298z.skywork.website/images/coffee_hero_2.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Equipment"></div>
- <div class="p-6 space-y-4 flex-grow flex flex-col">
- <h3 class="text-xl font-bold group-hover:text-orange-500 transition-colors">Набор бариста за $150</h3>
- <p class="text-slate-500 text-sm line-clamp-3">Бюджетная техника для качественного заваривания дома. Проверенные рекомендации экспертов.</p>
- <div class="mt-auto pt-4">
- <a href="budget-barista-equipment-150.html" class="block w-full text-center py-3 bg-slate-50 group-hover:bg-orange-500 group-hover:text-white border border-slate-100 rounded-2xl font-bold transition-all">Читать статью</a>
- </div>
- </div>
- </article>
+            <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group flex flex-col h-full">
+                <div class="h-48 overflow-hidden"><img src="https://5ub947298z.skywork.website/images/coffee_hero_2.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Equipment"></div>
+                <div class="p-6 space-y-4 flex-grow flex flex-col">
+                    <h3 class="text-xl font-bold group-hover:text-orange-500 transition-colors">Набор бариста за 150</h3>
+                    <p class="text-slate-500 text-sm line-clamp-3">Бюджетная техника для качественного заваривания дома. Проверенные рекомендации экспертов.</p>
+                    <div class="mt-auto pt-4">
+                        <a href="budget-barista-equipment-150.html" class="block w-full text-center py-3 bg-slate-50 group-hover:bg-orange-500 group-hover:text-white border border-slate-100 rounded-2xl font-bold transition-all">Читать статью</a>
+                    </div>
+                </div>
+            </article>
 
- <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group flex flex-col h-full">
- <div class="h-48 overflow-hidden"><img src="https://5ub947298z.skywork.website/images/coffee_beans_2.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Microlots"></div>
- <div class="p-6 space-y-4 flex-grow flex flex-col">
- <h3 class="text-xl font-bold group-hover:text-orange-500 transition-colors">Микролоты 2025: Топ сезона</h3>
- <p class="text-slate-500 text-sm line-clamp-3">Рейтинг самых ожидаемых сортов Specialty сезона 2025. Эксклюзивные лоты с высокими оценками.</p>
- <div class="mt-auto pt-4">
- <a href="specialty-micro-lots-2025.html" class="block w-full text-center py-3 bg-slate-50 group-hover:bg-orange-500 group-hover:text-white border border-slate-100 rounded-2xl font-bold transition-all">Читать статью</a>
- </div>
- </div>
- </article>
- </div>
- </div>
+            <article class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group flex flex-col h-full">
+                <div class="h-48 overflow-hidden"><img src="https://5ub947298z.skywork.website/images/coffee_beans_2.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Microlots"></div>
+                <div class="p-6 space-y-4 flex-grow flex flex-col">
+                    <h3 class="text-xl font-bold group-hover:text-orange-500 transition-colors">Микролоты 2025: Топ сезона</h3>
+                    <p class="text-slate-500 text-sm line-clamp-3">Рейтинг самых ожидаемых сортов Specialty сезона 2025. Эксклюзивные лоты с высокими оценками.</p>
+                    <div class="mt-auto pt-4">
+                        <a href="specialty-micro-lots-2025.html" class="block w-full text-center py-3 bg-slate-50 group-hover:bg-orange-500 group-hover:text-white border border-slate-100 rounded-2xl font-bold transition-all">Читать статью</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
 </section>
 
-<section class="py-20 bg-white">
- <div class="container mx-auto px-4 max-w-7xl">
- <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 border-b border-slate-100 pb-8">
- <div class="space-y-2">
- <div class="flex items-center space-x-2 text-orange-500 mb-2">
- <i data-lucide="shopping-bag" class="w-5 h-5"></i>
- <span class="text-xs font-black uppercase tracking-widest text-center md:text-left">Market Selection</span>
- </div>
- <h2 class="text-3xl md:text-4xl font-black text-slate-900 uppercase leading-none">Рекомендуем: <span class="text-slate-400 font-bold">Хиты сезона</span></h2>
- </div>
- <p class="text-slate-500 font-medium max-w-sm text-sm italic">Популярные сорта и новогодние новинки от независимых обжарщиков. Каждый лот прошел нашу экспертную оценку.</p>
- </div>
+<section class="py-20 bg-white Вот продолжение исправленного кода:
 
- <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
- <a href="https://www.coffeeproject.ru/" target="_blank" class="product-card bg-slate-50 rounded-[2.5rem] p-8 border border-slate-100 hover:shadow-xl transition-all group flex flex-col">
- <img src="https://www.coffeeproject.ru/images/products/coffee/560-sticker.jpg" class="h-48 object-contain mb-6" alt="Зимнее настроение">
- <span class="bg-orange-500 text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full w-fit">Хит продаж</span>
- <h3 class="text-2xl font-extrabold text-slate-900 mt-6 mb-2 uppercase tracking-tighter italic">Зимнее настроение</h3>
- <p class="text-slate-500 text-sm mb-6 flex-grow">Плотный и ароматный эспрессо с нотами шоколада и орехов. Идеальный баланс для зимнего утра. Оценка нашей команды: 84/100.</p>
- <div class="flex justify-between items-center pt-6 border-t border-slate-200">
- <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">250г / 1000г</span>
- <span class="text-orange-600 font-bold text-xs uppercase">Specialty Coffee</span>
- </div>
- </a>
+```html
+">
+    <div class="container mx-auto px-4 max-w-7xl">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 border-b border-slate-100 pb-8">
+            <div class="space-y-2">
+                <div class="flex items-center space-x-2 text-orange-500 mb-2">
+                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    <span class="text-xs font-black uppercase tracking-widest text-center md:text-left">Market Selection</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 uppercase leading-none">Рекомендуем: <span class="text-slate-400 font-bold">Хиты сезона</span></h2>
+            </div>
+            <p class="text-slate-500 font-medium max-w-sm text-sm italic">Популярные сорта и новогодние новинки от независимых обжарщиков. Каждый лот прошел нашу экспертную оценку.</p>
+        </div>
 
- <a href="https://www.coffeeproject.ru/" target="_blank" class="product-card bg-[#0f172a] rounded-[2.5rem] p-8 border border-slate-800 shadow-2xl transform hover:-translate-y-1 transition-all flex flex-col text-white">
- <img src="https://www.coffeeproject.ru/images/products/coffee/561-sticker.jpg" class="h-48 object-contain mb-6" alt="Волшебство Праздника">
- <span class="bg-white text-slate-900 text-[10px] font-bold uppercase px-3 py-1 rounded-full w-fit">Новый урожай</span>
- <h3 class="text-2xl font-extrabold text-orange-500 mt-6 mb-2 uppercase tracking-tighter italic">Волшебство Праздника</h3>
- <p class="text-slate-400 text-sm mb-6 flex-grow">Кофе, пропитанный духом праздника. Яркий фруктовый профиль с цитрусовыми нотами. Наш главный выбор сезона с оценкой 86/100.</p>
- <div class="flex justify-between items-center pt-6 border-t border-slate-800">
- <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest italic text-white/50">Limited Edition</span>
- <span class="text-white font-bold text-xs uppercase tracking-widest">Premium</span>
- </div>
- </a>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a href="https://www.coffeeproject.ru/" target="_blank" class="product-card bg-slate-50 rounded-[2.5rem] p-8 border border-slate-100 hover:shadow-xl transition-all group flex flex-col">
+                <img src="https://www.coffeeproject.ru/images/products/coffee/560-sticker.jpg" class="h-48 object-contain mb-6" alt="Зимнее настроение">
+                <span class="bg-orange-500 text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full w-fit">Хит продаж</span>
+                <h3 class="text-2xl font-extrabold text-slate-900 mt-6 mb-2 uppercase tracking-tighter italic">Зимнее настроение</h3>
+                <p class="text-slate-500 text-sm mb-6 flex-grow">Плотный и ароматный эспрессо с нотами шоколада и орехов. Идеальный баланс для зимнего утра. Оценка нашей команды: 84/100.</p>
+                <div class="flex justify-between items-center pt-6 border-t border-slate-200">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">250г / 1000г</span>
+                    <span class="text-orange-600 font-bold text-xs uppercase">Specialty Coffee</span>
+                </div>
+            </a>
 
- <a href="https://www.coffeeproject.ru/" target="_blank" class="product-card bg-slate-50 rounded-[2.5rem] p-8 border border-slate-100 hover:shadow-xl transition-all group flex flex-col">
- <img src="https://www.coffeeproject.ru/images/products/coffee/562.jpg" class="h-48 object-contain mb-6" alt="Крепкие Объятия">
- <span class="bg-slate-200 text-slate-600 text-[10px] font-bold uppercase px-3 py-1 rounded-full w-fit">Наш выбор</span>
- <h3 class="text-2xl font-extrabold text-slate-900 mt-6 mb-2 uppercase tracking-tighter italic">Крепкие Объятия</h3>
- <p class="text-slate-500 text-sm mb-6 flex-grow">Плотный и насыщенный эспрессо с долгим послевкусием. Новый урожай с глубоким вкусом и балансом. Оценка: 83/100.</p>
- <div class="flex justify-between items-center pt-6 border-t border-slate-200">
- <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">250г / 1000г</span>
- <span class="text-orange-600 font-bold text-xs uppercase">Fresh Roast</span>
- </div>
- </a>
- </div>
- </div>
+            <a href="https://www.coffeeproject.ru/" target="_blank" class="product-card bg-[#0f172a] rounded-[2.5rem] p-8 border border-slate-800 shadow-2xl transform hover:-translate-y-1 transition-all flex flex-col text-white">
+                <img src="https://www.coffeeproject.ru/images/products/coffee/561-sticker.jpg" class="h-48 object-contain mb-6" alt="Волшебство Праздника">
+                <span class="bg-white text-slate-900 text-[10px] font-bold uppercase px-3 py-1 rounded-full w-fit">Новый урожай</span>
+                <h3 class="text-2xl font-extrabold text-orange-500 mt-6 mb-2 uppercase tracking-tighter italic">Волшебство Праздника</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow">Кофе, пропитанный духом праздника. Яркий фруктовый профиль с цитрусовыми нотами. Наш главный выбор сезона с оценкой 86/100.</p>
+                <div class="flex justify-between items-center pt-6 border-t border-slate-800">
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest italic text-white/50">Limited Edition</span>
+                    <span class="text-white font-bold text-xs uppercase tracking-widest">Premium</span>
+                </div>
+            </a>
+
+            <a href="https://www.coffeeproject.ru/" target="_blank" class="product-card bg-slate-50 rounded-[2.5rem] p-8 border border-slate-100 hover:shadow-xl transition-all group flex flex-col">
+                <img src="https://www.coffeeproject.ru/images/products/coffee/562.jpg" class="h-48 object-contain mb-6" alt="Крепкие Объятия">
+                <span class="bg-slate-200 text-slate-600 text-[10px] font-bold uppercase px-3 py-1 rounded-full w-fit mb-6">Наш выбор</span>
+                <h3 class="text-2xl font-extrabold text-slate-900 mt-6 mb-2 uppercase tracking-tighter italic">Крепкие Объятия</h3>
+                <p class="text-slate-500 text-sm mb-6 flex-grow">Плотный и насыщенный эспрессо с долгим послевкусием. Новый урожай с глубоким вкусом и балансом. Оценка: 83/100.</p>
+                <div class="flex justify-between items-center pt-6 border-t border-slate-200">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">250г / 1000г</span>
+                    <span class="text-orange-600 font-bold text-xs uppercase">Fresh Roast</span>
+                </div>
+            </a>
+        </div>
+    </div>
 </section>
 
 <section class="py-20 bg-slate-50 border-t border-slate-200">
- <div class="container mx-auto px-4 max-w-7xl">
- <div class="text-center mb-12">
- <h2 class="text-3xl font-black uppercase tracking-tighter text-slate-900 mb-4">Как мы проводим анализ</h2>
- <p class="text-slate-600 max-w-2xl mx-auto mb-6">Наша методология основана на международных стандартах SCA и многолетнем опыте профессиональных Q-грейдеров</p>
- <div class="h-1 w-20 bg-orange-500 mx-auto"></div>
- </div>
+    <div class="container mx-auto px-4 max-w-7xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black uppercase tracking-tighter text-slate-900 mb-4">Как мы проводим анализ</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto mb-6">Наша методология основана на международных стандартах SCA и многолетнем опыте профессиональных Q-грейдеров</p>
+            <div class="h-1 w-20 bg-orange-500 mx-auto"></div>
+        </div>
 
- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
- <div class="relative p-6 text-center group">
- <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto mb-6 border border-slate-100 group-hover:border-orange-500 transition-colors">
- <i data-lucide="shopping-cart" class="text-orange-500 w-8 h-8"></i>
- </div>
- <h4 class="font-bold uppercase text-sm mb-2">1. Анонимная закупка</h4>
- <p class="text-slate-500 text-xs leading-relaxed">Мы покупаем зерно анонимно у обжарщиков, чтобы исключить предвзятость в оценке</p>
- </div>
- <div class="relative p-6 text-center group">
- <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto mb-6 border border-slate-100 group-hover:border-orange-500 transition-colors">
- <i data-lucide="thermometer" class="text-orange-500 w-8 h-8"></i>
- </div>
- <h4 class="font-bold uppercase text-sm mb-2">2. Слепой каппинг</h4>
- <p class="text-slate-500 text-xs leading-relaxed">Проводим слепую дегустацию по протоколу SCA с оценкой всех параметров</p>
- </div>
- <div class="relative p-6 text-center group">
- <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto mb-6 border border-slate-100 group-hover:border-orange-500 transition-colors">
- <i data-lucide="bar-chart-3" class="text-orange-500 w-8 h-8"></i>
- </div>
- <h4 class="font-bold uppercase text-sm mb-2">3. Техническая аналитика</h4>
- <p class="text-slate-500 text-xs leading-relaxed">Замеряем TDS, анализируем графики обжарки и химический состав зерна</p>
- </div>
- <div class="p-6 text-center group">
- <div class="w-16 h-16 bg-orange-500 rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-6">
- <i data-lucide="check-circle" class="text-white w-8 h-8"></i>
- </div>
- <h4 class="font-bold uppercase text-sm mb-2">4. Экспертный вердикт</h4>
- <p class="text-slate-500 text-xs leading-relaxed">Публикуем только проверенные рекомендации с детальными описаниями</p>
- </div>
- </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="relative p-6 text-center group">
+                <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto mb-6 border border-slate-100 group-hover:border-orange-500 transition-colors">
+                    <i data-lucide="shopping-cart" class="text-orange-500 w-8 h-8"></i>
+                </div>
+                <h4 class="font-bold uppercase text-sm mb-2">1. Анонимная закупка</h4>
+                <p class="text-slate-500 text-xs leading-relaxed">Мы покупаем зерно анонимно у обжарщиков, чтобы исключить предвзятость в оценке</p>
+            </div>
+            <div class="relative p-6 text-center group">
+                <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto mb-6 border border-slate-100 group-hover:border-orange-500 transition-colors">
+                    <i data-lucide="thermometer" class="text-orange-500 w-8 h-8"></i>
+                </div>
+                <h4 class="font-bold uppercase text-sm mb-2">2. Слепой каппинг</h4>
+                <p class="text-slate-500 text-xs leading-relaxed">Проводим слепую дегустацию по протоколу SCA с оценкой всех параметров</p>
+            </div>
+            <div class="relative p-6 text-center group">
+                <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto mb-6 border border-slate-100 group-hover:border-orange-500 transition-colors">
+                    <i data-lucide="bar-chart-3" class="text-orange-500 w-8 h-8"></i>
+                </div>
+                <h4 class="font-bold uppercase text-sm mb-2">3. Техническая аналитика</h4>
+                <p class="text-slate-500 text-xs leading-relaxed">Замеряем TDS, анализируем графики обжарки и химический состав зерна</p>
+            </div>
+            <div class="p-6 text-center group">
+                <div class="w-16 h-16 bg-orange-500 rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="check-circle" class="text-white w-8 h-8"></i>
+                </div>
+                <h4 class="font-bold uppercase text-sm mb-2">4. Экспертный вердикт</h4>
+                <p class="text-slate-500 text-xs leading-relaxed">Публикуем только проверенные рекомендации с детальными описаниями</p>
+            </div>
+        </div>
 
- <div class="mt-16 bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-200">
- <div class="max-w-3xl mx-auto text-center space-y-6">
- <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Почему нам доверяют?</h3>
- <p class="text-slate-600 text-lg leading-relaxed">
- Coffee Analysis — это независимая платформа, созданная профессионалами кофейной индустрии. Мы не работаем напрямую с обжарщиками и не получаем комиссию за продажи. Наша цель — предоставить объективную информацию и помочь вам найти идеальный кофе.
- </p>
- <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
- <div class="p-4">
- <div class="text-3xl font-black text-orange-500 mb-2">15,000+</div>
- <p class="text-slate-600 text-sm">Постоянных читателей</p>
- </div>
- <div class="p-4">
- <div class="text-3xl font-black text-orange-500 mb-2">500+</div>
- <p class="text-slate-600 text-sm">Протестированных лотов</p>
- </div>
- <div class="p-4">
- <div class="text-3xl font-black text-orange-500 mb-2">100%</div>
- <p class="text-slate-600 text-sm">Независимых оценок</p>
- </div>
- </div>
- </div>
- </div>
- </div>
+        <div class="mt-16 bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-slate-200">
+            <div class="max-w-3xl mx-auto text-center space-y-6">
+                <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Почему нам доверяют?</h3>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    Coffee Analysis — это независимая платформа, созданная профессионалами кофейной индустрии. Мы не работаем напрямую с обжарщиками и не получаем комиссию за продажи. Наша цель — предоставить объективную информацию и помочь вам найти идеальный кофе.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <div class="p-4">
+                        <div class="text-3xl font-black text-orange-500 mb-2">15,000+</div>
+                        <p class="text-slate-600 text-sm">Постоянных читателей</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl font-black text-orange-500 mb-2">500+</div>
+                        <p class="text-slate-600 text-sm">Протестированных лотов</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl font-black text-orange-500 mb-2">100%</div>
+                        <p class="text-slate-600 text-sm">Независимых оценок</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="py-20 bg-white border-y border-slate-100">
- <div class="container mx-auto px-4 max-w-7xl">
- <div class="mb-12 text-center md:text-left">
- <h2 class="text-4xl font-black text-slate-900 uppercase tracking-tighter italic">Уникальные сорта</h2>
- <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mt-2 italic">Наша коллекция редких лотов для настоящих ценителей</p>
- </div>
+    <div class="container mx-auto px-4 max-w-7xl">
+        <div class="mb-12 text-center md:text-left">
+            <h2 class="text-4xl font-black text-slate-900 uppercase tracking-tighter italic">Уникальные сорта</h2>
+            <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mt-2 italic">Наша коллекция редких лотов для настоящих ценителей</p>
+        </div>
 
- <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
- <div class="bg-white rounded-[2.5rem] border border-slate-200 shadow-sm hover:border-green-500 transition-all group flex flex-col h-full overflow-hidden">
- <div class="h-64 overflow-hidden bg-slate-50">
- <img src="https://i.postimg.cc/g0ZD6jPJ/Ethiopia-Oromo.png" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" alt="Ethiopia Oromo">
- </div>
- <div class="p-8 flex-grow flex flex-col">
- <span class="text-[10px] font-black uppercase tracking-widest text-green-600 bg-green-50 px-3 py-1 rounded-full w-fit mb-6">Сладкий и Фруктовый</span>
- <h3 class="text-2xl font-black text-slate-900 uppercase leading-none mb-4">Эфиопия <br>Оромо</h3>
- <p class="text-slate-500 text-sm italic mb-4">Эксклюзивный лот из региона Оромия с яркими нотами ягод и цветочным ароматом. Идеален для альтернативных методов заваривания.</p>
- <p class="text-slate-600 text-xs mb-6">Оценка SCA: 87/100. Обработка: натуральная. Высота произрастания: 2000-2200м. Супер-кофе для тех, кто любит экспериментировать с яркими вкусами.</p>
- <div class="mt-auto flex justify-between items-center text-[10px] font-black text-slate-400 uppercase pt-4 border-t border-slate-100">
- <span>Specialty Grade</span>
- <i data-lucide="microscope" class="w-4 h-4 text-green-500"></i>
- </div>
- </div>
- </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-[2.5rem] border border-slate-200 shadow-sm hover:border-green-500 transition-all group flex flex-col h-full overflow-hidden">
+                <div class="h-64 overflow-hidden bg-slate-50">
+                    <img src="https://i.postimg.cc/g0ZD6jPJ/Ethiopia-Oromo.png" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" alt="Ethiopia Oromo">
+                </div>
+                <div class="p-8 flex-grow flex flex-col">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-green-600 bg-green-50 px-3 py-1 rounded-full w-fit mb-6">Сладкий и Фруктовый</span>
+                    <h3 class="text-2xl font-black text-slate-900 uppercase leading-none mb-4">Эфиопия <br>Оромо</h3>
+                    <p class="text-slate-500 text-sm italic mb-4">Эксклюзивный лот из региона Оромия с яркими нотами ягод и цветочным ароматом. Идеален для альтернативных методов заваривания.</p>
+                    <p class="text-slate-600 text-xs mb-6">Оценка SCA: 87/100. Обработка: натуральная. Высота произрастания: 2000-2200м. Супер-кофе для тех, кто любит экспериментировать с яркими вкусами.</p>
+                    <div class="mt-auto flex justify-between items-center text-[10px] font-black text-slate-400 uppercase pt-4 border-t border-slate-100">
+                        <span>Specialty Grade</span>
+                        <i data-lucide="microscope" class="w-4 h-4 text-green-500"></i>
+                    </div>
+                </div>
+            </div>
 
- <div class="bg-white rounded-[2.5rem] border border-slate-200 shadow-sm hover:border-yellow-500 transition-all group flex flex-col h-full overflow-hidden">
- <div class="h-64 overflow-hidden bg-slate-50">
- <img src="https://i.postimg.cc/Z5ptFr3g/Brazilia-Zeltyj-Katuai.png" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" alt="Brazil Yellow Catuai">
- </div>
- <div class="p-8 flex-grow flex flex-col">
- <span class="text-[10px] font-black uppercase tracking-widest text-yellow-600 bg-yellow-50 px-3 py-1 rounded-full w-fit mb-6">Новый урожай</span>
- <h3 class="text-2xl font-black text-slate-900 uppercase leading-none mb-4">Бразилия <br>Желтый Катуаи</h3>
- <p class="text-slate-500 text-sm italic mb-4">Редкая разновидность с уникальным желтым цветом ягод. Сбалансированный профиль с медовой сладостью.</p>
- <p class="text-slate-600 text-xs mb-6">Оценка SCA: 85/100. Обработка: pulped natural. Идеален для эспрессо и фильтра. Ноты карамели, молочного шоколада и лесного ореха.</p>
- <div class="mt-auto flex justify-between items-center text-[10px] font-black text-slate-400 uppercase pt-4 border-t border-slate-100">
- <span>Premium Selection</span>
- <i data-lucide="coffee" class="w-4 h-4 text-yellow-500"></i>
- </div>
- </div>
- </div>
+            <div class="bg-white rounded-[2.5rem] border border-slate-200 shadow-sm hover:border-yellow-500 transition-all group flex flex-col h-full overflow-hidden">
+                <div class="h-64 overflow-hidden bg-slate-50">
+                    <img src="https://i.postimg.cc/Z5ptFr3g/Brazilia-Zeltyj-Katuai.png" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" alt="Brazil Yellow Catuai">
+                </div>
+                <div class="p-8 flex-grow flex flex-col">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-yellow-600 bg-yellow-50 px-3 py-1 rounded-full w-fit mb-6">Новый урожай</span>
+                    <h3 class="text-2xl font-black text-slate-900 uppercase leading-none mb-4">Бразилия <br>Желтый Катуаи</h3>
+                    <p class="text-slate-500 text-sm italic mb-4">Редкая разновидность с уникальным желтым цветом ягод. Сбалансированный профиль с медовой сладостью.</p>
+                    <p class="text-slate-600 text-xs mb-6">Оценка SCA: 85/100. Обработка: pulped natural. Идеален для эспрессо и фильтра. Ноты карамели, молочного шоколада и лесного ореха.</p>
+                    <div class="mt-auto flex justify-between items-center text-[10px] font-black text-slate-400 uppercase pt-4 border-t border-slate-100">
+                        <span>Premium Selection</span>
+                        <i data-lucide="coffee" class="w-4 h-4 text-yellow-500"></i>
+                    </div>
+                </div>
+            </div>
 
- <div class="bg-white rounded-[2.5rem] border-2 border-red-500 shadow-xl relative overflow-hidden flex flex-col h-full group">
- <div class="absolute top-4 right-4 bg-red-500 text-white px-4 py-1 rounded-full font-black text-xs italic z-10 shadow-lg">SCA: 85,5</div>
- <div class="h-64 overflow-hidden bg-slate-50">
- <img src="https://i.postimg.cc/4xVkbztq/Efiopia-Irgaceff.png" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" alt="Ethiopia Yirgacheffe">
- </div>
- <div class="p-8 flex-grow flex flex-col">
- <span class="text-[10px] font-black uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 rounded-full w-fit mb-6">Гамма Лепорис</span>
- <h3 class="text-2xl font-black text-slate-900 uppercase leading-none mb-4">Эфиопия <br>Иргачефф</h3>
- <p class="text-slate-500 text-sm italic mb-4">Легендарный регион с самыми изысканными эфиопскими сортами. Сложный многогранный букет.</p>
- <p class="text-slate-600 text-xs mb-6">Высокая оценка экспертов 85.5/100. Обработка: мытая. Ноты жасмина, бергамота, персика и черного чая. Элитный выбор для ценителей.</p>
- <div class="mt-auto flex justify-between items-center text-[10px] font-black text-slate-400 uppercase pt-4 border-t border-slate-100">
- <span>Top Rated</span>
- <i data-lucide="star" class="w-4 h-4 fill-red-500 text-red-500"></i>
- </div>
- </div>
- </div>
- </div>
+            <div class="bg-white rounded-[2.5rem] border-2 border-red-500 shadow-xl relative overflow-hidden flex flex-col h-full group">
+                <div class="absolute top-4 right-4 bg-red-500 text-white px-4 py-1 rounded-full font-black text-xs italic z-10 shadow-lg">SCA: 85,5</div>
+                <div class="h-64 overflow-hidden bg-slate-50">
+                    <img src="https://i.postimg.cc/4xVkbztq/Efiopia-Irgaceff.png" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" alt="Ethiopia Yirgacheffe">
+                </div>
+                <div class="p-8 flex-grow flex flex-col">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 rounded-full w-fit mb-6">Гамма Лепорис</span>
+                    <h3 class="text-2xl font-black text-slate-900 uppercase leading-none mb-4">Эфиопия <br>Иргачефф</h3>
+                    <p class="text-slate-500 text-sm italic mb-4">Легендарный регион с самыми изысканными эфиопскими сортами. Сложный многогранный букет.</p>
+                    <p class="text-slate-600 text-xs mb-6">Высокая оценка экспертов 85.5/100. Обработка: мытая. Ноты жасмина, бергамота, персика и черного чая. Элитный выбор для ценителей.</p>
+                    <div class="mt-auto flex justify-between items-center text-[10px] font-black text-slate-400 uppercase pt-4 border-t border-slate-100">
+                        <span>Top Rated</span>
+                        <i data-lucide="star" class="w-4 h-4 fill-red-500 text-red-500"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
 
- <div class="mt-16 text-center">
- <p class="text-slate-600 mb-6 text-lg">Хотите узнать больше о редких сортах и эксклюзивных лотах?</p>
- <a href="specialty-micro-lots-2025.html" class="inline-block bg-orange-500 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl">
- Смотреть все микролоты 2025
- </a>
- </div>
- </div>
+        <div class="mt-16 text-center">
+            <p class="text-slate-600 mb-6 text-lg">Хотите узнать больше о редких сортах и эксклюзивных лотах?</p>
+            <a href="specialty-micro-lots-2025.html" class="inline-block bg-orange-500 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl">
+                Смотреть все микролоты 2025
+            </a>
+        </div>
+    </div>
 </section>
 
 <section class="py-20 bg-gradient-to-b from-slate-50 to-white">
- <div class="container mx-auto px-4 max-w-7xl">
- <div class="text-center mb-16">
- <h2 class="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter mb-4">Полезные материалы</h2>
- <p class="text-slate-600 max-w-2xl mx-auto">Углубленные гайды и исследования для профессионального роста в кофейной индустрии</p>
- </div>
+   Вот продолжение исправленного кода:
 
- <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
- <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all">
- <div class="flex items-start space-x-4">
- <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="book-open" class="w-6 h-6 text-orange-500"></i>
- </div>
- <div class="flex-grow">
- <h3 class="text-xl font-bold text-slate-900 mb-3">Гайды по завариванию</h3>
- <p class="text-slate-600 text-sm mb-4">Пошаговые инструкции для всех методов: от эспрессо до колд-брю. Научитесь контролировать все параметры экстракции.</p>
- <a href="kak-hranit-kofe-guide.html" class="text-orange-500 font-bold text-sm hover:text-orange-600 inline-flex items-center">
- Читать гайды <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
- </a>
- </div>
- </div>
- </div>
+```html
+    <div class="container mx-auto px-4 max-w-7xl">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter mb-4">Полезные материалы</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto">Углубленные гайды и исследования для профессионального роста в кофейной индустрии</p>
+        </div>
 
- <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all">
- <div class="flex items-start space-x-4">
- <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="trending-up" class="w-6 h-6 text-blue-500"></i>
- </div>
- <div class="flex-grow">
- <h3 class="text-xl font-bold text-slate-900 mb-3">Стратегии монетизации</h3>
- <p class="text-slate-600 text-sm mb-4">Как превратить кофейный блог в прибыльный бизнес. Партнерские программы, реклама и продажа собственных продуктов.</p>
- <a href="affiliate-coffee-top-7.html" class="text-blue-500 font-bold text-sm hover:text-blue-600 inline-flex items-center">
- Узнать больше <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
- </a>
- </div>
- </div>
- </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="book-open" class="w-6 h-6 text-orange-500"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Гайды по завариванию</h3>
+                        <p class="text-slate-600 text-sm mb-4">Пошаговые инструкции для всех методов: от эспрессо до колд-брю. Научитесь контролировать все параметры экстракции.</p>
+                        <a href="kak-hranit-kofe-guide.html" class="text-orange-500 font-bold text-sm hover:text-orange-600 inline-flex items-center">
+                            Читать гайды <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
- <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all">
- <div class="flex items-start space-x-4">
- <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="beaker" class="w-6 h-6 text-green-500"></i>
- </div>
- <div class="flex-grow">
- <h3 class="text-xl font-bold text-slate-900 mb-3">Научный подход</h3>
- <p class="text-slate-600 text-sm mb-4">Химия кофе, физика экстракции и биология ферментации. Понимание процессов на молекулярном уровне.</p>
- <a href="espresso-masterclass.html" class="text-green-500 font-bold text-sm hover:text-green-600 inline-flex items-center">
- Изучить науку <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
- </a>
- </div>
- </div>
- </div>
+            <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="trending-up" class="w-6 h-6 text-blue-500"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Стратегии монетизации</h3>
+                        <p class="text-slate-600 text-sm mb-4">Как превратить кофейный блог в прибыльный бизнес. Партнерские программы, реклама и продажа собственных продуктов.</p>
+                        <a href="affiliate-coffee-top-7.html" class="text-blue-500 font-bold text-sm hover:text-blue-600 inline-flex items-center">
+                            Узнать больше <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
- <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all">
- <div class="flex items-start space-x-4">
- <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
- <i data-lucide="shopping-bag" class="w-6 h-6 text-purple-500"></i>
- </div>
- <div class="flex-grow">
- <h3 class="text-xl font-bold text-slate-900 mb-3">Обзоры оборудования</h3>
- <p class="text-slate-600 text-sm mb-4">Детальное тестирование кофемашин, кофемолок и аксессуаров. Сравнение характеристик и реальные замеры.</p>
- <a href="budget-barista-equipment-150.html" class="text-purple-500 font-bold text-sm hover:text-purple-600 inline-flex items-center">
- Смотреть обзоры <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
- </a>
- </div>
- </div>
- </div>
- </div>
- </div>
+            <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="beaker" class="w-6 h-6 text-green-500"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Научный подход</h3>
+                        <p class="text-slate-600 text-sm mb-4">Химия кофе, физика экстракции и биология ферментации. Понимание процессов на молекулярном уровне.</p>
+                        <a href="espresso-masterclass.html" class="text-green-500 font-bold text-sm hover:text-green-600 inline-flex items-center">
+                            Изучить науку <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="shopping-bag" class="w-6 h-6 text-purple-500"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Обзоры оборудования</h3>
+                        <p class="text-slate-600 text-sm mb-4">Детальное тестирование кофемашин, кофемолок и аксессуаров. Сравнение характеристик и реальные замеры.</p>
+                        <a href="budget-barista-equipment-150.html" class="text-purple-500 font-bold text-sm hover:text-purple-600 inline-flex items-center">
+                            Смотреть обзоры <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="py-16 bg-slate-50 border-y border-slate-200">
     <div class="container mx-auto px-4 max-w-7xl">
         <div class="flex flex-col lg:flex-row gap-12 items-center">
-            
             <div class="lg:w-1/2 space-y-6">
                 <div class="flex items-center space-x-2 text-orange-500 mb-2">
                     <i data-lucide="calculator" class="w-5 h-5"></i>
@@ -495,8 +488,7 @@ document.addEventListener("scroll", () => {
                                 <label class="text-xs font-bold uppercase tracking-widest text-slate-900">Объем воды (мл)</label>
                                 <span id="waterValue" class="text-orange-500 font-black text-lg">250</span>
                             </div>
-                            <input type="range" id="waterInput" min="100" max="1000" value="250" step="10" 
-                                class="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-orange-500">
+                            <input type="range" id="waterInput" min="100" max="1000" value="250" step="10" class="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-orange-500">
                         </div>
 
                         <div>
@@ -504,8 +496,7 @@ document.addEventListener("scroll", () => {
                                 <label class="text-xs font-bold uppercase tracking-widest text-slate-900">Коэффициент (Ratio)</label>
                                 <span id="ratioValue" class="text-orange-500 font-black text-lg">1:16</span>
                             </div>
-                            <input type="range" id="ratioInput" min="12" max="18" value="16" step="0.5" 
-                                class="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-orange-500">
+                            <input type="range" id="ratioInput" min="12" max="18" value="16" step="0.5" class="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-orange-500">
                         </div>
 
                         <div class="pt-6 border-t border-slate-100">
@@ -615,14 +606,12 @@ ratioInput.addEventListener('input', calculateCoffee);
 lucide.createIcons();
 </script>
 
-
 <footer class="bg-[#0f172a] text-white py-12 border-t border-slate-800">
     <div class="container mx-auto px-4 max-w-7xl">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-            
             <div class="col-span-1 space-y-4">
                 <div class="flex items-center space-x-2">
-                    <span class="text-2xl">☕</span>
+                    <span class="text-2xl"></span>
                     <span class="text-lg font-bold uppercase tracking-tighter">Coffee <span class="text-orange-500">Analysis</span></span>
                 </div>
                 <p class="text-slate-500 text-xs leading-relaxed uppercase font-bold tracking-widest">
@@ -655,15 +644,17 @@ lucide.createIcons();
                 </a>
                 <div class="flex space-x-4 mt-6">
                     <a href="#" class="text-slate-500 hover:text-white"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-                    <a href="#" class="text-slate-500 hover:text-white"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-white Вот завершение исправленного кода:
+
+```html
+                    "><i data-lucide="youtube" class="w-4 h-4"></i></a>
                 </div>
             </div>
-
         </div>
 
         <div class="mt-16 pt-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-[10px] font-bold text-slate-600 uppercase tracking-widest">
-                © 2025 COFFEE ANALYSIS. ALL RIGHTS RESERVED.
+                2025 COFFEE ANALYSIS. ALL RIGHTS RESERVED.
             </p>
             <div class="flex space-x-6 text-[10px] font-bold text-slate-600 uppercase tracking-widest">
                 <a href="#" class="hover:text-slate-400">Privacy</a>
@@ -672,166 +663,149 @@ lucide.createIcons();
         </div>
     </div>
 </footer>
+
 <script>
- lucide.createIcons();
- 
- const btn = document.getElementById('menu-btn');
- const menu = document.getElementById('mobile-menu');
- 
- btn.addEventListener('click', () => {
- menu.classList.toggle('mobile-menu-active');
- });
+    lucide.createIcons();
+    
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('mobile-menu-active');
+    });
 
- // Закрытие мобильного меню при клике на ссылку
- const mobileLinks = menu.querySelectorAll('a');
- mobileLinks.forEach(link => {
- link.addEventListener('click', () => {
- menu.classList.remove('mobile-menu-active');
- });
- });
+    // Закрытие мобильного меню при клике на ссылку
+    const mobileLinks = menu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('mobile-menu-active');
+        });
+    });
 
- // Плавная прокрутка для якорных ссылок
- document.querySelectorAll('a[href^="#"]').forEach(anchor => {
- anchor.addEventListener('click', function (e) {
- e.preventDefault();
- const target = document.querySelector(this.getAttribute('href'));
- if (target) {
- target.scrollIntoView({
- behavior: 'smooth',
- block: 'start'
- });
- }
- });
- });
+    // Плавная прокрутка для якорных ссылок
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 
- // Анимация появления элементов при скролле
- const observerOptions = {
- threshold: 0.1,
- rootMargin: '0px 0px -50px 0px'
- };
+    // Анимация появления элементов при скролле
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
- const observer = new IntersectionObserver((entries) => {
- entries.forEach(entry => {
- if (entry.isIntersecting) {
- entry.target.style.opacity = '1';
- entry.target.style.transform = 'translateY(0)';
- }
- });
- }, observerOptions);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
 
- // Применяем анимацию к карточкам статей
- document.querySelectorAll('article, .product-card').forEach(el => {
- el.style.opacity = '0';
- el.style.transform = 'translateY(20px)';
- el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
- observer.observe(el);
- });
+    // Применяем анимацию к карточкам статей
+    document.querySelectorAll('article, .product-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
 
- // Обработка формы подписки
- const subscribeForm = document.querySelector('form');
- if (subscribeForm) {
- subscribeForm.addEventListener('submit', (e) => {
- e.preventDefault();
- const email = subscribeForm.querySelector('input[type="email"]').value;
- 
- if (email) {
- // Здесь можно добавить отправку данных на сервер
- alert('Спасибо за подписку! Проверьте вашу почту.');
- subscribeForm.reset();
- }
- });
- }
+    // Обработка формы подписки
+    const subscribeForm = document.querySelector('form');
+    if (subscribeForm) {
+        subscribeForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = subscribeForm.querySelector('input[type="email"]').value;
+            
+            if (email) {
+                // Здесь можно добавить отправку данных на сервер
+                alert('Спасибо за подписку! Проверьте вашу почту.');
+                subscribeForm.reset();
+            }
+        });
+    }
 
- // Добавление эффекта параллакса для hero секции
- window.addEventListener('scroll', () => {
- const scrolled = window.pageYOffset;
- const parallax = document.querySelector('section:first-of-type img');
- 
- if (parallax) {
- parallax.style.transform = `translateY(${scrolled * 0.3}px)`;
- }
- });
+    // Добавление эффекта параллакса для hero секции
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const parallax = document.querySelector('section:first-of-type img');
+        
+        if (parallax) {
+            parallax.style.transform = `translateY(${scrolled * 0.3}px)`;
+        }
+    });
 
- // Счетчик для статистики
- function animateCounter(element, target, duration = 2000) {
- let start = 0;
- const increment = target / (duration / 16);
- 
- const timer = setInterval(() => {
- start += increment;
- if (start >= target) {
- element.textContent = target.toLocaleString() + '+';
- clearInterval(timer);
- } else {
- element.textContent = Math.floor(start).toLocaleString();
- }
- }, 16);
- }
+    // Счетчик для статистики
+    function animateCounter(element, target, duration = 2000) {
+        let start = 0;
+        const increment = target / (duration / 16);
+        
+        const timer = setInterval(() => {
+            start += increment;
+            if (start >= target) {
+                element.textContent = target.toLocaleString() + '+';
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(start).toLocaleString();
+            }
+        }, 16);
+    }
 
- // Запуск счетчиков при появлении в viewport
- const statsObserver = new IntersectionObserver((entries) => {
- entries.forEach(entry => {
- if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
- const target = parseInt(entry.target.textContent.replace(/\D/g, ''));
- animateCounter(entry.target, target);
- entry.target.classList.add('counted');
- }
- });
- }, { threshold: 0.5 });
+    // Запуск счетчиков при появлении в viewport
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                const target = parseInt(entry.target.textContent.replace(/\D/g, ''));
+                animateCounter(entry.target, target);
+                entry.target.classList.add('counted');
+            }
+        });
+    }, { threshold: 0.5 });
 
- document.querySelectorAll('.text-3xl.font-black.text-orange-500').forEach(el => {
- statsObserver.observe(el);
- });
+    document.querySelectorAll('.text-3xl.font-black.text-orange-500').forEach(el => {
+        statsObserver.observe(el);
+    });
 
- // Добавление индикатора загрузки
- window.addEventListener('load', () => {
- document.body.style.opacity = '0';
- setTimeout(() => {
- document.body.style.transition = 'opacity 0.5s ease';
- document.body.style.opacity = '1';
- }, 100);
- });
+    // Добавление индикатора загрузки
+    window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        setTimeout(() => {
+            document.body.style.transition = 'opacity 0.5s ease';
+            document.body.style.opacity = '1';
+        }, 100);
+    });
 
- // Lazy loading для изображений
- if ('loading' in HTMLImageElement.prototype) {
- const images = document.querySelectorAll('img');
- images.forEach(img => {
- img.loading = 'lazy';
- });
- }
+    // Lazy loading для изображений
+    if ('loading' in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            img.loading = 'lazy';
+        });
+    }
 
- // Обработка кликов по карточкам продуктов
- document.querySelectorAll('.product-card').forEach(card => {
- card.addEventListener('mouseenter', function() {
- this.style.transform = 'translateY(-5px)';
- });
- 
- card.addEventListener('mouseleave', function() {
- this.style.transform = 'translateY(0)';
- });
- });
+    // Обработка кликов по карточкам продуктов
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
 
- console.log('%c☕ Coffee Analysis', 'font-size: 20px; font-weight: bold; color: #f97316;');
- console.log('%cДобро пожаловать в мир профессионального кофе!', 'font-size: 14px; color: #64748b;');
+    console.log('%c Coffee Analysis', 'font-size: 20px; font-weight: bold; color: #f97316;');
+    console.log('%cДобро пожаловать в мир профессионального кофе!', 'font-size: 14px; color: #64748b;');
 </script>
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
- (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
- m[i].l=1*new Date();
- for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
- k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
- (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
- ym(XXXXXXXX, "init", {
- clickmap:true,
- trackLinks:true,
- accurateTrackBounce:true,
- webvisor:true
- });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
 </body>
 </html>
+
