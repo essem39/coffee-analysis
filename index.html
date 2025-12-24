@@ -6,50 +6,59 @@
  <title>Coffee Analysis: Экспертные Гайды, Обзоры Кофе и Стратегии E-commerce</title>
  <meta name="yandex-verification" content="6233c44c1fd26495" />
  <meta name="description" content="Независимый центр анализа кофейной индустрии. Экспертные обзоры кофе, профессиональные гайды по приготовлению.">
+ 
+ <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+ <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+ <link rel="icon" type="image/png" sizes="512x512" href="img/android-chrome-512x512.png">
+ <link rel="shortcut icon" href="img/favicon.ico">
+
  <script src="https://cdn.tailwindcss.com"></script>
  <script src="https://unpkg.com/lucide@latest"></script>
- <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/essem39/coffee-analysis/refs/heads/main/unnamed%20(6).webp">
+ 
  <style>
  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
  body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
  .mobile-menu-active { display: flex !important; }
- .product-card img { transition: transform 0.5s ease; }
- .product-card:hover img { transform: scale(1.05); }
  </style>
-<header class="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
-    <div class="container mx-auto px-4 h-24 md:h-40 flex items-center justify-between max-w-7xl">
-        
-        <a href="index.html" class="flex items-center min-w-[150px] md:min-w-[220px]">
+</head>
+<body class="bg-white text-slate-900">
+
+<header class="sticky top-0 z-50 bg-white/98 backdrop-blur-md border-b border-slate-100">
+    <div class="container mx-auto px-4 h-16 md:h-28 flex items-center justify-between max-w-7xl">
+        <a href="index.html" class="flex items-center">
             <img src="img/1601f59e45c93a87579f5c088fb77e81 (1).png" 
                  alt="Coffee Analysis" 
-                 class="h-14 md:h-32 w-auto object-contain transition-transform duration-300 hover:scale-110">
+                 class="h-10 md:h-22 w-auto object-contain">
         </a>
         
-        <nav class="hidden md:flex items-center space-x-10 lg:space-x-16">
-            <a href="index.html" class="text-[12px] font-bold text-slate-700 uppercase tracking-[0.2em] hover:text-orange-600 transition-colors">Главная</a>
-            <a href="specialty-micro-lots-2025.html" class="text-[12px] font-bold text-slate-700 uppercase tracking-[0.2em] hover:text-orange-600 transition-colors">Обзоры</a>
-            <a href="kak-hranit-kofe-guide.html" class="text-[12px] font-bold text-slate-700 uppercase tracking-[0.2em] hover:text-orange-600 transition-colors">Гайды</a>
-            <a href="links.html" class="text-[12px] font-bold text-slate-700 uppercase tracking-[0.2em] hover:text-orange-600 transition-colors">Ссылки</a>
+        <nav class="hidden md:flex items-center space-x-10">
+            <a href="index.html" class="text-[11px] font-bold text-slate-500 uppercase tracking-widest hover:text-orange-600 transition-colors">Главная</a>
+            <a href="specialty-micro-lots-2025.html" class="text-[11px] font-bold text-slate-500 uppercase tracking-widest hover:text-orange-600 transition-colors">Обзоры</a>
+            <a href="kak-hranit-kofe-guide.html" class="text-[11px] font-bold text-slate-500 uppercase tracking-widest hover:text-orange-600 transition-colors">Гайды</a>
+            <a href="links.html" class="text-[11px] font-bold text-slate-500 uppercase tracking-widest hover:text-orange-600 transition-colors">Ссылки</a>
         </nav>
 
-        <div class="flex items-center">
-            <button class="hidden sm:block border-2 border-slate-900 text-slate-900 px-8 py-3 rounded-md text-[11px] font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all">
+        <div class="flex items-center space-x-4">
+            <button class="hidden sm:block border border-slate-900 text-slate-900 px-5 py-2 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all">
                 Регистрация
             </button>
-            <button id="menu-btn" class="md:hidden text-slate-900 p-2">
-                <i data-lucide="menu" class="w-8 h-8"></i>
+            <button id="menu-btn" class="md:hidden text-slate-900 p-1">
+                <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
     </div>
 
-    <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full bg-white border-b border-slate-200 flex flex-col p-6 space-y-4 md:hidden shadow-xl">
-        <a href="index.html" class="text-[12px] font-bold text-slate-600 uppercase tracking-widest border-b pb-2">Главная</a>
-        <a href="specialty-micro-lots-2025.html" class="text-[12px] font-bold text-slate-600 uppercase tracking-widest border-b pb-2">Обзоры</a>
-        <a href="kak-hranit-kofe-guide.html" class="text-[12px] font-bold text-slate-600 uppercase tracking-widest border-b pb-2">Гайды</a>
-        <a href="links.html" class="text-[12px] font-bold text-slate-600 uppercase tracking-widest border-b pb-2">Ссылки</a>
-        <button class="w-full bg-orange-600 text-white py-4 rounded-lg text-[12px] font-bold uppercase tracking-widest">Регистрация</button>
+    <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white border-b border-slate-200 flex flex-col p-5 space-y-3 md:hidden shadow-xl">
+        <a href="index.html" class="text-[10px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-50 pb-2">Главная</a>
+        <a href="specialty-micro-lots-2025.html" class="text-[10px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-50 pb-2">Обзоры</a>
+        <a href="kak-hranit-kofe-guide.html" class="text-[10px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-50 pb-2">Гайды</a>
+        <a href="links.html" class="text-[10px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-50 pb-2">Ссылки</a>
+        <button class="w-full bg-orange-600 text-white py-3 rounded text-[10px] font-bold uppercase tracking-widest">Регистрация</button>
     </div>
 </header>
+
 
 <section class="py-12 md:py-20 bg-gradient-to-b from-slate-50 to-white">
  <div class="container mx-auto px-4 max-w-7xl flex flex-col md:flex-row items-center gap-12">
