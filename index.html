@@ -1,87 +1,150 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Analysis: Экспертные Гайды, Обзоры Кофе и Стратегии E-commerce</title>
-    <meta name="yandex-verification" content="6233c44c1fd26495" />
-    <meta name="description" content="Независимый центр анализа кофейной индустрии. Экспертные обзоры кофе, профессиональные гайды по приготовлению.">
+    <meta name="description" content="Независимый центр анализа кофейной индустрии. Экспертные обзоры specialty кофе, гайды по завариванию и стратегии монетизации кофейных проектов.">
     
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="img/android-chrome-512x512.png">
-    <link rel="shortcut icon" href="img/favicon.ico">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        .mobile-menu-active { display: flex !important; }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .animated-gradient {
+            background: linear-gradient(90deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7, #DFE6E9, #FF6B6B);
+            background-size: 200% 100%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        .mobile-menu-overlay {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .mobile-menu-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
     </style>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-gray-50">
 
-<header id="header" class="sticky top-0 z-50 bg-white/75 backdrop-blur-xl border-b border-slate-200 transition-all duration-300">
-    <div id="header-inner" class="container mx-auto px-4 h-20 md:h-28 flex items-center justify-between max-w-7xl transition-all duration-300">
-        <a href="index.html" class="flex items-center transition-all duration-300">
-            <img id="logo-img" src="img/1601f59e45c93a87579f5c088fb77e81 (1).png" alt="Coffee Analysis" class="h-14 md:h-24 w-auto object-contain transition-all duration-300">
-        </a>
-        <nav class="hidden md:flex items-center space-x-10">
-            <a href="index.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest hover:text-orange-600 transition-all">Главная</a>
-            <a href="specialty-micro-lots-2025.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest hover:text-orange-600 transition-all">Обзоры</a>
-            <a href="kak-hranit-kofe-guide.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest hover:text-orange-600 transition-all">Гайды</a>
-            <a href="links.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest hover:text-orange-600 transition-all">Ссылки</a>
-        </nav>
-        <div class="flex items-center space-x-4">
-            <button class="hidden sm:block border border-slate-900 text-slate-900 px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all">Регистрация</button>
-            <button id="menu-btn" class="md:hidden text-slate-900 p-1">
-                <i data-lucide="menu" class="w-7 h-7"></i>
-            </button>
+    <!-- Animated Gradient Bar -->
+    <div class="animated-gradient h-1"></div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="img/1601f59e45c93a87579f5c088fb77e81 (1).png" alt="Coffee Analysis" class="h-10 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Главная</a>
+                    <a href="specialty-micro-lots-2025.html" class="text-gray-700 hover:text-blue-600 transition-colors">Обзоры</a>
+                    <a href="kak-hranit-kofe-guide.html" class="text-gray-700 hover:text-blue-600 transition-colors">Гайды</a>
+                    <a href="tea-guide.html" class="text-gray-700 hover:text-blue-600 transition-colors">Чай</a>
+                    <a href="tasty-partners.html" class="text-gray-700 hover:text-blue-600 transition-colors">Партнёры</a>
+                </nav>
+
+                <!-- Auth Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://tasty.coffee/?r=elamainfo" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Вход</a>
+                    <a href="https://tasty.coffee/?r=elamainfo" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        Регистрация
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay fixed inset-0 bg-black bg-opacity-50 z-40" id="mobile-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu fixed top-0 left-0 w-80 h-full bg-white z-50 shadow-2xl" id="mobile-menu">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-8">
+                <span class="text-xl font-bold">Coffee Analysis</span>
+                <button id="close-menu" class="p-2">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <nav class="space-y-4">
+                <a href="index.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Главная</a>
+                <a href="specialty-micro-lots-2025.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Обзоры</a>
+                <a href="kak-hranit-kofe-guide.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Гайды</a>
+                <a href="tea-guide.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Чай</a>
+                <a href="tasty-partners.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Партнёры</a>
+            </nav>
+
+            <div class="mt-8 space-y-3">
+                <a href="https://tasty.coffee/?r=elamainfo" class="block w-full text-center px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                    Вход
+                </a>
+                <a href="https://tasty.coffee/?r=elamainfo" class="block w-full text-center px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    Регистрация
+                </a>
+            </div>
         </div>
     </div>
 
-    <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white/95 backdrop-blur-xl border-b border-slate-200 flex flex-col p-6 space-y-4 md:hidden shadow-xl">
-        <a href="index.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest">Главная</a>
-        <a href="specialty-micro-lots-2025.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest">Обзоры</a>
-        <a href="kak-hranit-kofe-guide.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest">Гайды</a>
-        <a href="links.html" class="text-[12px] font-semibold text-slate-600 uppercase tracking-widest">Ссылки</a>
-        <button class="w-full bg-orange-600 text-white py-3 rounded-full text-[11px] font-bold uppercase tracking-widest">Регистрация</button>
-    </div>
-</header>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Экспертные Гайды и Стратегии E-commerce
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Независимый центр анализа кофейной индустрии. Мы превращаем страсть к кофе в профессиональную экспертизу и помогаем разобраться в мире specialty кофе.
+                    </p>
+                    <div class="flex items-center space-x-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-600">15k+</div>
+                            <div class="text-sm text-gray-600">читателей</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600">Q-Grade</div>
+                            <div class="text-sm text-gray-600">стандарт</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="5umegappbb-round-corners (1).png" alt="Coffee Hero" class="rounded-2xl shadow-2xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-// мобильное меню
-document.getElementById("menu-btn").addEventListener("click", () => {
-    const menu = document.getElementById("mobile-menu");
-    menu.classList.toggle("hidden");
-});
-
-// эффект уменьшения шапки при прокрутке
-document.addEventListener("scroll", () => {
-    const header = document.getElementById("header");
-    const inner = document.getElementById("header-inner");
-    const logo = document.getElementById("logo-img");
-
-    if (window.scrollY > 20) {
-        header.classList.add("shadow-lg");
-        inner.classList.remove("h-20", "md:h-28");
-        inner.classList.add("h-14", "md:h-20");
-        logo.classList.remove("h-14", "md:h-24");
-        logo.classList.add("h-10", "md:h-16");
-    } else {
-        header.classList.remove("shadow-lg");
-        inner.classList.add("h-20", "md:h-28");
-        inner.classList.remove("h-14", "md:h-20");
-        logo.classList.add("h-14", "md:h-24");
-        logo.classList.remove("h-10", "md:h-16");
-    }
-});
-</script>
 
 <section class="py-12 md:py-20 bg-gradient-to-b from-slate-50 to-white">
     <div class="container mx-auto px-4 max-w-7xl flex flex-col md:flex-row items-center gap-12">
@@ -610,203 +673,76 @@ ratioInput.addEventListener('input', calculateCoffee);
 lucide.createIcons();
 </script>
 
-<footer class="bg-[#0f172a] text-white py-12 border-t border-slate-800">
-    <div class="container mx-auto px-4 max-w-7xl">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-            <div class="col-span-1 space-y-4">
-                <div class="flex items-center space-x-2">
-                    <span class="text-2xl"></span>
-                    <span class="text-lg font-bold uppercase tracking-tighter">Coffee <span class="text-orange-500">Analysis</span></span>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-semibold mb-4">Навигация</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Главная</a></li>
+                        <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Обзоры кофе</a></li>
+                        <li><a href="kak-hranit-kofe-guide.html" class="hover:text-white transition-colors">Гайды и рецепты</a></li>
+                    </ul>
                 </div>
-                <p class="text-slate-500 text-xs leading-relaxed uppercase font-bold tracking-widest">
-                    Независимый центр <br>анализа индустрии
-                </p>
-            </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">База знаний</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="espresso-masterclass.html" class="hover:text-white transition-colors">Мастер-класс</a></li>
+                        <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Декаф навигатор</a></li>
+                        <li><a href="tea-guide.html" class="hover:text-white transition-colors">Гид по чаю</a></li>
+                    </ul>
+                </div>
 
-            <div class="col-span-1">
-                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500 mb-6">Навигация</h4>
-                <ul class="space-y-3 text-sm font-bold text-slate-300">
-                    <li><a href="index.html" class="hover:text-white transition-colors">Главная</a></li>
-                    <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Обзоры кофе</a></li>
-                    <li><a href="kak-hranit-kofe-guide.html" class="hover:text-white transition-colors">Гайды и рецепты</a></li>
-                </ul>
-            </div>
-
-            <div class="col-span-1">
-                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500 mb-6">База знаний</h4>
-                <ul class="space-y-3 text-sm font-bold text-slate-300">
-                    <li><a href="espresso-masterclass.html" class="hover:text-white transition-colors">Мастер-класс</a></li>
-                    <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Декаф навигатор</a></li>
-                    <li><a href="links.html" class="hover:text-white transition-colors">Полезные ссылки</a></li>
-                </ul>
-            </div>
-
-            <div class="col-span-1">
-                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500 mb-6">Сотрудничество</h4>
-                <a href="mailto:info@coffeeanalysis.ru" class="text-white hover:text-orange-500 font-black text-sm transition-colors border-b border-orange-500/30 pb-1">
-                    info@coffeeanalysis.ru
-                </a>
-                <div class="flex space-x-4 mt-6">
-                    <a href="#" class="text-slate-500 hover:text-white"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-                    <a href="#" class="text-slate-500 hover:text-white"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+                <div>
+                    <h4 class="font-semibold mb-4">Партнёры</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="tasty-partners.html" class="hover:text-white transition-colors">Программа</a></li>
+                        <li><a href="premium-collection.html" class="hover:text-white transition-colors">Коллекция</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Сотрудничество</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="mailto:info@coffeeanalysis.ru" class="hover:text-white transition-colors">info@coffeeanalysis.ru</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Политика</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition-colors">Условия</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-
-        <div class="mt-16 pt-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-[10px] font-bold text-slate-600 uppercase tracking-widest">
-                2025 COFFEE ANALYSIS. ALL RIGHTS RESERVED.
-            </p>
-            <div class="flex space-x-6 text-[10px] font-bold text-slate-600 uppercase tracking-widest">
-                <a href="#" class="hover:text-slate-400">Privacy</a>
-                <a href="#" class="hover:text-slate-400">Terms</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<script>
-    lucide.createIcons();
-    
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    
-    btn.addEventListener('click', () => {
-        menu.classList.toggle('mobile-menu-active');
-    });
-
-    // Закрытие мобильного меню при клике на ссылку
-    const mobileLinks = menu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('mobile-menu-active');
-        });
-    });
-
-    // Плавная прокрутка для якорных ссылок
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-    // Анимация появления элементов при скролле
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Применяем анимацию к карточкам статей
-    document.querySelectorAll('article, .product-card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-
-    // Обработка формы подписки
-    const subscribeForm = document.querySelector('form');
-    if (subscribeForm) {
-        subscribeForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = subscribeForm.querySelector('input[type="email"]').value;
             
-            if (email) {
-                // Здесь можно добавить отправку данных на сервер
-                alert('Спасибо за подписку! Проверьте вашу почту.');
-                subscribeForm.reset();
-            }
-        });
-    }
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>© 2025 COFFEE ANALYSIS. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
 
-    // Добавление эффекта параллакса для hero секции
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const parallax = document.querySelector('section:first-of-type img');
+    <script>
+        lucide.createIcons();
         
-        if (parallax) {
-            parallax.style.transform = `translateY(${scrolled * 0.3}px)`;
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const closeMenu = document.getElementById('close-menu');
+        
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            mobileOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
         }
-    });
-
-    // Счетчик для статистики
-    function animateCounter(element, target, duration = 2000) {
-        let start = 0;
-        const increment = target / (duration / 16);
         
-        const timer = setInterval(() => {
-            start += increment;
-            if (start >= target) {
-                element.textContent = target.toLocaleString() + '+';
-                clearInterval(timer);
-            } else {
-                element.textContent = Math.floor(start).toLocaleString();
-            }
-        }, 16);
-    }
-
-    // Запуск счетчиков при появлении в viewport
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-                const target = parseInt(entry.target.textContent.replace(/\D/g, ''));
-                animateCounter(entry.target, target);
-                entry.target.classList.add('counted');
-            }
-        });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll('.text-3xl.font-black.text-orange-500').forEach(el => {
-        statsObserver.observe(el);
-    });
-
-    // Добавление индикатора загрузки
-    window.addEventListener('load', () => {
-        document.body.style.opacity = '0';
-        setTimeout(() => {
-            document.body.style.transition = 'opacity 0.5s ease';
-            document.body.style.opacity = '1';
-        }, 100);
-    });
-
-    // Lazy loading для изображений
-    if ('loading' in HTMLImageElement.prototype) {
-        const images = document.querySelectorAll('img');
-        images.forEach(img => {
-            img.loading = 'lazy';
-        });
-    }
-
-    // Обработка кликов по карточкам продуктов
-    document.querySelectorAll('.product-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px)';
-        });
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            mobileOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
         
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
-
-    console.log('%c Coffee Analysis', 'font-size: 20px; font-weight: bold; color: #f97316;');
-    console.log('%cДобро пожаловать в мир профессионального кофе!', 'font-size: 14px; color: #64748b;');
-</script>
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        closeMenu.addEventListener('click', closeMobileMenu);
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+    </script>
 </body>
 </html>
-
