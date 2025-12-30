@@ -157,7 +157,7 @@
 </head>
 <body class="bg-white text-slate-900">
  <!-- Header -->
- <header class="border-b bg-white/95 backdrop-blur sticky top-0 z-50">
+<header class="border-b bg-white/95 backdrop-blur sticky top-0 z-50">
  <div class="container mx-auto px-4 py-4 flex items-center justify-between max-w-7xl">
  <a href="index.html" class="flex items-center space-x-2">
  <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
@@ -166,38 +166,44 @@
  <span class="text-xl font-bold text-gray-900">Coffee <span class="text-orange-500">Analysis</span></span>
  </a>
  
- <!-- Desktop Navigation -->
  <nav class="hidden md:flex items-center space-x-8">
  <a href="index.html" class="text-gray-600 hover:text-orange-600 transition-colors">Главная</a>
- <a href="specialty-micro-lots-2025.html" class="text-gray-600 hover:text-orange-600 transition-colors">Обзоры</a>
+ <a href="specialty-micro-lots-2025.html" class="text-gray-600 hover:text-orange-600 transition-colors">Рейтинги</a>
+ <a href="premium-collection.html" class="text-orange-600 font-bold border-b-2 border-orange-500">Коллекция</a>
  
  <div class="relative group cursor-pointer py-2">
- <span class="flex items-center text-orange-600 font-bold border-b-2 border-orange-500 uppercase text-[11px] tracking-widest">Гайды <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></span>
+ <span class="flex items-center text-gray-600 hover:text-orange-600 transition-colors">
+ Гайды 
+ <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+ </span>
  <div class="hidden group-hover:block absolute top-full left-0 w-52 bg-white shadow-xl border border-gray-100 rounded-xl p-4 space-y-3">
- <a href="dekaf-guide.html" class="block text-sm hover:text-orange-600">Декаф навигатор</a>
- <a href="espresso-masterclass.html" class="block text-sm hover:text-orange-600 font-medium">Мастер-класс эспрессо</a>
- <a href="kak-hranit-kofe-guide.html" class="block text-sm hover:text-orange-600">Хранение кофе</a>
- <hr class="border-gray-50">
- <a href="budget-barista-equipment-150.html" class="block text-[10px] uppercase tracking-tighter text-gray-400 hover:text-orange-600">Оборудование</a>
- <a href="links.html" class="block text-[10px] uppercase tracking-tighter text-gray-400 hover:text-orange-600">Полезные ссылки</a>
+ <a href="dekaf-guide.html" class="block text-sm hover:text-orange-600 transition-colors">Декаф навигатор</a>
+ <a href="espresso-masterclass.html" class="block text-sm hover:text-orange-600 transition-colors">Мастер-класс эспрессо</a>
+ <a href="kak-hranit-kofe-guide.html" class="block text-sm hover:text-orange-600 transition-colors">Хранение кофе</a>
+ <a href="tea-guide.html" class="block text-sm hover:text-orange-600 transition-colors">Гид по чаю</a>
  </div>
  </div>
  </nav>
 
- <!-- Mobile Menu Button -->
+ <!-- Desktop Auth Buttons -->
+ <div class="hidden md:flex items-center space-x-4">
+ <a href="login.html" class="text-gray-600 hover:text-orange-600 transition-colors font-medium">Вход</a>
+ <a href="registration.html" class="bg-gradient-to-r from-orange-600 to-orange-500 text-white px-6 py-2 rounded-lg hover:from-orange-700 hover:to-orange-600 transition-all shadow-md hover:shadow-lg font-medium">
+ Регистрация
+ </a>
+ </div>
+
  <button class="md:hidden hamburger" id="menu-btn">
  <span class="hamburger-top"></span>
  <span class="hamburger-middle"></span>
  <span class="hamburger-bottom"></span>
  </button>
  </div>
- </header>
+</header>
 
- <!-- Mobile Menu Overlay -->
- <div class="mobile-menu-overlay fixed inset-0 bg-black bg-opacity-50 z-40" id="menu-overlay"></div>
+<div class="mobile-menu-overlay fixed inset-0 bg-black bg-opacity-50 z-40" id="menu-overlay"></div>
 
- <!-- Mobile Menu -->
- <div class="mobile-menu fixed top-0 left-0 w-80 h-full bg-white z-50 shadow-2xl" id="mobile-menu">
+<div class="mobile-menu fixed top-0 left-0 w-80 h-full bg-white z-50 shadow-2xl" id="mobile-menu">
  <div class="p-6">
  <div class="flex items-center justify-between mb-8">
  <div class="flex items-center space-x-2">
@@ -211,7 +217,7 @@
  </button>
  </div>
  
- <nav class="space-y-6">
+ <nav class="space-y-4">
  <a href="index.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
  <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
  <i data-lucide="home" class="w-5 h-5"></i>
@@ -221,37 +227,49 @@
  <a href="specialty-micro-lots-2025.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
  <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
  <i data-lucide="star" class="w-5 h-5"></i>
- <span>Обзоры</span>
+ <span>Рейтинги</span>
+ </div>
+ </a>
+ <a href="premium-collection.html" class="block text-lg text-orange-600 font-medium mobile-menu-link">
+ <div class="flex items-center space-x-3 p-3 rounded-lg bg-orange-50">
+ <i data-lucide="package" class="w-5 h-5"></i>
+ <span>Коллекция</span>
  </div>
  </a>
  <a href="dekaf-guide.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
  <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
  <i data-lucide="book-open" class="w-5 h-5"></i>
- <span>Декаф гайд</span>
+ <span>Гайды</span>
  </div>
  </a>
- <a href="espresso-masterclass.html" class="block text-lg text-orange-600 font-medium mobile-menu-link">
- <div class="flex items-center space-x-3 p-3 rounded-lg bg-orange-50">
- <i data-lucide="flask-conical" class="w-5 h-5"></i>
- <span>Методы заваривания</span>
- </div>
- </a>
- <a href="budget-barista-equipment-150.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
+ <a href="tea-guide.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
  <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
- <i data-lucide="package" class="w-5 h-5"></i>
- <span>Оборудование</span>
+ <i data-lucide="cup-soda" class="w-5 h-5"></i>
+ <span>Чай</span>
  </div>
  </a>
- <a href="links.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
+ 
+ <!-- Разделитель -->
+ <div class="border-t border-gray-200 my-4"></div>
+ 
+ <!-- Кнопка Вход -->
+ <a href="login.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
  <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
- <i data-lucide="link" class="w-5 h-5"></i>
- <span>Ссылки</span>
+ <i data-lucide="log-in" class="w-5 h-5"></i>
+ <span>Вход</span>
+ </div>
+ </a>
+ 
+ <!-- Кнопка Регистрация (выделенная) -->
+ <a href="registration.html" class="block mobile-menu-link">
+ <div class="flex items-center justify-center space-x-2 p-3 rounded-lg bg-gradient-to-r from-orange-600 to-orange-500 text-white font-bold shadow-md hover:shadow-lg transition-all">
+ <i data-lucide="user-plus" class="w-5 h-5"></i>
+ <span>Регистрация</span>
  </div>
  </a>
  </nav>
  </div>
- </div>
-
+</div>
  <!-- Hero Section -->
  <section class="hero-bg py-16 md:py-24">
  <div class="container mx-auto px-4 max-w-7xl">
@@ -1389,60 +1407,50 @@
  </div>
  </section>
 
-<footer class="bg-[#0f172a] text-white py-12 border-t border-slate-800">
-    <div class="container mx-auto px-4 max-w-7xl">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+ <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-semibold mb-4">Навигация</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Главная</a></li>
+                        <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Обзоры кофе</a></li>
+                        <li><a href="kak-hranit-kofe-guide.html" class="hover:text-white transition-colors">Гайды и рецепты</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">База знаний</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="espresso-masterclass.html" class="hover:text-white transition-colors">Мастер-класс</a></li>
+                        <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Декаф навигатор</a></li>
+                        <li><a href="tea-guide.html" class="hover:text-white transition-colors">Гид по чаю</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Партнёры</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="tasty-partners.html" class="hover:text-white transition-colors">Программа</a></li>
+                        <li><a href="premium-collection.html" class="hover:text-white transition-colors">Коллекция</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Сотрудничество</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="mailto:info@coffeeanalysis.ru" class="hover:text-white transition-colors">info@coffeeanalysis.ru</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Политика</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition-colors">Условия</a></li>
+                    </ul>
+                </div>
+            </div>
             
-            <div class="col-span-1 space-y-4">
-                <div class="flex items-center space-x-2">
-                    <span class="text-2xl">☕</span>
-                    <span class="text-lg font-bold uppercase tracking-tighter">Specialty <span class="text-orange-500">Coffee</span></span>
-                </div>
-                <p class="text-slate-500 text-xs leading-relaxed uppercase font-bold tracking-widest">
-                    Независимый центр <br>анализа индустрии
-                </p>
-            </div>
-
-            <div class="col-span-1">
-                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500 mb-6">Навигация</h4>
-                <ul class="space-y-3 text-sm font-bold text-slate-300">
-                    <li><a href="index.html" class="hover:text-white transition-colors">Главная</a></li>
-                    <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Обзоры кофе</a></li>
-                    <li><a href="kak-hranit-kofe-guide.html" class="hover:text-white transition-colors">Гайды и рецепты</a></li>
-                </ul>
-            </div>
-
-            <div class="col-span-1">
-                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500 mb-6">База знаний</h4>
-                <ul class="space-y-3 text-sm font-bold text-slate-300">
-                    <li><a href="espresso-masterclass.html" class="hover:text-white transition-colors">Мастер-класс</a></li>
-                    <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Декаф навигатор</a></li>
-                    <li><a href="links.html" class="hover:text-white transition-colors">Полезные ссылки</a></li>
-                </ul>
-            </div>
-
-            <div class="col-span-1">
-                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500 mb-6">Сотрудничество</h4>
-                <a href="mailto:info@coffeespecialty.ru" class="text-white hover:text-orange-500 font-black text-sm transition-colors border-b border-orange-500/30 pb-1">
-                    info@coffeespecialty.ru
-                </a>
-                <div class="flex space-x-4 mt-6">
-                    <a href="#" class="text-slate-500 hover:text-white"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-                    <a href="#" class="text-slate-500 hover:text-white"><i data-lucide="youtube" class="w-4 h-4"></i></a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="mt-16 pt-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold text-slate-600 uppercase tracking-widest">
-            <p>© 2025 COFFEESPECIALTY.RU. ALL RIGHTS RESERVED.</p>
-            <div class="flex space-x-6">
-                <a href="#" class="hover:text-slate-400">Privacy</a>
-                <a href="#" class="hover:text-slate-400">Terms</a>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>© 2025 COFFEE ANALYSIS. ALL RIGHTS RESERVED.</p>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
  <script>
  // Initialize Lucide icons
