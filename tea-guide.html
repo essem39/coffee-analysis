@@ -3,13 +3,15 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Премиальный чай: Гид по выбору элитных сортов в 2025 году | Tasty Coffee</title>
- <meta name="description" content="Экспертное руководство по премиальному чаю от Tasty Coffee: как выбрать качественный чай, лучшие сорта 2025 года, методы обработки и польза для здоровья.">
+ <title>Премиальный чай 2025: Полный гид по выбору элитных сортов | Tasty Coffee</title>
+ <meta name="description" content="Экспертный гид по премиальному чаю 2025 от Tasty Coffee. Тренды года: матча, функциональные чаи, адаптогены. Как выбрать качественный чай, лучшие сорта и методы заваривания.">
+ <meta name="keywords" content="премиальный чай, элитный чай, матча, функциональный чай, адаптогены, чай 2025, Tasty Coffee, зелёный чай, улун, белый чай">
  
  <!-- Open Graph -->
- <meta property="og:title" content="Премиальный чай: Гид по выбору элитных сортов в 2025 году">
- <meta property="og:description" content="Экспертное руководство по премиальному чаю: как выбрать качественный чай, лучшие сорта 2025 года, методы обработки и польза для здоровья.">
+ <meta property="og:title" content="Премиальный чай 2025: Гид по выбору элитных сортов">
+ <meta property="og:description" content="Откройте мир премиального чая с Tasty Coffee. Тренды 2025, экспертные советы и лучшие сорта.">
  <meta property="og:type" content="article">
+ <meta property="og:image" content="https://i.postimg.cc/Yq9DvMqG/i9j1wo98em.png">
  
  <!-- Tailwind CSS -->
  <script src="https://cdn.tailwindcss.com"></script>
@@ -18,10 +20,14 @@
  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
  
  <style>
- @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap');
  
  body {
  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ }
+ 
+ .font-display {
+ font-family: 'Playfair Display', serif;
  }
  
  .gradient-text {
@@ -33,6 +39,24 @@
  
  .hero-bg {
  background: linear-gradient(135deg, #fff7ed 0%, #ffffff 50%, #ffedd5 100%);
+ position: relative;
+ overflow: hidden;
+ }
+ 
+ .hero-bg::before {
+ content: '';
+ position: absolute;
+ top: -50%;
+ right: -50%;
+ width: 100%;
+ height: 100%;
+ background: radial-gradient(circle, rgba(251, 146, 60, 0.1) 0%, transparent 70%);
+ animation: pulse 8s ease-in-out infinite;
+ }
+ 
+ @keyframes pulse {
+ 0%, 100% { transform: scale(1); opacity: 0.5; }
+ 50% { transform: scale(1.1); opacity: 0.8; }
  }
  
  .cta-bg {
@@ -40,22 +64,43 @@
  }
  
  .card-hover {
- transition: all 0.3s ease;
+ transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
  }
  
  .card-hover:hover {
- transform: translateY(-4px);
- box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+ transform: translateY(-8px);
+ box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
  }
  
  .btn-primary {
  background: linear-gradient(135deg, #ea580c, #f97316);
  transition: all 0.3s ease;
+ position: relative;
+ overflow: hidden;
+ }
+ 
+ .btn-primary::before {
+ content: '';
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ width: 0;
+ height: 0;
+ border-radius: 50%;
+ background: rgba(255, 255, 255, 0.3);
+ transform: translate(-50%, -50%);
+ transition: width 0.6s, height 0.6s;
+ }
+ 
+ .btn-primary:hover::before {
+ width: 300px;
+ height: 300px;
  }
  
  .btn-primary:hover {
  background: linear-gradient(135deg, #c2410c, #ea580c);
- transform: translateY(-1px);
+ transform: translateY(-2px);
+ box-shadow: 0 10px 25px -5px rgba(234, 88, 12, 0.5);
  }
 
  /* Mobile Menu Styles */
@@ -128,7 +173,7 @@
  .comparison-table th,
  .comparison-table td {
  border: 1px solid #e5e7eb;
- padding: 12px;
+ padding: 16px;
  text-align: left;
  }
 
@@ -140,45 +185,82 @@
  .method-good {
  background-color: #f0fdf4;
  color: #166534;
+ font-weight: 500;
  }
 
  .method-bad {
  background-color: #fef2f2;
  color: #dc2626;
+ font-weight: 500;
  }
 
  .method-neutral {
  background-color: #fffbeb;
  color: #92400e;
+ font-weight: 500;
+ }
+ 
+ /* Scroll Animations */
+ .fade-in {
+ opacity: 0;
+ transform: translateY(30px);
+ transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+ }
+ 
+ .fade-in.visible {
+ opacity: 1;
+ transform: translateY(0);
+ }
+ 
+ /* Trend Badge */
+ .trend-badge {
+ background: linear-gradient(135deg, #fef3c7, #fde68a);
+ border: 2px solid #f59e0b;
+ animation: glow 2s ease-in-out infinite;
+ }
+ 
+ @keyframes glow {
+ 0%, 100% { box-shadow: 0 0 5px rgba(245, 158, 11, 0.5); }
+ 50% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.8); }
+ }
+ 
+ /* Matcha Animation */
+ @keyframes float {
+ 0%, 100% { transform: translateY(0px); }
+ 50% { transform: translateY(-20px); }
+ }
+ 
+ .float-animation {
+ animation: float 3s ease-in-out infinite;
  }
  </style>
 </head>
 <body class="bg-white">
  <!-- Header -->
- <header class="border-b bg-white/95 backdrop-blur sticky top-0 z-50">
+ <header class="border-b bg-white/95 backdrop-blur sticky top-0 z-50 shadow-sm">
  <div class="container mx-auto px-4 py-4 flex items-center justify-between max-w-7xl">
- <a href="index.html" class="flex items-center space-x-2">
- <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
+ <a href="index.html" class="flex items-center space-x-2 transform hover:scale-105 transition-transform">
+ <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center shadow-md">
  <i data-lucide="cup-soda" class="w-5 h-5 text-white"></i>
  </div>
  <span class="text-xl font-bold text-gray-900">Coffee <span class="text-orange-500">Specialty</span></span>
  </a>
  
  <nav class="hidden md:flex items-center space-x-8">
- <a href="index.html" class="text-gray-600 hover:text-orange-600 transition-colors">Главная</a>
- <a href="specialty-micro-lots-2025.html" class="text-gray-600 hover:text-orange-600 transition-colors">Рейтинги</a>
- <a href="premium-collection.html" class="text-gray-600 hover:text-orange-600 transition-colors">Коллекция</a>
+ <a href="index.html" class="text-gray-600 hover:text-orange-600 transition-colors font-medium">Главная</a>
+ <a href="specialty-micro-lots-2025.html" class="text-gray-600 hover:text-orange-600 transition-colors font-medium">Рейтинги</a>
+ <a href="premium-collection.html" class="text-gray-600 hover:text-orange-600 transition-colors font-medium">Коллекция</a>
  
  <div class="relative group cursor-pointer py-2">
  <span class="flex items-center text-orange-600 font-bold border-b-2 border-orange-500">
  Гайды 
  <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
  </span>
- <div class="hidden group-hover:block absolute top-full left-0 w-52 bg-white shadow-xl border border-gray-100 rounded-xl p-4 space-y-3">
- <a href="dekaf-guide.html" class="block text-sm hover:text-orange-600 transition-colors">Декаф навигатор</a>
- <a href="espresso-masterclass.html" class="block text-sm hover:text-orange-600 transition-colors">Мастер-класс эспрессо</a>
- <a href="kak-hranit-kofe-guide.html" class="block text-sm hover:text-orange-600 transition-colors">Хранение кофе</a>
- <a href="tea-guide.html" class="block text-sm text-orange-600 font-medium">Гид по чаю</a>
+ <div class="hidden group-hover:block absolute top-full left-0 w-52 bg-white shadow-xl border border-gray-100 rounded-xl p-4 space-y-3 mt-2">
+ <a href="dekaf-guide.html" class="block text-sm hover:text-orange-600 transition-colors py-2">Декаф навигатор</a>
+ <a href="espresso-masterclass.html" class="block text-sm hover:text-orange-600 transition-colors py-2">Мастер-класс эспрессо</a>
+ <a href="kak-hranit-kofe-guide.html" class="block text-sm hover:text-orange-600 transition-colors py-2">Хранение кофе</a>
+ <a href="tea-guide.html" class="block text-sm text-orange-600 font-semibold py-2">Гид по чаю ⭐</a>
  </div>
  </div>
  </nav>
@@ -186,7 +268,7 @@
  <!-- Desktop Auth Buttons -->
  <div class="hidden md:flex items-center space-x-4">
  <a href="login.html" class="text-gray-600 hover:text-orange-600 transition-colors font-medium">Вход</a>
- <a href="registration.html" class="bg-gradient-to-r from-orange-600 to-orange-500 text-white px-6 py-2 rounded-lg hover:from-orange-700 hover:to-orange-600 transition-all shadow-md hover:shadow-lg font-medium">
+ <a href="registration.html" class="bg-gradient-to-r from-orange-600 to-orange-500 text-white px-6 py-2.5 rounded-lg hover:from-orange-700 hover:to-orange-600 transition-all shadow-md hover:shadow-lg font-medium">
  Регистрация
  </a>
  </div>
@@ -243,14 +325,12 @@
  <a href="tea-guide.html" class="block text-lg text-orange-600 font-medium mobile-menu-link">
  <div class="flex items-center space-x-3 p-3 rounded-lg bg-orange-50">
  <i data-lucide="cup-soda" class="w-5 h-5"></i>
- <span>Чай</span>
+ <span>Чай ⭐</span>
  </div>
  </a>
  
- <!-- Разделитель -->
  <div class="border-t border-gray-200 my-4"></div>
  
- <!-- Кнопка Вход -->
  <a href="login.html" class="block text-lg text-gray-700 hover:text-orange-600 transition-colors mobile-menu-link">
  <div class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50">
  <i data-lucide="log-in" class="w-5 h-5"></i>
@@ -258,7 +338,6 @@
  </div>
  </a>
  
- <!-- Кнопка Регистрация (выделенная) -->
  <a href="registration.html" class="block mobile-menu-link">
  <div class="flex items-center justify-center space-x-2 p-3 rounded-lg bg-gradient-to-r from-orange-600 to-orange-500 text-white font-bold shadow-md hover:shadow-lg transition-all">
  <i data-lucide="user-plus" class="w-5 h-5"></i>
@@ -270,36 +349,37 @@
 </div> 
 
  <!-- Hero Section -->
- <section class="hero-bg py-16 md:py-24">
- <div class="container mx-auto px-4 max-w-7xl">
+ <section class="hero-bg py-16 md:py-24 relative">
+ <div class="container mx-auto px-4 max-w-7xl relative z-10">
  <div class="grid lg:grid-cols-2 gap-12 items-center">
- <div>
- <div class="inline-flex items-center space-x-2 bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+ <div class="fade-in">
+ <div class="inline-flex items-center space-x-2 bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-bold mb-6 trend-badge">
  <i data-lucide="trending-up" class="w-4 h-4"></i>
- <span>Экспертный гайд 2025</span>
+ <span>🔥 ТРЕНДЫ ЧАЯ 2025</span>
  </div>
- <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
- <span class="gradient-text">Премиальный чай</span>: Искусство выбора
+ <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+ <span class="gradient-text">Премиальный чай 2025</span>: Гид по трендам года
  </h1>
  <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
- Полное руководство по выбору качественного чая от экспертов Tasty Coffee. Узнайте, как отличить премиальные сорта от обычных и раскрыть весь потенциал чайного листа.
+ Откройте мир элитного чая от экспертов <strong>Tasty Coffee</strong>. Матча, адаптогены, функциональные блены — все, что нужно знать о чае в 2025 году.
  </p>
  <div class="flex flex-col sm:flex-row gap-4">
- <a href="tasty-partners.html" class="btn-primary text-white text-lg px-8 py-4 rounded-lg flex items-center justify-center">
- Каталог чая Tasty
+ <a href="tasty-partners.html" class="btn-primary text-white text-lg px-8 py-4 rounded-lg flex items-center justify-center font-bold shadow-lg">
+ Каталог Tasty Coffee
  <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
  </a>
- <a href="premium-collection.html" class="border border-gray-300 text-gray-700 text-lg px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors text-center">
- Премиум коллекция
+ <a href="#trends-2025" class="border-2 border-orange-500 text-orange-600 text-lg px-8 py-4 rounded-lg hover:bg-orange-50 transition-colors text-center font-bold">
+ Тренды 2025
  </a>
  </div>
  </div>
- <div class="relative">
- <div class="w-full h-96 bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl shadow-2xl overflow-hidden">
+ <div class="relative fade-in">
+ <div class="w-full h-96 bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl shadow-2xl overflow-hidden float-animation">
  <img 
  src="https://i.postimg.cc/Yq9DvMqG/i9j1wo98em.png" 
- alt="Премиальные чайные листья" 
+ alt="Премиальный чай 2025" 
  class="w-full h-full object-cover"
+ loading="eager"
  />
  </div>
  </div>
@@ -307,56 +387,166 @@
  </div>
  </section>
 
- <!-- Why It Matters Section -->
- <section class="py-16 bg-white">
+ <!-- Tea Trends 2025 Section -->
+ <section id="trends-2025" class="py-20 bg-gradient-to-b from-white to-gray-50">
  <div class="container mx-auto px-4 max-w-7xl">
- <div class="text-center mb-16">
- <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ <div class="text-center mb-16 fade-in">
+ <div class="inline-flex items-center space-x-2 bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-bold mb-4">
+ <i data-lucide="sparkles" class="w-4 h-4"></i>
+ <span>ТОП ТРЕНДЫ ГОДА</span>
+ </div>
+ <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">
+ Чайные <span class="gradient-text">тренды 2025</span>
+ </h2>
+ <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+ Что пьет мир в 2025? От матчи до адаптогенных блендов — разбираем главные тренды года
+ </p>
+ </div>
+
+ <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+ <!-- Trend 1: Matcha -->
+ <div class="card-hover p-8 rounded-2xl bg-white shadow-lg fade-in">
+ <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+ <i data-lucide="leaf" class="w-8 h-8 text-green-600"></i>
+ </div>
+ <h3 class="text-2xl font-bold mb-4 text-center">🍵 Матча — звезда 2025</h3>
+ <p class="text-gray-600 text-center mb-4">
+ Матча остается лидером! В 5 раз больше антиоксидантов, чем в обычном зелёном чае. Повышает метаболизм на 30% без нервозности благодаря L-теанину.
+ </p>
+ <div class="flex items-center justify-center space-x-2 text-green-600 font-semibold">
+ <i data-lucide="trending-up" class="w-5 h-5"></i>
+ <span>+11.2% рост рынка</span>
+ </div>
+ </div>
+
+ <!-- Trend 2: Functional Teas -->
+ <div class="card-hover p-8 rounded-2xl bg-white shadow-lg fade-in">
+ <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+ <i data-lucide="sparkles" class="w-8 h-8 text-purple-600"></i>
+ </div>
+ <h3 class="text-2xl font-bold mb-4 text-center">⚡ Функциональные чаи</h3>
+ <p class="text-gray-600 text-center mb-4">
+ Чаи с адаптогенами (ашваганда, рейши), пробиотиками и ноотропами для управления стрессом, улучшения пищеварения и ясности ума.
+ </p>
+ <div class="flex items-center justify-center space-x-2 text-purple-600 font-semibold">
+ <i data-lucide="zap" class="w-5 h-5"></i>
+ <span>Wellness-ориентация</span>
+ </div>
+ </div>
+
+ <!-- Trend 3: Sustainability -->
+ <div class="card-hover p-8 rounded-2xl bg-white shadow-lg fade-in">
+ <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+ <i data-lucide="recycle" class="w-8 h-8 text-emerald-600"></i>
+ </div>
+ <h3 class="text-2xl font-bold mb-4 text-center">🌍 Устойчивость</h3>
+ <p class="text-gray-600 text-center mb-4">
+ Эко-упаковка, биоразлагаемые пакетики, регенеративное сельское хозяйство. 37% покупок учитывают экологичность продукта.
+ </p>
+ <div class="flex items-center justify-center space-x-2 text-emerald-600 font-semibold">
+ <i data-lucide="globe" class="w-5 h-5"></i>
+ <span>Эко-сознательность</span>
+ </div>
+ </div>
+
+ <!-- Trend 4: Tropical Flavors -->
+ <div class="card-hover p-8 rounded-2xl bg-white shadow-lg fade-in">
+ <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+ <i data-lucide="sun" class="w-8 h-8 text-yellow-600"></i>
+ </div>
+ <h3 class="text-2xl font-bold mb-4 text-center">🥭 Тропические вкусы</h3>
+ <p class="text-gray-600 text-center mb-4">
+ Манго, гуава, маракуйя — яркие Instagram-friendly вкусы захватывают рынок. 94% Gen Z пробовали боба-чай за последние 3 месяца!
+ </p>
+ <div class="flex items-center justify-center space-x-2 text-yellow-600 font-semibold">
+ <i data-lucide="instagram" class="w-5 h-5"></i>
+ <span>Gen Z феномен</span>
+ </div>
+ </div>
+
+ <!-- Trend 5: Tea Mocktails -->
+ <div class="card-hover p-8 rounded-2xl bg-white shadow-lg fade-in">
+ <div class="w-16 h-16 bg-pink-100 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+ <i data-lucide="glass-water" class="w-8 h-8 text-pink-600"></i>
+ </div>
+ <h3 class="text-2xl font-bold mb-4 text-center">🍸 Чайные мокктейлы</h3>
+ <p class="text-gray-600 text-center mb-4">
+ Матча-мохито, Earl Grey с джином, гибискус-спритцер. Премиальные бары используют чай для изысканных безалкогольных коктейлей.
+ </p>
+ <div class="flex items-center justify-center space-x-2 text-pink-600 font-semibold">
+ <i data-lucide="martini" class="w-5 h-5"></i>
+ <span>Sober-curious тренд</span>
+ </div>
+ </div>
+
+ <!-- Trend 6: Premium Single-Origin -->
+ <div class="card-hover p-8 rounded-2xl bg-white shadow-lg fade-in">
+ <div class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+ <i data-lucide="award" class="w-8 h-8 text-amber-600"></i>
+ </div>
+ <h3 class="text-2xl font-bold mb-4 text-center">💎 Премиализация</h3>
+ <p class="text-gray-600 text-center mb-4">
+ Single-origin чаи: Дарджилинг First Flush, Гёкуро, Halmari. Как вино или specialty кофе — терруар и уникальность вкуса.
+ </p>
+ <div class="flex items-center justify-center space-x-2 text-amber-600 font-semibold">
+ <i data-lucide="crown" class="w-5 h-5"></i>
+ <span>+15% премиум сегмент</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Why It Matters Section -->
+ <section class="py-20 bg-white">
+ <div class="container mx-auto px-4 max-w-7xl">
+ <div class="text-center mb-16 fade-in">
+ <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">
  Почему премиальный чай — это <span class="gradient-text">важно</span>
  </h2>
  <p class="text-xl text-gray-600 max-w-3xl mx-auto">
- Качественный чай — это не просто напиток, а целая культура и забота о здоровье
+ Качественный чай — это не просто напиток, а инвестиция в здоровье и wellness
  </p>
  </div>
 
  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
- <div class="text-center card-hover p-6 rounded-xl bg-gray-50">
- <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
- <i data-lucide="heart" class="w-8 h-8 text-blue-600"></i>
+ <div class="text-center card-hover p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 shadow-lg fade-in">
+ <div class="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-xl">
+ <i data-lucide="heart" class="w-10 h-10 text-white"></i>
  </div>
  <h3 class="text-xl font-bold mb-3">Здоровье сердца</h3>
- <p class="text-gray-600">
- Качественный чай богат антиоксидантами, которые поддерживают здоровье сердечно-сосудистой системы.
+ <p class="text-gray-700 font-medium">
+ Антиоксиданты поддерживают сердечно-сосудистую систему и снижают риск заболеваний.
  </p>
  </div>
 
- <div class="text-center card-hover p-6 rounded-xl bg-gray-50">
- <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
- <i data-lucide="brain" class="w-8 h-8 text-green-600"></i>
+ <div class="text-center card-hover p-8 rounded-2xl bg-gradient-to-br from-green-50 to-green-100 shadow-lg fade-in">
+ <div class="w-20 h-20 bg-green-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-xl">
+ <i data-lucide="brain" class="w-10 h-10 text-white"></i>
  </div>
  <h3 class="text-xl font-bold mb-3">Ясность ума</h3>
- <p class="text-gray-600">
- L-теанин в чае улучшает концентрацию и снижает стресс без излишней стимуляции.
+ <p class="text-gray-700 font-medium">
+ L-теанин улучшает концентрацию и снижает стресс без излишней стимуляции.
  </p>
  </div>
 
- <div class="text-center card-hover p-6 rounded-xl bg-gray-50">
- <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
- <i data-lucide="leaf" class="w-8 h-8 text-purple-600"></i>
+ <div class="text-center card-hover p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100 shadow-lg fade-in">
+ <div class="w-20 h-20 bg-purple-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-xl">
+ <i data-lucide="leaf" class="w-10 h-10 text-white"></i>
  </div>
- <h3 class="text-xl font-bold mb-3">Натуральность</h3>
- <p class="text-gray-600">
- Премиальный чай выращивается без химикатов, сохраняя природную чистоту и вкус.
+ <h3 class="text-xl font-bold mb-3">100% Натуральность</h3>
+ <p class="text-gray-700 font-medium">
+ Выращивание без химикатов, сохраняя природную чистоту и аутентичный вкус.
  </p>
  </div>
 
- <div class="text-center card-hover p-6 rounded-xl bg-gray-50">
- <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 mx-auto">
- <i data-lucide="sparkles" class="w-8 h-8 text-orange-600"></i>
+ <div class="text-center card-hover p-8 rounded-2xl bg-gradient-to-br from-orange-50 to-orange-100 shadow-lg fade-in">
+ <div class="w-20 h-20 bg-orange-500 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-xl">
+ <i data-lucide="sparkles" class="w-10 h-10 text-white"></i>
  </div>
  <h3 class="text-xl font-bold mb-3">Уникальный вкус</h3>
- <p class="text-gray-600">
- Каждый сорт премиального чая имеет свой неповторимый букет вкусов и ароматов.
+ <p class="text-gray-700 font-medium">
+ Каждый сорт — неповторимый букет вкусов и ароматов с богатой историей.
  </p>
  </div>
  </div>
@@ -364,135 +554,143 @@
  </section>
 
  <!-- Methods Comparison Section -->
- <section class="py-16 bg-gray-50">
+ <section class="py-20 bg-gray-50">
  <div class="container mx-auto px-4 max-w-7xl">
- <div class="text-center mb-16">
- <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ <div class="text-center mb-16 fade-in">
+ <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">
  Виды <span class="gradient-text">премиального чая</span>
  </h2>
  <p class="text-xl text-gray-600 max-w-3xl mx-auto">
- Не все чаи одинаково полезны. Вот экспертное сравнение популярных видов
+ Экспертное сравнение популярных видов чая для осознанного выбора
  </p>
  </div>
 
- <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+ <div class="bg-white rounded-2xl shadow-xl overflow-hidden fade-in">
+ <div class="overflow-x-auto">
  <table class="comparison-table w-full">
  <thead>
- <tr>
+ <tr class="bg-gradient-to-r from-orange-50 to-amber-50">
  <th class="text-left">Вид чая</th>
- <th class="text-center">Польза для здоровья</th>
- <th class="text-center">Сложность заваривания</th>
+ <th class="text-center">Польза</th>
+ <th class="text-center">Заваривание</th>
  <th class="text-center">Цена</th>
- <th class="text-center">Рекомендация</th>
+ <th class="text-center">Рейтинг</th>
  </tr>
  </thead>
  <tbody>
- <tr>
+ <tr class="hover:bg-gray-50 transition-colors">
  <td class="font-semibold">
  <div class="flex items-center space-x-2">
  <i data-lucide="leaf" class="w-5 h-5 text-green-600"></i>
  <span>Зелёный чай</span>
  </div>
  </td>
- <td class="text-center method-good">Отлично</td>
+ <td class="text-center method-good">Отлично ⭐</td>
  <td class="text-center method-neutral">Средняя</td>
  <td class="text-center method-neutral">Средняя</td>
- <td class="text-center method-good">⭐⭐⭐⭐⭐</td>
+ <td class="text-center method-good text-xl">⭐⭐⭐⭐⭐</td>
  </tr>
- <tr>
+ <tr class="hover:bg-gray-50 transition-colors">
  <td class="font-semibold">
  <div class="flex items-center space-x-2">
  <i data-lucide="coffee" class="w-5 h-5 text-gray-800"></i>
  <span>Чёрный чай</span>
  </div>
  </td>
- <td class="text-center method-good">Отлично</td>
+ <td class="text-center method-good">Отлично ⭐</td>
  <td class="text-center method-good">Простая</td>
  <td class="text-center method-good">Низкая</td>
- <td class="text-center method-good">⭐⭐⭐⭐⭐</td>
+ <td class="text-center method-good text-xl">⭐⭐⭐⭐⭐</td>
  </tr>
- <tr>
+ <tr class="hover:bg-gray-50 transition-colors">
  <td class="font-semibold">
  <div class="flex items-center space-x-2">
  <i data-lucide="flower" class="w-5 h-5 text-blue-600"></i>
  <span>Улун</span>
  </div>
  </td>
- <td class="text-center method-good">Превосходно</td>
+ <td class="text-center method-good">Превосходно 🔥</td>
  <td class="text-center method-bad">Сложная</td>
  <td class="text-center method-neutral">Высокая</td>
- <td class="text-center method-good">⭐⭐⭐⭐⭐</td>
+ <td class="text-center method-good text-xl">⭐⭐⭐⭐⭐</td>
  </tr>
- <tr>
+ <tr class="hover:bg-gray-50 transition-colors">
  <td class="font-semibold">
  <div class="flex items-center space-x-2">
  <i data-lucide="star" class="w-5 h-5 text-yellow-600"></i>
  <span>Белый чай</span>
  </div>
  </td>
- <td class="text-center method-good">Превосходно</td>
+ <td class="text-center method-good">Превосходно 🔥</td>
  <td class="text-center method-neutral">Средняя</td>
  <td class="text-center method-bad">Очень высокая</td>
- <td class="text-center method-neutral">⭐⭐⭐⭐</td>
+ <td class="text-center method-neutral text-xl">⭐⭐⭐⭐</td>
  </tr>
  </tbody>
  </table>
  </div>
+ </div>
 
  <div class="mt-12 grid md:grid-cols-2 gap-8">
- <div class="bg-white p-8 rounded-xl shadow-lg">
+ <div class="bg-white p-8 rounded-2xl shadow-xl card-hover fade-in">
  <div class="flex items-center space-x-3 mb-4">
- <i data-lucide="award" class="w-8 h-8 text-green-600"></i>
+ <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+ <i data-lucide="award" class="w-6 h-6 text-green-600"></i>
+ </div>
  <h3 class="text-2xl font-bold">Зелёный чай</h3>
  </div>
- <p class="text-gray-600 mb-4">
- Минимальная обработка сохраняет максимум полезных веществ. Богат катехинами и антиоксидантами. 
- Идеален для ежедневного употребления и поддержания здоровья.
+ <p class="text-gray-600 mb-4 leading-relaxed">
+ Минимальная обработка сохраняет максимум полезных веществ. Богат катехинами (EGCG) и антиоксидантами. 
+ Идеален для ежедневного употребления, повышает метаболизм и поддерживает иммунитет.
  </p>
- <div class="flex items-center space-x-2 text-green-600">
+ <div class="flex items-center space-x-2 text-green-600 font-bold">
  <i data-lucide="check-circle" class="w-5 h-5"></i>
- <span class="font-medium">Рекомендация экспертов</span>
+ <span>Рекомендация экспертов #1</span>
  </div>
  </div>
 
- <div class="bg-white p-8 rounded-xl shadow-lg">
+ <div class="bg-white p-8 rounded-2xl shadow-xl card-hover fade-in">
  <div class="flex items-center space-x-3 mb-4">
- <i data-lucide="zap" class="w-8 h-8 text-blue-600"></i>
+ <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+ <i data-lucide="zap" class="w-6 h-6 text-blue-600"></i>
+ </div>
  <h3 class="text-2xl font-bold">Улун</h3>
  </div>
- <p class="text-gray-600 mb-4">
+ <p class="text-gray-600 mb-4 leading-relaxed">
  Полуферментированный чай с уникальным вкусовым профилем. 
- Сочетает пользу зелёного и насыщенность чёрного чая. Требует мастерства в заваривании.
+ Сочетает пользу зелёного и насыщенность чёрного чая. Требует мастерства в заваривании, но результат того стоит.
  </p>
- <div class="flex items-center space-x-2 text-green-600">
- <i data-lucide="check-circle" class="w-5 h-5"></i>
- <span class="font-medium">Премиум качество</span>
+ <div class="flex items-center space-x-2 text-blue-600 font-bold">
+ <i data-lucide="crown" class="w-5 h-5"></i>
+ <span>Премиум качество</span>
  </div>
  </div>
  </div>
  </div>
  </section>
 
- <!-- Tasty Coffee Tea Promo -->
- <section class="py-16 bg-gradient-to-r from-orange-600 to-orange-500 text-white">
- <div class="container mx-auto px-4 max-w-7xl">
- <div class="text-center">
- <div class="inline-flex items-center space-x-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
- <i data-lucide="award" class="w-4 h-4"></i>
- <span>Премиум чай от Tasty Coffee</span>
+ <!-- Tasty Coffee Promo -->
+ <section class="py-20 bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 text-white relative overflow-hidden">
+ <div class="absolute inset-0 bg-black opacity-10"></div>
+ <div class="container mx-auto px-4 max-w-7xl relative z-10">
+ <div class="text-center fade-in">
+ <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur text-white px-6 py-3 rounded-full text-sm font-bold mb-6 shadow-lg">
+ <i data-lucide="award" class="w-5 h-5"></i>
+ <span>ПРЕМИУМ ЧАЙ ОТ TASTY COFFEE</span>
  </div>
- <h2 class="text-3xl md:text-4xl font-bold mb-6">
+ <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
  Откройте мир вкуса с Tasty Coffee
  </h2>
- <p class="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
- Эксклюзивная коллекция премиальных чаёв от мировых плантаций. Свежесть, качество и уникальный вкус в каждой чашке.
+ <p class="text-xl md:text-2xl mb-10 opacity-95 max-w-3xl mx-auto leading-relaxed">
+ Эксклюзивная коллекция премиальных чаёв от мировых плантаций. 
+ <strong>Свежесть, качество и уникальный вкус</strong> в каждой чашке.
  </p>
  <div class="flex flex-col sm:flex-row gap-4 justify-center">
- <a href="tasty-partners.html" class="text-lg px-8 py-4 bg-white text-orange-600 hover:bg-gray-100 rounded-lg transition-colors flex items-center justify-center">
+ <a href="tasty-partners.html" class="text-lg px-10 py-4 bg-white text-orange-600 hover:bg-gray-50 rounded-xl transition-all shadow-xl hover:shadow-2xl font-bold flex items-center justify-center">
  Смотреть каталог
  <i data-lucide="external-link" class="ml-2 w-5 h-5"></i>
  </a>
- <a href="premium-collection.html" class="text-lg px-8 py-4 border border-white text-white hover:bg-white hover:text-orange-600 rounded-lg transition-colors text-center">
+ <a href="premium-collection.html" class="text-lg px-10 py-4 border-2 border-white text-white hover:bg-white hover:text-orange-600 rounded-xl transition-all font-bold text-center">
  Премиум коллекция
  </a>
  </div>
@@ -501,133 +699,164 @@
  </section>
 
  <!-- Selection Guide Section -->
- <section class="py-16 bg-white">
+ <section class="py-20 bg-white">
  <div class="container mx-auto px-4 max-w-7xl">
- <div class="text-center mb-16">
- <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ <div class="text-center mb-16 fade-in">
+ <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">
  Как выбрать <span class="gradient-text">идеальный чай</span>
  </h2>
  <p class="text-xl text-gray-600 max-w-3xl mx-auto">
- Пошаговое руководство для выбора чая, который раскроет весь свой потенциал
+ 4 простых шага от экспертов Tasty Coffee для выбора чая, который раскроет весь свой потенциал
  </p>
  </div>
 
  <div class="grid lg:grid-cols-2 gap-12 items-start">
  <div class="space-y-8">
- <div class="flex items-start space-x-4">
- <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
- <span class="text-orange-600 font-bold text-sm">1</span>
+ <div class="flex items-start space-x-4 fade-in card-hover p-6 rounded-2xl bg-gradient-to-r from-orange-50 to-amber-50">
+ <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+ <span class="text-white font-bold text-xl">1</span>
  </div>
  <div>
- <h3 class="text-xl font-bold mb-2">Проверьте происхождение</h3>
- <p class="text-gray-600">
- Лучший чай растёт на высокогорных плантациях. Ищите информацию о регионе: 
- Дарджилинг, Уи Шань, Нилгири — признанные центры чайного производства.
+ <h3 class="text-xl font-bold mb-2 flex items-center">
+ <i data-lucide="map-pin" class="w-5 h-5 mr-2 text-orange-600"></i>
+ Проверьте происхождение
+ </h3>
+ <p class="text-gray-600 leading-relaxed">
+ Лучший чай растёт на высокогорных плантациях 1000-2000м над уровнем моря. Ищите регионы: 
+ <strong>Дарджилинг (Индия), Уи Шань (Китай), Нилгири (Индия)</strong> — признанные центры производства.
  </p>
  </div>
  </div>
 
- <div class="flex items-start space-x-4">
- <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
- <span class="text-orange-600 font-bold text-sm">2</span>
+ <div class="flex items-start space-x-4 fade-in card-hover p-6 rounded-2xl bg-gradient-to-r from-orange-50 to-amber-50">
+ <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+ <span class="text-white font-bold text-xl">2</span>
  </div>
  <div>
- <h3 class="text-xl font-bold mb-2">Оцените внешний вид</h3>
- <p class="text-gray-600">
- Качественный чай имеет целые листья одинакового размера. Избегайте пыли и ломаных листьев. 
+ <h3 class="text-xl font-bold mb-2 flex items-center">
+ <i data-lucide="eye" class="w-5 h-5 mr-2 text-orange-600"></i>
+ Оцените внешний вид
+ </h3>
+ <p class="text-gray-600 leading-relaxed">
+ Качественный чай имеет <strong>целые листья одинакового размера</strong>. Избегайте пыли и ломаных листьев (признак низкого качества). 
  Цвет должен быть однородным, без посторонних включений.
  </p>
  </div>
  </div>
 
- <div class="flex items-start space-x-4">
- <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
- <span class="text-orange-600 font-bold text-sm">3</span>
+ <div class="flex items-start space-x-4 fade-in card-hover p-6 rounded-2xl bg-gradient-to-r from-orange-50 to-amber-50">
+ <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+ <span class="text-white font-bold text-xl">3</span>
  </div>
  <div>
- <h3 class="text-xl font-bold mb-2">Обратите внимание на дату сбора</h3>
- <p class="text-gray-600">
- Свежесть критична для зелёного и белого чая. Лучшие урожаи — весенние (First Flush). 
- Чай текущего года всегда предпочтительнее прошлогоднего.
+ <h3 class="text-xl font-bold mb-2 flex items-center">
+ <i data-lucide="calendar" class="w-5 h-5 mr-2 text-orange-600"></i>
+ Дата сбора урожая
+ </h3>
+ <p class="text-gray-600 leading-relaxed">
+ Свежесть критична для зелёного и белого чая. Лучшие урожаи — весенние (<strong>First Flush</strong>). 
+ Чай текущего года всегда предпочтительнее прошлогоднего. Смотрите на упаковку!
  </p>
  </div>
  </div>
 
- <div class="flex items-start space-x-4">
- <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
- <span class="text-orange-600 font-bold text-sm">4</span>
+ <div class="flex items-start space-x-4 fade-in card-hover p-6 rounded-2xl bg-gradient-to-r from-orange-50 to-amber-50">
+ <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+ <span class="text-white font-bold text-xl">4</span>
  </div>
  <div>
- <h3 class="text-xl font-bold mb-2">Правильное хранение</h3>
- <p class="text-gray-600">
- Храните чай в герметичной непрозрачной посуде, вдали от влаги, света и посторонних запахов. 
- Зелёный чай можно хранить в холодильнике.
+ <h3 class="text-xl font-bold mb-2 flex items-center">
+ <i data-lucide="archive" class="w-5 h-5 mr-2 text-orange-600"></i>
+ Правильное хранение
+ </h3>
+ <p class="text-gray-600 leading-relaxed">
+ Храните чай в <strong>герметичной непрозрачной посуде</strong>, вдали от влаги, света и сильных запахов. 
+ Зелёный и белый чай можно хранить в холодильнике для максимальной свежести.
  </p>
  </div>
  </div>
  </div>
 
- <div class="bg-gray-50 p-8 rounded-2xl">
- <h3 class="text-2xl font-bold mb-6">Топ-5 премиальных чаёв от Tasty Coffee 2025</h3>
+ <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl shadow-xl fade-in">
+ <h3 class="text-2xl font-bold mb-6 flex items-center">
+ <i data-lucide="trophy" class="w-7 h-7 mr-3 text-orange-600"></i>
+ Топ-5 премиальных чаёв Tasty Coffee 2025
+ </h3>
  <div class="space-y-4">
- <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow hover:shadow-lg transition-shadow card-hover">
  <div>
- <h4 class="font-semibold">Дарджилинг First Flush</h4>
- <p class="text-sm text-gray-600">Чёрный чай, Индия</p>
+ <h4 class="font-bold text-lg">Дарджилинг First Flush</h4>
+ <p class="text-sm text-gray-600 flex items-center mt-1">
+ <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i>
+ Чёрный чай, Индия
+ </p>
  </div>
  <div class="flex items-center space-x-1">
- <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
- <span class="text-sm font-medium">4.9</span>
+ <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-lg font-bold">4.9</span>
  </div>
  </div>
 
- <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow hover:shadow-lg transition-shadow card-hover">
  <div>
- <h4 class="font-semibold">Лунцзин (Колодец Дракона)</h4>
- <p class="text-sm text-gray-600">Зелёный чай, Китай</p>
+ <h4 class="font-bold text-lg">Лунцзин (Колодец Дракона)</h4>
+ <p class="text-sm text-gray-600 flex items-center mt-1">
+ <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i>
+ Зелёный чай, Китай
+ </p>
  </div>
  <div class="flex items-center space-x-1">
- <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
- <span class="text-sm font-medium">4.8</span>
+ <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-lg font-bold">4.8</span>
  </div>
  </div>
 
- <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow hover:shadow-lg transition-shadow card-hover">
  <div>
- <h4 class="font-semibold">Те Гуань Инь</h4>
- <p class="text-sm text-gray-600">Улун, Китай</p>
+ <h4 class="font-bold text-lg">Те Гуань Инь</h4>
+ <p class="text-sm text-gray-600 flex items-center mt-1">
+ <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i>
+ Улун, Китай
+ </p>
  </div>
  <div class="flex items-center space-x-1">
- <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
- <span class="text-sm font-medium">4.8</span>
+ <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-lg font-bold">4.8</span>
  </div>
  </div>
 
- <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow hover:shadow-lg transition-shadow card-hover">
  <div>
- <h4 class="font-semibold">Бай Хао Инь Чжэнь</h4>
- <p class="text-sm text-gray-600">Белый чай, Китай</p>
+ <h4 class="font-bold text-lg">Бай Хао Инь Чжэнь</h4>
+ <p class="text-sm text-gray-600 flex items-center mt-1">
+ <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i>
+ Белый чай, Китай
+ </p>
  </div>
  <div class="flex items-center space-x-1">
- <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
- <span class="text-sm font-medium">4.7</span>
+ <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-lg font-bold">4.7</span>
  </div>
  </div>
 
- <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+ <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow hover:shadow-lg transition-shadow card-hover">
  <div>
- <h4 class="font-semibold">Гёкуро</h4>
- <p class="text-sm text-gray-600">Зелёный чай, Япония</p>
+ <h4 class="font-bold text-lg">Гёкуро</h4>
+ <p class="text-sm text-gray-600 flex items-center mt-1">
+ <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i>
+ Зелёный чай, Япония
+ </p>
  </div>
  <div class="flex items-center space-x-1">
- <i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>
- <span class="text-sm font-medium">4.7</span>
+ <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+ <span class="text-lg font-bold">4.7</span>
  </div>
  </div>
  </div>
 
- <a href="tasty-partners.html" class="w-full mt-6 btn-primary text-white py-3 rounded-lg font-medium block text-center">
+ <a href="tasty-partners.html" class="w-full mt-6 btn-primary text-white py-4 rounded-xl font-bold block text-center text-lg shadow-lg">
  Смотреть весь каталог Tasty Coffee
+ <i data-lucide="arrow-right" class="inline w-5 h-5 ml-2"></i>
  </a>
  </div>
  </div>
@@ -635,58 +864,73 @@
  </section>
 
  <!-- FAQ Section -->
- <section class="py-16 bg-gray-50">
+ <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
  <div class="container mx-auto px-4 max-w-4xl">
- <div class="text-center mb-16">
- <h2 class="text-3xl md:text-4xl font-bold mb-4">
+ <div class="text-center mb-16 fade-in">
+ <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">
  Часто задаваемые <span class="gradient-text">вопросы</span>
  </h2>
  <p class="text-xl text-gray-600">
- Ответы на самые популярные вопросы о премиальном чае
+ Ответы экспертов Tasty Coffee на популярные вопросы о премиальном чае
  </p>
  </div>
 
  <div class="space-y-6">
- <div class="bg-white p-6 rounded-xl shadow-sm">
- <h3 class="text-xl font-bold mb-3">Чем отличается премиальный чай от обычного?</h3>
- <p class="text-gray-600">
- Премиальный чай производится из отборных листьев с высокогорных плантаций, собирается вручную 
- и проходит тщательную обработку. Он имеет более сложный вкусовой профиль и больше полезных веществ.
+ <div class="bg-white p-8 rounded-2xl shadow-lg card-hover fade-in">
+ <h3 class="text-xl font-bold mb-3 flex items-center">
+ <i data-lucide="help-circle" class="w-6 h-6 mr-3 text-orange-600"></i>
+ Чем отличается премиальный чай от обычного?
+ </h3>
+ <p class="text-gray-600 leading-relaxed">
+ Премиальный чай производится из <strong>отборных листьев с высокогорных плантаций</strong>, собирается вручную 
+ и проходит тщательную обработку. Он имеет более сложный вкусовой профиль, больше полезных веществ и уникальный терруар.
  </p>
  </div>
 
- <div class="bg-white p-6 rounded-xl shadow-sm">
- <h3 class="text-xl font-bold mb-3">Как правильно заваривать зелёный чай?</h3>
- <p class="text-gray-600">
- Используйте воду температурой 70-80°C (не кипяток!). Заваривайте 2-3 минуты. 
- Качественный зелёный чай можно заваривать 3-5 раз, каждый раз раскрывая новые оттенки вкуса.
+ <div class="bg-white p-8 rounded-2xl shadow-lg card-hover fade-in">
+ <h3 class="text-xl font-bold mb-3 flex items-center">
+ <i data-lucide="thermometer" class="w-6 h-6 mr-3 text-orange-600"></i>
+ Как правильно заваривать зелёный чай?
+ </h3>
+ <p class="text-gray-600 leading-relaxed">
+ Используйте воду температурой <strong>70-80°C</strong> (не кипяток!). Заваривайте 2-3 минуты. 
+ Качественный зелёный чай можно заваривать 3-5 раз, каждый раз раскрывая новые оттенки вкуса. Первую заварку слейте.
  </p>
  </div>
 
- <div class="bg-white p-6 rounded-xl shadow-sm">
- <h3 class="text-xl font-bold mb-3">Почему премиальный чай дороже?</h3>
- <p class="text-gray-600">
- Высокая цена обусловлена ручным сбором, строгим отбором листьев, сложной обработкой 
- и ограниченными объёмами производства. Один килограмм лучшего чая может требовать 
- сбора десятков тысяч почек.
+ <div class="bg-white p-8 rounded-2xl shadow-lg card-hover fade-in">
+ <h3 class="text-xl font-bold mb-3 flex items-center">
+ <i data-lucide="coins" class="w-6 h-6 mr-3 text-orange-600"></i>
+ Почему премиальный чай дороже?
+ </h3>
+ <p class="text-gray-600 leading-relaxed">
+ Высокая цена обусловлена <strong>ручным сбором, строгим отбором листьев</strong>, сложной обработкой 
+ и ограниченными объёмами производства. Один килограмм лучшего белого чая требует 
+ сбора 80,000-100,000 почек вручную.
  </p>
  </div>
 
- <div class="bg-white p-6 rounded-xl shadow-sm">
- <h3 class="text-xl font-bold mb-3">Теряет ли чай свойства со временем?</h3>
- <p class="text-gray-600">
- Да, особенно зелёный и белый чай лучше употреблять в течение года после сбора. 
+ <div class="bg-white p-8 rounded-2xl shadow-lg card-hover fade-in">
+ <h3 class="text-xl font-bold mb-3 flex items-center">
+ <i data-lucide="clock" class="w-6 h-6 mr-3 text-orange-600"></i>
+ Теряет ли чай свойства со временем?
+ </h3>
+ <p class="text-gray-600 leading-relaxed">
+ Да, особенно <strong>зелёный и белый чай</strong> лучше употреблять в течение года после сбора. 
  Улуны и пуэры могут улучшаться с возрастом при правильном хранении. Чёрный чай 
  сохраняет качество 2-3 года.
  </p>
  </div>
 
- <div class="bg-white p-6 rounded-xl shadow-sm">
- <h3 class="text-xl font-bold mb-3">Можно ли пить чай на ночь?</h3>
- <p class="text-gray-600">
- Зависит от вида чая и вашей чувствительности к кофеину. Белый чай и травяные настои 
- подходят для вечера. Зелёный и чёрный чай лучше пить в первой половине дня. 
- Улун — универсальный вариант с умеренным содержанием кофеина.
+ <div class="bg-white p-8 rounded-2xl shadow-lg card-hover fade-in">
+ <h3 class="text-xl font-bold mb-3 flex items-center">
+ <i data-lucide="moon" class="w-6 h-6 mr-3 text-orange-600"></i>
+ Можно ли пить чай на ночь?
+ </h3>
+ <p class="text-gray-600 leading-relaxed">
+ Зависит от вида чая и вашей чувствительности к кофеину. <strong>Белый чай и травяные настои</strong> 
+ подходят для вечера (20-40мг кофеина). Зелёный и чёрный чай лучше пить до 16:00. 
+ Улун — универсальный вариант с умеренным содержанием кофеина (30-50мг).
  </p>
  </div>
  </div>
@@ -694,21 +938,22 @@
  </section>
 
  <!-- CTA Section -->
- <section class="py-16 cta-bg text-white">
- <div class="container mx-auto px-4 text-center max-w-7xl">
- <h2 class="text-3xl md:text-4xl font-bold mb-6">
+ <section class="py-20 cta-bg text-white relative overflow-hidden">
+ <div class="absolute inset-0 bg-black opacity-10"></div>
+ <div class="container mx-auto px-4 text-center max-w-7xl relative z-10 fade-in">
+ <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
  Готовы открыть мир премиального чая?
  </h2>
- <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
- Используйте наши рекомендации и найдите свой идеальный чай от Tasty Coffee. 
- Качественный чай — это не роскошь, а инвестиция в здоровье и наслаждение жизнью.
+ <p class="text-xl md:text-2xl mb-10 opacity-95 max-w-3xl mx-auto leading-relaxed">
+ Используйте наши рекомендации и найдите свой идеальный чай от <strong>Tasty Coffee</strong>. 
+ Качественный чай — это инвестиция в здоровье, wellness и наслаждение жизнью.
  </p>
  <div class="flex flex-col sm:flex-row gap-4 justify-center">
- <a href="tasty-partners.html" class="text-lg px-8 py-4 bg-white text-orange-600 hover:bg-gray-100 rounded-lg transition-colors flex items-center justify-center">
+ <a href="tasty-partners.html" class="text-lg px-10 py-4 bg-white text-orange-600 hover:bg-gray-50 rounded-xl transition-all shadow-2xl hover:shadow-3xl font-bold flex items-center justify-center">
  Каталог Tasty Coffee
  <i data-lucide="search" class="ml-2 w-5 h-5"></i>
  </a>
- <a href="premium-collection.html" class="text-lg px-8 py-4 border border-white text-white hover:bg-white hover:text-orange-600 rounded-lg transition-colors text-center">
+ <a href="premium-collection.html" class="text-lg px-10 py-4 border-2 border-white text-white hover:bg-white hover:text-orange-600 rounded-xl transition-all font-bold text-center">
  Премиум коллекция
  </a>
  </div>
@@ -789,12 +1034,29 @@
  closeMenuBtn.addEventListener('click', closeMenu);
  menuOverlay.addEventListener('click', closeMenu);
 
- // Close menu when clicking on menu links
  mobileMenuLinks.forEach(link => {
  link.addEventListener('click', closeMenu);
  });
 
- // Smooth scrolling for anchor links
+ // Scroll animations
+ const observerOptions = {
+ threshold: 0.1,
+ rootMargin: '0px 0px -50px 0px'
+ };
+
+ const observer = new IntersectionObserver((entries) => {
+ entries.forEach(entry => {
+ if (entry.isIntersecting) {
+ entry.target.classList.add('visible');
+ }
+ });
+ }, observerOptions);
+
+ document.querySelectorAll('.fade-in').forEach(el => {
+ observer.observe(el);
+ });
+
+ // Smooth scrolling
  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
  anchor.addEventListener('click', function (e) {
  e.preventDefault();
@@ -808,7 +1070,7 @@
  });
  });
 
- // Close mobile menu on window resize
+ // Close mobile menu on resize
  window.addEventListener('resize', () => {
  if (window.innerWidth >= 768) {
  closeMenu();
