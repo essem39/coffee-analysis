@@ -13,6 +13,8 @@
  <meta property="og:type" content="article">
  <meta property="og:image" content="https://i.postimg.cc/Yq9DvMqG/i9j1wo98em.png">
  
+ <!-- Author: Пилот для Геми -->
+ 
  <!-- Tailwind CSS -->
  <script src="https://cdn.tailwindcss.com"></script>
  
@@ -233,11 +235,45 @@
  .float-animation {
  animation: float 3s ease-in-out infinite;
  }
+ 
+ /* Scroll Progress Bar - Пилот для Геми */
+ .scroll-progress {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 0%;
+ height: 4px;
+ background: linear-gradient(90deg, 
+   #ea580c 0%, 
+   #f97316 10%, 
+   #10b981 25%, 
+   #059669 35%, 
+   #fbbf24 50%, 
+   #f59e0b 60%, 
+   #3b82f6 75%, 
+   #8b5cf6 90%, 
+   #ea580c 100%
+ );
+ background-size: 300% 100%;
+ z-index: 9999;
+ transition: width 0.1s ease-out;
+ box-shadow: 0 2px 10px rgba(234, 88, 12, 0.5);
+ animation: rainbowShift 5s ease-in-out infinite;
+ }
+ 
+ /* Анимация радужного перехода - Пилот для Геми */
+ @keyframes rainbowShift {
+ 0% { background-position: 0% 50%; }
+ 50% { background-position: 100% 50%; }
+ 100% { background-position: 0% 50%; }
+ }
  </style>
 </head>
 <body class="bg-white">
+ <!-- Scroll Progress Bar - Радужная полоска от Пилота для Геми -->
+ <div class="scroll-progress" id="scrollProgress"></div>
  <!-- Header -->
- <header class="border-b bg-white/95 backdrop-blur sticky top-0 z-50 shadow-sm">
+ <header class="border-b bg-white/95 backdrop-blur sticky top-0 z-50 shadow-sm" style="margin-top: 0;">
  <div class="container mx-auto px-4 py-4 flex items-center justify-between max-w-7xl">
  <a href="index.html" class="flex items-center space-x-2 transform hover:scale-105 transition-transform">
  <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center shadow-md">
@@ -357,10 +393,10 @@
  <i data-lucide="trending-up" class="w-4 h-4"></i>
  <span>🔥 ТРЕНДЫ ЧАЯ 2025</span>
  </div>
- <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+ <h1 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight">
  <span class="gradient-text">Премиальный чай 2025</span>: Гид по трендам года
  </h1>
- <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+ <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
  Откройте мир элитного чая от экспертов <strong>Tasty Coffee</strong>. Матча, адаптогены, функциональные блены — все, что нужно знать о чае в 2025 году.
  </p>
  <div class="flex flex-col sm:flex-row gap-4">
@@ -395,7 +431,7 @@
  <i data-lucide="sparkles" class="w-4 h-4"></i>
  <span>ТОП ТРЕНДЫ ГОДА</span>
  </div>
- <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">
+ <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
  Чайные <span class="gradient-text">тренды 2025</span>
  </h2>
  <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -501,7 +537,7 @@
  <section class="py-20 bg-white">
  <div class="container mx-auto px-4 max-w-7xl">
  <div class="text-center mb-16 fade-in">
- <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">
+ <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
  Почему премиальный чай — это <span class="gradient-text">важно</span>
  </h2>
  <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -557,7 +593,7 @@
  <section class="py-20 bg-gray-50">
  <div class="container mx-auto px-4 max-w-7xl">
  <div class="text-center mb-16 fade-in">
- <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">
+ <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
  Виды <span class="gradient-text">премиального чая</span>
  </h2>
  <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -678,10 +714,10 @@
  <i data-lucide="award" class="w-5 h-5"></i>
  <span>ПРЕМИУМ ЧАЙ ОТ TASTY COFFEE</span>
  </div>
- <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+ <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
  Откройте мир вкуса с Tasty Coffee
  </h2>
- <p class="text-xl md:text-2xl mb-10 opacity-95 max-w-3xl mx-auto leading-relaxed">
+ <p class="text-lg md:text-xl mb-10 opacity-95 max-w-3xl mx-auto leading-relaxed">
  Эксклюзивная коллекция премиальных чаёв от мировых плантаций. 
  <strong>Свежесть, качество и уникальный вкус</strong> в каждой чашке.
  </p>
@@ -702,7 +738,7 @@
  <section class="py-20 bg-white">
  <div class="container mx-auto px-4 max-w-7xl">
  <div class="text-center mb-16 fade-in">
- <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">
+ <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
  Как выбрать <span class="gradient-text">идеальный чай</span>
  </h2>
  <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -867,7 +903,7 @@
  <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
  <div class="container mx-auto px-4 max-w-4xl">
  <div class="text-center mb-16 fade-in">
- <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">
+ <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
  Часто задаваемые <span class="gradient-text">вопросы</span>
  </h2>
  <p class="text-xl text-gray-600">
@@ -941,10 +977,10 @@
  <section class="py-20 cta-bg text-white relative overflow-hidden">
  <div class="absolute inset-0 bg-black opacity-10"></div>
  <div class="container mx-auto px-4 text-center max-w-7xl relative z-10 fade-in">
- <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+ <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
  Готовы открыть мир премиального чая?
  </h2>
- <p class="text-xl md:text-2xl mb-10 opacity-95 max-w-3xl mx-auto leading-relaxed">
+ <p class="text-lg md:text-xl mb-10 opacity-95 max-w-3xl mx-auto leading-relaxed">
  Используйте наши рекомендации и найдите свой идеальный чай от <strong>Tasty Coffee</strong>. 
  Качественный чай — это инвестиция в здоровье, wellness и наслаждение жизнью.
  </p>
@@ -992,7 +1028,7 @@
  <div>
  <h4 class="font-semibold mb-4">Сотрудничество</h4>
  <ul class="space-y-2 text-gray-400 text-sm">
- <li><a href="mailto:info@coffeespecialty.ru" class="hover:text-white transition-colors">info@coffeespecialty.ru</a></li>
+ <li><a href="/cdn-cgi/l/email-protection#375e59515877545851515252444752545e565b434e194542" class="hover:text-white transition-colors"><span class="__cf_email__" data-cfemail="40292e262f00232f262625253330252329212c34396e3235">[email&#160;protected]</span></a></li>
  <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Политика</a></li>
  <li><a href="terms.html" class="hover:text-white transition-colors">Условия</a></li>
  </ul>
@@ -1001,11 +1037,12 @@
  
  <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
  <p>© 2025 COFFEE SPECIALTY. ALL RIGHTS RESERVED.</p>
+ <!-- Premium Tea Guide v2.0 - Создано Пилотом для Геми 🚀✨ -->
  </div>
  </div>
  </footer>
 
- <script>
+ <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
  // Initialize Lucide icons
  lucide.createIcons();
  
@@ -1075,6 +1112,15 @@
  if (window.innerWidth >= 768) {
  closeMenu();
  }
+ });
+ 
+ // Scroll Progress Bar - Радужный индикатор прокрутки от Пилота для Геми
+ window.addEventListener('scroll', () => {
+ const scrollProgress = document.getElementById('scrollProgress');
+ const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+ const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+ const scrollPercentage = (scrollTop / scrollHeight) * 100;
+ scrollProgress.style.width = scrollPercentage + '%';
  });
  </script>
 </body>
