@@ -295,10 +295,7 @@
  background: linear-gradient(90deg, #059669, #10b981);
  }
  </style>
-</head>
-<body class="bg-white">
- <!-- Header -->
- <header class="border-b bg-white/95 backdrop-blur sticky top-0 z-50">
+<header class="border-b bg-white/95 backdrop-blur sticky top-0 z-50">
  <div class="container mx-auto px-4 py-4 flex items-center justify-between max-w-7xl">
  <a href="index.html" class="flex items-center space-x-2">
  <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
@@ -309,7 +306,8 @@
  
  <nav class="hidden md:flex items-center space-x-8">
  <a href="index.html" class="text-gray-600 hover:text-orange-600 transition-colors">Главная</a>
- <a href="specialty-micro-lots-2025.html" class="text-orange-600 font-bold border-b-2 border-orange-500">Рейтинги</a>
+ <a href="specialty-micro-lots-2025.html" class="text-gray-600 hover:text-orange-600 transition-colors">Рейтинги</a>
+ <a href="premium-collection.html" class="text-orange-600 font-bold border-b-2 border-orange-500">Коллекция</a>
  
  <div class="relative group cursor-pointer py-2">
  <span class="flex items-center text-gray-600 hover:text-orange-600 transition-colors">Гайды <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></span>
@@ -320,7 +318,7 @@
  </div>
  </div>
 
- <!-- КНОПКА РЕГИСТРАЦИИ -->
+ <a href="login.html" class="text-gray-600 hover:text-orange-600 transition-colors font-medium">Вход</a>
  <a href="registration.html" class="text-gray-600 hover:text-orange-600 transition-colors font-medium">Регистрация</a>
  </nav>
 
@@ -330,7 +328,7 @@
  <span class="hamburger-bottom"></span>
  </button>
  </div>
- </header>
+</header>
 
  <div class="mobile-menu-overlay fixed inset-0 bg-black bg-opacity-50 z-40" id="menu-overlay"></div>
 
@@ -2520,90 +2518,51 @@
  </div>
  </div>
  </section>
+  <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-semibold mb-4">Навигация</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Главная</a></li>
+                        <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Обзоры кофе</a></li>
+                        <li><a href="kak-hranit-kofe-guide.html" class="hover:text-white transition-colors">Гайды и рецепты</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">База знаний</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="espresso-masterclass.html" class="hover:text-white transition-colors">Мастер-класс</a></li>
+                        <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Декаф навигатор</a></li>
+                        <li><a href="tea-guide.html" class="hover:text-white transition-colors">Гид по чаю</a></li>
+                    </ul>
+                </div>
 
- <!-- Footer -->
- <footer class="bg-[#0f172a] text-white py-16">
- <div class="container mx-auto px-4 max-w-7xl">
- <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
- <div class="col-span-2 md:col-span-1 space-y-6">
- <div class="flex items-center space-x-2">
- <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-lg flex items-center justify-center">
- <i data-lucide="coffee" class="w-5 h-5 text-white"></i>
- </div>
- <span class="text-xl font-bold">Coffee Analysis</span>
- </div>
- <p class="text-slate-400 text-sm leading-relaxed">
- Независимый центр анализа кофейной и чайной индустрии. Профессиональный взгляд на мир напитков.
- </p>
- <div class="flex space-x-4">
- <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
- <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
- <a href="#" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
- </div>
- </div>
- 
- <div>
- <h4 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">Разделы</h4>
- <ul class="space-y-3 text-slate-400 text-sm">
- <li><a href="index.html" class="hover:text-white transition-colors">Главная</a></li>
- <li><a href="specialty-micro-lots-2025.html" class="hover:text-white transition-colors">Обзоры кофе</a></li>
- <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Гайды</a></li>
- <li><a href="links.html" class="hover:text-white transition-colors">Полезные ссылки</a></li>
- </ul>
- </div>
- 
- <div>
- <h4 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">Популярное</h4>
- <ul class="space-y-3 text-slate-400 text-sm">
- <li><a href="dekaf-guide.html" class="hover:text-white transition-colors">Декаф навигатор</a></li>
- <li><a href="espresso-masterclass.html" class="hover:text-white transition-colors">Мастер-класс Эспрессо</a></li>
- <li><a href="tasty-coffee-complete-guide-2025.html" class="hover:text-white transition-colors">Tasty Coffee гид</a></li>
- <li><a href="budget-barista-equipment-150.html" class="hover:text-white transition-colors">Оборудование бариста</a></li>
- <li><a href="kak-hranit-kofe-guide.html" class="hover:text-white transition-colors">Хранение кофе</a></li>
- </ul>
- </div>
- 
- <div>
- <h4 class="font-bold mb-6 text-white uppercase text-xs tracking-widest">О проекте</h4>
- <div class="space-y-4 text-slate-400 text-sm">
- <p>Coffee Analysis — это команда сертифицированных Q-грейдеров и чайных экспертов.</p>
- <p>Наша миссия: делать мир specialty напитков доступным и понятным для всех.</p>
- <div class="pt-4 border-t border-slate-800">
- <p class="text-xs text-slate-500 mb-2">Контакты для сотрудничества:</p>
- <a href="mailto:info@coffeeanalysis.ru" class="text-orange-500 hover:text-orange-400 text-sm font-medium">info@coffeeanalysis.ru</a>
- </div>
- </div>
- </div>
- </div>
- 
- <div class="border-t border-slate-800 mt-12 pt-8">
- <div class="flex flex-col md:flex-row justify-between items-center gap-4">
- <div class="text-slate-500 text-xs text-center md:text-left">
- <p class="uppercase font-bold tracking-[0.2em] mb-2">&copy; 2025 Coffee Analysis. Все права защищены.</p>
- <p class="text-slate-600">coffeeanalysis.ru — Независимая аналитика кофейной и чайной индустрии</p>
- </div>
- <div class="flex space-x-6 text-slate-500 text-xs">
- <a href="privacy-policy.html" class="hover:text-orange-500 transition-colors">Политика конфиденциальности</a>
- <a href="terms.html" class="hover:text-orange-500 transition-colors">Пользовательское соглашение</a>
- </div>
- </div>
- 
- <div class="mt-8 pt-8 border-t border-slate-800">
- <div class="flex flex-col md:flex-row items-center justify-between gap-4">
- <div class="text-slate-600 text-xs italic text-center md:text-left">
- <p>Сайт использует технологии SEO-оптимизации для лучшей доступности контента</p>
- </div>
- <div class="flex items-center space-x-4">
- <span class="text-slate-600 text-xs">Партнер:</span>
- <a href="https://elama.ru/" target="_blank" class="text-slate-400 hover:text-orange-500 transition-colors text-xs font-medium underline decoration-orange-500/20">
- elama.ru
- </a>
- </div>
- </div>
- </div>
- </div>
- </div>
- </footer>
+                <div>
+                    <h4 class="font-semibold mb-4">Партнёры</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="tasty-partners.html" class="hover:text-white transition-colors">Программа</a></li>
+                        <li><a href="premium-collection.html" class="hover:text-white transition-colors">Коллекция</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Сотрудничество</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="mailto:info@coffeeanalysis.ru" class="hover:text-white transition-colors">info@coffeeanalysis.ru</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Политика</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition-colors">Условия</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>© 2025 COFFEE ANALYSIS. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
 
  <script>
  lucide.createIcons();
