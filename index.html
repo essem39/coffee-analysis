@@ -41,6 +41,69 @@
             opacity: 1;
             visibility: visible;
         }
+        
+        /* ВЫПАДАЮЩЕЕ МЕНЮ */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            min-width: 200px;
+            margin-top: 8px;
+            z-index: 1000;
+        }
+        
+        .dropdown-menu.show {
+            display: block;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: #374151;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        
+        .dropdown-menu a:hover {
+            background: #f3f4f6;
+            color: #2563eb;
+        }
+        
+        .dropdown-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .dropdown-arrow {
+            transition: transform 0.3s;
+        }
+        
+        .dropdown.active .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+        
+        /* МОБИЛЬНОЕ ВЫПАДАЮЩЕЕ МЕНЮ */
+        .mobile-dropdown-content {
+            display: none;
+            padding-left: 16px;
+            margin-top: 8px;
+            gap: 8px;
+        }
+        
+        .mobile-dropdown-content.show {
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -55,7 +118,7 @@
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center space-x-2">
-                        <img src="img/1601f59e45c93a87579f5c088fb77e81 (1).png" alt="Coffee Analysis" class="h-10 w-auto">
+                        <img src="img/1601f59e45c93a87579f5c088fb77e81 (1).png" alt="Coffee Analysis" class="h-14 w-auto">
                     </a>
                 </div>
 
@@ -65,13 +128,28 @@
                     <a href="specialty-micro-lots-2025.html" class="text-gray-700 hover:text-blue-600 transition-colors">Обзоры</a>
                     <a href="kak-hranit-kofe-guide.html" class="text-gray-700 hover:text-blue-600 transition-colors">Гайды</a>
                     <a href="tea-guide.html" class="text-gray-700 hover:text-blue-600 transition-colors">Чай</a>
-                    <a href="tasty-partners.html" class="text-gray-700 hover:text-blue-600 transition-colors">Партнёры</a>
+                    <a href="premium-collection.html" class="text-gray-700 hover:text-blue-600 transition-colors">Коллекция</a>
+                    
+                    <!-- Выпадающее меню "Ещё" -->
+                    <div class="dropdown relative">
+                        <button class="dropdown-toggle text-gray-700 hover:text-blue-600 transition-colors flex items-center space-x-1">
+                            <span>Ещё</span>
+                            <svg class="dropdown-arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="espresso-masterclass.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors">Мастер-класс</a>
+                            <a href="dekaf-guide.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors">Декаф</a>
+                            <a href="tasty-partners.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors">Партнёры</a>
+                        </div>
+                    </div>
                 </nav>
 
                 <!-- Auth Buttons -->
                 <div class="hidden md:flex items-center space-x-4">
                     <a href="https://tasty.coffee/?r=elamainfo" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Вход</a>
-                    <a href="https://tasty.coffee/?r=elamainfo" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                    <a href="https://tasty.coffee/?r=elamainfo" class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium">
                         Регистрация
                     </a>
                 </div>
@@ -102,14 +180,29 @@
                 <a href="specialty-micro-lots-2025.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Обзоры</a>
                 <a href="kak-hranit-kofe-guide.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Гайды</a>
                 <a href="tea-guide.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Чай</a>
-                <a href="tasty-partners.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Партнёры</a>
+                <a href="premium-collection.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Коллекция</a>
+                
+                <!-- Выпадающее меню "Ещё" для мобильных -->
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-toggle w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors flex justify-between items-center">
+                        <span>Ещё</span>
+                        <svg class="dropdown-arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown-content">
+                        <a href="espresso-masterclass.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">Мастер-класс</a>
+                        <a href="dekaf-guide.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">Декаф</a>
+                        <a href="tasty-partners.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">Партнёры</a>
+                    </div>
+                </div>
             </nav>
 
             <div class="mt-8 space-y-3">
                 <a href="https://tasty.coffee/?r=elamainfo" class="block w-full text-center px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
                     Вход
                 </a>
-                <a href="https://tasty.coffee/?r=elamainfo" class="block w-full text-center px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                <a href="https://tasty.coffee/?r=elamainfo" class="block w-full text-center px-4 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors">
                     Регистрация
                 </a>
             </div>
@@ -702,6 +795,35 @@ lucide.createIcons();
 
     <script>
         lucide.createIcons();
+        
+        // Desktop Dropdown Menu
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const dropdown = document.querySelector('.dropdown');
+        
+        if (dropdownToggle && dropdownMenu) {
+            dropdownToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                dropdownMenu.classList.toggle('show');
+                dropdown.classList.toggle('active');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function() {
+                dropdownMenu.classList.remove('show');
+                dropdown.classList.remove('active');
+            });
+        }
+        
+        // Mobile Dropdown Menu
+        const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+        const mobileDropdownContent = document.querySelector('.mobile-dropdown-content');
+        
+        if (mobileDropdownToggle && mobileDropdownContent) {
+            mobileDropdownToggle.addEventListener('click', function() {
+                mobileDropdownContent.classList.toggle('show');
+            });
+        }
         
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
