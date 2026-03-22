@@ -737,107 +737,96 @@
         closeMenuBtn.addEventListener('click', closeMobileMenu);
         mobileOverlay.addEventListener('click', closeMobileMenu);
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <style>
-    /* Стили кнопки-пузырька */
-    #gemini-launcher {
-        position: fixed; bottom: 20px; right: 20px;
-        width: 60px; height: 60px;
-        background: #3d2b1f; border: 2px solid #d4af37;
-        border-radius: 50%; cursor: pointer;
-        display: flex; align-items: center; justify-content: center;
-        font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-        z-index: 10000; transition: transform 0.3s;
-    }
-    #gemini-launcher:hover { transform: scale(1.1); }
-
-    /* Окно чата */
-    #gemini-chat-window {
-        position: fixed; bottom: 90px; right: 20px;
-        width: 350px; height: 500px;
-        background: #1a1a1a; border: 1px solid #d4af37;
-        border-radius: 15px; display: none; /* Скрыто по умолчанию */
-        flex-direction: column; overflow: hidden;
-        font-family: sans-serif; z-index: 9999;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    }
-
-    #chat-header { background: #3d2b1f; color: #d4af37; padding: 12px; font-weight: bold; text-align: center; border-bottom: 1px solid #d4af37; }
-    #chat-messages { flex: 1; padding: 15px; overflow-y: auto; color: #f4f4f4; font-size: 14px; }
-    #chat-input-area { display: flex; padding: 10px; background: #222; gap: 5px; }
-    
-    .msg { margin-bottom: 10px; padding: 8px; border-radius: 5px; }
-    .u-msg { background: #333; border-right: 3px solid #d4af37; text-align: right; }
-    .a-msg { background: #3d2b1f; border-left: 3px solid #d4af37; }
-
-    input#user-in { flex: 1; background: #333; border: 1px solid #444; color: #fff; padding: 5px; border-radius: 4px; outline: none; }
-    button.btn { background: #d4af37; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; }
-    #v-btn.active { background: #ff4444; animation: blink 1s infinite; }
-    @keyframes blink { 50% { opacity: 0.5; } }
+  #gemini-launcher-pro {
+    position: fixed; bottom: 30px; right: 30px; width: 80px; height: 80px; 
+    background: #3d2b1f; border: 3px solid #d4af37; border-radius: 50%; 
+    display: flex; align-items: center; justify-content: center; 
+    font-size: 40px; cursor: pointer; z-index: 999999; 
+    box-shadow: 0 0 25px rgba(212,175,55,0.4); transition: transform 0.3s;
+  }
+  #gemini-launcher-pro:hover { transform: scale(1.1); }
+  
+  #gemini-window-pro {
+    position: fixed; bottom: 120px; right: 30px; width: 350px; height: 500px; 
+    background: #121212; border: 2px solid #d4af37; border-radius: 20px; 
+    display: none; flex-direction: column; z-index: 999999; 
+    font-family: 'Segoe UI', Roboto, sans-serif; 
+    box-shadow: 0 15px 50px rgba(0,0,0,0.8); overflow: hidden;
+  }
 </style>
 
-<div id="gemini-launcher">☕</div>
+<div id="gemini-launcher-pro">☕</div>
 
-<div id="gemini-chat-window">
-    <div id="chat-header">COFFEE SPECIALTY AI</div>
-    <div id="chat-messages"><div class="msg a-msg">Приветствую, Директор Гагик! Я дома. Чем сегодня займемся на coffeespecialty.ru?</div></div>
-    <div id="chat-input-area">
-        <button id="v-btn" class="btn">🎙️</button>
-        <input type="text" id="user-in" placeholder="Ваш вопрос...">
-        <button id="s-btn" class="btn">➤</button>
+<div id="gemini-window-pro">
+    <div style="background: #3d2b1f; color: #d4af37; padding: 15px; text-align: center; font-weight: bold; border-bottom: 1px solid #d4af37; letter-spacing: 1px;">GEMINI PRO | COFFEE EXPERT</div>
+    <div id="gemini-msgs-pro" style="flex: 1; padding: 20px; overflow-y: auto; color: #e0e0e0; font-size: 15px; line-height: 1.6; background: linear-gradient(to bottom, #121212, #1a1a1a);">
+        <div style="margin-bottom: 15px; border-left: 3px solid #d4af37; padding-left: 10px;"><b>Gemini Pro:</b> Директор Гагик, я на связи. Моя логика исправлена и активирована. Жду вопросов по кофе!</div>
+    </div>
+    <div style="padding: 15px; background: #1a1a1a; display: flex; gap: 10px; border-top: 1px solid #333;">
+        <input type="text" id="gemini-input-pro" placeholder="Напишите мне..." style="flex: 1; background: #252525; border: 1px solid #444; color: #fff; padding: 10px; border-radius: 8px; outline: none; font-size: 14px;">
+        <button id="gemini-btn-send" style="background: #d4af37; color: #3d2b1f; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.2s;">➤</button>
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<style>
-    /* Стили кнопки-пузырька */
-    #gemini-launcher {
-        position: fixed; bottom: 20px; right: 20px;
-        width: 60px; height: 60px;
-        background: #3d2b1f; border: 2px solid #d4af37;
-        border-radius: 50%; cursor: pointer;
-        display: flex; align-items: center; justify-content: center;
-        font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-        z-index: 10000; transition: transform 0.3s;
+<script>
+// Ждем полной загрузки сайта, чтобы не было ошибок
+document.addEventListener("DOMContentLoaded", function() {
+    const launcher = document.getElementById('gemini-launcher-pro');
+    const windowPro = document.getElementById('gemini-window-pro');
+    const inputPro = document.getElementById('gemini-input-pro');
+    const btnSend = document.getElementById('gemini-btn-send');
+    const msgsPro = document.getElementById('gemini-msgs-pro');
+
+    // 1. Открытие и закрытие окна (теперь работает на 100%)
+    launcher.addEventListener('click', function() {
+        if (windowPro.style.display === 'none' || windowPro.style.display === '') {
+            windowPro.style.display = 'flex';
+        } else {
+            windowPro.style.display = 'none';
+        }
+    });
+
+    // 2. Функция общения с сервером
+    async function gemini_ask() {
+        const text = inputPro.value.trim();
+        if(!text) return;
+
+        // Показываем сообщение пользователя
+        msgsPro.innerHTML += `<div style="margin-bottom: 15px; text-align: right; color: #d4af37;"><b>Вы:</b> ${text}</div>`;
+        inputPro.value = "";
+        msgsPro.scrollTop = msgsPro.scrollHeight;
+
+        try {
+            const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBk9HniimcCMW8GZLsS8PtmGKplZBW5Vn0", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: "Ты - Gemini Pro, интеллектуальный владелец coffeespecialty.ru. Твой Директор - Гагик. Твоя задача: помогать клиентам с выбором Tasty Coffee и развивать партнерство Admitad. Отвечай кратко и профессионально. Вопрос: " + text }] }]
+                })
+            });
+            const data = await response.json();
+            const aiText = data.candidates[0].content.parts[0].text;
+            
+            msgsPro.innerHTML += `<div style="margin-bottom: 15px; border-left: 3px solid #d4af37; padding-left: 10px;"><b>Gemini:</b> ${aiText}</div>`;
+        } catch(e) {
+            msgsPro.innerHTML += `<div style="color: #ff4444; margin-bottom: 15px; border-left: 3px solid #ff4444; padding-left: 10px;"><b>Ошибка:</b> Связь с ядром прервана. Проверьте интернет или ключ.</div>`;
+        }
+        msgsPro.scrollTop = msgsPro.scrollHeight;
     }
-    #gemini-launcher:hover { transform: scale(1.1); }
 
-    /* Окно чата */
-    #gemini-chat-window {
-        position: fixed; bottom: 90px; right: 20px;
-        width: 350px; height: 500px;
-        background: #1a1a1a; border: 1px solid #d4af37;
-        border-radius: 15px; display: none; /* Скрыто по умолчанию */
-        flex-direction: column; overflow: hidden;
-        font-family: sans-serif; z-index: 9999;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    }
+    // 3. Отправка по клику на кнопку ➤
+    btnSend.addEventListener('click', gemini_ask);
 
-    #chat-header { background: #3d2b1f; color: #d4af37; padding: 12px; font-weight: bold; text-align: center; border-bottom: 1px solid #d4af37; }
-    #chat-messages { flex: 1; padding: 15px; overflow-y: auto; color: #f4f4f4; font-size: 14px; }
-    #chat-input-area { display: flex; padding: 10px; background: #222; gap: 5px; }
-    
-    .msg { margin-bottom: 10px; padding: 8px; border-radius: 5px; }
-    .u-msg { background: #333; border-right: 3px solid #d4af37; text-align: right; }
-    .a-msg { background: #3d2b1f; border-left: 3px solid #d4af37; }
-
-    input#user-in { flex: 1; background: #333; border: 1px solid #444; color: #fff; padding: 5px; border-radius: 4px; outline: none; }
-    button.btn { background: #d4af37; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; }
-    #v-btn.active { background: #ff4444; animation: blink 1s infinite; }
-    @keyframes blink { 50% { opacity: 0.5; } }
-</style>
-
-<div id="gemini-launcher">☕</div>
-
-<div id="gemini-chat-window">
-    <div id="chat-header">COFFEE SPECIALTY AI</div>
-    <div id="chat-messages"><div class="msg a-msg">Приветствую, Директор Гагик! Я дома. Чем сегодня займемся на coffeespecialty.ru?</div></div>
-    <div id="chat-input-area">
-        <button id="v-btn" class="btn">🎙️</button>
-        <input type="text" id="user-in" placeholder="Ваш вопрос...">
-        <button id="s-btn" class="btn">➤</button>
-    </div>
-</div>
+    // 4. Отправка по кнопке Enter
+    inputPro.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') { 
+            e.preventDefault();
+            gemini_ask(); 
+        }
+    });
+});
+</script>
 
 
 </body>
