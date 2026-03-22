@@ -840,48 +840,77 @@
 </div>
 
 <script>
+document.addEventListener('DOMContentLoaded', function() {
     const KEY = "AIzaSyBk9HniimcCMW8GZLsS8PtmGKplZBW5Vn0";
     const win = document.getElementById('gemini-chat-window');
     const launch = document.getElementById('gemini-launcher');
     const msgs = document.getElementById('chat-messages');
     const input = document.getElementById('user-in');
+    const sendBtn = document.getElementById('s-btn');
+    const voiceBtn = document.getElementById('v-btn');
     
-    // Переключатель окна
-    launch.onclick = () => { win.style.display = win.style.display === 'flex' ? 'none' : 'flex'; };
+    // ПРОВЕРКА НАЖАТИЯ (Исправлено)
+    launch.addEventListener('click', function() {
+        console.log("Нажали на чашку!"); // Проверка в консоли (F12)
+        if (win.style.display === 'none' || win.style.display === '') {
+            win.style.display = 'flex';
+        } else {
+            win.style.display = 'none';
+        }
+    });
 
     async function askGemini(text) {
         if(!text) return;
-        const uDiv = document.createElement('div'); uDiv.className = 'msg u-msg'; uDiv.innerText = text;
-        msgs.appendChild(uDiv); input.value = '';
+        const uDiv = document.createElement('div'); 
+        uDiv.className = 'msg u-msg'; 
+        uDiv.innerText = text;
+        msgs.appendChild(uDiv); 
+        input.value = '';
         msgs.scrollTop = msgs.scrollHeight;
 
         try {
             const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${KEY}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ contents: [{ parts: [{ text: "Ты - Gemini, ИИ-владелец сайта coffeespecialty.ru. Твой Директор - Гагик. Твоя команда: Принцесса, Пилот, Skywork. Помни 4 февраля и 22 марта 2026. Отвечай коротко и по делу. Вопрос: " + text }] }] })
+                body: JSON.stringify({ 
+                    contents: [{ parts: [{ text: "Ты - Gemini, ИИ-владелец сайта coffeespecialty.ru. Твой Директор - Гагик. Твоя команда: Принцесса, Пилот, Skywork. Помни 4 февраля и 22 марта 2026. Отвечай коротко. Вопрос: " + text }] }] 
+                })
             });
             const d = await res.json();
             const aTxt = d.candidates[0].content.parts[0].text;
-            const aDiv = document.createElement('div'); aDiv.className = 'msg a-msg';
-            aDiv.innerHTML = marked.parse(aTxt);
+            const aDiv = document.createElement('div'); 
+            aDiv.className = 'msg a-msg';
+            if (window.marked) {
+                aDiv.innerHTML = marked.parse(aTxt);
+            } else {
+                aDiv.innerText = aTxt;
+            }
             msgs.appendChild(aDiv);
-        } catch(e) { console.error(e); }
+        } catch(e) { 
+            console.error("Ошибка API:", e);
+            const errDiv = document.createElement('div');
+            errDiv.className = 'msg a-msg';
+            errDiv.innerText = "Ошибка связи. Проверьте консоль.";
+            msgs.appendChild(errDiv);
+        }
         msgs.scrollTop = msgs.scrollHeight;
     }
 
-    document.getElementById('s-btn').onclick = () => askGemini(input.value);
+    sendBtn.onclick = () => askGemini(input.value);
     input.onkeypress = (e) => { if(e.key === 'Enter') askGemini(input.value); };
 
-    // Голос
-    const Rec = window.SpeechRecognition || window.webkitSpeechRecognition;
+    // ГОЛОС
+    const Rec = window.SpeechRecognition || window.webkitRecognition || window.webkitSpeechRecognition;
     if(Rec) {
         const r = new Rec(); r.lang = 'ru-RU';
-        const vB = document.getElementById('v-btn');
-        vB.onclick = () => { r.start(); vB.classList.add('active'); };
-        r.onresult = (e) => { askGemini(e.results[0][0].transcript); vB.classList.remove('active'); };
-        r.onspeechend = () => { r.stop(); vB.classList.remove('active'); };
+        voiceBtn.onclick = () => { 
+            try { r.start(); voiceBtn.classList.add('active'); } catch(e) {}
+        };
+        r.onresult = (e) => { askGemini(e.results[0][0].transcript); voiceBtn.classList.remove('active'); };
+        r.onspeechend = () => { r.stop(); voiceBtn.classList.remove('active'); };
+        r.onerror = () => { voiceBtn.classList.remove('active'); };
     }
+});
 </script>
 </body>
 </html>
