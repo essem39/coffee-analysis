@@ -343,13 +343,14 @@
   widget.id = 'coffeepilot-widget';
   widget.innerHTML = `
     <button id="coffeepilot-button" aria-label="Открыть чат">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
+        <path d="M2 21h18v-2H2v2zM20 8h-2V5h2c1.1 0 2 .9 2 2s-.9 2-2 2zm-2 10c1.1 0 2-.9 2-2v-4h-2v6zM4 5v13h12V5H4zm10 11H6V7h8v9z"/>
+        <circle cx="10" cy="11" r="1"/>
       </svg>
     </button>
     <div id="coffeepilot-chat">
       <div class="chat-header">
-        <h3>✈️ CoffeePilot</h3>
+        <h3>☕ CoffeePilot</h3>
         <button class="chat-close" aria-label="Закрыть чат">×</button>
       </div>
       <div class="chat-messages"></div>
@@ -453,7 +454,7 @@
     
     const avatar = document.createElement('div');
     avatar.className = 'message-avatar';
-    avatar.textContent = sender === 'user' ? 'В' : '✈️';
+    avatar.textContent = sender === 'user' ? 'В' : '☕';
     
     const content = document.createElement('div');
     content.className = 'message-content';
@@ -564,7 +565,7 @@
     const typingDiv = document.createElement('div');
     typingDiv.className = 'message typing';
     typingDiv.innerHTML = `
-      <div class="message-avatar">✈️</div>
+      <div class="message-avatar">☕</div>
       <div class="message-content">
         <div class="typing-dots">
           <span></span>
