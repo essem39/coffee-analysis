@@ -39,6 +39,15 @@
  .animate-fade-in { animation: fadeInUp 0.6s ease-out; }
  .stat-number { font-size: 2.5rem; font-weight: 800; color: #ea580c; line-height: 1; }
  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Coffee",
+  "url": "https://coffeespecialty.ru/",
+  "description": ""
+}
+</script>
 </head>
 <body class="bg-white">
 
@@ -528,11 +537,7 @@
  const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('animate-fade-in'); }); }, observerOptions);
  document.querySelectorAll('.card-hover').forEach(card => { observer.observe(card); });
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Искусство Specialty кофе дома: Экспертные гайды 2026","description":"Полное руководство бариста для дома: рецепты V60 и Аэропресса, химия воды, настройка помола, колесо вкусов и уход за оборудованием.","author":{"@type":"Organization","name":"Coffee Analysis"},"datePublished":"2025-01-15",
-"mainEntityOfPage":{"@type":"WebPage","@id":"https://coffeespecialty.ru/kak-hranit-kofe-guide.html"}}
 
-</script>
  <script src="coffeepilot-widget.js"></script>
 </body>
 </html>
