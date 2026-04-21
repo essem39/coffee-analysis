@@ -111,744 +111,158 @@
                         </div>
                     </div>
                 </nav>
-<!-- РЕКЛАМА DISCLOSURE -->
-<div style="background:#fff8f0;border-bottom:2px solid #f0d9b5;padding:10px 0;text-align:center;font-size:13px;color:#7a5c3a">
-  <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem">
-    📢 <strong>Реклама.</strong> Сайт является партнёром Tasty Coffee. Все ссылки на товары — партнёрские. При покупке мы получаем комиссию. Цена для вас не меняется.
-    ООО «Кофе с доставкой», ИНН 1832131543. <a href="contacts.html" style="color:#8B4513;font-weight:600">Реквизиты →</a>
-  </div>
-</div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2F%23%3A%7E%3Atext%3D%25D0%259A%25D0%25BE%25D0%25BD%25D1%2582%25D0%25B0%25D0%25BA%25D1%2582%25D1%258B-%2C%25D0%2592%25D1%2585%25D0%25BE%25D0%25B4%2C-%25D0%25A0%25D0%25B5%25D0%25B3%25D0%25B8%25D1%2581%25D1%2582%25D1%2580%25D0%25B0%25D1%2586%25D0%25B8%25D1%258F" target="_blank" rel="nofollow noopener" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Вход</a>
+                    <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcreate-account" target="_blank" rel="nofollow noopener" class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium">Регистрация</a>
+                </div>
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </header>
 
-<!-- SHOP HERO -->
-<section style="background:linear-gradient(135deg,#2c1810,#4a2c1a);padding:3rem 0;text-align:center;color:#fff">
-  <div class="container">
-    <h1 style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;margin-bottom:.75rem">☕ Магазин Tasty Coffee</h1>
-    <p style="font-size:16px;color:rgba(255,255,255,.8);margin-bottom:2rem">298 товаров · Свежая обжарка · Бесплатная доставка по России</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-      <a href="#espresso" style="background:#fff;color:#2c1810;padding:10px 22px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none">Эспрессо</a>
-      <a href="#filter" style="background:rgba(255,255,255,.15);color:#fff;padding:10px 22px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.3)">Фильтр</a>
-      <a href="#tea" style="background:rgba(255,255,255,.15);color:#fff;padding:10px 22px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.3)">Чай</a>
-      <a href="#accessories" style="background:rgba(255,255,255,.15);color:#fff;padding:10px 22px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.3)">Аксессуары</a>
-      <a href="#chocolate" style="background:rgba(255,255,255,.15);color:#fff;padding:10px 22px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.3)">Шоколад</a>
-      <a href="#sets" style="background:rgba(255,255,255,.15);color:#fff;padding:10px 22px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.3)">Наборы</a>
+    <div class="mobile-menu-overlay fixed inset-0 bg-black bg-opacity-50 z-40" id="mobile-overlay"></div>
+    <div class="mobile-menu fixed top-0 left-0 w-80 h-full bg-white z-50 shadow-2xl" id="mobile-menu">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-8">
+                <span class="text-xl font-bold">Coffee Analysis</span>
+                <button id="close-menu" class="p-2"><i data-lucide="x" class="w-6 h-6"></i></button>
+            </div>
+            <nav class="space-y-4">
+                <a href="index.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Главная</a>
+                <a href="shop.html" class="block px-4 py-3 bg-orange-50 text-orange-500 font-bold rounded-lg">Магазин</a>
+                <a href="specialty-micro-lots-2025.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Обзоры</a>
+                <a href="kak-hranit-kofe-guide.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Гайды</a>
+                <a href="tea-guide.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Чай</a>
+                <a href="premium-collection.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Коллекция</a>
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-toggle w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors flex justify-between items-center">
+                        <span>Ещё</span>
+                        <svg class="dropdown-arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="mobile-dropdown-content">
+                        <a href="espresso-masterclass.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Мастер-класс</a>
+                        <a href="dekaf-guide.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Декаф</a>
+                        <a href="tasty-partners.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Партнёры</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="mt-8 space-y-3">
+                <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2F%23%3A%7E%3Atext%3D%25D0%259A%25D0%25BE%25D0%25BD%25D1%2582%25D0%25B0%25D0%25BA%25D1%2582%25D1%258B-%2C%25D0%2592%25D1%2585%25D0%25BE%25D0%25B4%2C-%25D0%25A0%25D0%25B5%25D0%25B3%25D0%25B8%25D1%2581%25D1%2582%25D1%2580%25D0%25B0%25D1%2586%25D0%25B8%25D1%258F" target="_blank" rel="nofollow noopener" class="block w-full text-center px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">Вход</a>
+                <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcreate-account" target="_blank" rel="nofollow noopener" class="block w-full text-center px-4 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors">Регистрация</a>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
 
-<style>
-.shop-section{padding:3rem 0;border-bottom:1px solid #f0ebe3}
-.shop-section:nth-child(even){background:#fafaf8}
-.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
-.section-head h2{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:700;color:#2c1810}
-.ad-label{font-size:11px;color:#999;background:#f5f0e8;padding:4px 12px;border-radius:20px;border:1px solid #e5ddd0}
-.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.25rem}
-.product-card{background:#fff;border:1px solid #e5e0d8;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;transition:.2s;display:flex;flex-direction:column}
-.product-card:hover{border-color:#8B4513;box-shadow:0 4px 20px rgba(139,69,19,.12);transform:translateY(-2px)}
-.product-img-wrap{position:relative;background:#f5f0e8;height:200px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.product-img-wrap img{max-width:100%;max-height:190px;object-fit:contain;padding:10px}
-.product-badge{position:absolute;top:8px;left:8px;background:rgba(139,69,19,.9);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.05em}
-.product-body{padding:1rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
-.product-name{font-weight:700;font-size:15px;color:#2c1810;line-height:1.3}
-.product-desc{font-size:12px;color:#999;line-height:1.5;flex:1}
-.product-footer{display:flex;align-items:center;justify-content:space-between;padding-top:.75rem;border-top:1px solid #f0ebe3;margin-top:auto}
-.product-price{font-size:18px;font-weight:700;color:#8B4513}
-.product-btn{font-size:13px;font-weight:600;color:#8B4513;background:#fff8f0;padding:6px 14px;border-radius:6px;border:1px solid #f0d9b5}
-.product-card:hover .product-btn{background:#8B4513;color:#fff;border-color:#8B4513}
-@media(max-width:640px){.products-grid{grid-template-columns:repeat(2,1fr)}.section-head{flex-direction:column;align-items:flex-start}}
-</style>
-
-
-    <section class="shop-section" id="espresso">
-      <div class="container">
-        <div class="section-head">
-          <h2>☕ Кофе для эспрессо</h2>
-          <span class="ad-label">📢 Реклама · Партнёр Tasty Coffee</span>
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-amber-50 to-orange-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center space-x-2 text-orange-500 mb-4">
+                <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                <span class="text-xs font-black uppercase tracking-widest">Official Store</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Купить кофе онлайн в интернет-магазине Tasty Coffee</h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Эксклюзивная подборка от Coffee Analysis. Каждый лот проверен нашими экспертами и рекомендован на основе слепых дегустаций по стандартам SCA.</p>
+            <div class="flex items-center justify-center space-x-6 mb-10">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-orange-600" id="hero-count">296</div>
+                    <div class="text-sm text-gray-600">товаров</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-green-600">Tasty</div>
+                    <div class="text-sm text-gray-600">качество</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-blue-600">Доставка</div>
+                    <div class="text-sm text-gray-600">по РФ</div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                <a href="promocodes.html" class="bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 text-center border border-orange-100 block">
+                    <img src="four/ADMITAT (1).webp" alt="Купить кофе со скидкой 10% — промокод Admitad" class="w-full h-48 object-contain rounded-2xl mb-4" loading="lazy" width="300" height="96">
+                    <div class="text-2xl font-black text-orange-500 mb-1">−10%</div>
+                    <div class="text-xs font-bold text-gray-700">Промокод Admitad</div>
+                    <div class="text-xs text-gray-400 mt-1">На весь кофе и чай</div>
+                </a>
+                <a href="promocodes.html" class="bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 text-center border border-green-100 block">
+                    <img src="four/KOFE (1).webp" alt="Купить кофе онлайн — подарок при заказе от 6 пачек" class="w-full h-48 object-contain rounded-2xl mb-4" loading="lazy" width="300" height="96">
+                    <div class="text-2xl font-black text-green-600 mb-1">🎁 Подарок</div>
+                    <div class="text-xs font-bold text-gray-700">6 пачек кофе</div>
+                    <div class="text-xs text-gray-400 mt-1">+1 пачка бесплатно</div>
+                </a>
+                <a href="promocodes.html" class="bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 text-center border border-purple-100 block">
+                    <img src="four/15%25 (1).webp" alt="Купить кофе онлайн — накопить скидку до 15%" class="w-full h-48 object-contain rounded-2xl mb-4" loading="lazy" width="300" height="96">
+                    <div class="text-2xl font-black text-purple-600 mb-1">до 15%</div>
+                    <div class="text-xs font-bold text-gray-700">Накопительная</div>
+                    <div class="text-xs text-gray-400 mt-1">Скидка за лояльность</div>
+                </a>
+                <a href="promocodes.html" class="bg-white rounded-2xl p-5 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 text-center border border-blue-100 block">
+                    <img src="four/CHAY (1).webp" alt="Купить чай онлайн — пачка в подарок от Tasty Coffee" class="w-full h-48 object-contain rounded-2xl mb-4" loading="lazy" width="300" height="96">
+                    <div class="text-2xl font-black text-blue-600 mb-1">🍵 Чай</div>
+                    <div class="text-xs font-bold text-gray-700">6 пачек чая</div>
+                    <div class="text-xs text-gray-400 mt-1">+1 пачка бесплатно</div>
+                </a>
+            </div>
         </div>
-        <div class="products-grid">
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fcapsules-nutty-40" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/capsules/capsules-nutty-40.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Купить кофе в капсулах Nespresso Натти с быстрой и бесплатной доставкой...</div>
-              <div class="product-footer">
-                <div class="product-price">1719 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fblack-candy" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Кэнди — плотный кофе для эспрессо и приготовления молочных напитков...</div>
-              <div class="product-footer">
-                <div class="product-price">769 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fbrazil-cerrado" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack10/espresso_mono/brazil-cerrado-025.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Сбалансированный вкус с нотами жареных орехов, шоколада и карамели...</div>
-              <div class="product-footer">
-                <div class="product-price">579 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fespresso-nutty" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/nutty_250.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Плотный кофе с нотами жареных орехов, печенья и нуги...</div>
-              <div class="product-footer">
-                <div class="product-price">699 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fespresso-berri" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/berry_250.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Бэрри — плотный кофе для эспрессо и приготовления молочных напитков...</div>
-              <div class="product-footer">
-                <div class="product-price">759 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fespresso-brownie" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/brownie_250.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Брауни — плотный и сбалансированный кофе для эспрессо и приготовления молочных напитков...</div>
-              <div class="product-footer">
-                <div class="product-price">799 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fdrip-coffee-guatemala-santiago-50" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/drip/mockups/drip-big-black-50.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Сладкий кофе с нотами апельсина, сухофруктов и молочного шоколада...</div>
-              <div class="product-footer">
-                <div class="product-price">2479 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fespresso-honey" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/honey_250.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Хани — сладкий кофе с нотами цветочного мёда, сухофруктов и тёмного шоколада...</div>
-              <div class="product-footer">
-                <div class="product-price">739 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
     </section>
 
-    <section class="shop-section" id="filter">
-      <div class="container">
-        <div class="section-head">
-          <h2>🌿 Фильтровый кофе</h2>
-          <span class="ad-label">📢 Реклама · Партнёр Tasty Coffee</span>
+    <!-- Filters + Sort -->
+    <section class="py-6 bg-white border-b border-slate-200 sticky top-16 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap gap-3 items-center justify-between">
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn active px-5 py-2 rounded-full border-2 border-slate-200 font-bold text-sm uppercase tracking-wider hover:border-orange-500" data-filter="all">Все товары</button>
+                    <button class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 font-bold text-sm uppercase tracking-wider hover:border-orange-500" data-filter="coffee">Кофе</button>
+                    <button class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 font-bold text-sm uppercase tracking-wider hover:border-orange-500" data-filter="tea">Чай</button>
+                    <button class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 font-bold text-sm uppercase tracking-wider hover:border-orange-500" data-filter="accessories">Аксессуары</button>
+                    <button class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 font-bold text-sm uppercase tracking-wider hover:border-orange-500" data-filter="other">Другое</button>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span id="product-count"></span>
+                    <select class="sort-select" id="sort-select">
+                        <option value="default">По умолчанию</option>
+                        <option value="price-asc">Цена: сначала дешевле</option>
+                        <option value="price-desc">Цена: сначала дороже</option>
+                        <option value="name-asc">По названию А-Я</option>
+                    </select>
+                </div>
+            </div>
         </div>
-        <div class="products-grid">
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fbraziliya-sul-de-minas" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack10/filter_mono/new/braziliya-sul-de-minas_250_front.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Бразилия Суль-де-Минас — сбалансированный кофе для фильтра без яркой кислотности...</div>
-              <div class="product-footer">
-                <div class="product-price">739 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fdrip-coffee-kenya-maunt" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack9/drip/drip-coffee-kenya-maunt-new.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Сочный кофе с нотами красной смородины, какао и чёрного чая...</div>
-              <div class="product-footer">
-                <div class="product-price">599 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fdrip-coffee-berry-30" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack9/drip/Drip_Monthly_pack_barry.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Плотный кофе с нотами ореховой пасты, темных ягод и печенья...</div>
-              <div class="product-footer">
-                <div class="product-price">1569 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Frwanda-muteteli" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack10/filter_mono/rwanda-kivu-25.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Яркий кофе с нотами вишни, грейпфрута и тёмного шоколада...</div>
-              <div class="product-footer">
-                <div class="product-price">669 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fespresso-kenya-nairobi" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack10/espresso_mono/espresso-kenya-nairobi-250.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Сочный кофе с нотами джема из смородины, чёрного чая и пудры какао...</div>
-              <div class="product-footer">
-                <div class="product-price">859 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fdrip-coffee-indonesia-sumatra-gayo-50" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/drip/mockups/drip-big-black-50.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Яркий кофе со вкусом шиповника, мандарина и листа смородины...</div>
-              <div class="product-footer">
-                <div class="product-price">2789 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fdrip-coffee-kenya-maunt-50" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/drip/mockups/drip-big-black-50.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Сочный кофе с нотами красной смородины, какао и чёрного чая...</div>
-              <div class="product-footer">
-                <div class="product-price">2489 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fdrip-coffee-berry-50" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/drip/mockups/drip-big-berry.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Плотный кофе с нотами ореховой пасты, темных ягод и печенья...</div>
-              <div class="product-footer">
-                <div class="product-price">2369 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
     </section>
 
-    <section class="shop-section" id="tea">
-      <div class="container">
-        <div class="section-head">
-          <h2>🍵 Чай</h2>
-          <span class="ad-label">📢 Реклама · Партнёр Tasty Coffee</span>
+    <!-- Products Grid -->
+    <section class="py-12 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="loading-spinner">
+                <svg class="animate-spin h-10 w-10 text-orange-500 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                </svg>
+                <p class="text-gray-500 font-medium">Загружаем товары...</p>
+            </div>
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" style="display:none;"></div>
+            <div id="no-results" class="text-center py-20 hidden">
+                <p class="text-gray-400 text-xl">Ничего не найдено</p>
+            </div>
         </div>
-        <div class="products-grid">
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Ftea%2Fkaskara-costa-rica-100" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_tea10/SPECIALTY%20TEA/kaskara-costa-rica-100.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Каскара Коста-Рика...</div>
-              <div class="product-footer">
-                <div class="product-price">529 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Ftea%2Fgrechishnyy" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_tea5_new/herbal/grechishnyy1.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Гречишный чай. Тизан с лёгким сладковатым ароматом, с оттенками ореха и овсяного печенья...</div>
-              <div class="product-footer">
-                <div class="product-price">339 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Ftea%2Fblack-aroma-berry-mix" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_tea5_new/aroma_black/black-aroma-berry-mix1.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Черный ароматизированный чай &quot;Фруктовая смесь&quot;...</div>
-              <div class="product-footer">
-                <div class="product-price">439 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Ftea%2Fgreen-aroma-mozhzhevelnik" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_tea5_new/aroma_green/green-aroma-mozhzhevelnik1.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">В основе этого чая — китайский зелёный чай сенча, в который добавили листья земляники и чёрной сморо...</div>
-              <div class="product-footer">
-                <div class="product-price">429 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Ftea%2Foolong-dgenshen" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_tea5_new/oolong/oolong-dgenshen1.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Улун &quot;Женьшень Улун Выдержанный&quot;...</div>
-              <div class="product-footer">
-                <div class="product-price">439 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Ftea%2Fblack-aroma-chabrets" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_tea5_new/aroma_black/black-aroma-chabrets1.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Черный ароматизированный чай &quot;Чабрец&quot;...</div>
-              <div class="product-footer">
-                <div class="product-price">359 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Ftea%2Fgreen-aroma-japan-linden" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_tea5_new/aroma_green/green-aroma-japan-linden1.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">В составе этого чая китайская сенча, в которую добавили лимонную траву, листья липы, цедру лимона, р...</div>
-              <div class="product-footer">
-                <div class="product-price">409 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Ftea%2Findia-assam-digu" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_tea5_new/black/india-assam-digu1.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Классический индийский чёрный чай из штата Ассам. Произведён на плантации Дижу, знаменитой качеством...</div>
-              <div class="product-footer">
-                <div class="product-price">439 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
     </section>
 
-    <section class="shop-section" id="accessories">
-      <div class="container">
-        <div class="section-head">
-          <h2>⚗️ Аксессуары для бариста</h2>
-          <span class="ad-label">📢 Реклама · Партнёр Tasty Coffee</span>
+    <!-- CTA -->
+    <section class="py-16 bg-gradient-to-br from-orange-500 to-orange-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Купить кофе онлайн — лучшие сорта Tasty Coffee с доставкой</h2>
+            <p class="text-xl mb-8 text-orange-100">Полный каталог Tasty Coffee с возможностью оформить заказ и отслеживать доставку</p>
+            <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee" target="_blank" rel="nofollow noopener" class="inline-block bg-white text-orange-500 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-orange-50 transition-all shadow-xl">
+                Перейти в Tasty Coffee →
+            </a>
         </div>
-        <div class="products-grid">
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Faccessories%2Flatte-cup-ancap-350" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/accessories3/cups/latte-cup-ancap-350_2.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Ancap — известный бренд из Италии, который производит фарфоровую посуду для кофеен, ресторанов, кафе...</div>
-              <div class="product-footer">
-                <div class="product-price">1469 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Faccessories%2Fcup-porcelain-loveramics-egg-150" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack7/accessories/loveramics-1.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Loveramics — бренд из Гонконга, который занимает одно из ведущих мест по производству посуды из фарф...</div>
-              <div class="product-footer">
-                <div class="product-price">1799 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Faccessories%2Fmiir-camp-cup" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_accessories9/miir/miir-camp-cup.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Кружка Miir Camp Cup &quot;Expanding the coffee culture&quot;, 236 мл...</div>
-              <div class="product-footer">
-                <div class="product-price">3299 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Faccessories%2Ffilter-kap-big-250" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_accessories8/filters/filter-kap-big-250.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Фильтры для капельных кофеварок (1-2,5 л), 250 шт...</div>
-              <div class="product-footer">
-                <div class="product-price">1329 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Faccessories%2Fshopper-tasty-coffee-poly" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_accessories9/merch/shopper-tasty-coffee-poly.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Сумка-шопер upcycled прозрачная, купить сумку по цене от 2639 рублей с бесплатной доставкой по всей ...</div>
-              <div class="product-footer">
-                <div class="product-price">2399 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Faccessories%2Fupcycled-crossbody-bag" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_accessories9/bags/upcycled-crossbody-bag.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Сумка-кроссбоди upcycled...</div>
-              <div class="product-footer">
-                <div class="product-price">2399 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Faccessories%2Fbottle-bag-upcycled" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_accessories9/merch/bottle-bag-upcycled.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Купить сумку для бутылки upcycled по цене от 2299 руб. с быстрой и бесплатной доставкой...</div>
-              <div class="product-footer">
-                <div class="product-price">1999 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Faccessories%2Fcoffee-grinder-washer" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_accessories8/clean/Grindz.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Средство GRINDZ для чистки кофемолок в таблетках, 430 г...</div>
-              <div class="product-footer">
-                <div class="product-price">4399 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
     </section>
 
-    <section class="shop-section" id="chocolate">
-      <div class="container">
-        <div class="section-head">
-          <h2>🍫 Шоколад и сиропы</h2>
-          <span class="ad-label">📢 Реклама · Партнёр Tasty Coffee</span>
-        </div>
-        <div class="products-grid">
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fchocolate%2Fraf-powder-blueberry-cream" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/osnova/mockups/raf-powder-blueberry-cream.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Сухая основа для приготовления кофейно-молочных напитков...</div>
-              <div class="product-footer">
-                <div class="product-price">599 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fchocolate%2Fraf-powder-raspberry-red-basil" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_accessories9/raf-powder/raf-powder-raspberry-red-basil-new.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Сухая основа на базе кокосовых сливок для приготовления кофейно-молочных напитков...</div>
-              <div class="product-footer">
-                <div class="product-price">599 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fchocolate%2Fraf-powder-pear-whoopie" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/osnova/mockups/raf-powder-pear-whoopie.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Сухая основа для приготовления кофейно-молочных напитков...</div>
-              <div class="product-footer">
-                <div class="product-price">599 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fchocolate%2Fraf-powder-strawberry-fig" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/osnova/mockups/raf-powder-strawberry-fig.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Сухая основа для приготовления кофейно-молочных напитков...</div>
-              <div class="product-footer">
-                <div class="product-price">599 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fchocolate%2Fsyrup-davinci-hazelnut" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/accessories3/Gourmix/Hazelnut.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Сироп Gourmix Фундук...</div>
-              <div class="product-footer">
-                <div class="product-price">699 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fchocolate%2Fraf-powder-cheese-punch" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/osnova/mockups/raf-powder-cheese-punch.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Сухая основа для приготовления кофейно-молочных напитков...</div>
-              <div class="product-footer">
-                <div class="product-price">599 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
+    <script src="coffeepilot-widget.js"></script>
 
-    <section class="shop-section" id="sets">
-      <div class="container">
-        <div class="section-head">
-          <h2>🎁 Наборы</h2>
-          <span class="ad-label">📢 Реклама · Партнёр Tasty Coffee</span>
-        </div>
-        <div class="products-grid">
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fgift-box-11" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_accessories9/gift_box/gift-box-11.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Набор кофе, френч-пресс Timemore, Tasty Coffee...</div>
-              <div class="product-footer">
-                <div class="product-price">5999 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fgift-box-1" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_accessories9/gift_box/gift-box-1.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Подарочный набор с кофе и аэропрессом Go, Tasty Coffee....</div>
-              <div class="product-footer">
-                <div class="product-price">10099 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fgift-box-20" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_accessories9/gift_box/gift-box-20.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Набор кофе, дрип-пакеты, Tasty Coffee, купить набор для каппинга по цене от 3999 рублей с бесплатной...</div>
-              <div class="product-footer">
-                <div class="product-price">4699 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fgift-box-30" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/gift_box/gift-box-scrub.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Купить подарочный набор в интернет-магазине Tasty Coffee...</div>
-              <div class="product-footer">
-                <div class="product-price">1749 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fgift-box-21" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/gift_box/gift-box-saloev.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Купить подарочный набор в интернет-магазине Tasty Coffee...</div>
-              <div class="product-footer">
-                <div class="product-price">3599 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-          <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcoffee%2Fgift-box-23" target="_blank" rel="noopener" class="product-card">
-            <div class="product-img-wrap">
-              <img src="https://coffee-static.storage.yandexcloud.net/files/shares/data/_accessories9/gift_box/gift-box-23.png" alt="" loading="lazy" onerror="this.src='https://coffee-static.storage.yandexcloud.net/files/shares/data/_newpack11/mono_espresso/candy_250.png'">
-              <span class="product-badge">Реклама</span>
-            </div>
-            <div class="product-body">
-              <div class="product-name"></div>
-              <div class="product-desc">Набор кофе + воронка Cafec + фильтры, Tasty Coffee, купить набор кофе по цене 3699 рублей с бесплатн...</div>
-              <div class="product-footer">
-                <div class="product-price">4199 ₽</div>
-                <div class="product-btn">Купить →</div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-<!-- VIEW ALL -->
-<div style="text-align:center;padding:3rem 0">
-  <p style="color:#999;font-size:14px;margin-bottom:1rem">Показаны лучшие товары. В магазине Tasty Coffee доступно 298 позиций.</p>
-  <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2F" target="_blank" rel="noopener" style="background:#8B4513;color:#fff;padding:14px 36px;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;display:inline-block">
-    📢 Реклама · Смотреть все товары в магазине →
-  </a>
-</div>
-
-<footer class="bg-gray-900 text-white py-12">
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
                 <div>
