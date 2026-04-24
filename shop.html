@@ -61,9 +61,10 @@
         .sort-select { border: 2px solid #e2e8f0; border-radius: 12px; padding: 8px 16px; font-size: 14px; font-weight: 600; background: white; cursor: pointer; outline: none; }
         .sort-select:focus { border-color: #f97316; }
         #product-count { font-size: 14px; color: #64748b; font-weight: 500; }
+    
     /* === unified-nav === */
 .dropdown { position: relative; }
-.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px; min-width: 220px; margin-top: 8px; z-index: 1000; }
+.dropdown-menu { display: none; position: absolute; top: 100%; right: 0; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px; min-width: 240px; margin-top: 8px; z-index: 1000; }
 .dropdown-menu.show { display: block; }
 .dropdown-menu a { display: block; padding: 12px 16px; color: #374151; text-decoration: none; transition: background .2s; white-space: nowrap; }
 .dropdown-menu a:hover { background: #f3f4f6; color: #2563eb; }
@@ -115,90 +116,72 @@
                         <img src="img/1601f59e45c93a87579f5c088fb77e81 (1).png" alt="CoffeeSpecialty" class="h-20 w-auto">
                     </a>
                 </div>
-                <nav class="hidden lg:flex items-center space-x-6">
+                <nav class="hidden lg:flex items-center space-x-5">
                     <a href="index.html" data-nav="home" class="text-gray-700 hover:text-blue-600 transition-colors">Главная</a>
-                    <div class="dropdown relative" data-dd="shop">
-                        <button class="dropdown-toggle text-gray-700 hover:text-blue-600 transition-colors flex items-center space-x-1" data-nav="shop">
-                            <span>Магазин</span>
-                            <svg class="dropdown-arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a href="shop.html">Все товары</a>
-                            <a href="shop.html?cat=tea">Чай</a>
-                            <a href="shop.html?cat=coffee">Кофе</a>
-                            <a href="shop.html?cat=accessories">Оборудование</a>
-                        </div>
-                    </div>
+                    <a href="shop.html" data-nav="shop" class="text-gray-700 hover:text-blue-600 transition-colors">Магазин</a>
+                    <a href="shop.html?cat=coffee" data-nav="coffee" class="text-gray-700 hover:text-blue-600 transition-colors">Кофе</a>
+                    <a href="shop.html?cat=tea" data-nav="tea" class="text-gray-700 hover:text-blue-600 transition-colors">Чай</a>
+                    <a href="shop.html?cat=accessories" data-nav="equipment" class="text-gray-700 hover:text-blue-600 transition-colors">Оборудование</a>
                     <a href="premium-collection.html" data-nav="collection" class="text-gray-700 hover:text-blue-600 transition-colors">Коллекции</a>
-                    <a href="specialty-micro-lots-2025.html" data-nav="reviews" class="text-gray-700 hover:text-blue-600 transition-colors">Обзоры</a>
-                    <div class="dropdown relative" data-dd="guides">
-                        <button class="dropdown-toggle text-gray-700 hover:text-blue-600 transition-colors flex items-center space-x-1" data-nav="guides">
-                            <span>Гайды</span>
+                    <div class="dropdown relative" data-dd="more">
+                        <button type="button" class="dropdown-toggle text-gray-700 hover:text-blue-600 transition-colors flex items-center space-x-1">
+                            <span>Ещё</span>
                             <svg class="dropdown-arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="dropdown-menu">
+                            <a href="specialty-micro-lots-2025.html">Обзоры</a>
                             <a href="espresso-masterclass.html">Мастер-класс эспрессо</a>
                             <a href="dekaf-guide.html">Декаф навигатор</a>
                             <a href="kak-hranit-kofe-guide.html">Хранение кофе</a>
                             <a href="tea-guide.html">Гид по чаю</a>
                             <a href="budget-barista-equipment-150.html">Бюджетное оборудование</a>
+                            <a href="tasty-partners.html">Партнёры</a>
+                            <a href="promocodes.html">Промокоды</a>
+                            <a href="contacts.html">Контакты</a>
                         </div>
                     </div>
-                    <a href="tasty-partners.html" data-nav="partners" class="text-gray-700 hover:text-blue-600 transition-colors">Партнёры</a>
-                    <a href="promocodes.html" data-nav="promo" class="text-gray-700 hover:text-blue-600 transition-colors">Промокоды</a>
-                    <a href="contacts.html" data-nav="contacts" class="text-gray-700 hover:text-blue-600 transition-colors">Контакты</a>
                 </nav>
                 <div class="hidden lg:flex items-center space-x-3">
                     <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2F" target="_blank" rel="nofollow noopener" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Вход</a>
                     <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcreate-account" target="_blank" rel="nofollow noopener" class="bg-orange-500 text-white px-5 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium">Регистрация</a>
                 </div>
-                <button class="lg:hidden p-2" id="mobile-menu-btn" aria-label="Меню">
+                <button type="button" class="lg:hidden p-2" id="mobile-menu-btn" aria-label="Меню">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
         </div>
-        <!-- Mobile Menu Overlay -->
         <div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"></div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-xl z-50 transform translate-x-full transition-transform lg:hidden overflow-y-auto">
             <div class="p-4 border-b flex justify-between items-center">
                 <span class="font-bold text-lg">Меню</span>
-                <button id="close-menu" class="p-2" aria-label="Закрыть">
+                <button type="button" id="close-menu" class="p-2" aria-label="Закрыть">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
             </div>
             <nav class="p-4 flex flex-col gap-1">
                 <a href="index.html" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Главная</a>
-                <div class="mobile-dropdown">
-                    <button class="mobile-dropdown-toggle w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg flex justify-between items-center">
-                        <span>Магазин</span>
-                        <svg class="dropdown-arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="mobile-dropdown-content">
-                        <a href="shop.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Все товары</a>
-                        <a href="shop.html?cat=tea" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Чай</a>
-                        <a href="shop.html?cat=coffee" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Кофе</a>
-                        <a href="shop.html?cat=accessories" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Оборудование</a>
-                    </div>
-                </div>
+                <a href="shop.html" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Магазин</a>
+                <a href="shop.html?cat=coffee" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Кофе</a>
+                <a href="shop.html?cat=tea" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Чай</a>
+                <a href="shop.html?cat=accessories" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Оборудование</a>
                 <a href="premium-collection.html" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Коллекции</a>
-                <a href="specialty-micro-lots-2025.html" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Обзоры</a>
                 <div class="mobile-dropdown">
-                    <button class="mobile-dropdown-toggle w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg flex justify-between items-center">
-                        <span>Гайды</span>
+                    <button type="button" class="mobile-dropdown-toggle w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg flex justify-between items-center">
+                        <span>Ещё</span>
                         <svg class="dropdown-arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="mobile-dropdown-content">
+                        <a href="specialty-micro-lots-2025.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Обзоры</a>
                         <a href="espresso-masterclass.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Мастер-класс эспрессо</a>
                         <a href="dekaf-guide.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Декаф навигатор</a>
                         <a href="kak-hranit-kofe-guide.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Хранение кофе</a>
                         <a href="tea-guide.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Гид по чаю</a>
                         <a href="budget-barista-equipment-150.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Бюджетное оборудование</a>
+                        <a href="tasty-partners.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Партнёры</a>
+                        <a href="promocodes.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Промокоды</a>
+                        <a href="contacts.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">Контакты</a>
                     </div>
                 </div>
-                <a href="tasty-partners.html" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Партнёры</a>
-                <a href="promocodes.html" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Промокоды</a>
-                <a href="contacts.html" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Контакты</a>
                 <div class="border-t pt-3 mt-3 flex flex-col gap-2">
                     <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2F" target="_blank" rel="nofollow noopener" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg font-medium">Вход</a>
                     <a href="https://dkfrh.com/g/p7ivmje1cj86edf43b229ebcee8c5e/?erid=MvGzQC98w3Z1gMq1mSxTgEET&f_id=24863&ulp=https%3A%2F%2Fshop.tastycoffee.ru%2Fcreate-account" target="_blank" rel="nofollow noopener" class="bg-orange-500 text-white text-center px-5 py-3 rounded-lg hover:bg-orange-600 font-medium">Регистрация</a>
@@ -400,31 +383,6 @@
     <script>
         lucide.createIcons();
 
-        // Desktop Dropdown
-        const dropdownToggle = document.querySelector('.dropdown-toggle');
-        const dropdownMenu = document.querySelector('.dropdown-menu');
-        const dropdown = document.querySelector('.dropdown');
-        if (dropdownToggle) {
-            dropdownToggle.addEventListener('click', e => { e.stopPropagation(); dropdownMenu.classList.toggle('show'); dropdown.classList.toggle('active'); });
-            document.addEventListener('click', () => { dropdownMenu.classList.remove('show'); dropdown.classList.remove('active'); });
-        }
-
-        // Mobile Dropdown
-        const mobToggle = document.querySelector('.mobile-dropdown-toggle');
-        const mobContent = document.querySelector('.mobile-dropdown-content');
-        if (mobToggle) mobToggle.addEventListener('click', () => mobContent.classList.toggle('show'));
-
-        // Mobile Menu
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenuEl = document.getElementById('mobile-menu');
-        const mobileOverlay = document.getElementById('mobile-overlay');
-        const closeMenuBtn = document.getElementById('close-menu');
-        const openMobileMenu = () => { mobileMenuEl.classList.add('open'); mobileOverlay.classList.add('open'); document.body.style.overflow = 'hidden'; };
-        const closeMobileMenu = () => { mobileMenuEl.classList.remove('open'); mobileOverlay.classList.remove('open'); document.body.style.overflow = ''; };
-        mobileMenuBtn.addEventListener('click', openMobileMenu);
-        closeMenuBtn.addEventListener('click', closeMobileMenu);
-        mobileOverlay.addEventListener('click', closeMobileMenu);
-
         // ---- PRODUCTS RENDERING ----
         let currentFilter = 'all';
         let currentSort = 'default';
@@ -517,76 +475,90 @@
             document.getElementById('loading-spinner').innerHTML = '<p class="text-red-400 font-medium">Не удалось загрузить товары. Обновите страницу.</p>';
         }
     </script>
-<script>
+
+    
+    <script>
 /* === unified-nav-js === */
 (function(){
-  // Desktop dropdowns
-  document.querySelectorAll('.dropdown').forEach(function(dd){
-    var toggle = dd.querySelector('.dropdown-toggle');
-    var menu = dd.querySelector('.dropdown-menu');
-    if(!toggle||!menu) return;
-    toggle.addEventListener('click', function(e){
-      e.stopPropagation();
-      var wasOpen = menu.classList.contains('show');
-      document.querySelectorAll('.dropdown-menu.show').forEach(function(m){m.classList.remove('show');});
-      document.querySelectorAll('.dropdown.active').forEach(function(d){d.classList.remove('active');});
-      if(!wasOpen){ menu.classList.add('show'); dd.classList.add('active'); }
+  function initNav(){
+    // Desktop dropdowns
+    document.querySelectorAll('.dropdown').forEach(function(dd){
+      if(dd.dataset.navInit) return;
+      dd.dataset.navInit = '1';
+      var toggle = dd.querySelector('.dropdown-toggle');
+      var menu = dd.querySelector('.dropdown-menu');
+      if(!toggle||!menu) return;
+      toggle.addEventListener('click', function(e){
+        e.preventDefault(); e.stopPropagation();
+        var wasOpen = menu.classList.contains('show');
+        document.querySelectorAll('.dropdown-menu.show').forEach(function(m){m.classList.remove('show');});
+        document.querySelectorAll('.dropdown.active').forEach(function(d){d.classList.remove('active');});
+        if(!wasOpen){ menu.classList.add('show'); dd.classList.add('active'); }
+      });
     });
-  });
-  document.addEventListener('click', function(){
-    document.querySelectorAll('.dropdown-menu.show').forEach(function(m){m.classList.remove('show');});
-    document.querySelectorAll('.dropdown.active').forEach(function(d){d.classList.remove('active');});
-  });
-  // Mobile menu
-  var mb = document.getElementById('mobile-menu-btn');
-  var mm = document.getElementById('mobile-menu');
-  var mo = document.getElementById('mobile-overlay');
-  var cm = document.getElementById('close-menu');
-  function openM(){ if(mm){mm.classList.add('open');} if(mo){mo.classList.add('open');} }
-  function closeM(){ if(mm){mm.classList.remove('open');} if(mo){mo.classList.remove('open');} }
-  if(mb) mb.addEventListener('click', openM);
-  if(cm) cm.addEventListener('click', closeM);
-  if(mo) mo.addEventListener('click', closeM);
-  document.querySelectorAll('.mobile-dropdown-toggle').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var c = btn.nextElementSibling;
-      if(c) c.classList.toggle('show');
-      var arrow = btn.querySelector('.dropdown-arrow');
-      if(arrow) arrow.style.transform = c && c.classList.contains('show') ? 'rotate(180deg)' : '';
+    if(!document.documentElement.dataset.navDocInit){
+      document.documentElement.dataset.navDocInit = '1';
+      document.addEventListener('click', function(){
+        document.querySelectorAll('.dropdown-menu.show').forEach(function(m){m.classList.remove('show');});
+        document.querySelectorAll('.dropdown.active').forEach(function(d){d.classList.remove('active');});
+      });
+    }
+    // Mobile
+    var mb = document.getElementById('mobile-menu-btn');
+    var mm = document.getElementById('mobile-menu');
+    var mo = document.getElementById('mobile-overlay');
+    var cm = document.getElementById('close-menu');
+    function openM(){ if(mm)mm.classList.add('open'); if(mo)mo.classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeM(){ if(mm)mm.classList.remove('open'); if(mo)mo.classList.remove('open'); document.body.style.overflow=''; }
+    if(mb && !mb.dataset.navInit){ mb.dataset.navInit='1'; mb.addEventListener('click', openM); }
+    if(cm && !cm.dataset.navInit){ cm.dataset.navInit='1'; cm.addEventListener('click', closeM); }
+    if(mo && !mo.dataset.navInit){ mo.dataset.navInit='1'; mo.addEventListener('click', closeM); }
+    document.querySelectorAll('.mobile-dropdown-toggle').forEach(function(btn){
+      if(btn.dataset.navInit) return;
+      btn.dataset.navInit = '1';
+      btn.addEventListener('click', function(){
+        var c = btn.nextElementSibling;
+        if(c) c.classList.toggle('show');
+        var arrow = btn.querySelector('.dropdown-arrow');
+        if(arrow) arrow.style.transform = c && c.classList.contains('show') ? 'rotate(180deg)' : '';
+      });
     });
-  });
-  // Highlight current page in nav
-  var path = location.pathname.split('/').pop() || 'index.html';
-  var map = {
-    'index.html':'home','shop.html':'shop',
-    'premium-collection.html':'collection',
-    'specialty-micro-lots-2025.html':'reviews',
-    'tasty-partners.html':'partners',
-    'promocodes.html':'promo','contacts.html':'contacts',
-    'espresso-masterclass.html':'guides','dekaf-guide.html':'guides',
-    'kak-hranit-kofe-guide.html':'guides','tea-guide.html':'guides',
-    'budget-barista-equipment-150.html':'guides'
-  };
-  var key = map[path];
-  if(key){
-    document.querySelectorAll('[data-nav="'+key+'"]').forEach(function(el){el.classList.add('active-nav');});
+    // Highlight active page
+    var path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    var params = new URLSearchParams(location.search);
+    var cat = params.get('cat');
+    var key = null;
+    if(path === 'shop.html' && cat === 'coffee') key = 'coffee';
+    else if(path === 'shop.html' && cat === 'tea') key = 'tea';
+    else if(path === 'shop.html' && cat === 'accessories') key = 'equipment';
+    else {
+      var map = {
+        'index.html':'home','shop.html':'shop',
+        'premium-collection.html':'collection'
+      };
+      key = map[path] || null;
+    }
+    if(key){
+      document.querySelectorAll('[data-nav="'+key+'"]').forEach(function(el){el.classList.add('active-nav');});
+    }
   }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', initNav); }
+  else { initNav(); }
 })();
 /* === end unified-nav-js === */
 </script>
     <script>
 /* === shop-cat-param === */
 (function(){
-  var p = new URLSearchParams(location.search);
-  var cat = p.get('cat');
-  if(!cat) return;
   function apply(){
+    var p = new URLSearchParams(location.search);
+    var cat = p.get('cat');
+    if(!cat) return;
     var btn = document.querySelector('.filter-btn[data-filter="'+cat+'"]');
-    if(btn){ btn.click(); }
+    if(btn) btn.click();
   }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', apply);
-  } else { apply(); }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', apply); }
+  else { setTimeout(apply, 50); }
 })();
 /* === end shop-cat-param === */
 </script>
