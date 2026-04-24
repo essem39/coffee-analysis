@@ -53,6 +53,7 @@
  .scroll-progress { position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: linear-gradient(90deg, #ea580c 0%, #f97316 10%, #10b981 25%, #059669 35%, #fbbf24 50%, #f59e0b 60%, #3b82f6 75%, #8b5cf6 90%, #ea580c 100%); background-size: 300% 100%; z-index: 9999; transition: width 0.1s ease-out; box-shadow: 0 2px 10px rgba(234,88,12,0.5); animation: rainbowShift 5s ease-in-out infinite; }
  @keyframes rainbowShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
  
+    
     /* === unified-nav === */
 .dropdown { position: relative; }
 .dropdown-menu { display: none; position: absolute; top: 100%; right: 0; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px; min-width: 240px; margin-top: 8px; z-index: 1000; }
@@ -113,6 +114,7 @@
                     <a href="shop.html?cat=tea" data-nav="tea" class="text-gray-700 hover:text-blue-600 transition-colors">Чай</a>
                     <a href="shop.html?cat=accessories" data-nav="equipment" class="text-gray-700 hover:text-blue-600 transition-colors">Оборудование</a>
                     <a href="premium-collection.html" data-nav="collection" class="text-gray-700 hover:text-blue-600 transition-colors">Коллекции</a>
+                    <a href="promocodes.html" data-nav="promo" class="text-gray-700 hover:text-blue-600 transition-colors">Бонусы</a>
                     <div class="dropdown relative" data-dd="more">
                         <button type="button" class="dropdown-toggle text-gray-700 hover:text-blue-600 transition-colors flex items-center space-x-1">
                             <span>Ещё</span>
@@ -155,6 +157,7 @@
                 <a href="shop.html?cat=tea" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Чай</a>
                 <a href="shop.html?cat=accessories" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Оборудование</a>
                 <a href="premium-collection.html" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Коллекции</a>
+                <a href="promocodes.html" class="px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg">Бонусы</a>
                 <div class="mobile-dropdown">
                     <button type="button" class="mobile-dropdown-toggle w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg flex justify-between items-center">
                         <span>Ещё</span>
@@ -560,6 +563,7 @@
 </script>
  <script src="coffeepilot-widget.js"></script>
 
+    
     <script>
 /* === unified-nav-js === */
 (function(){
